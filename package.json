@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@superviz/sdk": "git+https://github.com/SuperViz/sdk.git#lab-release#8cb8163f251620907c662890a21d617ef18eb026",
+    "@superviz/sdk": "git+https://github.com/SuperViz/sdk.git#lab-release#4a5086beeb3811d536e2a58d20b172fa60ef378b",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

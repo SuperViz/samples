@@ -1725,9 +1725,9 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@superviz/sdk@git+https://github.com/SuperViz/sdk.git#lab-release#8cb8163f251620907c662890a21d617ef18eb026":
+"@superviz/sdk@git+https://github.com/SuperViz/sdk.git#lab-release#4a5086beeb3811d536e2a58d20b172fa60ef378b":
   version "0.0.0"
-  resolved "git+https://github.com/SuperViz/sdk.git#302fe30ab4dfd92e61fb772f52f87456cdcefd32"
+  resolved "git+https://github.com/SuperViz/sdk.git#373a56b0470171b1aa1531321bae41578263a7a4"
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"

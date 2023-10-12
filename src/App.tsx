@@ -4,6 +4,7 @@ function App() {
     <div className="App">
       <a href="/video">Video</a>
       <a href="/cursor">Cursor</a>
+      <a href="/realtime">RealTime</a>
     </div>
   );
 }

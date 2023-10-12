@@ -30,6 +30,8 @@ export default function CursorPage() {
   const enterMousePresence = function () {
     const mouse = new PresenceMouseComponent("place");
 
+    sdk.subscribe("frame.dimensions-update", enterMousePresence);
+
     sdk.addComponent(mouse);
   };
 

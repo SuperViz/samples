@@ -1,8 +1,7 @@
-import SuperVizSdk, { MeetingEvent, Participant, ParticipantType } from "@superviz/sdk";
-import { EnvironmentTypes } from "@superviz/sdk/common/types/sdk-options.types";
+import SuperVizSdk, { MeetingEvent, ParticipantType } from "@superviz/sdk";
 import { VideoComponent } from "@superviz/sdk/components";
-import { CamerasPosition, LayoutPosition } from "@superviz/sdk/services/video-conference-manager/types";
 import App from "../../App";
+import { FrameEvent } from "@superviz/sdk/common/types/events.types";
 
 export default function VideoPage() {
   let sdk: any = null;
@@ -10,7 +9,6 @@ export default function VideoPage() {
 
   const initSDK = async () => {
     const DEVELOPER_KEY = process.env.REACT_APP_DEVELOPER_KEY || "";
-    const randomNumber = Math.floor(Math.random() * 1000000).toString();
     const randomText = Math.random().toString(36).substring(2, 15);
     sdk = await SuperVizSdk(DEVELOPER_KEY, {
       roomId: "vtn_ts_002",
@@ -41,13 +39,13 @@ export default function VideoPage() {
 
       defaultToolbar: true,
     });
-    video.subscribe(MeetingEvent.MEETING_DEVICES_CHANGE, onEventSomething);
+    video.subscribe(MeetingEvent.MEETING_PARTICIPANT_JOINED, onEventSomething);
 
     sdk.addComponent(video);
   };
 
-  const onEventSomething = function (event: any) {
-    console.log("event response 2: ", event);
+  const onEventSomething = function () {
+    console.log("event response 2: ");
   };
 
   const fetchHistoryCall = () => {
