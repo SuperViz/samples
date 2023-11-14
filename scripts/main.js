@@ -1,10 +1,8 @@
-import dotenv from "dotenv";
-
 const roomId = generateUUID();
 const groupId = "sv-sample-room-cdn-mouse-pointers";
 const groupName = "Sample Room for Mouse Pointers (CDN)";
 
-let DEVELOPER_KEY = "";
+const DEVELOPER_KEY = "mzz9oa4nrse9x6g3rudoj793b6wvr8";
 
 document.addEventListener("DOMContentLoaded", function () {
   InitSuperVizMousePointers();
@@ -12,13 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function InitSuperVizMousePointers() {
   // We are initializing two rooms for demo propose.
-
-  dotenv.config();
-  DEVELOPER_KEY = process.env.DEVELOPER_KEY;
-
-  console.log("dev", DEVELOPER_KEY);
-  console.log("process", process.env);
-
   InitFirstRoom();
   InitSecondRoom();
 }
