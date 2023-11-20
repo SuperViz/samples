@@ -9,11 +9,17 @@
     <script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>
 
     <!-- Main script, after SDK -->
-    <script src="/scripts/main.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
-    <canvas id="mouse-pointer-1"></canvas>
-    <canvas id="mouse-pointer-2"></canvas>
+    <section>
+      <h1>View from "Zeus" participant</h1>
+      <canvas id="mouse-pointer-1"></canvas>
+    </section>
+    <section>
+      <h1>View from "Hera" participant</h1>
+      <canvas id="mouse-pointer-2"></canvas>
+    </section>
   </body>
 </html>
