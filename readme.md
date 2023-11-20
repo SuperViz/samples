@@ -26,7 +26,7 @@ Just make sure that you have the required developer keys in the `.env` file. For
 
 NOTE: inside the `js/` directory you can find the `vanilla/` directory, this contains samples using our SDK with CDN, meaning that SuperViz package is downloaded from `<script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>` and not using it as a package.
 
-# Samples with JavaScript
+## Samples with JavaScript
 
 | Component                            | Vanilla                            | React | Vue | Angular |
 | ------------------------------------ | ---------------------------------- | ----- | --- | ------- |
@@ -40,3 +40,18 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Contextual Comments with Matteport   | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
 | Contextual Comments with ThreeJS     | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
 | Video Conference                     | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
+
+## Samples with TypeScript
+
+| Component                            | Vanilla | React | Vue | Angular |
+| ------------------------------------ | ------- | ----- | --- | ------- |
+| Mouser Pointer                       | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Real-time Data Engine                | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Presence for AutoDesk                | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Presence for Matteport               | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Presence for ThreeJS                 | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Contextual Comments with HTML Canvas | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Contextual Comments with AutoDesk    | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Contextual Comments with Matteport   | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Contextual Comments with ThreeJS     | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Video Conference                     | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
