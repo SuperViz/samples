@@ -32,9 +32,9 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | ------------------------------------ | ---------------------------------- | ----- | --- | ------- |
 | Mouser Pointer                       | [Link](/js/vanilla/mouse-pointer/) | 🔄️   | 🔄️ | 🔄️     |
 | Real-time Data Engine                | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
-| Presence for AutoDesk                | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
-| Presence for Matteport               | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
-| Presence for ThreeJS                 | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
+| Presence3D for AutoDesk              | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
+| Presence3D for Matteport             | [Link](/js/vanilla/matterport/)    | 🔄️   | 🔄️ | 🔄️     |
+| Presence3D for ThreeJS               | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
 | Contextual Comments with HTML Canvas | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
 | Contextual Comments with AutoDesk    | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
 | Contextual Comments with Matteport   | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |

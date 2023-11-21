@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-vanilla-js-mouse-pointers",
+  "name": "sv-sample-room-vanilla-js-presence3d-matterport",
   "version": "1.0.0",
-  "description": "Sample Room for Mouse Pointers (Vanilla/JS)",
+  "description": "Sample Room for Presence3D for Matterport (Vanilla/JS)",
   "scripts": {
     "start": "npx serve public/"
   },
