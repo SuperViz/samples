@@ -26,7 +26,7 @@ function InitFirstParticipantMatterport() {
 
   showcase.addEventListener("load", async () => {
     if (!showcaseWindow) return;
-    firstParticipantMatterportSDK = await showcaseWindow.MP_SDK.connect(showcaseWindow, "zmr67mi1q03hk6307w86s32cb");
+    firstParticipantMatterportSDK = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
     console.log("firstParticipantMatterportSDK", firstParticipantMatterportSDK);
   });
 }
