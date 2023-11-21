@@ -4,11 +4,11 @@ This project hosts samples for SuperViz SDK. To find out more about the SDK itse
 
 ## Getting started
 
-The SDK documentation has extensive sections about [getting started](https://docs.superviz.com/getting-started/quickstart), setting up the SDK, as well as the process to acquire the required developer key. You will need Developer Key keys to run the samples on your machines, you therefore should [follow the instructions on these pages](https://docs.superviz.com/getting-started/setting-account) before continuing.
+The SDK documentation has extensive sections about [getting started](https://docs.superviz.com/getting-started/quickstart), setting up the SDK, as well as the process of acquiring the required developer key. You will need Developer Key keys to run the samples on your machines, you therefore should [follow the instructions on these pages](https://docs.superviz.com/getting-started/setting-account) before continuing.
 
 ## Build and run the samples
 
-Every sample is a standalone project, and can be built and run independently. The samples, in the `js/` directory is written in JavaScript. The samples in the `ts/` directory are written in TypeScript. Both can be built and run using the following commands:
+Every sample is a standalone project and can be built and run independently. The samples, in the `js/` directory are written in JavaScript. The samples in the `ts/` directory are written in TypeScript. Both can be built and run using the following commands:
 
 ```bash
 npm install
@@ -40,6 +40,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Contextual Comments with Matteport   | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
 | Contextual Comments with ThreeJS     | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
 | Video Conference                     | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
+| Who-is-Online                        | 🔄️                                | 🔄️   | 🔄️ | 🔄️     |
 
 ## Samples with TypeScript
 
@@ -55,3 +56,4 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Contextual Comments with Matteport   | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
 | Contextual Comments with ThreeJS     | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
 | Video Conference                     | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
+| Who-is-Online                        | 🔄️     | 🔄️   | 🔄️ | 🔄️     |
