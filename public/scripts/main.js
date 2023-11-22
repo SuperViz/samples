@@ -1,8 +1,8 @@
 import { DEVELOPER_KEY, MATTERPORT_KEY } from "../env.js";
 
 const roomId = generateUUID();
-const groupId = "sv-sample-room-vanilla-js-presence3d-matterport";
-const groupName = "Sample Room for Presence3D for Matterport (Vanilla/JS)";
+const groupId = "sv-sample-room-cdn-js-presence3d-matterport";
+const groupName = "Sample Room for Presence3D for Matterport (CDN/JS)";
 const modelId = "LmRnZAsWoxy";
 
 document.addEventListener("DOMContentLoaded", function () {
