@@ -1,11 +1,9 @@
 import { DEVELOPER_KEY, MATTERPORT_KEY } from "../env.js";
 
 const roomId = generateUUID();
-const groupId = "sv-sample-room-vanilla-js-presence3d-matterport";
-const groupName = "Sample Room for Presence3D for Matterport (Vanilla/JS)";
+const groupId = "sv-sample-room-cdn-js-presence3d-matterport";
+const groupName = "Sample Room for Presence3D for Matterport (CDN/JS)";
 const modelId = "LmRnZAsWoxy";
-
-const firstParticipantMatterportSDK = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   InitMatterportIntegrationWithSuperViz();
@@ -14,24 +12,40 @@ document.addEventListener("DOMContentLoaded", function () {
 function InitMatterportIntegrationWithSuperViz() {
   // We are initializing two rooms for demo propose.
   InitFirstParticipantMatterport();
+  InitSecondParticipantMatterport();
 }
 
 function InitFirstParticipantMatterport() {
-  const showcase = document.getElementById("zeusparticipant");
+  const showcase = document.getElementById("zeus-participant");
   if (!showcase) return;
 
   const showcaseWindow = showcase.contentWindow;
   showcase.src = `./mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
-  console.log("showcaseWindow", showcaseWindow);
 
   showcase.addEventListener("load", async () => {
     if (!showcaseWindow) return;
-    firstParticipantMatterportSDK = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
-    console.log("firstParticipantMatterportSDK", firstParticipantMatterportSDK);
+    const mpSDK = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
+
+    InitSuperVizRoomWithMatterport(mpSDK, "Zeus");
   });
 }
 
-async function InitFirstRoom() {
+function InitSecondParticipantMatterport() {
+  const showcase = document.getElementById("hera-participant");
+  if (!showcase) return;
+
+  const showcaseWindow = showcase.contentWindow;
+  showcase.src = `./mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
+
+  showcase.addEventListener("load", async () => {
+    if (!showcaseWindow) return;
+    const mpSDK = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
+
+    InitSuperVizRoomWithMatterport(mpSDK, "Hera");
+  });
+}
+
+async function InitSuperVizRoomWithMatterport(mpSDK, participant) {
   const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
     roomId: roomId,
     group: {
@@ -39,30 +53,24 @@ async function InitFirstRoom() {
       name: groupName,
     },
     participant: {
-      id: "zeus",
-      name: "Zeus",
+      id: participant.toLowerCase(),
+      name: participant,
     },
     environment: "dev",
   });
 
-  return room;
-}
-
-async function InitSecondRoom() {
-  const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-    roomId: roomId,
-    group: {
-      id: groupId,
-      name: groupName,
+  const matterportPresence = new window.Presence3D(mpSDK, {
+    isAvatarsEnabled: true,
+    isLaserEnabled: true,
+    isNameEnabled: true,
+    avatarConfig: {
+      height: 0,
+      scale: 1,
+      laserOrigin: { x: 0, y: 0, z: 0 },
     },
-    participant: {
-      id: "hera",
-      name: "Hera",
-    },
-    environment: "dev",
   });
 
-  return room;
+  room.addComponent(matterportPresence);
 }
 
 function generateUUID() {
