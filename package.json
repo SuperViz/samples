@@ -1,22 +1,20 @@
 {
-  "name": "mouse-pointers",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "sv-sample-room-react-ts-mouse-pointers",
+  "version": "1.0.0",
+  "description": "Sample Room for Mouse Pointers (React/TS)",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@superviz/sdk": "^5.1.0",
-    "@types/uuid": "^9.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "@superviz/sdk": "^5.1.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/uuid": "^9.0.7",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.2.0",
