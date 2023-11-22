@@ -1,0 +1,13 @@
+{
+  "name": "sv-sample-room-vanilla-js-mouse-pointers",
+  "version": "1.0.0",
+  "description": "Sample Room for Mouse Pointers (Vanilla/JS)",
+  "scripts": {
+    "start": "npx serve public/"
+  },
+  "dependencies": {
+    "serve": "14.2.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
