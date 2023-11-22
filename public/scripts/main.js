@@ -1,8 +1,8 @@
 import { DEVELOPER_KEY } from "../env.js";
 
 const roomId = generateUUID();
-const groupId = "sv-sample-room-vanilla-mouse-pointers";
-const groupName = "Sample Room for Mouse Pointers (Vanilla JS)";
+const groupId = "sv-sample-room-cdn-mouse-pointers";
+const groupName = "Sample Room for Mouse Pointers (CDN JS)";
 
 document.addEventListener("DOMContentLoaded", function () {
   InitSuperVizMousePointers();

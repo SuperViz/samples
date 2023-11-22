@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-vanilla-js-mouse-pointers",
+  "name": "sv-sample-room-cdn-js-mouse-pointers",
   "version": "1.0.0",
-  "description": "Sample Room for Mouse Pointers (Vanilla/JS)",
+  "description": "Sample Room for Mouse Pointers (CDN/JS)",
   "scripts": {
     "start": "npx live-server public/ --host=localhost"
   },
