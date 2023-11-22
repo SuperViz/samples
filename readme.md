@@ -35,7 +35,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Presence3D for AutoDesk              | 🔄️                                             | 🔄️     | 🔄️                               | 🔄️ | 🔄️     |
 | Presence3D for Matteport             | [Link](/js/cdn/matterport/)                     | 🔄️     | 🔄️                               | 🔄️ | 🔄️     |
 | Presence3D for ThreeJS               | 🔄️                                             | 🔄️     | 🔄️                               | 🔄️ | 🔄️     |
-| Contextual Comments with HTML Canvas | 🔄️                                             | 🔄️     | 🔄️                               | 🔄️ | 🔄️     |
+| Contextual Comments with HTML Canvas | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | 🔄️                               | 🔄️ | 🔄️     |
 | Contextual Comments with AutoDesk    | 🔄️                                             | 🔄️     | 🔄️                               | 🔄️ | 🔄️     |
 | Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | 🔄️                               | 🔄️ | 🔄️     |
 | Contextual Comments with ThreeJS     | 🔄️                                             | 🔄️     | 🔄️                               | 🔄️ | 🔄️     |

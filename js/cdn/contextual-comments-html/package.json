@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-cdn-js-contextual-comments-matterport",
+  "name": "sv-sample-room-cdn-js-contextual-comments-html",
   "version": "1.0.0",
-  "description": "Sample Room for Contextual Comments for Matterport (CDN/JS)",
+  "description": "Sample Room for Contextual Comments for HTML (CDN/JS)",
   "scripts": {
     "start": "npx live-server public/ --host=localhost"
   },

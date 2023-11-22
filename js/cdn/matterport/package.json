@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-vanilla-js-presence3d-matterport",
+  "name": "sv-sample-room-cdn-js-presence3d-matterport",
   "version": "1.0.0",
-  "description": "Sample Room for Presence3D for Matterport (Vanilla/JS)",
+  "description": "Sample Room for Presence3D for Matterport (CDN/JS)",
   "scripts": {
     "start": "npx live-server public/ --host=localhost"
   },
