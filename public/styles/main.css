@@ -23,14 +23,9 @@ h1 {
   text-align: center;
 }
 
-canvas {
+iframe {
   background-color: #c9c4d1;
   width: 100%;
   height: calc(100% - 3.3125rem);
   border-radius: 6px;
-}
-
-canvas:hover {
-  background-color: #baa9ff;
-  transition: all 0.5s ease;
 }
