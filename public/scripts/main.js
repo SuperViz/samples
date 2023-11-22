@@ -3,7 +3,7 @@ import { DEVELOPER_KEY, MATTERPORT_KEY } from "../env.js";
 const roomId = generateUUID();
 const groupId = "sv-sample-room-vanilla-js-presence3d-matterport";
 const groupName = "Sample Room for Presence3D for Matterport (Vanilla/JS)";
-const modelId = "v4LWLiLDm3s"; //"LmRnZAsWoxy";
+const modelId = "LmRnZAsWoxy";
 
 const firstParticipantMatterportSDK = null;
 
@@ -21,7 +21,7 @@ function InitFirstParticipantMatterport() {
   if (!showcase) return;
 
   const showcaseWindow = showcase.contentWindow;
-  showcase.src = `/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
+  showcase.src = `./mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
   console.log("showcaseWindow", showcaseWindow);
 
   showcase.addEventListener("load", async () => {
