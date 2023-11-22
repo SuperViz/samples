@@ -26,31 +26,7 @@ function InitFirstParticipantMatterport() {
     if (!showcaseWindow) return;
     const mpSDK = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
 
-    const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-      roomId: roomId,
-      group: {
-        id: groupId,
-        name: groupName,
-      },
-      participant: {
-        id: "zeus",
-        name: "Zeus",
-      },
-      environment: "dev",
-    });
-
-    const matterportPresence = new window.Presence3D(mpSDK, {
-      isAvatarsEnabled: true,
-      isLaserEnabled: true,
-      isNameEnabled: true,
-      avatarConfig: {
-        height: 0,
-        scale: 1,
-        laserOrigin: { x: 0, y: 0, z: 0 },
-      },
-    });
-
-    room.addComponent(matterportPresence);
+    InitSuperVizRoomWithMatterport(mpSDK, "Zeus");
   });
 }
 
@@ -65,32 +41,36 @@ function InitSecondParticipantMatterport() {
     if (!showcaseWindow) return;
     const mpSDK = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
 
-    const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-      roomId: roomId,
-      group: {
-        id: groupId,
-        name: groupName,
-      },
-      participant: {
-        id: "hera",
-        name: "Hera",
-      },
-      environment: "dev",
-    });
-
-    const matterportPresence = new window.Presence3D(mpSDK, {
-      isAvatarsEnabled: true,
-      isLaserEnabled: true,
-      isNameEnabled: true,
-      avatarConfig: {
-        height: 0,
-        scale: 10,
-        laserOrigin: { x: 0, y: 0, z: 0 },
-      },
-    });
-
-    room.addComponent(matterportPresence);
+    InitSuperVizRoomWithMatterport(mpSDK, "Hera");
   });
+}
+
+async function InitSuperVizRoomWithMatterport(mpSDK, participant) {
+  const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
+    roomId: roomId,
+    group: {
+      id: groupId,
+      name: groupName,
+    },
+    participant: {
+      id: participant.toLowerCase(),
+      name: participant,
+    },
+    environment: "dev",
+  });
+
+  const matterportPresence = new window.Presence3D(mpSDK, {
+    isAvatarsEnabled: true,
+    isLaserEnabled: true,
+    isNameEnabled: true,
+    avatarConfig: {
+      height: 0,
+      scale: 1,
+      laserOrigin: { x: 0, y: 0, z: 0 },
+    },
+  });
+
+  room.addComponent(matterportPresence);
 }
 
 function generateUUID() {
