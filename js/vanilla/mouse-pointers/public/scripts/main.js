@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function InitSuperVizMousePointers() {
-  // We are initializing two rooms for demo propose.
+  // We are initializing two rooms for demo purposes.
   InitFirstRoom();
   InitSecondRoom();
 }
