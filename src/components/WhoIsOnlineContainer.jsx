@@ -24,7 +24,7 @@ const initWhoIsOnline = async (roomId, userId, name, containerId) => {
 };
 
 export default function WhoIsOnlineContainer({ name, roomId }) {
-  const containerId = name + "-canvas";
+  const containerId = name + "-container";
   const userId = name.toLowerCase();
 
   return (
