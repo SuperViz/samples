@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 
 body {
@@ -9,7 +8,7 @@ body {
 }
 
 #root {
-  background: #e9e5ef;
+  background: #c9c4d1;
   margin: 0;
   height: 100%;
   width: 100%;
@@ -35,7 +34,7 @@ section {
 button {
   all: unset;
   padding: 3px 10px;
-  border-radius: 2px;
+  border-radius: 6px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   margin: 0.5rem;
@@ -43,17 +42,18 @@ button {
   height: 2rem;
   color: #efefef;
   text-align: center;
-  background-color: #1d4c9c;
-  cursor: pointer; 
+  background-color: #6210cc;
+  cursor: pointer;
   transition: 0.15s all ease-in;
 }
 
 button:hover {
-  filter: invert(1)
+  background-color: #baa9ff;
+  color: #39363e;
 }
 
 div {
-  background-color: #3c3c4d;
+  background-color: #57535f;
   border-radius: 6px;
   padding: 10px;
   width: 100%;
@@ -62,5 +62,5 @@ div {
 }
 
 div:hover {
-  background-color: #6c6c7d;
+  background-color: #7e7a88;
 }
