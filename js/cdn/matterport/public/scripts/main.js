@@ -55,6 +55,10 @@ async function InitSuperVizRoomWithMatterport(mpSDK, participant) {
     participant: {
       id: participant.toLowerCase(),
       name: participant,
+      avatar: {
+        imageUrl: "https://production.cdn.superviz.com/static/default-avatars/2.png",
+        model3DUrl: "https://production.storage.superviz.com/readyplayerme/2.glb",
+      },
     },
     environment: "dev",
   });
@@ -65,7 +69,7 @@ async function InitSuperVizRoomWithMatterport(mpSDK, participant) {
     isNameEnabled: true,
     avatarConfig: {
       height: 0,
-      scale: 1,
+      scale: 2,
       laserOrigin: { x: 0, y: 0, z: 0 },
     },
   });
