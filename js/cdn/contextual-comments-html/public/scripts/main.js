@@ -1,9 +1,8 @@
-import { DEVELOPER_KEY, MATTERPORT_KEY } from "../env.js";
+import { DEVELOPER_KEY } from "../env.js";
 
-const roomId = generateUUID();
+const roomId = "efd689fe-03b0-442e-ba4e-fb0bbd39dfe7";
 const groupId = "sv-sample-room-cdn-js-presence3d-html";
 const groupName = "Sample Room for Presence3D for HTML (CDN/JS)";
-const modelId = "LmRnZAsWoxy";
 
 document.addEventListener("DOMContentLoaded", function () {
   InitSuperVizComments();
