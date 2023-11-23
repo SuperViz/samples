@@ -40,7 +40,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | 🔄️                                 | 🔄️ | 🔄️     |
 | Contextual Comments with ThreeJS     | [Link](/js/cdn/contextual-comments-threejs/)    | 🔄️     | 🔄️                                 | 🔄️ | 🔄️     |
 | Video Conference                     | 🔄️                                             | 🔄️     | [Link](/js/react/video-conference/) | 🔄️ | 🔄️     |
-| Who-is-Online                        | 🔄️                                             | 🔄️     | [Link](/js/react/who-is-online/)    | 🔄️ | 🔄️     |
+| Who-is-Online                        | [Link](/js/cdn/who-is-online/)                  | 🔄️     | [Link](/js/react/who-is-online/)    | 🔄️ | 🔄️     |
 
 ## Samples with TypeScript
 
