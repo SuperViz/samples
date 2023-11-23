@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  background: #c9c4d1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  padding: 25px;
+  width: min(100%, 2000px);
+  height: 100%;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+section {
+  flex: 1;
+  min-width: max(300px, 45%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: #39363e;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: #efefef;
+  text-align: center;
+}
+
+button {
+  all: unset;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 1rem;
+  height: 2rem;
+  color: #efefef;
+  text-align: center;
+  background-color: #6210cc;
+  cursor: pointer;
+  transition: 0.15s all ease-in;
+}
+
+button:hover {
+  background-color: #baa9ff;
+  color: #39363e;
+}
+
+.container {
+  background-color: #57535f;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  min-height: 60px;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container > div {
+  background-color: #39363e;
+  border-radius: 7px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+input {
+  all: unset;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 1rem;
+  height: 2rem;
+  color: #39363e;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.15s all ease-in;
+  width: 200px;
+}
+
+.subscriptions {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscriptions > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.subscription {
+  color: #efefef;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  transition: 0.15s all ease-in;
+}
+
+.subscription:hover {
+  color: #d0d0d0;
+}
+
+.last-message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.last-message > span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.last-message > span > p {
+  font-size: 1rem;
+  color: #efefef;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
