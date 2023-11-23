@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sample Room for Who Is Online (React/TS)",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
