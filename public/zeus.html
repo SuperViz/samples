@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <script async src="./vendor/es-module-shims@1.3.6.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./vendor/threejs/three@0.149.0.js",
+          "three/addons/": "./vendor/threejs/examples/jsm/",
+          "three-mesh-bvh": "./vendor/threejs/three-mesh-bvh@0.5.23.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <section>
+      <h1>View from "Zeus" participant</h1>
+      <canvas id="zeus-participant"> </canvas>
+    </section>
+
+    <!-- SuperViz SDK -->
+    <script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>
+    <script type="module" src="https://unpkg.com/@superviz/threejs-plugin@latest"></script>
+
+    <!-- Main script, after SDK -->
+    <script type="module" src="./scripts/participant-two.js"></script>
+  </body>
+</html>
