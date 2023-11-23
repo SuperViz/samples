@@ -46,6 +46,9 @@ function InitSecondParticipantMatterport() {
 }
 
 async function InitSuperVizRoomWithMatterport(mpSDK, participant) {
+  // This line is only for demonstration purpose. You can use any avatar you want.
+  const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
+
   const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
     roomId: roomId,
     group: {
@@ -56,8 +59,8 @@ async function InitSuperVizRoomWithMatterport(mpSDK, participant) {
       id: participant.toLowerCase(),
       name: participant,
       avatar: {
-        imageUrl: "https://production.cdn.superviz.com/static/default-avatars/2.png",
-        model3DUrl: "https://production.storage.superviz.com/readyplayerme/2.glb",
+        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
+        model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
       },
     },
     environment: "dev",
