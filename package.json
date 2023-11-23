@@ -1,0 +1,13 @@
+{
+  "name": "sv-sample-room-cdn-js-presence3d-three-js",
+  "version": "1.0.0",
+  "description": "Sample Room for Presence3D for ThreeJS (CDN/JS)",
+  "scripts": {
+    "start": "npx live-server public/ --host=localhost"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
