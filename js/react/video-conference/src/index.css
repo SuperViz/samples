@@ -1,23 +1,10 @@
 * {
   box-sizing: border-box;
-
 }
-
 body {
-  margin: 0;
-  min-height: 100vh;
-}
-
-#root {
   background: #e9e5ef;
   margin: 0;
-  height: 100%;
-  width: 100%;
-}
-
-main {
   padding: 25px;
-  width: 100%;
   gap: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -37,8 +24,8 @@ button {
   text-align: center;
   background-color: #6210cc;
   color: #efefef;
-  cursor: pointer; 
-  transition: 0.15s all ease-in;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 button:hover {
