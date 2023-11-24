@@ -61,7 +61,7 @@ export default function CommentsInstance({ name, position, toggle }: Props) {
       <button onClick={destroy}>Change participant</button>
       <section>
         <h1>View from "{name}" participant</h1>
-        <canvas id={`${name.toLocaleLowerCase()}-participant`} className={name.toLocaleLowerCase()}></canvas>
+        <canvas id={`${participantId}-participant`} className={participantId}></canvas>
       </section>
     </>
   );
