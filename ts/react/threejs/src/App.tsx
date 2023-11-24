@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import ThreejsInstance from "./components/ThreejsInstance";
+import ThreeJSInstance from "./components/ThreejsInstance";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
   // We are initializing multiple rooms for demo purposes.
   return (
     <main>
-      <ThreejsInstance name="Zeus" roomId={roomId} />
-      <ThreejsInstance name="Hera" roomId={roomId} />
+      <ThreeJSInstance name="Zeus" roomId={roomId} />
+      <ThreeJSInstance name="Hera" roomId={roomId} />
     </main>
   );
 }

@@ -9,8 +9,8 @@ import { useEffect, useRef } from "react";
 import { BaseComponent } from "@superviz/sdk/lib/components/base/index.js";
 import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types.js";
 
-const groupId = "sv-sample-room-react-ts-who-is-online";
-const groupName = "Sample Room for Who-is-Online (React/TS)";
+const groupId = "sv-sample-room-react-ts-presence3d-three-js";
+const groupName = "Sample Room for Presence3D for ThreeJS (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
 function InitParticipantThreeJS(participantName: string, roomId: string) {
@@ -46,7 +46,7 @@ function InitParticipantThreeJS(participantName: string, roomId: string) {
       animate();
     },
     undefined,
-    (e: any)=> console.error(e)
+    (e: any) => console.error(e)
   );
 
   const animate = () => {
@@ -59,7 +59,12 @@ function InitParticipantThreeJS(participantName: string, roomId: string) {
   animate();
 }
 
-async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.PerspectiveCamera, participant: string, roomId: string) {
+async function InitSuperVizRoomWithThreeJS(
+  scene: THREE.Scene,
+  camera: THREE.PerspectiveCamera,
+  participant: string,
+  roomId: string
+) {
   // This line is only for demonstration purpose. You can use any avatar you want.
   const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
 
@@ -83,9 +88,9 @@ async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.Per
   const threeJSPresence = new Presence3D(scene, camera, camera, {
     isAvatarsEnabled: true,
     isLaserEnabled: true,
-    isNameEnabled: true,
+    isNameEnabled: false,
     isMouseEnabled: true,
-    renderLocalAvatar: true,
+    renderLocalAvatar: false,
     avatarConfig: {
       height: 0,
       scale: 1,
@@ -95,15 +100,15 @@ async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.Per
 
   room.addComponent(threeJSPresence);
 }
-export default function WhoIsOnlineContainer({ name, roomId }: { name: string; roomId: string }) {
+export default function ThreeJSContainer({ name, roomId }: { name: string; roomId: string }) {
   const userId = name.toLowerCase();
   const containerId = userId + "-participant";
   const ref = useRef<any>(null);
 
-  useEffect(()=> {
+  useEffect(() => {
     if (!ref) return;
-    InitParticipantThreeJS(name, roomId)
-  }, [ref])
+    InitParticipantThreeJS(name, roomId);
+  }, [ref]);
 
   return (
     <section>

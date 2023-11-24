@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-threejs",
+  "name": "sv-sample-room-react-ts-presence3d-three-js",
   "version": "1.0.0",
-  "description": "Sample Room for Threejs (React/TS)",
+  "description": "Sample Room for Presence3D for ThreeJS (React/TS)",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
