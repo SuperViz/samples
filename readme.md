@@ -40,7 +40,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | 🔄️                                 | 🔄️ | 🔄️     |
 | Contextual Comments with ThreeJS     | [Link](/js/cdn/contextual-comments-threejs/)    | 🔄️     | 🔄️                                 | 🔄️ | 🔄️     |
 | Video Conference                     | 🔄️                                             | 🔄️     | [Link](/js/react/video-conference/) | 🔄️ | 🔄️     |
-| Who-is-Online                        | 🔄️                                             | 🔄️     | [Link](/js/react/who-is-online/)    | 🔄️ | 🔄️     |
+| Who-is-Online                        | [Link](/js/cdn/who-is-online/)                  | 🔄️     | [Link](/js/react/who-is-online/)    | 🔄️ | 🔄️     |
 
 ## Samples with TypeScript
 
@@ -57,3 +57,22 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Contextual Comments with ThreeJS     | 🔄️ | 🔄️     | 🔄️                                       | 🔄️  | 🔄️     |
 | Video Conference                     | 🔄️ | 🔄️     | [Link](/ts/react/video-conference/)      | 🔄️  | 🔄️     |
 | Who-is-Online                        | 🔄️ | 🔄️     | [Link](/ts/react/who-is-online/)         | 🔄️  | 🔄️     |
+
+## Project roadmap
+
+This are the key features we are working on right now:
+
+- Samples with JavaScript CDN - _in progress_
+- Samples with React for both JavaScript and TypeScript - _in progress_
+- Samples with Vanilla for both JavaScript and TypeScript - _planned_
+- Samples with Vue for both JavaScript and TypeScript - _planned_
+- Samples with Angular for both JavaScript and TypeScript - _planned_
+
+After that, we will be working on bringing the samples to more libraries and frameworks, such as Svelte.
+
+Besides samples, we want this project to:
+
+- GitOps to deploy each sample isolated to a different branch - _planned_
+- Deploys to CodeSandbox - _planned_
+- GitOps to update SuperViz SDK version before (in a separate branch) and after a new version is released - _planned_
+- User Interface Automatic Tests - _planned_
