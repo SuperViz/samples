@@ -90,9 +90,9 @@ async function InitSuperVizRoomWithThreeJS(scene, camera, participant, participa
   const threeJSPresence = new window.Presence3D(scene, camera, camera, {
     isAvatarsEnabled: true,
     isLaserEnabled: true,
-    isNameEnabled: true,
+    isNameEnabled: false,
     isMouseEnabled: true,
-    renderLocalAvatar: true,
+    renderLocalAvatar: false,
     avatarConfig: {
       height: 0,
       scale: 1,
