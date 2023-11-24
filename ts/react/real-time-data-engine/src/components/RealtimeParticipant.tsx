@@ -2,146 +2,140 @@ import SuperVizRoom, { RealtimeMessage } from "@superviz/sdk";
 import { Realtime } from "@superviz/sdk/lib/components";
 import { useEffect, useRef, useState } from "react";
 
-const groupId = "sv-sample-room-react-ts-who-is-online";
-const groupName = "Sample Room for Who-is-Online (React/TS)";
-const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-
-const initWhoIsOnline = async (roomId: string, userId: string, name: string, realtime: Realtime) => {
-  const room = await SuperVizRoom(DEVELOPER_KEY, {
-    roomId: roomId,
-    group: {
-      id: groupId,
-      name: groupName,
-    },
-    participant: {
-      id: userId,
-      name: name,
-    },
-    environment: "dev" as any,
-  });
-
-  room.addComponent(realtime as any);
-};
-
 export default function RealtimeParticipant({ name, roomId }: { name: string; roomId: string }) {
-  const containerId = name + "-container";
+  const participantId = name.toLowerCase();
+  const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+  const groupId = "sv-sample-room-react-ts-real-time-data-engine";
+  const groupName = "Sample Room for Real-time Data Engine (React/TS)";
+
+  const [eventsSubscribed, setEventsSubscribed] = useState<string[]>([]);
+  const [lastPublishedMessage, setLastPublishedMessage] = useState<RealtimeMessage | undefined>();
+
   const realtime = useRef<Realtime>(new Realtime());
   const subscribeTo = useRef<HTMLInputElement>(null);
-  const unsubscribeFrom = useRef<HTMLInputElement>(null);
   const publishTo = useRef<HTMLInputElement>(null);
   const message = useRef<HTMLInputElement>(null);
 
-  const [lastPublishedMessage, setLastPublishedMessage] = useState<{ text: string; event: string; author: string } | undefined>();
+  const InitSuperVizRoom = async (roomId: string, name: string, realtime: Realtime) => {
+    const room = await SuperVizRoom(DEVELOPER_KEY, {
+      roomId: roomId,
+      group: {
+        id: groupId,
+        name: groupName,
+      },
+      participant: {
+        id: participantId,
+        name: name,
+      },
+      environment: "dev" as any,
+    });
 
-  const userId = name.toLowerCase();
-  const [subscribedTo, setSubscribedTo] = useState<string[]>([])
-  
-  const updateMessages = (message: unknown) => {
-    // destructuring the message and taking the fields "data" and "participantId"
-    // from the first element of the array
-    const [{ data, participantId }] = message as Array<RealtimeMessage>;
-    if (participantId === userId) return;
+    room.addComponent(realtime as any);
+  };
 
-    const { text, event , author} = data as { text: string; event: string; author: string };
+  const callbackFunctionForWhenTheEventIsDispatched = (message: any) => {
+    const messageData = message[0] as RealtimeMessage;
+    if (messageData.participantId === participantId) return;
 
-    setLastPublishedMessage({ text, event, author });
-  }
+    console.log("Message received", message);
+
+    setLastPublishedMessage(message[0]);
+  };
+
   const subscribeToBasicEvents = () => {
-    realtime.current.subscribe('Discord', updateMessages)
-    realtime.current.subscribe('Slack', updateMessages)
-    realtime.current.subscribe('Linkedin', updateMessages)
+    realtime.current.subscribe("Discord", callbackFunctionForWhenTheEventIsDispatched);
+    realtime.current.subscribe("Slack", callbackFunctionForWhenTheEventIsDispatched);
+    realtime.current.subscribe("Linkedin", callbackFunctionForWhenTheEventIsDispatched);
 
-  subscribedTo.forEach((event) => { realtime.current.unsubscribe(event)})
-    setSubscribedTo(['Discord', 'Slack', 'Linkedin'])
-  }
+    setEventsSubscribed(["Discord", "Slack", "Linkedin"]);
+  };
 
-  useEffect(()=> {
-    (
-      async () => {
-        await initWhoIsOnline(roomId, userId, name, realtime.current);
-      }
-    )(
-    )
-  }, [])
+  useEffect(() => {
+    (async () => {
+      await InitSuperVizRoom(roomId, name, realtime.current);
+    })();
+  }, []);
 
-  const subscribeToEvent = ()=> {
-    const event = subscribeTo.current?.value;
+  const subscribeToEvent = () => {
+    const eventName = subscribeTo.current?.value;
 
-    if (!event || subscribedTo.includes(event)) return;
+    if (!eventName || eventsSubscribed.includes(eventName)) return;
 
-    if (subscribedTo.length === 3) {
-      realtime.current.unsubscribe(subscribedTo[0]);
-    }
+    if (eventsSubscribed.length === 3) realtime.current.unsubscribe(eventsSubscribed[0]);
 
-    realtime.current.subscribe(subscribeTo.current.value, updateMessages);
+    realtime.current.subscribe(subscribeTo.current.value, callbackFunctionForWhenTheEventIsDispatched);
 
-    setSubscribedTo((prev) => [...prev.slice(-2), event]);
-    subscribeTo.current.value = '';
-  }
+    setEventsSubscribed((prev) => [...prev.slice(-2), eventName]);
+    subscribeTo.current.value = "";
+  };
 
-  const unsubscribeFromEvent = ()=> {
-    const event = unsubscribeFrom.current?.value;
+  const unsubscribeFromEvent = () => {
+    const eventName = subscribeTo.current?.value;
 
-    if (!event || !subscribedTo.includes(event)) return;
-    realtime.current.unsubscribe(unsubscribeFrom.current.value);
-    setSubscribedTo((prev) => prev.filter((message) => message !== event));
-    unsubscribeFrom.current.value = '';
-  }
+    if (!eventName || !eventsSubscribed.includes(eventName)) return;
+
+    realtime.current.unsubscribe(subscribeTo.current.value);
+
+    setEventsSubscribed((prev) => prev.filter((message) => message !== eventName));
+    subscribeTo.current.value = "";
+  };
 
   const publishEvent = () => {
-    const event = publishTo.current?.value;
-    const text = message.current?.value;
-    if (!event || !text) return;
-    
-    realtime.current.publish(event, { text, event, author: name });
-  }
-  
+    const eventName = publishTo.current?.value;
+    const messageToPublish = message.current?.value;
+    if (!eventName || !messageToPublish) return;
+
+    realtime.current.publish(eventName, messageToPublish);
+  };
+
   return (
     <section>
       <h1>{name}</h1>
-      <div id={containerId} className="container">
-        <button onClick={subscribeToBasicEvents}>Subscribe to basic events</button>
-        <div>
-          <button onClick={subscribeToEvent}>Subscribe to:</button>
-          <input placeholder="Type the event name" ref={subscribeTo}/>
+      <div className="events-info">
+        <div className="container">
+          <h2>Subscription Manager</h2>
+          <input placeholder="Event name" ref={subscribeTo} />
+          <div className="subscribe-options">
+            <button onClick={subscribeToEvent}>Subscribe</button>
+            <button onClick={unsubscribeFromEvent}>Unsubscribe</button>
+          </div>
+          <button onClick={subscribeToBasicEvents}>Subscribe to basic events</button>
         </div>
-        <div>
-          <button onClick={unsubscribeFromEvent}>Unsubscribe from:</button>
-          <input placeholder="Type the event name" ref={unsubscribeFrom}/>
-        </div>
-        <div>
-          <button onClick={publishEvent}>Publish:</button>
-          <input placeholder="Type the message" ref={message}/>
-          <h2>To:</h2>
-          <input ref={publishTo} placeholder="Type the event name"/>
-        </div>
-        {subscribedTo.length > 0 && <div className="subscriptions">
-          <h2>Subscribed to:</h2>
-          <div>
-            {subscribedTo.map((message, index) => {
-              return (
-                <span key={index} className="subscription">
-                  {message}
-                </span>
-              )
+
+        {eventsSubscribed.length > 0 && (
+          <div className="container">
+            <h2>Subscribed to:</h2>
+            {eventsSubscribed.map((message, index) => {
+              return <code key={index}>{message}</code>;
             })}
           </div>
-        </div>}
-        {lastPublishedMessage && <div className="last-message">
-          <span>
-            <h2>Last message:</h2>
-            <p>{lastPublishedMessage?.text}</p>
-          </span>
-          <span>
-            <h2>Published via:</h2>
-            <p>{lastPublishedMessage?.event}</p>
-          </span>
-          <span>
-            <h2>Published by:</h2>
-            <p>{lastPublishedMessage?.author}</p>
-          </span>
-        </div>}
+        )}
       </div>
+
+      <hr />
+
+      <div className="container">
+        <h2>Publising events</h2>
+        <div className="subscribe-options">
+          <input placeholder="Event message" ref={message} />
+          <input placeholder="Event name" ref={publishTo} />
+          <button onClick={publishEvent}>Publish</button>
+        </div>
+      </div>
+
+      {lastPublishedMessage && (
+        <div className="last-message container">
+          <p>
+            <strong>Last message:</strong> <span>{lastPublishedMessage?.data?.toString()}</span>
+          </p>
+          <p>
+            <strong>Published via:</strong> <span>{lastPublishedMessage?.name}</span>
+          </p>
+          <p>
+            <strong>Published by:</strong> <span>{lastPublishedMessage?.participantId}</span>
+          </p>
+        </div>
+      )}
     </section>
   );
 }
