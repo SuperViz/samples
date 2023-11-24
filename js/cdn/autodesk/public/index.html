@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presence 3D for Autodesk Viewer with CDN | SuperViz SDK</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Autodesk Viewer -->
+    <link
+      rel="stylesheet"
+      href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
+      type="text/css"
+    />
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+
+    <!-- SuperViz SDK -->
+    <script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>
+    <script type="module" src="https://unpkg.com/@superviz/autodesk-viewer-plugin@latest"></script>
+
+    <!-- Main script, after SDK -->
+    <script type="module" src="./scripts/main.js"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <section>
+      <h1>View from "Zeus" participant</h1>
+      <div id="zeus-participant"></div>
+    </section>
+    <section>
+      <h1>View from "Hera" participant</h1>
+      <div id="hera-participant"></div>
+    </section>
+  </body>
+</html>
