@@ -1,5 +1,4 @@
 import SuperVizRoom from "@superviz/sdk";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types";
 import { MousePointers } from "@superviz/sdk/lib/components";
 
 import { useRef } from "react";
