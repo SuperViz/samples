@@ -1,9 +1,9 @@
 {
-  "name": "sv-sample-room-react-js-who-is-online",
+  "name": "sv-sample-room-react-js-video-conference",
   "version": "1.0.0",
   "description": "Sample Room for Video Conference (React/JS)",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
