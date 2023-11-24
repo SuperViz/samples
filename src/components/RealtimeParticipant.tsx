@@ -6,7 +6,7 @@ const groupId = "sv-sample-room-react-ts-who-is-online";
 const groupName = "Sample Room for Who-is-Online (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
-const initWhoIsOnline = async (roomId: string, userId: string, name: string, realtime: any) => {
+const initWhoIsOnline = async (roomId: string, userId: string, name: string, realtime: Realtime) => {
   const room = await SuperVizRoom(DEVELOPER_KEY, {
     roomId: roomId,
     group: {
