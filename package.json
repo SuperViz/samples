@@ -1,7 +1,7 @@
 {
   "name": "sv-sample-room-react-js-matterport",
   "version": "1.0.0",
-  "description": "Sample Room for Matterport (React/JS)",
+  "description": "Sample Room for Presence3D for Matterport (React/JS)",
   "type": "module",
   "scripts": {
     "start": "vite",
