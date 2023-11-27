@@ -1,0 +1,22 @@
+{
+  "name": "sv-sample-room-react-js-contextual-comments",
+  "version": "1.0.0",
+  "description": "Sample Room for Autodesk with Contextual Comments (React/JS)",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@superviz/autodesk-viewer-plugin": "^1.8.0",
+    "@superviz/sdk": "^5.1.0",
+    "forge-apis": "^0.9.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0"
+  }
+}
