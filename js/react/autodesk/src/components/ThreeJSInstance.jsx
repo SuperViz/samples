@@ -1,7 +1,6 @@
 import SuperVizRoom from "@superviz/sdk";
 import { Presence3D } from "@superviz/autodesk-viewer-plugin";  
 import { useEffect, useRef } from "react";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types.js";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-cdn-js-presence3d-autodesk-viewer";
@@ -15,12 +14,11 @@ const AutodeskData = {
   scope: "data:read bucket:read",
 };
 
-function InitParticipantAutodesk(participantName: string, roomId: string) {
+function InitParticipantAutodesk(participantName, roomId) {
   const participantId = participantName.toLowerCase();
   const contentSection = document.getElementById(participantId + "-participant");
 
-  const GuiViewer3D = window.Autodesk.Viewing.GuiViewer3D;
-  let viewer: typeof GuiViewer3D = null;
+  let viewer = null;
 
   fetch(AUTH_URL, {
     method: "POST",
@@ -51,11 +49,11 @@ function InitParticipantAutodesk(participantName: string, roomId: string) {
         viewer.setOptimizeNavigation(true);
         viewer.setProgressiveRendering(true);
 
-        window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, (error: string)=> console.error(error));
+        window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, (error)=> console.error(error));
       });
     });
 
-  function onDocumentLoadSuccess(doc: any) {
+  function onDocumentLoadSuccess(doc) {
     const viewable = doc.getRoot().getDefaultGeometry();
     if (viewable) {
       viewer
@@ -65,14 +63,14 @@ function InitParticipantAutodesk(participantName: string, roomId: string) {
         .then(() => {
           InitSuperVizRoomWithAutodesk(viewer, participantName, participantId, roomId);
         })
-        .catch((error: string) => {
+        .catch((error) => {
           console.error(`Error loading forge model: ${error}`);
         });
     }
   }
 }
 
-async function InitSuperVizRoomWithAutodesk(viewer: any, participant: string, participantId: string, roomId: string) {
+async function InitSuperVizRoomWithAutodesk(viewer, participant, participantId, roomId) {
   // This line is only for demonstration purpose. You can use any avatar you want.
   const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
 
@@ -90,7 +88,7 @@ async function InitSuperVizRoomWithAutodesk(viewer: any, participant: string, pa
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
       },
     },
-    environment: "dev" as EnvironmentTypes,
+    environment: "dev",
   });
 
   const autodeskPresence = new Presence3D(viewer, {
@@ -104,11 +102,11 @@ async function InitSuperVizRoomWithAutodesk(viewer: any, participant: string, pa
     },
   });
 
-  room.addComponent(autodeskPresence as any);
+  room.addComponent(autodeskPresence);
 }
 
 
-export default function WhoIsOnlineContainer({ name, roomId }: { name: string; roomId: string }) {
+export default function WhoIsOnlineContainer({ name, roomId }) {
   const loaded = useRef(false);
 
   useEffect(()=> {
