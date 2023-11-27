@@ -1,6 +1,6 @@
 import SuperVizRoom from "@superviz/sdk";
 import { Presence3D } from "@superviz/matterport-plugin";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const groupId = "sv-sample-room-react-ts-who-is-online";
 const groupName = "Sample Room for Who-is-Online (React/TS)";
@@ -45,19 +45,23 @@ export default function MatterportInstance({ name, roomId, avatar }: { name: str
   const containerId = name + "-container";
   const userId = name.toLowerCase();
   const ref = useRef<any>(null)
-  
-  const onLoad = async ()=> {
+  const [disableButton, setDisableButton] = useState(false);
+
+  const enter = async ()=> {
     const showcaseWindow = ref.current.contentWindow;
 
     if(!showcaseWindow) return;
-  
-    const mpSdk = await showcaseWindow.MP_SDK.connect(showcaseWindow);
-    initMatterport(roomId, userId, name, mpSdk, roomId);
+    const mpSdk = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);    
+    initMatterport(roomId, userId, name, avatar, mpSdk);
+    setDisableButton(true);
   }
-  
+
   return (
+    <>
     <section>
-      <iframe ref={ref} id={containerId} onLoad={onLoad} src={`/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}/>
+      <button onClick={enter} disabled={disableButton}>Join Matterport room as "{name}"</button>
+      <iframe ref={ref} id={containerId} src={`/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}/>
     </section>
+    </>
   );
 }

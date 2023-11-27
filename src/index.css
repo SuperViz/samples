@@ -7,7 +7,9 @@ body {
 
 #root {
   width: 100%;
-  padding: 2rem;
+  overflow-y: scroll;
+  margin: min(5%, 1rem);
+  overflow-x: hidden;
 }
 
 main {
@@ -15,10 +17,17 @@ main {
   height: 100%;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
+
 section {
-  width: calc(50% - 1rem);
-  height: 100%;
+  flex: 1;
+  flex-basis: 330px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  height: max(100%, 500px);
 }
 
 section:first-of-type {
@@ -36,6 +45,34 @@ h1 {
 iframe {
   background-color: #c9c4d1;
   width: 100%;
-  height: calc(100% - 3.3125rem);
+  height: 100%;
   border-radius: 6px;
+}
+
+button {
+  all: unset;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 1rem;
+  height: 2rem;
+  color: #efefef;
+  text-align: center;
+  background-color: #6210cc;
+  cursor: pointer;
+  transition: 0.15s all ease-in;
+}
+
+button:hover {
+  background-color: #baa9ff;
+  color: #39363e;
+}
+
+
+button:disabled {
+  background-color: #c9c4d1;
+  color: #39363e;
+  cursor: not-allowed;
 }
