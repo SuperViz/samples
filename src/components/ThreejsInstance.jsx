@@ -8,8 +8,8 @@ import { OrbitControls } from "../../vendor/threejs/examples/jsm/controls/OrbitC
 import { GLTFLoader } from "../../vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
 import { useEffect, useRef, useState } from "react";
 
-const groupId = "sv-sample-room-react-js-threejs-contextual-comments";
-const groupName = "Sample Room for ThreeJS with Contextual Comments (React/JS)";
+const groupId = "sv-sample-room-react-js-contextual-comments-threejs";
+const groupName = "Sample Room with Contextual Comments for ThreeJS (React/JS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
 export default function ThreeJSInstance({ name, roomId, toggle, position }) {
