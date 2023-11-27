@@ -14,7 +14,6 @@ interface Props {
 
 export default function CommentsInstance({ name, position, toggle }: Props) {
   const [room, setRoom] = useState<LauncherFacade>()
-  const [comments, setComments] = useState<Comments>()
   
   const loaded = useRef<boolean>(false);
 
