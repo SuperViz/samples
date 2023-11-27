@@ -17,22 +17,18 @@ const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
 interface Props {
   name: string;
-  roomId: string;
-  position: "left" | "right";
   toggle: () => void;
 }
 
-export default function ThreeJSContainer({ name, toggle, position }: Props) {
-  const userId = name.toLowerCase();
-  const containerId = userId + "-participant";
+export default function ThreeJSContainer({ name, toggle }: Props) {
+  const participantId = name.toLowerCase();
+  const containerId = participantId + "-participant";
   const ref = useRef<any>(null);
   const [room, setRoom] = useState<LauncherFacade>();
   const loaded = useRef(false);
 
   function InitParticipantThreeJS() {
-    const participantId = name.toLowerCase();
-
-    const container = document.getElementById(participantId + "-participant") as HTMLElement;
+    const container = document.getElementById(containerId) as HTMLElement;
     const width = container.clientWidth;
     const height = container.clientHeight;
 
@@ -100,12 +96,10 @@ export default function ThreeJSContainer({ name, toggle, position }: Props) {
       environment: "dev" as EnvironmentTypes,
     });
 
-    const oppositeSide = position == "left" ? "right" : "left";
-
     const pinAdapter = new ThreeJsPin(scene, renderer, camera);
     const comments = new Comments(pinAdapter, {
-      buttonLocation: `top-${position}`,
-      position: oppositeSide,
+      buttonLocation: `top-left`,
+      position: "left",
     });
 
     room.addComponent(comments);
@@ -130,12 +124,8 @@ export default function ThreeJSContainer({ name, toggle, position }: Props) {
   return (
     <>
       <button onClick={destroy}>Change participant</button>
-      <section>
-        <h1>View from "{name}" participant</h1>
-        <span className={position}>
-          <canvas id={containerId} ref={ref} />
-        </span>
-      </section>
+      <h1>View from "{name}" participant</h1>
+      <canvas id={containerId} ref={ref} />
     </>
   );
 }

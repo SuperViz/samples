@@ -11,8 +11,8 @@ function App() {
   // We are initializing multiple rooms for demo purposes.
   return (
     <main>
-      {showZeus && <ThreeJSContainer name="Zeus" position="left" toggle={toggle} />}
-      {!showZeus && <ThreeJSContainer name="Hera" position="right" toggle={toggle} />}
+      {showZeus && <ThreeJSContainer name="Zeus" toggle={toggle} />}
+      {!showZeus && <ThreeJSContainer name="Hera" toggle={toggle} />}
     </main>
   );
 }
