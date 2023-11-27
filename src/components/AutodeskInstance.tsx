@@ -108,7 +108,7 @@ async function InitSuperVizRoomWithAutodesk(viewer: any, participant: string, pa
 }
 
 
-export default function WhoIsOnlineContainer({ name, roomId }: { name: string; roomId: string }) {
+export default function AutodeskInstance({ name, roomId }: { name: string; roomId: string }) {
   const loaded = useRef(false);
 
   useEffect(()=> {
