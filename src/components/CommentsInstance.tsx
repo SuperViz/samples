@@ -44,7 +44,7 @@ export default function CommentsInstance({ name, position, toggle }: Props) {
       loaded.current = true;
     
       ( async () => { 
-          await initComments(room, "sv-sample-room-react-ts-mouse-pointers", name.toLowerCase(), name, position);
+          await initComments(room, "sv-sample-room-react-ts-contextual-comments", name.toLowerCase(), name, position);
         }
       )()
     }, [])
