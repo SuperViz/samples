@@ -36,7 +36,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Presence3D for Matteport             | [Link](/js/cdn/matterport/)                     | 🔄️     | [Link](/js/react/matterport/)                     | 🔄️ | 🔄️       |
 | Presence3D for ThreeJS               | [Link](/js/cdn/threejs/)                        | 🔄️     | [Link](/ts/react/threejs/)                        | 🔄️ | 🔄️       |
 | Contextual Comments with HTML Canvas | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | [Link](/js/react/contextual-comments-html/)       | 🔄️ | 🔄️       |
-| Contextual Comments with AutoDesk    | 🔄️                                              | 🔄️     | 🔄️                                                | 🔄️ | 🔄️       |
+| Contextual Comments with AutoDesk    | 🔄️                                              | 🔄️     | [Link](/js/react/contextual-comments-autodesk/)   | 🔄️ | 🔄️       |
 | Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | [Link](/js/react/contextual-comments-matterport/) | 🔄️ | 🔄️       |
 | Contextual Comments with ThreeJS     | [Link](/js/cdn/contextual-comments-threejs/)    | 🔄️     | [Link](/js/react/contextual-comments-threejs/)    | 🔄️ | 🔄️       |
 | Video Conference                     | 🔄️                                              | 🔄️     | [Link](/js/react/video-conference/)               | 🔄️ | 🔄️       |
@@ -52,7 +52,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Presence for Matteport               | 🔄️ | 🔄️     | [Link](/ts/react/matterport/)                     | 🔄️  | 🔄️     |
 | Presence for ThreeJS                 | 🔄️ | 🔄️     | [Link](/ts/react/threejs/)                        | 🔄️  | 🔄️     |
 | Contextual Comments with HTML Canvas | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-html/)       | 🔄️  | 🔄️     |
-| Contextual Comments with AutoDesk    | 🔄️ | 🔄️     | 🔄️                                                | 🔄️  | 🔄️     |
+| Contextual Comments with AutoDesk    | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-autodesk/)   | 🔄️  | 🔄️     |
 | Contextual Comments with Matteport   | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-matterport/) | 🔄️  | 🔄️     |
 | Contextual Comments with ThreeJS     | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-threejs/)    | 🔄️  | 🔄️     |
 | Video Conference                     | 🔄️ | 🔄️     | [Link](/ts/react/video-conference/)               | 🔄️  | 🔄️     |
