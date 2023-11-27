@@ -1,0 +1,25 @@
+{
+  "name": "sv-sample-room-react-ts-comments-matterport",
+  "version": "1.0.0",
+  "description": "Sample Room for Matterport with Contextual Comments (React/TS)",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@superviz/matterport-plugin": "^0.11.0",
+    "@superviz/sdk": "^5.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/uuid": "^9.0.7",
+    "@vitejs/plugin-react": "^4.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}
