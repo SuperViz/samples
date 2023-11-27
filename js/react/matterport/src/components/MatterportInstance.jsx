@@ -8,7 +8,7 @@ const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
 const modelId = "LmRnZAsWoxy";
 
-const initMatterport = async (roomId: string, userId: string, name: string, avatar: string, mpSdk: any) => {
+const initMatterport = async (roomId, userId, name, avatar, mpSdk) => {
   const room = await SuperVizRoom(DEVELOPER_KEY, {
     roomId: roomId,
     group: {
@@ -23,7 +23,7 @@ const initMatterport = async (roomId: string, userId: string, name: string, avat
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatar}.glb`,
       }
     },
-    environment: "dev" as any,
+    environment: "dev",
   });
 
   const matterportPresence = new Presence3D(mpSdk, {
@@ -37,14 +37,14 @@ const initMatterport = async (roomId: string, userId: string, name: string, avat
     },
   });
 
-  room.addComponent(matterportPresence as any)
+  room.addComponent(matterportPresence)
 
 };
 
-export default function MatterportInstance({ name, roomId, avatar }: { name: string; roomId: string, avatar: string }) {
+export default function MatterportInstance({ name, roomId, avatar }) {
   const containerId = name + "-container";
   const userId = name.toLowerCase();
-  const ref = useRef<any>(null)
+  const ref = useRef(null)
   const [disableButton, setDisableButton] = useState(false);
 
   const enter = async ()=> {
