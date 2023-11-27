@@ -3,7 +3,7 @@ import { Comments } from "@superviz/sdk/lib/components";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-js-contextual-comments-autodesk";
-const groupName = "Sample Room for Autodesk with Contextual Comments (React/JS)";
+const groupName = "Sample Room with Contextual Comments for Autodesk  (React/JS)";
 
 export default async function initSuperVizRoomWithAutodesk({
   pinAdapter,

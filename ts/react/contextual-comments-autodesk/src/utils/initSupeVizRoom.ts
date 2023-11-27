@@ -14,7 +14,7 @@ interface Parameters {
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-ts-contextual-comments-autodesk";
-const groupName = "Sample Room for Autodesk with Contextual Comments (React/TS)";
+const groupName = "Sample Room with Contextual Comments for Autodesk  (React/TS)";
 
 export default async function initSuperVizRoomWithAutodesk({
   pinAdapter,

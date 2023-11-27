@@ -6,7 +6,7 @@ import { GLTFLoader } from "/vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
 
 const roomId = "AAd689fe-03b0-442f-ba5e-fb0bbd39d983";
 const groupId = "sv-sample-room-cdn-js-contextual-comments-threejs";
-const groupName = "Sample Room for Contextual Comments for ThreeJS (CDN/JS)";
+const groupName = "Sample Room for Contextual Comments with ThreeJS (CDN/JS)";
 
 document.addEventListener("DOMContentLoaded", function () {
   InitParticipantThreeJS("Hera");
