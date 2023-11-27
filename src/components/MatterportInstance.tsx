@@ -83,16 +83,14 @@ export default function MatterportInstance({ name, roomId, avatar, position, tog
       <button disabled={!loaded} onClick={destroy}>
         Change participant
       </button>
-      <section>
-        <h1>View from "{name}" participant</h1>
-        <iframe
-          onLoad={enter}
-          className={name.toLowerCase()}
-          ref={ref}
-          id={containerId}
-          src={`/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
-        />
-      </section>
+      <h1>View from "{name}" participant</h1>
+      <iframe
+        onLoad={enter}
+        className={name.toLowerCase()}
+        ref={ref}
+        id={containerId}
+        src={`/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
+      />
     </>
   );
 }
