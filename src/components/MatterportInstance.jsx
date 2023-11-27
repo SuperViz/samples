@@ -4,7 +4,7 @@ import { MatterportPin } from "@superviz/matterport-plugin";
 import { useRef, useState } from "react";
 
 const groupId = "sv-sample-room-react-js-contextual-comments-matterport";
-const groupName = "Sample Room for Matterport with Contextual Comments (React/JS)";
+const groupName = "Sample Room with Contextual Comments for Matterport (React/JS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
 const modelId = "LmRnZAsWoxy";
