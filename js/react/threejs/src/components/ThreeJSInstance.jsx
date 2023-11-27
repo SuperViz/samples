@@ -8,7 +8,7 @@ import { GLTFLoader } from "../../vendor/threejs/examples/jsm/loaders/GLTFLoader
 import { useEffect, useRef } from "react";
 
 const groupId = "sv-sample-room-react-ts-presence3d-three-js";
-const groupName = "Sample Room for Presence3D for ThreeJS (React/TS)";
+const groupName = "Sample Room for Presence3D for ThreeJS (React/JS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
 function InitParticipantThreeJS(participantName, roomId) {
@@ -57,7 +57,7 @@ function InitParticipantThreeJS(participantName, roomId) {
   animate();
 }
 
-async function InitSuperVizRoomWithThreeJS(scene,camera, participant, roomId) {
+async function InitSuperVizRoomWithThreeJS(scene, camera, participant, roomId) {
   // This line is only for demonstration purpose. You can use any avatar you want.
   const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
 

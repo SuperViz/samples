@@ -1,11 +1,11 @@
 import SuperVizRoom from "@superviz/sdk";
-import { Presence3D } from "@superviz/autodesk-viewer-plugin";  
+import { Presence3D } from "@superviz/autodesk-viewer-plugin";
 import { useEffect, useRef } from "react";
 import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types.js";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const groupId = "sv-sample-room-cdn-js-presence3d-autodesk-viewer";
-const groupName = "Sample Room for Presence3D for Autodesk viewer (CDN/JS)";
+const groupId = "sv-sample-room-react-ts-autodesk";
+const groupName = "Sample Room for Presence3D for Autodesk (React/TS)";
 const AUTH_URL = "https://developer.api.autodesk.com/authentication/v1/authenticate";
 const modelURN = "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
 const AutodeskData = {
@@ -51,7 +51,9 @@ function InitParticipantAutodesk(participantName: string, roomId: string) {
         viewer.setOptimizeNavigation(true);
         viewer.setProgressiveRendering(true);
 
-        window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, (error: string)=> console.error(error));
+        window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, (error: string) =>
+          console.error(error)
+        );
       });
     });
 
@@ -107,20 +109,18 @@ async function InitSuperVizRoomWithAutodesk(viewer: any, participant: string, pa
   room.addComponent(autodeskPresence as any);
 }
 
-
 export default function AutodeskInstance({ name, roomId }: { name: string; roomId: string }) {
   const loaded = useRef(false);
 
-  useEffect(()=> {
+  useEffect(() => {
     if (loaded.current) return;
     loaded.current = true;
     InitParticipantAutodesk(name, roomId);
-
-  }, [loaded])
+  }, [loaded]);
 
   return (
     <section>
-      <h1>View from "{name}" participant</h1> 
+      <h1>View from "{name}" participant</h1>
       <div id={`${name.toLowerCase()}-participant`}></div>
     </section>
   );

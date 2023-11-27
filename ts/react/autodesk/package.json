@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-threejs",
+  "name": "sv-sample-room-react-ts-autodesk",
   "version": "1.0.0",
-  "description": "Sample Room for Threejs (React/TS)",
+  "description": "Sample Room for Presence3D for Autodesk (React/TS)",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
@@ -10,13 +10,10 @@
   "dependencies": {
     "@superviz/autodesk-viewer-plugin": "^1.8.0",
     "@superviz/sdk": "^5.1.0",
-    "@superviz/threejs-plugin": "^0.15.0",
     "@types/forge-apis": "^0.9.6",
-    "@types/three": "^0.158.3",
     "forge-apis": "^0.9.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "three": "^0.158.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
