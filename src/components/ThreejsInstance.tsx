@@ -7,50 +7,49 @@ import { RoomEnvironment } from "../../vendor/threejs/examples/jsm/environments/
 import { OrbitControls } from "../../vendor/threejs/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "../../vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
 import { useEffect, useRef, useState } from "react";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types.js";
 
-const groupId = "sv-sample-room-react-ts-presence3d-three-js";
-const groupName = "Sample Room for Presence3D for ThreeJS (React/TS)";
+const groupId = "sv-sample-room-react-ts-contextual-comments-threejs";
+const groupName = "Sample Room with Contextual Comments for ThreeJS (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
-interface Props { 
-  name: string; 
-  roomId: string; 
+interface Props {
+  name: string;
+  roomId: string;
   position: "left" | "right";
-  toggle: ()=> void 
+  toggle: () => void;
 }
 
 export default function WhoIsOnlineContainer({ name, roomId, toggle, position }: Props) {
   const userId = name.toLowerCase();
   const containerId = userId + "-participant";
   const ref = useRef<any>(null);
-  const [room, setRoom] = useState<LauncherFacade>()
+  const [room, setRoom] = useState<LauncherFacade>();
   const loaded = useRef(false);
 
   function InitParticipantThreeJS() {
     const participantId = name.toLowerCase();
-  
+
     const container = document.getElementById(participantId + "-participant") as HTMLElement;
     const width = container.clientWidth;
     const height = container.clientHeight;
-  
+
     const renderer = new THREE.WebGLRenderer({ canvas: container, antialias: true });
     // renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.setSize(width, height);
-  
+
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0xb6b7b8);
     scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 300);
     camera.position.set(2, 0, 2);
-  
+
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.target.set(0, 0.5, 0);
     controls.update();
     controls.enablePan = false;
     controls.enableDamping = true;
-  
+
     const loader = new GLTFLoader();
     loader.load(
       "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb",
@@ -60,23 +59,27 @@ export default function WhoIsOnlineContainer({ name, roomId, toggle, position }:
         animate();
       },
       undefined,
-      (e: any)=> console.error(e)
+      (e: any) => console.error(e)
     );
-  
+
     const animate = () => {
       requestAnimationFrame(animate);
       controls.update();
-  
+
       renderer.render(scene, camera);
     };
-  
+
     animate();
   }
-  
-  async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.PerspectiveCamera, renderer: THREE.WebGLRenderer) {
+
+  async function InitSuperVizRoomWithThreeJS(
+    scene: THREE.Scene,
+    camera: THREE.PerspectiveCamera,
+    renderer: THREE.WebGLRenderer
+  ) {
     // This line is only for demonstration purpose. You can use any avatar you want.
     const avatarImageForParticipant = name == "Hera" ? "2" : "5";
-  
+
     const room = await SuperVizRoom(DEVELOPER_KEY, {
       roomId: roomId,
       group: {
@@ -93,36 +96,35 @@ export default function WhoIsOnlineContainer({ name, roomId, toggle, position }:
       },
       environment: "dev" as EnvironmentTypes,
     });
-  
+
     const oppositeSide = position == "left" ? "right" : "left";
 
     const pinAdapter = new ThreeJsPin(scene, renderer, camera);
     const comments = new Comments(pinAdapter, {
       buttonLocation: `top-${position}`,
-      position: oppositeSide
+      position: oppositeSide,
     });
-  
+
     room.addComponent(comments);
-    setRoom(room)
+    setRoom(room);
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     if (loaded.current) return;
     loaded.current = true;
-  
-    ( async () => { 
-        await InitParticipantThreeJS();
-      }
-    )()
-  }, [])
+
+    (async () => {
+      await InitParticipantThreeJS();
+    })();
+  }, []);
 
   const destroy = () => {
     if (room) {
-      room.destroy()
-      toggle()
+      room.destroy();
+      toggle();
     }
-  }
-  return(
+  };
+  return (
     <>
       <button onClick={destroy}>Change participant</button>
       <section>
