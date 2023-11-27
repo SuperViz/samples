@@ -32,7 +32,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | ------------------------------------ | ----------------------------------------------- | ------- | ------------------------------------------------ | --- | ------- |
 | Mouse Pointer                        | [Link](/js/cdn/mouse-pointers/)                 | 🔄️     | [Link](/js/react/mouse-pointers/)                 | 🔄️ | 🔄️       |
 | Real-time Data Engine                | 🔄️                                              | 🔄️     | [Link](/js/react/real-time-data-engine/)          | 🔄️ | 🔄️       |
-| Presence3D for AutoDesk              | [Link](/js/cdn/autodesk/)                       | 🔄️     | 🔄️                                                | 🔄️ | 🔄️       |
+| Presence3D for AutoDesk              | [Link](/js/cdn/autodesk/)                       | 🔄️     | [Link](/js/react/autodesk/)                       | 🔄️ | 🔄️       |
 | Presence3D for Matteport             | [Link](/js/cdn/matterport/)                     | 🔄️     | [Link](/js/react/matterport/)                     | 🔄️ | 🔄️       |
 | Presence3D for ThreeJS               | [Link](/js/cdn/threejs/)                        | 🔄️     | [Link](/ts/react/threejs/)                        | 🔄️ | 🔄️       |
 | Contextual Comments with HTML Canvas | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | [Link](/js/react/contextual-comments-html/)       | 🔄️ | 🔄️       |
@@ -48,7 +48,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | ------------------------------------ | --- | ------- | ----------------------------------------------- | --- | ------- |
 | Mouse Pointer                        | 🔄️ | 🔄️     | [Link](/ts/react/mouse-pointers/)                 | 🔄️  | 🔄️     |
 | Real-time Data Engine                | 🔄️ | 🔄️     | [Link](/ts/react/real-time-data-engine/)          | 🔄️  | 🔄️     |
-| Presence for AutoDesk                | 🔄️ | 🔄️     | 🔄️                                                | 🔄️  | 🔄️     |
+| Presence for AutoDesk                | 🔄️ | 🔄️     | [Link](/ts/react/autodesk/)                       | 🔄️  | 🔄️     |
 | Presence for Matteport               | 🔄️ | 🔄️     | [Link](/ts/react/matterport/)                     | 🔄️  | 🔄️     |
 | Presence for ThreeJS                 | 🔄️ | 🔄️     | [Link](/ts/react/threejs/)                        | 🔄️  | 🔄️     |
 | Contextual Comments with HTML Canvas | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-html/)       | 🔄️  | 🔄️     |
