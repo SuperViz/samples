@@ -7,10 +7,10 @@ function App() {
 
   // We are initializing multiple rooms for demo purposes.
   return (
-    <main>
-      <ThreejsInstance name="Zeus" roomId={roomId} />
-      <ThreejsInstance name="Hera" roomId={roomId} />
-    </main>
+      <>
+        <ThreejsInstance name="Zeus" roomId={roomId} />
+        <ThreejsInstance name="Hera" roomId={roomId} />
+      </>
   );
 }
 

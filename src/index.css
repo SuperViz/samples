@@ -1,25 +1,15 @@
-body {
+#root {
   background: #e9e5ef;
   margin: 0;
   display: flex;
   flex-direction: row;
-}
-
-main {
-  display: flex;
-  width: 100%;
-  gap: 10rem;
-  background-color: red;
-}
-
-#root {
-  padding: 1rem;
-  width: 100%;
+  overflow-y: scroll;
 }
 
 section {
-  width: 100%;
+  width: calc(50% - 1rem);
   height: 100%;
+  margin: 1rem;
 }
 
 section:first-of-type {
@@ -34,9 +24,11 @@ h1 {
   text-align: center;
 }
 
-canvas{
-  background-color: #c9c4d1;
-  width: 50% !important;
-  height: 50% !important;
+#zeus-participant,
+#hera-participant {
+  position: absolute;
   border-radius: 6px;
+  top: 5rem;
+  width: calc(50% - 2rem);
+  height: calc(100% - 3.3125rem);
 }
