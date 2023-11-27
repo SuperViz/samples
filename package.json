@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-matterport",
+  "name": "sv-sample-room-react-ts-presence3d-matterport",
   "version": "1.0.0",
-  "description": "Sample Room for Matterport (React/TS)",
+  "description": "Sample Room for Presence3D for Matterport (React/TS)",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
