@@ -3,7 +3,6 @@ body {
   margin: 0;
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
 }
 
 main {
@@ -88,7 +87,8 @@ button:hover {
 }
 
 @media screen and (max-width: 550px) {
-  .left, .right {
+  .left,
+  .right {
     align-self: center;
     width: 100% !important;
   }

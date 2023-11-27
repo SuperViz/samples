@@ -1,20 +1,18 @@
-import { useRef, useState } from "react";
-import ThreejsInstance from "./components/ThreejsInstance";
-import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
+import ThreeJSContainer from "./components/ThreejsInstance";
 
 function App() {
-  const roomId = useRef(uuidv4()).current;
-  const [showZeus, setShowZeus] = useState(true)
+  const [showZeus, setShowZeus] = useState(true);
 
   const toggle = () => {
-    setShowZeus(!showZeus)
-  }
+    setShowZeus(!showZeus);
+  };
 
   // We are initializing multiple rooms for demo purposes.
   return (
     <main>
-      { showZeus && <ThreejsInstance name="Zeus" position="left" roomId={roomId} toggle={toggle}/> }
-      { !showZeus && <ThreejsInstance name="Hera" position="right" roomId={roomId} toggle={toggle}/> }
+      {showZeus && <ThreeJSContainer name="Zeus" position="left" toggle={toggle} />}
+      {!showZeus && <ThreeJSContainer name="Hera" position="right" toggle={toggle} />}
     </main>
   );
 }
