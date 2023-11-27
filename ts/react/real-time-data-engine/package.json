@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-who-is-online",
+  "name": "sv-sample-room-react-ts-real-time-data-engine",
   "version": "1.0.0",
-  "description": "Sample Room for Who Is Online (React/TS)",
+  "description": "Sample Room for Real-time Data Engine (React/TS)",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",

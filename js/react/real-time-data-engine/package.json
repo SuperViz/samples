@@ -1,10 +1,10 @@
 {
-  "name": "real-time-engine",
-  "private": true,
-  "version": "0.0.0",
+  "name": "sv-sample-room-react-js-real-time-data-engine",
+  "version": "1.0.0",
+  "description": "Sample Room for Real-time Data Engine (React/JS)",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

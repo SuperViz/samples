@@ -1,16 +1,16 @@
 import SuperVizRoom, { LauncherFacade } from "@superviz/sdk";
 import { ThreeJsPin } from "@superviz/threejs-plugin";
-import { Comments } from "@superviz/sdk/lib/components";
+import { Comments } from "@superviz/sdk/lib/components/index.js";
 
-import * as THREE from "three";
+import * as THREE from "../../node_modules/@types/three/index.js";
 import { RoomEnvironment } from "../../vendor/threejs/examples/jsm/environments/RoomEnvironment.js";
 import { OrbitControls } from "../../vendor/threejs/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "../../vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
 import { useEffect, useRef, useState } from "react";
 import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types.js";
 
-const groupId = "sv-sample-room-react-ts-who-is-online";
-const groupName = "Sample Room for Who-is-Online (React/TS)";
+const groupId = "sv-sample-room-react-ts-presence3d-three-js";
+const groupName = "Sample Room for Presence3D for ThreeJS (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
 interface Props { 

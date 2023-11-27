@@ -1,6 +1,6 @@
 import SuperVizRoom from "@superviz/sdk";
 import { ThreeJsPin } from "@superviz/threejs-plugin";
-import { Comments } from "@superviz/sdk/lib/components";
+import { Comments } from "@superviz/sdk/lib/components/index.js";
 
 import * as THREE from "three";
 import { RoomEnvironment } from "../../vendor/threejs/examples/jsm/environments/RoomEnvironment.js";
@@ -12,7 +12,7 @@ const groupId = "sv-sample-room-react-ts-who-is-online";
 const groupName = "Sample Room for Who-is-Online (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
-export default function WhoIsOnlineContainer({ name, roomId, toggle, position }) {
+export default function ThreeJSInstance({ name, roomId, toggle, position }) {
   const userId = name.toLowerCase();
   const containerId = userId + "-participant";
   const ref = useRef(null);

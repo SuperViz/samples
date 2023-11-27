@@ -1,52 +1,43 @@
-import { useEffect, useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
-import SuperVizRoom, { LauncherFacade } from '@superviz/sdk'
-import { VideoConference } from '@superviz/sdk/lib/components'
-import { EnvironmentTypes } from '@superviz/sdk/lib/common/types/sdk-options.types';
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import SuperVizRoom from "@superviz/sdk";
+import { VideoConference } from "@superviz/sdk/lib/components";
 
-const groupId = "sv-sample-room-react-mouse-pointers";
-const groupName = "Sample Room for Mouse Pointers (React + TS)";
-const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY
-const roomId = uuidv4()
-const name = 'Zeus'
-const userId = name.toLowerCase()
-
-const initVideoConference = (room: LauncherFacade | undefined)=> {
-  const video = new VideoConference()
-  room?.addComponent(video);
-}
+const roomId = uuidv4();
+const groupId = "sv-sample-room-react-ts-video-conference";
+const groupName = "Sample Room for Video Conference (React/TS)";
+const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
 function App() {
-  const [sdkLoaded, setSdkLoaded] = useState(false)
-  const [room, setRoom] = useState<LauncherFacade>()
+  const [isRunning, setIsRunning] = useState(false);
 
-  useEffect(()=> {
-    (
-      async ()=> {
-        const room = await SuperVizRoom(DEVELOPER_KEY, {
-          roomId: roomId,
-          group: {
-            id: groupId,
-            name: groupName,
-          },
-          participant: {
-            id: userId,
-            name: name,
-          },
-          environment: 'dev' as EnvironmentTypes,
-        });
-        
-        setRoom(room);
-        setSdkLoaded(true)
-      }
-    )()
-  }, [])
-  
+  const initSuperVizRoom = async () => {
+    setIsRunning(true);
+    const room = await SuperVizRoom(DEVELOPER_KEY, {
+      roomId: roomId,
+      group: {
+        id: groupId,
+        name: groupName,
+      },
+      participant: {
+        id: "zeus",
+        name: "Zeus",
+      },
+      environment: "dev",
+    });
+
+    const video = new VideoConference({
+      participantType: "host",
+    });
+
+    room.addComponent(video);
+  };
+
   return (
-    <main>
-      <button disabled={!sdkLoaded} onClick={()=>initVideoConference(room)}>Join Video Conference</button>
-    </main>
-  )
+    <button disabled={isRunning} onClick={() => initSuperVizRoom()}>
+      Join Video Conference
+    </button>
+  );
 }
 
-export default App
+export default App;

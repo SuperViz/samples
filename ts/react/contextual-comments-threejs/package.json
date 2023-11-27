@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-js-threejs-contextual-comments",
+  "name": "sv-sample-room-react-ts-presence3d-three-js",
   "version": "1.0.0",
-  "description": "Sample Room for Threejs with Contextual Comments (React/JS)",
+  "description": "Sample Room for Presence3D for ThreeJS (React/TS)",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
