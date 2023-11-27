@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-threejs",
+  "name": "sv-sample-room-react-js-threejs-contextual-comments",
   "version": "1.0.0",
-  "description": "Sample Room for Threejs (React/TS)",
+  "description": "Sample Room for Threejs with Contextual Comments (React/JS)",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
