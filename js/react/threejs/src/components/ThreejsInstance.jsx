@@ -6,17 +6,15 @@ import { RoomEnvironment } from "../../vendor/threejs/examples/jsm/environments/
 import { OrbitControls } from "../../vendor/threejs/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "../../vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
 import { useRef, useState } from "react";
-import { BaseComponent } from "@superviz/sdk/lib/components/base/index.js";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types.js";
 
 const groupId = "sv-sample-room-react-ts-who-is-online";
 const groupName = "Sample Room for Who-is-Online (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
-function InitParticipantThreeJS(participantName: string, roomId: string) {
+function InitParticipantThreeJS(participantName, roomId) {
   const participantId = participantName.toLowerCase();
 
-  const container = document.getElementById(participantId + "-participant") as HTMLElement;
+  const container = document.getElementById(participantId + "-participant");
   const width = container.clientWidth;
   const height = container.clientHeight;
 
@@ -40,13 +38,13 @@ function InitParticipantThreeJS(participantName: string, roomId: string) {
   const loader = new GLTFLoader();
   loader.load(
     "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb",
-    (gltf: { scene: THREE.Object3D }) => {
+    (gltf) => {
       scene.add(gltf.scene);
       InitSuperVizRoomWithThreeJS(scene, camera, participantName, roomId);
       animate();
     },
     undefined,
-    (e: any)=> console.error(e)
+    (e)=> console.error(e)
   );
 
   const animate = () => {
@@ -59,7 +57,7 @@ function InitParticipantThreeJS(participantName: string, roomId: string) {
   animate();
 }
 
-async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.PerspectiveCamera, participant: string, roomId: string) {
+async function InitSuperVizRoomWithThreeJS(scene, camera, participant, roomId) {
   // This line is only for demonstration purpose. You can use any avatar you want.
   const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
 
@@ -77,7 +75,7 @@ async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.Per
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
       },
     },
-    environment: "dev" as EnvironmentTypes,
+    environment: "dev",
   });
 
   const threeJSPresence = new Presence3D(scene, camera, camera, {
@@ -91,14 +89,14 @@ async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.Per
       scale: 1,
       laserOrigin: { x: 0, y: 0, z: 0 },
     },
-  }) as unknown as BaseComponent;
+  });
 
   room.addComponent(threeJSPresence);
 }
-export default function WhoIsOnlineContainer({ name, roomId }: { name: string; roomId: string }) {
+export default function WhoIsOnlineContainer({ name, roomId }) {
   const userId = name.toLowerCase();
   const containerId = userId + "-participant";
-  const ref = useRef<any>(null);
+  const ref = useRef(null);
   const [joined, setJoined] = useState(false);
 
   const enter = ()=> {
