@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 import SuperVizRoom, { LauncherFacade } from "@superviz/sdk";
 import { ThreeJsPin } from "@superviz/threejs-plugin";
 import { Comments } from "@superviz/sdk/lib/components/index.js";
@@ -6,21 +8,19 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
-import { useEffect, useRef, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types";
-
-const roomId = uuidv4();
-const groupId = "sv-sample-room-react-ts-contextual-comments-threejs";
-const groupName = "Sample Room with Contextual Comments for ThreeJS (React/TS)";
-const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
 interface Props {
   name: string;
+  roomId: string;
   toggle: () => void;
 }
 
-export default function ThreeJSContainer({ name, toggle }: Props) {
+export default function ThreeJSContainer({ name, roomId, toggle }: Props) {
+  const groupId = "sv-sample-room-react-ts-contextual-comments-threejs";
+  const groupName = "Sample Room with Contextual Comments for ThreeJS (React/TS)";
+  const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+
   const participantId = name.toLowerCase();
   const containerId = participantId + "-participant";
   const ref = useRef<any>(null);
