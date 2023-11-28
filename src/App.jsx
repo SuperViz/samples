@@ -8,8 +8,8 @@ function App() {
   // We are initializing multiple rooms for demo purposes.
   return (
     <main>
-      <MatterportInstance name="Zeus" roomId={roomId} avatar="5"/>
-      <MatterportInstance name="Hera" roomId={roomId} avatar="2"/>
+      <MatterportInstance name="Zeus" roomId={roomId} />
+      <MatterportInstance name="Hera" roomId={roomId} />
     </main>
   );
 }
