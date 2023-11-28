@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contextual Comments for Matterport with CDN | SuperViz SDK</title>
+    <title>Presence 3D for CDN | SuperViz SDK</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
     <!-- SuperViz SDK -->
@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <iframe src="./zeus.html"></iframe>
-    <iframe src="./hera.html"></iframe>
+    <section>
+      <button id="change-participant">Change participant</button>
+      <h1 id="participant-name"></h1>
+      <iframe frameborder="0" allow="xr-spatial-tracking" id="participant-showcase"> </iframe>
+    </section>
   </body>
 </html>
