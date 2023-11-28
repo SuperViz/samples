@@ -34,7 +34,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Real-time Data Engine                | 🔄️                                              | 🔄️     | [Link](/js/react/real-time-data-engine/)          | 🔄️ | 🔄️       |
 | Presence3D for AutoDesk              | [Link](/js/cdn/autodesk/)                       | 🔄️     | [Link](/js/react/autodesk/)                       | 🔄️ | 🔄️       |
 | Presence3D for Matteport             | [Link](/js/cdn/matterport/)                     | 🔄️     | [Link](/js/react/matterport/)                     | 🔄️ | 🔄️       |
-| Presence3D for ThreeJS               | [Link](/js/cdn/threejs/)                        | 🔄️     | [Link](/ts/react/threejs/)                        | 🔄️ | 🔄️       |
+| Presence3D for ThreeJS               | [Link](/js/cdn/threejs/)                        | 🔄️     | [Link](/js/react/threejs/)                        | 🔄️ | 🔄️       |
 | Contextual Comments with HTML Canvas | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | [Link](/js/react/contextual-comments-html/)       | 🔄️ | 🔄️       |
 | Contextual Comments with AutoDesk    | 🔄️                                              | 🔄️     | [Link](/js/react/contextual-comments-autodesk/)   | 🔄️ | 🔄️       |
 | Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | [Link](/js/react/contextual-comments-matterport/) | 🔄️ | 🔄️       |
