@@ -19,7 +19,6 @@ function changeParticipant() {
   document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
 
   room.destroy();
-
   InitSuperVizRoomWithComments(participantName);
 }
 
