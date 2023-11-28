@@ -7,12 +7,12 @@ const groupId = "sv-sample-room-react-ts-contextual-comments-html";
 const groupName = "Sample Room for Contextual Comments for HTML (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
-export default function CommentsInstance({ name, position, toggle }) {
+export default function CommentsInstance({ name, toggle }) {
   const participantId = name.toLowerCase();
   const loaded = useRef(false);
   const [room, setRoom] = useState();
 
-  const initComments = async (room, position) => {
+  const initSuperVizWithComments = async (room) => {
     room = await SuperVizRoom(DEVELOPER_KEY, {
       roomId: roomId,
       group: {
@@ -27,9 +27,10 @@ export default function CommentsInstance({ name, position, toggle }) {
     });
 
     const pinAdapter = new CanvasPin(`${participantId}-participant`);
-    const comments = new Comments(pinAdapter, { position, buttonLocation: `top-${position}` });
+    const comments = new Comments(pinAdapter, { position: "left", buttonLocation: "top-left" });
 
     room.addComponent(comments);
+
     setRoom(room);
   };
 
@@ -38,7 +39,7 @@ export default function CommentsInstance({ name, position, toggle }) {
     loaded.current = true;
 
     (async () => {
-      await initComments(room, position);
+      await initSuperVizWithComments(room);
     })();
   }, []);
 
@@ -51,10 +52,8 @@ export default function CommentsInstance({ name, position, toggle }) {
   return (
     <>
       <button onClick={destroy}>Change participant</button>
-      <section>
-        <h1>View from "{name}" participant</h1>
-        <canvas id={`${participantId}-participant`} className={participantId}></canvas>
-      </section>
+      <h1>View from "{name}" participant</h1>
+      <canvas id={`${participantId}-participant`} className={participantId}></canvas>
     </>
   );
 }

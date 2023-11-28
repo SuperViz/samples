@@ -1,23 +1,24 @@
 import "./index.css";
 import CommentsInstance from "./components/CommentsInstance";
 import { useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
+  const roomId = useRef(uuidv4()).current;
+
   const [showZeus, setShowZeus] = useState(true);
-  const room1 = useRef();
-  const room2 = useRef();
 
   const toggle = () => {
     setShowZeus(!showZeus);
   };
 
-  const props = {
-    name: showZeus ? "Zeus" : "Hera",
-    position: showZeus ? "right" : "left",
-    room: showZeus ? room1 : room2,
-  };
-
-  return <CommentsInstance {...props} toggle={toggle} key={String(showZeus)} />;
+  // We are initializing multiple rooms for demo purposes.
+  return (
+    <main>
+      {showZeus && <CommentsInstance name="Zeus" toggle={toggle} roomId={roomId} />}
+      {!showZeus && <CommentsInstance name="Hera" toggle={toggle} roomId={roomId} />}
+    </main>
+  );
 }
 
 export default App;
