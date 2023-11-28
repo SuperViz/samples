@@ -1,5 +1,5 @@
 import SuperVizRoom from "@superviz/sdk";
-import { Presence3D } from "@superviz/autodesk-viewer-plugin";  
+import { Presence3D } from "@superviz/autodesk-viewer-plugin";
 import { useEffect, useRef } from "react";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
@@ -49,7 +49,7 @@ function InitParticipantAutodesk(participantName, roomId) {
         viewer.setOptimizeNavigation(true);
         viewer.setProgressiveRendering(true);
 
-        window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, (error)=> console.error(error));
+        window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, (error) => console.error(error));
       });
     });
 
@@ -105,20 +105,18 @@ async function InitSuperVizRoomWithAutodesk(viewer, participant, participantId, 
   room.addComponent(autodeskPresence);
 }
 
-
-export default function WhoIsOnlineContainer({ name, roomId }) {
+export default function Container({ name, roomId }) {
   const loaded = useRef(false);
 
-  useEffect(()=> {
+  useEffect(() => {
     if (loaded.current) return;
     loaded.current = true;
     InitParticipantAutodesk(name, roomId);
-
-  }, [loaded])
+  }, [loaded]);
 
   return (
     <section>
-      <h1>View from "{name}" participant</h1> 
+      <h1>View from "{name}" participant</h1>
       <div id={`${name.toLowerCase()}-participant`}></div>
     </section>
   );
