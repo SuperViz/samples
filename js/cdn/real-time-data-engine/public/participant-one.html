@@ -15,20 +15,15 @@
   </head>
   <body>
     <section id="container">
-      <h1>Zeus</h1>
+      <h1 id="participant-name"></h1>
 
       <div class="events-info">
         <div class="container">
           <h2>Subscription Manager</h2>
-          <input type="text" placeholder="Event name" id="event-name" value="" />
-          <div class="subscribe-options">
-            <button id="subscribe">Subscribe</button>
-            <button id="unsubscribe">Unsubscribe</button>
-          </div>
           <button id="subscribe-all">Subscribe to basic events</button>
         </div>
 
-        <div class="container">
+        <div class="container" id="events">
           <h2>Subscribed to:</h2>
           <code></code>
         </div>
@@ -41,14 +36,14 @@
         <div class="subscribe-options">
           <input placeholder="Event message" id="message" />
           <input placeholder="Event name" id="name" />
-          <button id="zeus-publish">Publish</button>
+          <button id="publish">Publish</button>
         </div>
       </div>
 
-      <div class="last-message container">
-        <p><strong>Last message:</strong> <span class="data"></span></p>
-        <p><strong>Published via:</strong> <span class="name"></span></p>
-        <p><strong>Published by:</strong> <span class="participantid"></span></p>
+      <div class="last-message container" id="last-message">
+        <p><strong>Last message:</strong> <span></span></p>
+        <p><strong>Published via:</strong> <span></span></p>
+        <p><strong>Published by:</strong> <span></span></p>
       </div>
     </section>
   </body>

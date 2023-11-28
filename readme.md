@@ -31,7 +31,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Component                            | CDN                                             | Vanilla | React                                             | Vue                               |
 | ------------------------------------ | ----------------------------------------------- | ------- | ------------------------------------------------- | --------------------------------- |
 | Mouse Pointer                        | [Link](/js/cdn/mouse-pointers/)                 | 🔄️     | [Link](/js/react/mouse-pointers/)                 | [Link](/js/vue/mouse-pointers/)   |
-| Real-time Data Engine                | 🔄️                                             | 🔄️     | [Link](/js/react/real-time-data-engine/)          | 🔄️                               |
+| Real-time Data Engine                | [Link](/js/cdn/real-time-data-engine/)          | 🔄️     | [Link](/js/react/real-time-data-engine/)          | 🔄️                               |
 | Presence3D for AutoDesk              | [Link](/js/cdn/autodesk/)                       | 🔄️     | [Link](/js/react/autodesk/)                       | 🔄️                               |
 | Presence3D for Matteport             | [Link](/js/cdn/matterport/)                     | 🔄️     | [Link](/js/react/matterport/)                     | 🔄️                               |
 | Presence3D for ThreeJS               | [Link](/js/cdn/threejs/)                        | 🔄️     | [Link](/js/react/threejs/)                        | 🔄️                               |

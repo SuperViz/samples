@@ -5,18 +5,16 @@ let realtime;
 let eventsSubscribed = [];
 
 // Generating random name for the participant
-const participantName = (Math.random() + 1).toString(7);
+const participantName = Math.floor(Math.random() * Date.now()).toString(36);
 const roomId = "9cbbb622-9e8d-40be-a4fd-0cba22f08887";
 const groupId = "sv-sample-room-react-cdn-real-time-data-engine";
 const groupName = "Sample Room for Real-time Data Engine (CDN/JS)";
 
 document.addEventListener("DOMContentLoaded", function () {
-  loadSuperVizRealTimeDataEngine();
+  document.getElementById("participant-name").innerHTML = "Participant name: " + participantName;
 });
 
-document.getElementById("subscribe").addEventListener("click", subscribeToEvent);
-document.getElementById("unsubscribe").addEventListener("click", unsubscribeToEvent);
-document.getElementById("subscribe-all").addEventListener("click", subscribeToAllEvents);
+document.getElementById("subscribe-all").addEventListener("click", loadSuperVizRealTimeDataEngine);
 document.getElementById("publish").addEventListener("click", publish);
 
 async function loadSuperVizRealTimeDataEngine() {
@@ -35,53 +33,38 @@ async function loadSuperVizRealTimeDataEngine() {
 
   realtime = new window.SuperVizRoom.Realtime();
 
-  room.addComponent(realtime);
-}
-
-function subscribeToEvent() {
-  const event = document.getElementById("event-name").value;
-
-  if (!event || eventsSubscribed.includes(event)) return;
-
-  if (eventsSubscribed.length === 3) {
-    realtime.unsubscribe(eventsSubscribed[0]);
-  }
-
-  realtime.subscribe(event, callbackFunctionForWhenTheEventIsDispatched);
-
-  eventsSubscribed.push(event);
-  document.getElementById("event-name").value = "";
-}
-
-function unsubscribeToEvent() {
-  const event = document.getElementById("event-name").value;
-
-  if (!event || !eventsSubscribed.includes(event)) return;
-
-  realtime.unsubscribe(event);
-
-  eventsSubscribed = eventsSubscribed.filter((e) => e !== event);
-
-  document.getElementById("event-name").value = "";
-}
-
-function subscribeToAllEvents() {
   realtime.subscribe("Discord", callbackFunctionForWhenTheEventIsDispatched);
   realtime.subscribe("Slack", callbackFunctionForWhenTheEventIsDispatched);
   realtime.subscribe("Linkedin", callbackFunctionForWhenTheEventIsDispatched);
 
+  room.addComponent(realtime);
+
   eventsSubscribed.push("Discord");
   eventsSubscribed.push("Slack");
   eventsSubscribed.push("Linkedin");
+
+  const container = document.getElementById("events");
+  container.innerHTML = `<h2>Subscribed to:</h2>`;
+  container.innerHTML += eventsSubscribed.map((event) => `<code>${event}</code>`).join("");
 }
 
-function publish() {}
+function publish() {
+  const eventName = document.getElementById("name").value;
+  const eventMessage = document.getElementById("message").value;
+
+  console.log("Publishing", realtime);
+
+  realtime.publish(eventName, eventMessage);
+}
 
 function callbackFunctionForWhenTheEventIsDispatched(message) {
   const messageData = message[0];
-  // if (messageData.participantId === participantId) return;
+  if (messageData.participantId === participantName) return;
 
-  console.log("Message received", message);
+  console.log("Message received", messageData);
 
-  //setLastPublishedMessage(messageData);
+  const container = document.getElementById("last-message");
+  container.innerHTML = `<p><strong>Last message:</strong> <span>${messageData.data}</span></p>
+        <p><strong>Published via:</strong> <span>${messageData.name}</span></p>
+        <p><strong>Published by:</strong> <span>${messageData.participantId}</span></p>`;
 }
