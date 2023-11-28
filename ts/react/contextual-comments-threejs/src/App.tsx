@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import ThreeJSContainer from "./components/ThreejsInstance";
 
 function App() {
-  const roomId = uuidv4();
+  const roomId = "b2a6b164-91a6-4b18-a78a-05c0ba41d7ab";
   const [showZeus, setShowZeus] = useState(true);
 
   const toggle = () => {
