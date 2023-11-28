@@ -39,7 +39,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Contextual Comments with AutoDesk    | 🔄️                                             | 🔄️     | [Link](/js/react/contextual-comments-autodesk/)   | 🔄️                               |
 | Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | [Link](/js/react/contextual-comments-matterport/) | 🔄️                               |
 | Contextual Comments with ThreeJS     | [Link](/js/cdn/contextual-comments-threejs/)    | 🔄️     | [Link](/js/react/contextual-comments-threejs/)    | 🔄️                               |
-| Video Conference                     | 🔄️                                             | 🔄️     | [Link](/js/react/video-conference/)               | [Link](/js/vue/video-conference/) |
+| Video Conference                     | [Link](/js/cdn/video-conference/)               | 🔄️     | [Link](/js/react/video-conference/)               | [Link](/js/vue/video-conference/) |
 | Who-is-Online                        | [Link](/js/cdn/who-is-online/)                  | 🔄️     | [Link](/js/react/who-is-online/)                  | [Link](/js/vue/who-is-online/)    |
 
 ## Samples with TypeScript
