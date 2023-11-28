@@ -28,35 +28,35 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 
 ## Samples with JavaScript
 
-| Component                            | CDN                                             | Vanilla | React                                            | Vue | Angular |
-| ------------------------------------ | ----------------------------------------------- | ------- | ------------------------------------------------ | --- | ------- |
-| Mouse Pointer                        | [Link](/js/cdn/mouse-pointers/)                 | 🔄️     | [Link](/js/react/mouse-pointers/)                 | 🔄️ | 🔄️       |
-| Real-time Data Engine                | 🔄️                                              | 🔄️     | [Link](/js/react/real-time-data-engine/)          | 🔄️ | 🔄️       |
-| Presence3D for AutoDesk              | [Link](/js/cdn/autodesk/)                       | 🔄️     | [Link](/js/react/autodesk/)                       | 🔄️ | 🔄️       |
-| Presence3D for Matteport             | [Link](/js/cdn/matterport/)                     | 🔄️     | [Link](/js/react/matterport/)                     | 🔄️ | 🔄️       |
-| Presence3D for ThreeJS               | [Link](/js/cdn/threejs/)                        | 🔄️     | [Link](/js/react/threejs/)                        | 🔄️ | 🔄️       |
-| Contextual Comments with HTML Canvas | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | [Link](/js/react/contextual-comments-html/)       | 🔄️ | 🔄️       |
-| Contextual Comments with AutoDesk    | 🔄️                                              | 🔄️     | [Link](/js/react/contextual-comments-autodesk/)   | 🔄️ | 🔄️       |
-| Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | [Link](/js/react/contextual-comments-matterport/) | 🔄️ | 🔄️       |
-| Contextual Comments with ThreeJS     | [Link](/js/cdn/contextual-comments-threejs/)    | 🔄️     | [Link](/js/react/contextual-comments-threejs/)    | 🔄️ | 🔄️       |
-| Video Conference                     | 🔄️                                              | 🔄️     | [Link](/js/react/video-conference/)               | 🔄️ | 🔄️       |
-| Who-is-Online                        | [Link](/js/cdn/who-is-online/)                  | 🔄️     | [Link](/js/react/who-is-online/)                  | 🔄️ | 🔄️       |
+| Component                            | CDN                                             | Vanilla | React                                            | Vue                                 | Angular |
+| ------------------------------------ | ----------------------------------------------- | ------- | ------------------------------------------------ | ----------------------------------- | ------- |
+| Mouse Pointer                        | [Link](/js/cdn/mouse-pointers/)                 | 🔄️     | [Link](/js/react/mouse-pointers/)                 | [Link](/js/vue/mouse-pointers/)     | 🔄️       |
+| Real-time Data Engine                | 🔄️                                              | 🔄️     | [Link](/js/react/real-time-data-engine/)          | 🔄️                                  | 🔄️       |
+| Presence3D for AutoDesk              | [Link](/js/cdn/autodesk/)                       | 🔄️     | [Link](/js/react/autodesk/)                       | 🔄️                                  | 🔄️       |
+| Presence3D for Matteport             | [Link](/js/cdn/matterport/)                     | 🔄️     | [Link](/js/react/matterport/)                     | 🔄️                                  | 🔄️       |
+| Presence3D for ThreeJS               | [Link](/js/cdn/threejs/)                        | 🔄️     | [Link](/js/react/threejs/)                        | 🔄️                                  | 🔄️       |
+| Contextual Comments with HTML Canvas | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | [Link](/js/react/contextual-comments-html/)       | 🔄️                                  | 🔄️       |
+| Contextual Comments with AutoDesk    | 🔄️                                              | 🔄️     | [Link](/js/react/contextual-comments-autodesk/)   | 🔄️                                  | 🔄️       |
+| Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | [Link](/js/react/contextual-comments-matterport/) | 🔄️                                  | 🔄️       |
+| Contextual Comments with ThreeJS     | [Link](/js/cdn/contextual-comments-threejs/)    | 🔄️     | [Link](/js/react/contextual-comments-threejs/)    | 🔄️                                  | 🔄️       |
+| Video Conference                     | 🔄️                                              | 🔄️     | [Link](/js/react/video-conference/)               | [Link](/js/vue/video-conference/)   | 🔄️       |
+| Who-is-Online                        | [Link](/js/cdn/who-is-online/)                  | 🔄️     | [Link](/js/react/who-is-online/)                  | [Link](/js/vue/who-is-online/)      | 🔄️       |
 
 ## Samples with TypeScript
 
-| Component                            | CDN | Vanilla | React                                             | Vue | Angular |
-| ------------------------------------ | --- | ------- | ------------------------------------------------- | --- | ------- |
-| Mouse Pointer                        | 🔄️ | 🔄️     | [Link](/ts/react/mouse-pointers/)                 | 🔄️ | 🔄️     |
-| Real-time Data Engine                | 🔄️ | 🔄️     | [Link](/ts/react/real-time-data-engine/)          | 🔄️ | 🔄️     |
-| Presence for AutoDesk                | 🔄️ | 🔄️     | [Link](/ts/react/autodesk/)                       | 🔄️ | 🔄️     |
-| Presence for Matteport               | 🔄️ | 🔄️     | [Link](/ts/react/matterport/)                     | 🔄️ | 🔄️     |
-| Presence for ThreeJS                 | 🔄️ | 🔄️     | [Link](/ts/react/threejs/)                        | 🔄️ | 🔄️     |
-| Contextual Comments with HTML Canvas | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-html/)       | 🔄️ | 🔄️     |
-| Contextual Comments with AutoDesk    | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-autodesk/)   | 🔄️ | 🔄️     |
-| Contextual Comments with Matteport   | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-matterport/) | 🔄️ | 🔄️     |
-| Contextual Comments with ThreeJS     | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-threejs/)    | 🔄️ | 🔄️     |
-| Video Conference                     | 🔄️ | 🔄️     | [Link](/ts/react/video-conference/)               | 🔄️ | 🔄️     |
-| Who-is-Online                        | 🔄️ | 🔄️     | [Link](/ts/react/who-is-online/)                  | 🔄️ | 🔄️     |
+| Component                            | CDN | Vanilla | React                                           | Vue                                  | Angular |
+| ------------------------------------ | --- | ------- | ----------------------------------------------- | -----------------------------------  | ------- |
+| Mouse Pointer                        | 🔄️ | 🔄️     | [Link](/ts/react/mouse-pointers/)                 | [Link](/ts/vue/mouse-pointers/)      | 🔄️     |
+| Real-time Data Engine                | 🔄️ | 🔄️     | [Link](/ts/react/real-time-data-engine/)          | 🔄️                                   | 🔄️     |
+| Presence for AutoDesk                | 🔄️ | 🔄️     | [Link](/ts/react/autodesk/)                       | 🔄️                                   | 🔄️     |
+| Presence for Matteport               | 🔄️ | 🔄️     | [Link](/ts/react/matterport/)                     | 🔄️                                   | 🔄️     |
+| Presence for ThreeJS                 | 🔄️ | 🔄️     | [Link](/ts/react/threejs/)                        | 🔄️                                   | 🔄️     |
+| Contextual Comments with HTML Canvas | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-html/)       | 🔄️                                   | 🔄️     |
+| Contextual Comments with AutoDesk    | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-autodesk/)   | 🔄️                                   | 🔄️     |
+| Contextual Comments with Matteport   | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-matterport/) | 🔄️                                   | 🔄️     |
+| Contextual Comments with ThreeJS     | 🔄️ | 🔄️     | [Link](/ts/react/contextual-comments-threejs/)    | 🔄️                                   | 🔄️     |
+| Video Conference                     | 🔄️ | 🔄️     | [Link](/ts/react/video-conference/)               | [Link](/js/vue/video-conference/)    | 🔄️     |
+| Who-is-Online                        | 🔄️ | 🔄️     | [Link](/ts/react/who-is-online/)                  | [Link](/ts/vue/who-is-online/)       | 🔄️     |
 
 ## Project roadmap
 
