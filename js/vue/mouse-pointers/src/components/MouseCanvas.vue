@@ -11,8 +11,8 @@
   
   import { ref, onMounted, defineComponent } from "vue";
   
-  const groupId = "sv-sample-room-cdn-mouse-pointers";
-  const groupName = "Sample Room for Mouse Pointers (Vue JS)";
+  const groupId = "sv-sample-room-vue-js-mouse-pointers";
+  const groupName = "Sample Room for Mouse Pointers (Vue/JS)";
 
   const DEVELOPER_KEY = process.env.VUE_APP_SUPERVIZ_DEVELOPER_TOKEN;
   
