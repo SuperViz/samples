@@ -10,7 +10,7 @@ const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
 export default function Canvas({ name, roomId }) {
   const canvasId = name + "-canvas";
-  const userId = name.toLowerCase();
+  const participantId = canvasId.toLowerCase();
   const loaded = useRef(false);
 
   async function IntitializeSuperViz() {
@@ -21,7 +21,7 @@ export default function Canvas({ name, roomId }) {
         name: groupName,
       },
       participant: {
-        id: userId,
+        id: participantId,
         name: name,
       },
       environment: "dev",
@@ -39,7 +39,7 @@ export default function Canvas({ name, roomId }) {
     return () => {
       loaded.current = true;
     };
-  }, [canvasId, name, roomId, userId]);
+  }, [canvasId, name, roomId, participantId]);
 
   return (
     <section>

@@ -1,11 +1,9 @@
 import SuperVizRoom from "@superviz/sdk";
 import { Presence3D } from "@superviz/matterport-plugin";
 import { useRef, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
-export default function MatterportInstance({ name }: { name: string }) {
+export default function MatterportInstance({ name, roomId }: { name: string; roomId: string }) {
   const participantId = name.toLowerCase();
-  const roomId = uuidv4();
   const modelId = "LmRnZAsWoxy";
   const groupId = "sv-sample-room-react-ts-presence3d-matterport";
   const groupName = "Sample Room for Presence3D for Matterport (React/TS)";

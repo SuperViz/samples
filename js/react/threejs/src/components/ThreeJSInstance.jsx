@@ -1,11 +1,11 @@
+import { useEffect, useRef } from "react";
 import SuperVizRoom from "@superviz/sdk";
 import { Presence3D } from "@superviz/threejs-plugin";
 
 import * as THREE from "three";
-import { RoomEnvironment } from "../../vendor/threejs/examples/jsm/environments/RoomEnvironment.js";
-import { OrbitControls } from "../../vendor/threejs/examples/jsm/controls/OrbitControls.js";
-import { GLTFLoader } from "../../vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
-import { useEffect, useRef } from "react";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
 const groupId = "sv-sample-room-react-ts-presence3d-three-js";
 const groupName = "Sample Room for Presence3D for ThreeJS (React/JS)";
@@ -93,6 +93,7 @@ async function InitSuperVizRoomWithThreeJS(scene, camera, participant, roomId) {
 
   room.addComponent(threeJSPresence);
 }
+
 export default function ThreeJSContainer({ name, roomId }) {
   const userId = name.toLowerCase();
   const containerId = userId + "-participant";
