@@ -1,7 +1,7 @@
+import { Presence3D } from "@superviz/autodesk-viewer-plugin";
 import { useEffect, useRef } from "react";
 import forge from "../utils/forge";
 import initSuperVizRoomWithAutodesk from "../utils/initSupeVizRoom";
-import { Presence3D } from "@superviz/autodesk-viewer-plugin";
 
 interface Props {
   name: string;
@@ -17,7 +17,7 @@ export default function AutodeskInstance({ name, roomId, avatar }: Props) {
 
   const viewerData = useRef<{ viewerDiv?: HTMLElement, viewer?: typeof GuiViewer3D, success: boolean }>({ success: false });
 
-  useEffect(()=> {
+  useEffect(() => {
     if (loaded.current) return;
     loaded.current = true;
     ( async ()=> {
@@ -43,7 +43,7 @@ export default function AutodeskInstance({ name, roomId, avatar }: Props) {
 
   return (
     <section>
-      <h1>View from "{name}" participant</h1> 
+      <h1>View from "{name}" participant</h1>
       <div id={`${name.toLowerCase()}-participant`}></div>
     </section>
   );
