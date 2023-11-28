@@ -4,19 +4,18 @@ import { useEffect, useRef, useState } from "react";
 
 export default function RealtimeParticipant({ name, roomId }) {
   const participantId = name.toLowerCase();
-  const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
   const groupId = "sv-sample-room-react-js-real-time-data-engine";
   const groupName = "Sample Room for Real-time Data Engine (React/JS)";
+  const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
+  const [realtime] = useState(new Realtime());
   const [eventsSubscribed, setEventsSubscribed] = useState([]);
   const [lastPublishedMessage, setLastPublishedMessage] = useState();
 
-  const realtime = useRef(new Realtime());
-  const subscribeTo = useRef(null);
   const publishTo = useRef(null);
   const message = useRef(null);
 
-  const InitSuperVizRoom = async (roomId, name, realtime) => {
+  const InitSuperVizRoom = async () => {
     const room = await SuperVizRoom(DEVELOPER_KEY, {
       roomId: roomId,
       group: {
@@ -29,6 +28,12 @@ export default function RealtimeParticipant({ name, roomId }) {
       },
       environment: "dev",
     });
+
+    realtime.subscribe("Discord", callbackFunctionForWhenTheEventIsDispatched);
+    realtime.subscribe("Slack", callbackFunctionForWhenTheEventIsDispatched);
+    realtime.subscribe("Linkedin", callbackFunctionForWhenTheEventIsDispatched);
+
+    setEventsSubscribed(["Discord", "Slack", "Linkedin"]);
 
     room.addComponent(realtime);
   };
@@ -43,43 +48,7 @@ export default function RealtimeParticipant({ name, roomId }) {
   };
 
   const subscribeToBasicEvents = () => {
-    realtime.current.subscribe("Discord", callbackFunctionForWhenTheEventIsDispatched);
-    realtime.current.subscribe("Slack", callbackFunctionForWhenTheEventIsDispatched);
-    realtime.current.subscribe("Linkedin", callbackFunctionForWhenTheEventIsDispatched);
-
-    setEventsSubscribed(["Discord", "Slack", "Linkedin"]);
-  };
-
-  useEffect(() => {
-    (async () => {
-      await InitSuperVizRoom(roomId, name, realtime.current);
-    })();
-  }, []);
-
-  const subscribeToEvent = () => {
-    const event = subscribeTo.current?.value;
-
-    if (!event || eventsSubscribed.includes(event)) return;
-
-    if (eventsSubscribed.length === 3) {
-      realtime.current.unsubscribe(eventsSubscribed[0]);
-    }
-
-    realtime.current.subscribe(subscribeTo.current.value, callbackFunctionForWhenTheEventIsDispatched);
-
-    setEventsSubscribed((prev) => [...prev.slice(-2), event]);
-    subscribeTo.current.value = "";
-  };
-
-  const unsubscribeFromEvent = () => {
-    const event = subscribeTo.current?.value;
-
-    if (!event || !eventsSubscribed.includes(event)) return;
-
-    realtime.current.unsubscribe(subscribeTo.current.value);
-
-    setEventsSubscribed((prev) => prev.filter((message) => message !== event));
-    subscribeTo.current.value = "";
+    InitSuperVizRoom();
   };
 
   const publishEvent = () => {
@@ -87,7 +56,7 @@ export default function RealtimeParticipant({ name, roomId }) {
     const messageToPublish = message.current?.value;
     if (!eventName || !messageToPublish) return;
 
-    realtime.current.publish(eventName, messageToPublish);
+    realtime.publish(eventName, messageToPublish);
   };
 
   return (
@@ -96,12 +65,7 @@ export default function RealtimeParticipant({ name, roomId }) {
       <div className="events-info">
         <div className="container">
           <h2>Subscription Manager</h2>
-          <input placeholder="Event name" ref={subscribeTo} />
-          <div className="subscribe-options">
-            <button onClick={subscribeToEvent}>Subscribe</button>
-            <button onClick={unsubscribeFromEvent}>Unsubscribe</button>
-          </div>
-          <button onClick={subscribeToBasicEvents}>Subscribe to basic events</button>
+          <button onClick={subscribeToBasicEvents}>Subscribe to events</button>
         </div>
 
         {eventsSubscribed.length > 0 && (
