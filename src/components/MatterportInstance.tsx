@@ -4,7 +4,6 @@ import { useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function MatterportInstance({ name }: { name: string }) {
-  const avatarNumber = name === "Zeus" ? "5" : "2";
   const participantId = name.toLowerCase();
   const roomId = uuidv4();
   const modelId = "LmRnZAsWoxy";
@@ -17,6 +16,9 @@ export default function MatterportInstance({ name }: { name: string }) {
   const [disableButton, setDisableButton] = useState(false);
 
   const initSuperVizWithMatterport = async (mpSdk: any) => {
+    // This line is only for demonstration purpose. You can use any avatar you want.
+    const avatarImageForParticipant = name == "Hera" ? "2" : "5";
+
     const room = await SuperVizRoom(DEVELOPER_KEY, {
       roomId: roomId,
       group: {
@@ -27,8 +29,8 @@ export default function MatterportInstance({ name }: { name: string }) {
         id: participantId,
         name: name,
         avatar: {
-          imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarNumber}.png`,
-          model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarNumber}.glb`,
+          imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
+          model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
         },
       },
       environment: "dev" as any,
