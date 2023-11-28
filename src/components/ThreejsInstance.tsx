@@ -21,6 +21,8 @@ export default function ThreeJSContainer({ name, roomId, toggle }: Props) {
   const containerId = participantId + "-participant";
   const groupId = "sv-sample-room-react-ts-contextual-comments-threejs";
   const groupName = "Sample Room with Contextual Comments for ThreeJS (React/TS)";
+
+  console.log("AutodeskInstance", name, roomId);
   const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
   const ref = useRef<any>(null);
@@ -109,12 +111,10 @@ export default function ThreeJSContainer({ name, roomId, toggle }: Props) {
     if (loaded.current) return;
     loaded.current = true;
 
-    (async () => {
-      await InitParticipantThreeJS();
-    })();
-  }, []);
+    InitParticipantThreeJS();
+  }, [loaded]);
 
-  const destroy = () => {
+  const changeParticipant = () => {
     if (room) {
       room.destroy();
       toggle();
@@ -122,7 +122,7 @@ export default function ThreeJSContainer({ name, roomId, toggle }: Props) {
   };
   return (
     <>
-      <button onClick={destroy}>Change participant</button>
+      <button onClick={changeParticipant}>Change participant</button>
       <h1>View from "{name}" participant</h1>
       <canvas id={containerId} ref={ref} />
     </>

@@ -1,18 +1,15 @@
 body {
   background: #e9e5ef;
   margin: 0;
-  padding: 1rem;
   height: 100%;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   width: calc(100% - 2rem);
   height: 100%;
-  flex-direction: column;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 section {
