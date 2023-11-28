@@ -1,0 +1,13 @@
+{
+  "name": "sv-sample-room-cdn-js-real-time-data-engine",
+  "version": "1.0.0",
+  "description": "Sample Room for Real-time Data Engine (CDN/JS)",
+  "scripts": {
+    "start": "npx live-server public/ --host=localhost"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
