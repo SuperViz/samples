@@ -25,6 +25,8 @@ export default async function initSuperVizRoomWithAutodesk({
   position,
 }: Parameters) {
   // This line is only for demonstration purpose. You can use any avatar you want.
+  const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
+
   const room = await SuperVizRoom(DEVELOPER_KEY, {
     roomId: roomId,
     group: {
@@ -35,8 +37,8 @@ export default async function initSuperVizRoomWithAutodesk({
       id: participantId,
       name: participant,
       avatar: {
-        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatar}.png`,
-        model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatar}.glb`,
+        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
+        model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
       },
     },
     environment: "dev" as EnvironmentTypes,

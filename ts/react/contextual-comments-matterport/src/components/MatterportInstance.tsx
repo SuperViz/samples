@@ -21,7 +21,8 @@ export default function MatterportInstance({ name, roomId, toggle }: Props) {
   const [room, setRoom] = useState<LauncherFacade>();
   const [loaded, setLoaded] = useState(false);
 
-  const initSuperVizWithMatterport = async (pinAdapter: MatterportPin) => {
+  const initSuperVizWithMatterport = async (mpSdk: any, showcase: any) => {
+    // This line is only for demonstration purpose. You can use any avatar you want.
     const avatarImageForParticipant = name == "Hera" ? "2" : "5";
 
     const room = await SuperVizRoom(DEVELOPER_KEY, {
@@ -41,6 +42,8 @@ export default function MatterportInstance({ name, roomId, toggle }: Props) {
       environment: "dev" as any,
     });
 
+    const pinAdapter = new MatterportPin(mpSdk, showcase);
+
     const comments = new Comments(pinAdapter, {
       position: "left",
       buttonLocation: `top-left`,
@@ -57,8 +60,8 @@ export default function MatterportInstance({ name, roomId, toggle }: Props) {
     if (!showcaseWindow) return;
     const mpSdk = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
 
-    const pinAdapter = new MatterportPin(mpSdk, showcase);
-    await initSuperVizWithMatterport(roomId, participantId, name, avatar, pinAdapter, position);
+    await initSuperVizWithMatterport(mpSdk, showcase);
+
     setLoaded(true);
   };
 
