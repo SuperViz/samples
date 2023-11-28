@@ -8,40 +8,48 @@ interface Props {
   name: string;
   position: "left" | "right";
   toggle: () => void;
-  roomId: string
-  avatar: string
+  roomId: string;
+  avatar: string;
 }
 
 export default function AutodeskInstance({ name, roomId, position, toggle, avatar }: Props) {
   const participantId = `${name.toLowerCase()}-participant`;
-  
+
   const loaded = useRef(false);
   const [room, setRoom] = useState<LauncherFacade>();
   const GuiViewer3D = window.Autodesk.Viewing.GuiViewer3D;
 
-  const viewerData = useRef<{ viewerDiv?: HTMLElement, viewer?: typeof GuiViewer3D, success: boolean }>({ success: false });
+  const viewerData = useRef<{ viewerDiv?: HTMLElement; viewer?: typeof GuiViewer3D; success: boolean }>({
+    success: false,
+  });
 
-  useEffect(()=> {
+  useEffect(() => {
     if (loaded.current) return;
     loaded.current = true;
-    ( async ()=> {
+    (async () => {
       await forge({ participantId, viewerData });
 
       if (!viewerData.current?.success) return;
       const pinAdapter = new AutodeskPin(viewerData.current.viewer, viewerData.current.viewerDiv!);
 
-      const room = await initSuperVizRoomWithAutodesk({ pinAdapter, participant: name, participantId, roomId, avatar, position })
+      const room = await initSuperVizRoomWithAutodesk({
+        pinAdapter,
+        participant: name,
+        participantId,
+        roomId,
+        avatar,
+        position,
+      });
       setRoom(room);
     })();
+  }, [loaded]);
 
-  }, [loaded])
-
-  const changeParticipant = ()=> {
+  const changeParticipant = () => {
     if (!room) return;
 
     room.destroy();
     toggle();
-  }
+  };
 
   return (
     <>

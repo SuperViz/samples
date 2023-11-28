@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-js-comments-matterport",
+  "name": "sv-sample-room-react-js-contextual-comments-matterport",
   "version": "1.0.0",
-  "description": "Sample Room for Matterport with Contextual Comments (React/JS)",
+  "description": "Sample Room with Contextual Comments for Matterport (React/JS)",
   "type": "module",
   "scripts": {
     "start": "vite",

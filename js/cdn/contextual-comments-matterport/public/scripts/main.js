@@ -2,7 +2,7 @@ import { DEVELOPER_KEY, MATTERPORT_KEY } from "../env.js";
 
 const roomId = "AAd689fe-03b0-442f-ba5e-fb0bbd39d983";
 const groupId = "sv-sample-room-cdn-js-contextual-comments-matterport";
-const groupName = "Sample Room for Contextual Comments for Matterport (CDN/JS)";
+const groupName = "Sample Room for Contextual Comments with Matterport (CDN/JS)";
 const modelId = "LmRnZAsWoxy";
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-js-who-is-online",
+  "name": "sv-sample-room-react-js-three-js",
   "version": "1.0.0",
-  "description": "Sample Room for Who Is Online (React/JS)",
+  "description": "Sample Room for Presence3D for ThreeJS (React/JS)",
   "type": "module",
   "scripts": {
     "start": "vite",
