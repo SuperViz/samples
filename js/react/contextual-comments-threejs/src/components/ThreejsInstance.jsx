@@ -1,33 +1,31 @@
+import { useEffect, useRef, useState } from "react";
+
 import SuperVizRoom from "@superviz/sdk";
 import { ThreeJsPin } from "@superviz/threejs-plugin";
 import { Comments } from "@superviz/sdk/lib/components/index.js";
 
 import * as THREE from "three";
-import { RoomEnvironment } from "../../vendor/threejs/examples/jsm/environments/RoomEnvironment.js";
-import { OrbitControls } from "../../vendor/threejs/examples/jsm/controls/OrbitControls.js";
-import { GLTFLoader } from "../../vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
-import { useEffect, useRef, useState } from "react";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
-const groupId = "sv-sample-room-react-js-contextual-comments-threejs";
-const groupName = "Sample Room with Contextual Comments for ThreeJS (React/JS)";
-const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+export default function ThreeJSContainer({ name, roomId, toggle }) {
+  const participantId = name.toLowerCase();
+  const containerId = participantId + "-participant";
+  const groupId = "sv-sample-room-react-js-contextual-comments-threejs";
+  const groupName = "Sample Room with Contextual Comments for ThreeJS (React/JS)";
+  const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
-export default function ThreeJSInstance({ name, roomId, toggle, position }) {
-  const userId = name.toLowerCase();
-  const containerId = userId + "-participant";
   const ref = useRef(null);
   const [room, setRoom] = useState();
   const loaded = useRef(false);
 
   function InitParticipantThreeJS() {
-    const participantId = name.toLowerCase();
-
-    const container = document.getElementById(participantId + "-participant");
+    const container = document.getElementById(containerId);
     const width = container.clientWidth;
     const height = container.clientHeight;
 
     const renderer = new THREE.WebGLRenderer({ canvas: container, antialias: true });
-    // renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.setSize(width, height);
 
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
@@ -76,7 +74,7 @@ export default function ThreeJSInstance({ name, roomId, toggle, position }) {
         name: groupName,
       },
       participant: {
-        id: name.toLowerCase(),
+        id: participantId,
         name: name,
         avatar: {
           imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
@@ -86,12 +84,10 @@ export default function ThreeJSInstance({ name, roomId, toggle, position }) {
       environment: "dev",
     });
 
-    const oppositeSide = position == "left" ? "right" : "left";
-
     const pinAdapter = new ThreeJsPin(scene, renderer, camera);
     const comments = new Comments(pinAdapter, {
-      buttonLocation: `top-${position}`,
-      position: oppositeSide,
+      buttonLocation: `top-left`,
+      position: "left",
     });
 
     room.addComponent(comments);
@@ -113,12 +109,8 @@ export default function ThreeJSInstance({ name, roomId, toggle, position }) {
   return (
     <>
       <button onClick={destroy}>Change participant</button>
-      <section>
-        <h1>View from "{name}" participant</h1>
-        <span className={position}>
-          <canvas id={containerId} ref={ref} />
-        </span>
-      </section>
+      <h1>View from "{name}" participant</h1>
+      <canvas id={containerId} ref={ref} />
     </>
   );
 }

@@ -66,7 +66,7 @@ export default function MatterportInstance({ name, roomId }: { name: string; roo
         </button>
         <iframe
           ref={ref}
-          id={name + `-container`}
+          id={`${name}-container`}
           src={`/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
         />
       </section>

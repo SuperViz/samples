@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import ThreeJSInstance from "./components/ThreeJSInstance";
+import ThreeJSContainer from "./components/ThreeJSInstance";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
   // We are initializing multiple rooms for demo purposes.
   return (
     <main>
-      {showZeus && <ThreeJSInstance name="Zeus" position="left" roomId={roomId} toggle={toggle} />}
-      {!showZeus && <ThreeJSInstance name="Hera" position="right" roomId={roomId} toggle={toggle} />}
+      {showZeus && <ThreeJSContainer name="Zeus" toggle={toggle} roomId={roomId} />}
+      {!showZeus && <ThreeJSContainer name="Hera" toggle={toggle} roomId={roomId} />}
     </main>
   );
 }
