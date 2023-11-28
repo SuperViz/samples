@@ -11,27 +11,19 @@ const modelId = "LmRnZAsWoxy";
 
 interface Props {
   name: string;
-  position: "left" | "right";
   toggle: () => void;
-  avatar: string;
   roomId: string;
 }
 
-export default function MatterportInstance({ name, roomId, avatar, position, toggle }: Props) {
-  const containerId = name + "-container";
-  const userId = name.toLowerCase();
+export default function MatterportInstance({ name, roomId, toggle }: Props) {
+  const participantId = name.toLowerCase();
   const ref = useRef<any>(null);
   const [room, setRoom] = useState<LauncherFacade>();
   const [loaded, setLoaded] = useState(false);
 
-  const initMatterport = async (
-    roomId: string,
-    userId: string,
-    name: string,
-    avatar: string,
-    pinAdapter: MatterportPin,
-    position: "left" | "right"
-  ) => {
+  const initSuperVizWithMatterport = async (pinAdapter: MatterportPin) => {
+    const avatarImageForParticipant = name == "Hera" ? "2" : "5";
+
     const room = await SuperVizRoom(DEVELOPER_KEY, {
       roomId: roomId,
       group: {
@@ -39,28 +31,26 @@ export default function MatterportInstance({ name, roomId, avatar, position, tog
         name: groupName,
       },
       participant: {
-        id: userId,
+        id: participantId,
         name: name,
         avatar: {
-          imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatar}.png`,
-          model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatar}.glb`,
+          imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
+          model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
         },
       },
       environment: "dev" as any,
     });
 
-    const oppositeSide = position === "left" ? "right" : "left";
-
     const comments = new Comments(pinAdapter, {
-      position,
-      buttonLocation: `top-${oppositeSide}`,
+      position: "left",
+      buttonLocation: `top-left`,
     });
 
     room.addComponent(comments);
     setRoom(room);
   };
 
-  const enter = async () => {
+  const InitMatterport = async () => {
     const showcase = ref.current;
     const showcaseWindow = showcase.contentWindow;
 
@@ -68,7 +58,7 @@ export default function MatterportInstance({ name, roomId, avatar, position, tog
     const mpSdk = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
 
     const pinAdapter = new MatterportPin(mpSdk, showcase);
-    await initMatterport(roomId, userId, name, avatar, pinAdapter, position);
+    await initSuperVizWithMatterport(roomId, participantId, name, avatar, pinAdapter, position);
     setLoaded(true);
   };
 
@@ -85,10 +75,10 @@ export default function MatterportInstance({ name, roomId, avatar, position, tog
       </button>
       <h1>View from "{name}" participant</h1>
       <iframe
-        onLoad={enter}
+        onLoad={InitMatterport}
         className={name.toLowerCase()}
         ref={ref}
-        id={containerId}
+        id={`${name}-container`}
         src={`/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
       />
     </>
