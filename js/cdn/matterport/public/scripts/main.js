@@ -5,15 +5,9 @@ const groupId = "sv-sample-room-cdn-js-presence3d-matterport";
 const groupName = "Sample Room for Presence3D for Matterport (CDN/JS)";
 const modelId = "LmRnZAsWoxy";
 
-document.addEventListener("DOMContentLoaded", function () {
-  InitMatterportIntegrationWithSuperViz();
-});
-
-function InitMatterportIntegrationWithSuperViz() {
-  // We are initializing two rooms for demo propose.
-  InitFirstParticipantMatterport();
-  InitSecondParticipantMatterport();
-}
+// We are initializing two rooms for demo propose.
+document.getElementById("zeus-button").addEventListener("click", InitFirstParticipantMatterport);
+document.getElementById("hera-button").addEventListener("click", InitSecondParticipantMatterport);
 
 function InitFirstParticipantMatterport() {
   const showcase = document.getElementById("zeus-participant");
