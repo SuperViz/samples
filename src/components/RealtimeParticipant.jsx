@@ -39,7 +39,7 @@ export default function RealtimeParticipant({ name, roomId }) {
 
     console.log("Message received", message);
 
-    setLastPublishedMessage(message[0]);
+    setLastPublishedMessage(messageData);
   };
 
   const subscribeToBasicEvents = () => {
