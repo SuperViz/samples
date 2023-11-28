@@ -5,33 +5,31 @@ const groupId = "sv-sample-room-react-ts-who-is-online";
 const groupName = "Sample Room for Who-is-Online (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 
-const initWhoIsOnline = async (roomId: string, userId: string, name: string, containerId: string) => {
-  const room = await SuperVizRoom(DEVELOPER_KEY, {
-    roomId: roomId,
-    group: {
-      id: groupId,
-      name: groupName,
-    },
-    participant: {
-      id: userId,
-      name: name,
-    },
-    environment: "dev" as any,
-  });
-
-  const whoIsOnline = new WhoIsOnline(containerId);
-  room.addComponent(whoIsOnline);
-};
-
 export default function WhoIsOnlineContainer({ name, roomId }: { name: string; roomId: string }) {
-  const containerId = name + "-container";
-  const userId = name.toLowerCase();
+  const participantId = name.toLowerCase();
+  const containerId = participantId + "-container";
+
+  const initSuperVizWithWhoIsOnline = async () => {
+    const room = await SuperVizRoom(DEVELOPER_KEY, {
+      roomId: roomId,
+      group: {
+        id: groupId,
+        name: groupName,
+      },
+      participant: {
+        id: participantId,
+        name: name,
+      },
+      environment: "dev" as any,
+    });
+
+    const whoIsOnline = new WhoIsOnline(containerId);
+    room.addComponent(whoIsOnline);
+  };
 
   return (
     <section>
-      <button onClick={() => initWhoIsOnline(roomId, userId, name, containerId)}>
-        Enter Who-is-Online as "{name}"
-      </button>
+      <button onClick={() => initSuperVizWithWhoIsOnline()}>Enter Who-is-Online as "{name}"</button>
       <div id={containerId} />
     </section>
   );
