@@ -85,7 +85,7 @@ export default function ThreeJSContainer({ name, roomId, toggle }: Props) {
         name: groupName,
       },
       participant: {
-        id: name.toLowerCase(),
+        id: participantId,
         name: name,
         avatar: {
           imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
