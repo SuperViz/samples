@@ -8,14 +8,30 @@ const roomId = "AAd689fe-03b0-442f-ba5e-fb0bbd39d983";
 const groupId = "sv-sample-room-cdn-js-contextual-comments-threejs";
 const groupName = "Sample Room for Contextual Comments with ThreeJS (CDN/JS)";
 
+let room;
+let participantName = "Zeus";
+
 document.addEventListener("DOMContentLoaded", function () {
-  InitParticipantThreeJS("Hera");
+  document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
+  InitParticipantThreeJS(participantName);
 });
+
+document.getElementById("change-participant").addEventListener("click", changeParticipant);
+
+function changeParticipant() {
+  participantName = participantName == "Zeus" ? "Hera" : "Zeus";
+  document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
+
+  room.destroy();
+
+  InitParticipantThreeJS(participantName);
+}
 
 function InitParticipantThreeJS(participantName) {
   const participantId = participantName.toLowerCase();
 
-  const container = document.getElementById(participantId + "-participant");
+  const container = document.getElementById("participant-canvas");
+  console.log(container);
   const width = container.clientWidth;
   const height = container.clientHeight;
 
@@ -64,7 +80,7 @@ async function InitSuperVizRoomWithThreeJS(scene, renderer, camera, participant,
   // This line is only for demonstration purpose. You can use any avatar you want.
   const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
 
-  const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
+  room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
     roomId: roomId,
     group: {
       id: groupId,
