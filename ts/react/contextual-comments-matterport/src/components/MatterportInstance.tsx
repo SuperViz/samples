@@ -3,11 +3,11 @@ import { Comments } from "@superviz/sdk/lib/components";
 import { MatterportPin } from "@superviz/matterport-plugin";
 import { useRef, useState } from "react";
 
+const modelId = "LmRnZAsWoxy";
 const groupId = "sv-sample-room-react-ts-contextual-comments-matterport";
 const groupName = "Sample Room with Contextual Comments for Matterport (React/TS)";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
-const modelId = "LmRnZAsWoxy";
 
 interface Props {
   name: string;
