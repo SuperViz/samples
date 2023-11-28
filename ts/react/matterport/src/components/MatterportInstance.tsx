@@ -48,7 +48,7 @@ export default function MatterportInstance({ name }: { name: string }) {
     room.addComponent(matterportPresence as any);
   };
 
-  const enter = async () => {
+  const InitMatterport = async () => {
     const showcaseWindow = ref.current.contentWindow;
 
     if (!showcaseWindow) return;
@@ -61,7 +61,7 @@ export default function MatterportInstance({ name }: { name: string }) {
   return (
     <>
       <section>
-        <button onClick={enter} disabled={disableButton}>
+        <button onClick={InitMatterport} disabled={disableButton}>
           Join Matterport room as "{name}"
         </button>
         <iframe
