@@ -31,7 +31,6 @@ function InitParticipantThreeJS(participantName) {
   const participantId = participantName.toLowerCase();
 
   const container = document.getElementById("participant-canvas");
-  console.log(container);
   const width = container.clientWidth;
   const height = container.clientHeight;
 
