@@ -36,7 +36,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Presence3D for Matteport             | [Link](/js/cdn/matterport/)                     | 🔄️     | [Link](/js/react/matterport/)                     | 🔄️                               |
 | Presence3D for ThreeJS               | [Link](/js/cdn/threejs/)                        | 🔄️     | [Link](/js/react/threejs/)                        | 🔄️                               |
 | Contextual Comments with HTML Canvas | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | [Link](/js/react/contextual-comments-html/)       | 🔄️                               |
-| Contextual Comments with AutoDesk    | 🔄️                                             | 🔄️     | [Link](/js/react/contextual-comments-autodesk/)   | 🔄️                               |
+| Contextual Comments with AutoDesk    | [Link](/js/cdn/contextual-comments-autodesk/)   | 🔄️     | [Link](/js/react/contextual-comments-autodesk/)   | 🔄️                               |
 | Contextual Comments with Matteport   | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | [Link](/js/react/contextual-comments-matterport/) | 🔄️                               |
 | Contextual Comments with ThreeJS     | [Link](/js/cdn/contextual-comments-threejs/)    | 🔄️     | [Link](/js/react/contextual-comments-threejs/)    | 🔄️                               |
 | Video Conference                     | [Link](/js/cdn/video-conference/)               | 🔄️     | [Link](/js/react/video-conference/)               | [Link](/js/vue/video-conference/) |
