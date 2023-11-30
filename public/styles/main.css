@@ -9,6 +9,7 @@ section {
   width: calc(50% - 1rem);
   height: 100%;
   margin: 0 1rem 1rem 1rem;
+  text-align: center;
 }
 
 section:first-of-type {
@@ -26,6 +27,33 @@ h1 {
 canvas {
   background-color: #c9c4d1;
   width: 100%;
-  height: calc(100% - 3.3125rem);
+  height: calc(100% - 5rem);
   border-radius: 6px;
+}
+
+button {
+  all: unset;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 1rem;
+  height: 2rem;
+  color: #efefef;
+  text-align: center;
+  background-color: #6210cc;
+  cursor: pointer;
+  transition: 0.15s all ease-in;
+}
+
+button:hover {
+  background-color: #baa9ff;
+  color: #39363e;
+}
+
+button:disabled {
+  background-color: #c9c4d1;
+  color: #39363e;
+  cursor: not-allowed;
 }
