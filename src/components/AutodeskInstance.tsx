@@ -36,7 +36,7 @@ export default function AutodeskInstance({ name, roomId, toggle }: Props) {
       environment: "dev" as EnvironmentTypes,
     });
 
-    const pinAdapter = new AutodeskPin(viewer, viewerDiv!);
+    const pinAdapter = new AutodeskPin(viewer, viewerDiv);
 
     const comments = new Comments(pinAdapter, {
       position: "left",
