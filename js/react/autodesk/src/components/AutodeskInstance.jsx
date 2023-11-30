@@ -1,14 +1,8 @@
 import { useState } from "react";
 import SuperVizRoom from "@superviz/sdk";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types";
 import { Presence3D } from "@superviz/autodesk-viewer-plugin";
 
-interface Props {
-  name: string;
-  roomId: string;
-}
-
-export default function AutodeskInstance({ name, roomId }: Props) {
+export default function AutodeskInstance({ name, roomId }) {
   const participantId = `${name.toLowerCase()}-participant`;
   const [disableButton, setDisableButton] = useState(false);
 
@@ -28,7 +22,7 @@ export default function AutodeskInstance({ name, roomId }: Props) {
     };
 
     const contentSection = document.getElementById(participantId);
-    let viewer: any = null;
+    let viewer = null;
 
     fetch(AUTH_URL, {
       method: "POST",
@@ -61,27 +55,27 @@ export default function AutodeskInstance({ name, roomId }: Props) {
         });
       });
 
-    function onDocumentLoadSuccess(doc: any) {
+    function onDocumentLoadSuccess(doc) {
       const viewable = doc.getRoot().getDefaultGeometry();
       if (viewable) {
         viewer
           .loadDocumentNode(doc, viewable, {
             applyScaling: "meters",
           })
-          .then((result: any) => {
+          .then((result) => {
             initSuperVizRoomWithAutodesk(viewer);
           })
-          .catch((error: any) => {
+          .catch((error) => {
             console.error("Error: ", error);
           });
       }
     }
-    function onDocumentLoadFailure(error: any, message: any) {
+    function onDocumentLoadFailure(error, message) {
       console.error(`Error loading forge model: ${error} - ${message}`);
     }
   }
 
-  async function initSuperVizRoomWithAutodesk(viewer: any) {
+  async function initSuperVizRoomWithAutodesk(viewer) {
     const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
     const groupId = "sv-sample-room-cdn-js-presence3d-autodesk-viewer";
     const groupName = "Sample Room for Presence3D for Autodesk viewer (CDN/JS)";
@@ -103,7 +97,7 @@ export default function AutodeskInstance({ name, roomId }: Props) {
           model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
         },
       },
-      environment: "dev" as EnvironmentTypes,
+      environment: "dev",
     });
 
     const autodeskPresence = new Presence3D(viewer, {
@@ -117,7 +111,7 @@ export default function AutodeskInstance({ name, roomId }: Props) {
       },
     });
 
-    room.addComponent(autodeskPresence as any);
+    room.addComponent(autodeskPresence);
 
     setDisableButton(true);
   }

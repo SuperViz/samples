@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import ThreejsInstance from "./components/ThreeJSInstance";
+import AutodeskInstance from "./components/AutodeskInstance";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -7,10 +7,10 @@ function App() {
 
   // We are initializing multiple rooms for demo purposes.
   return (
-      <>
-        <ThreejsInstance name="Zeus" roomId={roomId} />
-        <ThreejsInstance name="Hera" roomId={roomId} />
-      </>
+    <main>
+      <AutodeskInstance name="Zeus" roomId={roomId} />
+      <AutodeskInstance name="Hera" roomId={roomId} />
+    </main>
   );
 }
 
