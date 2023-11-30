@@ -1,15 +1,33 @@
-#root {
+body {
   background: #e9e5ef;
   margin: 0;
+  height: 100%;
+}
+
+#root {
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
+  height: 100%;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  height: calc(100% - 2rem);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 section {
-  width: calc(50% - 1rem);
-  height: 100%;
-  margin: 1rem;
+  flex: 1;
+  flex-basis: 330px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  height: max(100%, 500px);
+  position: relative;
 }
 
 section:first-of-type {
@@ -24,11 +42,38 @@ h1 {
   text-align: center;
 }
 
-#zeus-participant,
-#hera-participant {
+.canvas {
   position: absolute;
+  background-color: #c9c4d1;
+  width: 100%;
+  height: calc(100% - 5rem);
   border-radius: 6px;
-  top: 5rem;
-  width: calc(50% - 2rem);
-  height: calc(100% - 3.3125rem);
+  margin-top: 5rem;
+}
+
+button {
+  all: unset;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 1rem;
+  height: 2rem;
+  color: #efefef;
+  text-align: center;
+  background-color: #6210cc;
+  cursor: pointer;
+  transition: 0.15s all ease-in;
+}
+
+button:hover {
+  background-color: #baa9ff;
+  color: #39363e;
+}
+
+button:disabled {
+  background-color: #c9c4d1;
+  color: #39363e;
+  cursor: not-allowed;
 }

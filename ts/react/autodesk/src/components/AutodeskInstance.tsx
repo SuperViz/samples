@@ -1,50 +1,133 @@
+import { useState } from "react";
+import SuperVizRoom from "@superviz/sdk";
+import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types";
 import { Presence3D } from "@superviz/autodesk-viewer-plugin";
-import { useEffect, useRef } from "react";
-import forge from "../utils/forge";
-import initSuperVizRoomWithAutodesk from "../utils/initSupeVizRoom";
 
 interface Props {
   name: string;
-  roomId: string
-  avatar: string
+  roomId: string;
 }
 
-export default function AutodeskInstance({ name, roomId, avatar }: Props) {
+export default function AutodeskInstance({ name, roomId }: Props) {
   const participantId = `${name.toLowerCase()}-participant`;
-  
-  const loaded = useRef(false);
-  const GuiViewer3D = window.Autodesk.Viewing.GuiViewer3D;
+  const [disableButton, setDisableButton] = useState(false);
 
-  const viewerData = useRef<{ viewerDiv?: HTMLElement, viewer?: typeof GuiViewer3D, success: boolean }>({ success: false });
+  function InitParticipantAutodesk() {
+    const modelURN = "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
+    const modelID = btoa(modelURN);
+    const FORGE_CLIENT = import.meta.env.VITE_CLIENT_ID;
+    const FORGE_SECRET = import.meta.env.VITE_CLIENT_SECRET;
+    const AUTH_URL = "https://developer.api.autodesk.com/authentication/v1/authenticate";
+    const documentId = `urn:${modelID}`;
 
-  useEffect(() => {
-    if (loaded.current) return;
-    loaded.current = true;
-    ( async ()=> {
-      await forge({ participantId, viewerData });
+    let data = {
+      client_id: FORGE_CLIENT,
+      client_secret: FORGE_SECRET,
+      grant_type: "client_credentials",
+      scope: "data:read bucket:read",
+    };
 
-      if (!viewerData.current?.success) return;
-      
-      const autodeskPresence = new Presence3D(viewerData.current.viewer, {
-        isAvatarsEnabled: true,
-        isLaserEnabled: false,
-        isNameEnabled: true,
-        avatarConfig: {
-          height: 0,
-          scale: 10,
-          laserOrigin: { x: 0, y: 0, z: 0 },
-        },
+    const contentSection = document.getElementById(participantId);
+    let viewer: any = null;
+
+    fetch(AUTH_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString(),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((dataToken) => {
+        const options = {
+          env: "AutodeskProduction2",
+          api: "streamingV2",
+          accessToken: dataToken.access_token,
+        };
+
+        window.Autodesk.Viewing.Initializer(options, async () => {
+          viewer = new window.Autodesk.Viewing.GuiViewer3D(contentSection);
+          await viewer.start();
+
+          viewer.setTheme("dark-theme");
+          viewer.setQualityLevel(false, false);
+          viewer.setGhosting(false);
+          viewer.setGroundShadow(false);
+          viewer.setGroundReflection(false);
+          viewer.setOptimizeNavigation(true);
+          viewer.setProgressiveRendering(true);
+
+          window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
+        });
       });
 
-       await initSuperVizRoomWithAutodesk({ autodeskPresence, participant: name, participantId, roomId, avatar })
-    })();
+    function onDocumentLoadSuccess(doc: any) {
+      const viewable = doc.getRoot().getDefaultGeometry();
+      if (viewable) {
+        viewer
+          .loadDocumentNode(doc, viewable, {
+            applyScaling: "meters",
+          })
+          .then((result: any) => {
+            initSuperVizRoomWithAutodesk(viewer);
+          })
+          .catch((error: any) => {
+            console.error("Error: ", error);
+          });
+      }
+    }
+    function onDocumentLoadFailure(error: any, message: any) {
+      console.error(`Error loading forge model: ${error} - ${message}`);
+    }
+  }
 
-  }, [loaded])
+  async function initSuperVizRoomWithAutodesk(viewer: any) {
+    const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+    const groupId = "sv-sample-room-cdn-js-presence3d-autodesk-viewer";
+    const groupName = "Sample Room for Presence3D for Autodesk viewer (CDN/JS)";
+
+    // This line is only for demonstration purpose. You can use any avatar you want.
+    const avatarImageForParticipant = name == "Hera" ? "2" : "5";
+
+    const room = await SuperVizRoom(DEVELOPER_KEY, {
+      roomId: roomId,
+      group: {
+        id: groupId,
+        name: groupName,
+      },
+      participant: {
+        id: participantId,
+        name: name,
+        avatar: {
+          imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
+          model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
+        },
+      },
+      environment: "dev" as EnvironmentTypes,
+    });
+
+    const autodeskPresence = new Presence3D(viewer, {
+      isAvatarsEnabled: true,
+      isLaserEnabled: false,
+      isNameEnabled: true,
+      avatarConfig: {
+        height: 0,
+        scale: 10,
+        laserOrigin: { x: 0, y: 0, z: 0 },
+      },
+    });
+
+    room.addComponent(autodeskPresence as any);
+
+    setDisableButton(true);
+  }
 
   return (
     <section>
-      <h1>View from "{name}" participant</h1>
-      <div id={`${name.toLowerCase()}-participant`}></div>
+      <button onClick={InitParticipantAutodesk} disabled={disableButton}>
+        Join Matterport room as "{name}"
+      </button>
+      <div className="canvas" id={name.toLowerCase() + `-participant`}></div>
     </section>
   );
 }
