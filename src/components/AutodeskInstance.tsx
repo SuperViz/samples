@@ -125,7 +125,7 @@ export default function AutodeskInstance({ name, roomId }: Props) {
   return (
     <section>
       <button onClick={InitParticipantAutodesk} disabled={disableButton}>
-        Join Matterport room as "{name}"
+        Join Autodesk room as "{name}"
       </button>
       <div className="canvas" id={name.toLowerCase() + `-participant`}></div>
     </section>
