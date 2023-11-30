@@ -1,30 +1,43 @@
-#root {
+body {
+  background: #e9e5ef;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
+  padding: 1rem;
   height: 100%;
 }
 
-body {
-  margin: 0;
+main {
+  display: flex;
+  width: calc(100% - 2rem);
+  height: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+}
+
+section:first-of-type {
+  margin-right: 0;
 }
 
 h1 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
-  margin: 0.5rem;
   color: #39363e;
   text-align: center;
+  box-sizing: border-box;
 }
 
-#zeus-participant,
-#hera-participant {
-  position: relative;
-  border-radius: 6px;
-  top: 5rem;
+.forge-viewer {
+  background-color: #c9c4d1;
   width: 100%;
-  height: 400px;
+  height: calc(95vh - 6.5rem);
+  border-radius: 6px;
+  border: none;
 }
 
 button {
@@ -34,9 +47,9 @@ button {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   margin: 0.5rem;
-  font-weight: bold;
-  line-height: 1.5rem;
-  height: 2rem;
+  line-height: 1rem;
+  height: 2.5rem;
+  box-sizing: border-box;
   color: #efefef;
   text-align: center;
   background-color: #6210cc;
@@ -48,28 +61,4 @@ button {
 button:hover {
   background-color: #baa9ff;
   color: #39363e;
-}
-
-.infos {
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-}
-
-.forge-viewer {
-  top: 0px !important;
-  position: fixed;  
-  width: 100vw !important;
-  height: 100% !important;
-  z-index: 0;
-}
-
-.forge-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
 }

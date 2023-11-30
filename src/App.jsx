@@ -12,10 +12,10 @@ function App() {
 
   // We are initializing multiple rooms for demo purposes.
   return (
-      <>
-        { showZeus && <ThreejsInstance name="Zeus" position="right" avatar="2" toggle={toggle} roomId={roomId} /> }
-        { !showZeus && <ThreejsInstance name="Hera" position="left" avatar="5" toggle={toggle} roomId={roomId} /> }
-      </>
+    <main>
+      {showZeus && <ThreejsInstance name="Zeus" toggle={toggle} roomId={roomId} />}
+      {!showZeus && <ThreejsInstance name="Hera" toggle={toggle} roomId={roomId} />}
+    </main>
   );
 }
 
