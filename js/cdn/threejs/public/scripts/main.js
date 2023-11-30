@@ -8,13 +8,16 @@ const roomId = generateUUID();
 const groupId = "sv-sample-room-cdn-js-presence3d-three-js";
 const groupName = "Sample Room for Presence3D for ThreeJS (CDN/JS)";
 
-document.addEventListener("DOMContentLoaded", function () {
-  InitThreeJsIntegrationWithSuperViz();
-});
+document.getElementById("zeus-button").addEventListener("click", InitFirstParticipant);
+document.getElementById("hera-button").addEventListener("click", InitSecondParticipant);
 
-function InitThreeJsIntegrationWithSuperViz() {
-  // We are initializing two rooms for demo propose.
+function InitFirstParticipant() {
+  document.getElementById("zeus-button").disabled = true;
   InitParticipantThreeJS("Zeus");
+}
+
+function InitSecondParticipant() {
+  document.getElementById("hera-button").disabled = true;
   InitParticipantThreeJS("Hera");
 }
 
