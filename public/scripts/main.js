@@ -13,14 +13,16 @@ const AutodeskData = {
   scope: "data:read bucket:read",
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  InitAutodesk();
-});
+document.getElementById("zeus-button").addEventListener("click", InitFirstParticipant);
+document.getElementById("hera-button").addEventListener("click", InitSecondParticipant);
 
-function InitAutodesk() {
-  // We are initializing two rooms for demo propose.
-
+function InitFirstParticipant() {
+  document.getElementById("zeus-button").disabled = true;
   InitParticipantAutodesk("Zeus");
+}
+
+function InitSecondParticipant() {
+  document.getElementById("hera-button").disabled = true;
   InitParticipantAutodesk("Hera");
 }
 
