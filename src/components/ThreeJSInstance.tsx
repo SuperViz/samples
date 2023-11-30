@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 
 import SuperVizRoom from "@superviz/sdk";
 import { Presence3D } from "@superviz/threejs-plugin";
@@ -11,14 +11,16 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
 export default function ThreeJSInstance({ name, roomId }: { name: string; roomId: string }) {
+  const [disableButton, setDisableButton] = useState(false);
+
   const groupId = "sv-sample-room-react-ts-presence3d-three-js";
   const groupName = "Sample Room for Presence3D for ThreeJS (React/TS)";
   const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+  const participantId = name.toLowerCase();
+  const containerId = participantId + "-participant";
 
-  function InitParticipantThreeJS(participantName: string, roomId: string) {
-    const participantId = participantName.toLowerCase();
-
-    const container = document.getElementById(participantId + "-participant") as HTMLElement;
+  function InitParticipantThreeJS() {
+    const container = document.getElementById(containerId) as HTMLElement;
     const width = container.clientWidth;
     const height = container.clientHeight;
 
@@ -43,7 +45,7 @@ export default function ThreeJSInstance({ name, roomId }: { name: string; roomId
       "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb",
       (gltf: { scene: THREE.Object3D }) => {
         scene.add(gltf.scene);
-        InitSuperVizRoomWithThreeJS(scene, camera, participantName, roomId);
+        InitSuperVizRoomWithThreeJS(scene, camera);
         animate();
       },
       undefined,
@@ -60,14 +62,9 @@ export default function ThreeJSInstance({ name, roomId }: { name: string; roomId
     animate();
   }
 
-  async function InitSuperVizRoomWithThreeJS(
-    scene: THREE.Scene,
-    camera: THREE.PerspectiveCamera,
-    participant: string,
-    roomId: string
-  ) {
+  async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.PerspectiveCamera) {
     // This line is only for demonstration purpose. You can use any avatar you want.
-    const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
+    const avatarImageForParticipant = name == "Hera" ? "2" : "5";
 
     const room = await SuperVizRoom(DEVELOPER_KEY, {
       roomId: roomId,
@@ -76,8 +73,8 @@ export default function ThreeJSInstance({ name, roomId }: { name: string; roomId
         name: groupName,
       },
       participant: {
-        id: participant.toLowerCase(),
-        name: participant,
+        id: participantId,
+        name: name,
         avatar: {
           imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
           model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
@@ -100,20 +97,16 @@ export default function ThreeJSInstance({ name, roomId }: { name: string; roomId
     }) as unknown as BaseComponent;
 
     room.addComponent(threeJSPresence);
-  }
-  const userId = name.toLowerCase();
-  const containerId = userId + "-participant";
-  const ref = useRef<any>(null);
 
-  useEffect(() => {
-    if (!ref) return;
-    InitParticipantThreeJS(name, roomId);
-  }, [ref]);
+    setDisableButton(true);
+  }
 
   return (
     <section>
-      <h1>View from "{name}" participant</h1>
-      <canvas id={containerId} ref={ref} />
+      <button onClick={InitParticipantThreeJS} disabled={disableButton}>
+        Join ThreeJS room as "{name}"
+      </button>
+      <canvas id={containerId} />
     </section>
   );
 }
