@@ -1,0 +1,24 @@
+name: Branch Management
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Create branches from subdirectories
+        run: |
+          for dir in $(find . -mindepth 3 -maxdepth 3 -type d ! -path "./.git*"); do
+            dir=${dir#./}
+            git subtree split --prefix=$dir --branch $dir
+            git push origin $dir
+          done
