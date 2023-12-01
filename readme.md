@@ -71,7 +71,6 @@ After that, we will be working on bringing the samples to more libraries and fra
 
 Besides samples, we want this project to:
 
-- GitOps to deploy each sample isolated to a different branch - _planned_
 - Deploys to CodeSandbox - _planned_
 - GitOps to update SuperViz SDK version before (in a separate branch) and after a new version is released - _planned_
 - User Interface Automatic Tests - _planned_
