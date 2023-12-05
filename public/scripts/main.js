@@ -54,7 +54,7 @@ async function InitSuperVizRoomWithMatterport(mpSDK, participant) {
       name: participant,
       avatar: {
         imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
-        model3DUrl: `/test-avater1.vrm`,
+        model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
       },
     },
     environment: "dev",
