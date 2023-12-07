@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import ThreeJSContainer from "./components/ThreeJSInstance";
+import ThreeJSContainer from "./components/CommentsContainer";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
