@@ -29,7 +29,7 @@ export default function WhoIsOnlineContainer({ name, roomId }: { name: string; r
   return (
     <section>
       <button onClick={() => initSuperVizWithWhoIsOnline()}>Enter Who-is-Online as "{name}"</button>
-      <div id={containerId} />
+      <div className="card" id={containerId} />
     </section>
   );
 }
