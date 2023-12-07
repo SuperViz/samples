@@ -50,7 +50,6 @@ async function InitSuperVizRoomWithMatterport(mpSDK, showcase, participant) {
       id: participant.toLowerCase(),
       name: participant,
     },
-    environment: "dev",
   });
 
   const pinAdapter = new window.MatterportPin(mpSDK, showcase);
