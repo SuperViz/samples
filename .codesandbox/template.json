@@ -1,0 +1,14 @@
+{
+  "title": "Sample Room for Video Conference (React/TS)",
+  "description": "The Video Conference, a key feature of the SuperViz SDK, empowers you with the ability to connect multiple participants in video meetings. This is part of the SuperViz SDK.",
+  "iconUrl": "https://superviz.com/wp-content/uploads/2022/10/superviz-1-80x80.png",
+  "tags": [
+    "react",
+    "javascript",
+    "typescript",
+    "superviz",
+    "real-time",
+    "collaboration"
+  ],
+  "published": true
+}
