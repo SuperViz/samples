@@ -24,7 +24,6 @@ export default function Canvas({ name, roomId }) {
         id: participantId,
         name: name,
       },
-      environment: "dev",
     });
 
     const mousePointer = new MousePointers(canvasId);
