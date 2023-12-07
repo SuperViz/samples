@@ -33,7 +33,6 @@ async function InitSuperVizRoomWithComments(participant) {
       id: participant.toLowerCase(),
       name: participant,
     },
-    environment: "dev",
   });
 
   const pinAdapter = new window.SuperVizRoom.CanvasPin(`participant-canvas`);
