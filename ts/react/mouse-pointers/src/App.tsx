@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Canvas from "./components/Canvas";
+import MousePointer from "./components/MousePointer";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
   // We are initializing two rooms for demo purposes.
   return (
     <>
-      <Canvas name="Zeus" roomId={roomId} />
-      <Canvas name="Hera" roomId={roomId} />
+      <MousePointer name="Zeus" roomId={roomId} />
+      <MousePointer name="Hera" roomId={roomId} />
     </>
   );
 }
