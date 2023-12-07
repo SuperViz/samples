@@ -1,0 +1,14 @@
+{
+  "title": "Sample Room for Who Is Online (React/TS)",
+  "description": "The Who-is-On-line component allows you to see participants who are connected in a room. This is part of the SuperViz SDK.",
+  "iconUrl": "https://superviz.com/wp-content/uploads/2022/10/superviz-1-80x80.png",
+  "tags": [
+    "react",
+    "javascript",
+    "typescript",
+    "superviz",
+    "real-time",
+    "collaboration"
+  ],
+  "published": true
+}
