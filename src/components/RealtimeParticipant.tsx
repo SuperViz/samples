@@ -26,7 +26,6 @@ export default function RealtimeParticipant({ name, roomId }: { name: string; ro
         id: participantId,
         name: name,
       },
-      environment: "dev" as any,
     });
 
     realtime.subscribe("Discord", callbackFunctionForWhenTheEventIsDispatched);
