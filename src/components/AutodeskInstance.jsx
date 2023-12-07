@@ -25,7 +25,6 @@ export default function AutodeskInstance({ name, roomId, toggle }) {
         id: participantId,
         name: name,
       },
-      environment: "dev",
     });
 
     const pinAdapter = new AutodeskPin(viewer, viewerDiv);
