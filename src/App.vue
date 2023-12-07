@@ -1,11 +1,9 @@
 <template>
-  <button :disabled="isRunning" @click="initSuperVizRoom">
-    Join Video Conference
-  </button>
+  <button :disabled="isRunning" @click="initSuperVizRoom">Join Video Conference</button>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref } from "vue";
 import { v4 as uuidv4 } from "uuid";
 import SuperVizRoom from "@superviz/sdk";
 import { VideoConference } from "@superviz/sdk/lib/components";
@@ -14,9 +12,8 @@ const groupId = "sv-sample-room-vue-t s-video-conference";
 const groupName = "Sample Room for Video Conference (Vue/TS)";
 const DEVELOPER_KEY = process.env.VUE_APP_SUPERVIZ_DEVELOPER_TOKEN as string;
 
-
 export default defineComponent({
-  name: 'App',
+  name: "App",
   setup() {
     const isRunning = ref(false);
 
@@ -33,7 +30,6 @@ export default defineComponent({
           id: "zeus",
           name: "Zeus",
         },
-        environment: "dev",
       });
 
       const video = new VideoConference({
@@ -47,6 +43,6 @@ export default defineComponent({
       isRunning,
       initSuperVizRoom,
     };
-  }
+  },
 });
 </script>
