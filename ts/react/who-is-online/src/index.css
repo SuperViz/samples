@@ -52,7 +52,7 @@ button:hover {
   color: #39363e;
 }
 
-div {
+.card {
   background-color: #57535f;
   border-radius: 6px;
   padding: 10px;
