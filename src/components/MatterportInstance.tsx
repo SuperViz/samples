@@ -39,7 +39,6 @@ export default function MatterportInstance({ name, roomId, toggle }: Props) {
           model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
         },
       },
-      environment: "dev" as any,
     });
 
     const pinAdapter = new MatterportPin(mpSdk, showcase);
