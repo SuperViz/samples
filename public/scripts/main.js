@@ -25,7 +25,6 @@ async function InitFirstRoom() {
       id: "zeus",
       name: "Zeus",
     },
-    environment: "dev",
   });
 
   const mousePointers = new window.SuperVizRoom.MousePointers("mouse-pointer-1");
@@ -45,7 +44,6 @@ async function InitSecondRoom() {
       id: "hera",
       name: "Hera",
     },
-    environment: "dev",
   });
 
   const mousePointers = new window.SuperVizRoom.MousePointers("mouse-pointer-2");
