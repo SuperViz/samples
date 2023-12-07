@@ -31,7 +31,6 @@ async function initWhoIsOnline(event) {
       id: participantId,
       name: name,
     },
-    environment: "dev",
   });
 
   const whoIsOnline = new window.SuperVizRoom.WhoIsOnline(containerId);
