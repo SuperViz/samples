@@ -31,7 +31,6 @@ export default function MatterportInstance({ name, roomId }) {
           model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
         },
       },
-      environment: "dev",
     });
 
     const matterportPresence = new Presence3D(mpSdk, {
