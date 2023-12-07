@@ -23,7 +23,6 @@ export default function CommentsInstance({ name, toggle }) {
         id: participantId,
         name: name,
       },
-      environment: "dev",
     });
 
     const pinAdapter = new CanvasPin(`${participantId}-participant`);
