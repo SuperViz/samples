@@ -21,7 +21,6 @@ async function initSuperVizWithVideoConference() {
       id: "zeus",
       name: "Zeus",
     },
-    environment: "dev",
   });
 
   const videoConference = new window.SuperVizRoom.VideoConference({
