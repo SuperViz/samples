@@ -23,7 +23,6 @@ function App() {
         id: "zeus",
         name: "Zeus",
       },
-      environment: "dev",
     });
 
     const video = new VideoConference({
