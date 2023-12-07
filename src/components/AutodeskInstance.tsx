@@ -103,7 +103,6 @@ export default function AutodeskInstance({ name, roomId }: Props) {
           model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
         },
       },
-      environment: "dev" as EnvironmentTypes,
     });
 
     const autodeskPresence = new Presence3D(viewer, {
