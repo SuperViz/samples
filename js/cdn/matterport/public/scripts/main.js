@@ -57,7 +57,6 @@ async function InitSuperVizRoomWithMatterport(mpSDK, participant) {
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
       },
     },
-    environment: "dev",
   });
 
   const matterportPresence = new window.Presence3D(mpSDK, {

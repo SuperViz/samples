@@ -93,7 +93,6 @@ async function InitSuperVizRoomWithThreeJS(scene, renderer, camera, participant,
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
       },
     },
-    environment: "dev",
   });
 
   const pinAdapter = new window.ThreeJsPin(scene, renderer, camera);

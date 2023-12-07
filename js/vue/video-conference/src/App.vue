@@ -1,7 +1,5 @@
 <template>
-  <button :disabled="isRunning" @click="initSuperVizRoom">
-    Join Video Conference
-  </button>
+  <button :disabled="isRunning" @click="initSuperVizRoom">Join Video Conference</button>
 </template>
 
 <script lang="js">
@@ -33,7 +31,7 @@ export default defineComponent({
           id: "zeus",
           name: "Zeus",
         },
-        environment: "dev",
+
       });
 
       const video = new VideoConference({

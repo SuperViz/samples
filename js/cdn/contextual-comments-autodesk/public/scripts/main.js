@@ -109,7 +109,6 @@ async function InitSuperVizRoomWithAutodesk(viewer, viewerElement, participant, 
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
       },
     },
-    environment: "dev",
   });
 
   const pinAdapter = new window.AutodeskPin(viewer, viewerElement);

@@ -28,7 +28,6 @@ async function loadSuperVizRealTimeDataEngine() {
       id: participantName,
       name: participantName,
     },
-    environment: "dev",
   });
 
   realtime = new window.SuperVizRoom.Realtime();
