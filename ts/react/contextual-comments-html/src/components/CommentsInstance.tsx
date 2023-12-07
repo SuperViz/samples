@@ -28,7 +28,6 @@ export default function CommentsInstance({ name, toggle, roomId }: Props) {
         id: participantId,
         name: name,
       },
-      environment: "dev" as any,
     });
 
     const pinAdapter = new CanvasPin(`${participantId}-participant`);

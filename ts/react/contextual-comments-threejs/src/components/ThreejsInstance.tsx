@@ -93,7 +93,6 @@ export default function ThreeJSContainer({ name, roomId, toggle }: Props) {
           model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
         },
       },
-      environment: "dev" as EnvironmentTypes,
     });
 
     const pinAdapter = new ThreeJsPin(scene, renderer, camera);

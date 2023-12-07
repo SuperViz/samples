@@ -33,7 +33,6 @@ export default function AutodeskInstance({ name, roomId, toggle }: Props) {
         id: participantId,
         name: name,
       },
-      environment: "dev" as EnvironmentTypes,
     });
 
     const pinAdapter = new AutodeskPin(viewer, viewerDiv);

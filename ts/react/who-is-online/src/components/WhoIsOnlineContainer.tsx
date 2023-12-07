@@ -20,7 +20,6 @@ export default function WhoIsOnlineContainer({ name, roomId }: { name: string; r
         id: participantId,
         name: name,
       },
-      environment: "dev" as any,
     });
 
     const whoIsOnline = new WhoIsOnline(containerId);

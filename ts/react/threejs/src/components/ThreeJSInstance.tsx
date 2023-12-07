@@ -80,7 +80,6 @@ export default function ThreeJSInstance({ name, roomId }: { name: string; roomId
           model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
         },
       },
-      environment: "dev" as EnvironmentTypes,
     });
 
     const threeJSPresence = new Presence3D(scene, camera, camera, {
