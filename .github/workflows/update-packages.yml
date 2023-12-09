@@ -1,9 +1,8 @@
 name: Update packages
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [new-release]
 
 jobs:
   update:
