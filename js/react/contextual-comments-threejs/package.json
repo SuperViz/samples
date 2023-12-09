@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@superviz/sdk": "^5.1.0",
+    "@superviz/sdk": "^5.1.1",
     "@superviz/threejs-plugin": "^0.15.0",
     "uuid": "^9.0.1",
     "three": "^0.158.0"
