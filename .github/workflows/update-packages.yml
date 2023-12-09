@@ -39,6 +39,7 @@ jobs:
               npx npm-check-updates -u @superviz/threejs-plugin
             fi
             git add .
+            yarn install
             cd -
           done
 
