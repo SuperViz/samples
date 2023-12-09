@@ -26,7 +26,7 @@ jobs:
       - name: Update package for each subdirectory
         run: |
           for dir in $(find . -mindepth 3 -maxdepth 3 -type d ! -path "./.git*"); do
-            dir=${dir#./}
+            cd "$dir"
             echo "Updating package for $dir"
             npx npm-check-updates -u @superviz/sdk
             if [[ $dir == *"matterport"* ]]; then
@@ -39,6 +39,7 @@ jobs:
               npx npm-check-updates -u @superviz/threejs-plugin
             fi
             git add .
+            cd -
           done
 
       - name: Commit changes
