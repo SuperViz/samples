@@ -443,7 +443,7 @@
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/sdk@^5.1.0":
+"@superviz/sdk@^5.1.1":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.1.1.tgz#f98247e2992e36a463ed1b781eb3da7b2e5984b9"
   integrity sha512-hmhGJZqzhlZLsY28eA7mQhwhl44G1YaXtp8xrXG85Szn1Pz7JDjirMSHBmfr0YNB/TCuKDbJlRfnQOzEVtRayg==
