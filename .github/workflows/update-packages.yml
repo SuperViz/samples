@@ -1,8 +1,9 @@
 name: Update packages
 
 on:
-  repository_dispatch:
-    types: [new-release]
+  push:
+    branches:
+      - main
 
 jobs:
   update:
@@ -38,8 +39,8 @@ jobs:
             if [[ $dir == *"threejs"* ]]; then
               npx npm-check-updates -u @superviz/threejs-plugin
             fi
-            git add .
             yarn install
+            git add .
             cd -
           done
 
