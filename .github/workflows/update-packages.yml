@@ -16,8 +16,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
         with:
-          fetch-depth: 0
+          node-version: "18.x"
 
       - name: Update package for each subdirectory
         run: |
