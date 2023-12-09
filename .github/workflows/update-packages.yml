@@ -35,6 +35,7 @@ jobs:
             if [[ $dir == *"threejs"* ]]; then
               npm update --save --pattern "@superviz/threejs-plugin"
             fi
+            git status
           done
 
       - name: Upload changes folder
@@ -55,6 +56,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: changes
+
+      - run: git status
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
