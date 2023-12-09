@@ -10,6 +10,9 @@ jobs:
     name: Update package
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -25,39 +28,18 @@ jobs:
           for dir in $(find . -mindepth 3 -maxdepth 3 -type d ! -path "./.git*"); do
             dir=${dir#./}
             echo "Updating package for $dir"
-            npm update --save --pattern "@superviz/sdk"
+            npx npm-check-updates -u @superviz/sdk
             if [[ $dir == *"matterport"* ]]; then
-              npm update --save --pattern "@superviz/matterport-plugin"
+              npx npm-check-updates -u @superviz/matterport-plugin
             fi
             if [[ $dir == *"autodesk"* ]]; then
-              npm update --save --pattern "@superviz/autodesk-viewer-plugin"
+              npx npm-check-updates -u @superviz/autodesk-viewer-plugin
             fi
             if [[ $dir == *"threejs"* ]]; then
-              npm update --save --pattern "@superviz/threejs-plugin"
+              npx npm-check-updates -u @superviz/threejs-plugin
             fi
-            git status
+            git add .
           done
-
-      - name: Upload changes folder
-        uses: actions/upload-artifact@v2
-        with:
-          name: changes
-          path: changes
-
-  commit:
-    name: Commit changes
-    runs-on: ubuntu-latest
-    needs: update
-    permissions:
-      contents: write
-
-    steps:
-      - name: Download changes folder
-        uses: actions/download-artifact@v2
-        with:
-          name: changes
-
-      - run: git status
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
