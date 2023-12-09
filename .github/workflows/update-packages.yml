@@ -15,12 +15,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-node@v3
         with:
           node-version: "18.x"
+
+      - name: Enable corepack
+        run: corepack enable
 
       - name: Update package for each subdirectory
         run: |
