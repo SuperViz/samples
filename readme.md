@@ -24,7 +24,7 @@ yarn start
 
 Just make sure that you have the required developer keys in the `.env` file. For that copy the `.env.example` file to `.env` and fill in the values.
 
-NOTE: inside the `js/` directory you can find the `vanilla/` directory, this contains samples using our SDK with CDN, meaning that SuperViz package is downloaded from `<script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>` and not using it as a package.
+NOTE: inside the `js/` directory you can find the `vanilla/` directory, this contains samples using our SDK with CDN, meaning that the SuperViz package is downloaded from `<script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>` and not using it as a package.
 
 ## Samples with JavaScript
 
@@ -60,10 +60,8 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 
 ## Project roadmap
 
-This are the key features we are working on right now:
+These are the key features we are working on right now:
 
-- Samples with JavaScript CDN - _in progress_
-- Samples with React for both JavaScript and TypeScript - _in progress_
 - Samples with Vanilla for both JavaScript and TypeScript - _planned_
 - Samples with Vue for both JavaScript and TypeScript - _planned_
 
@@ -71,6 +69,5 @@ After that, we will be working on bringing the samples to more libraries and fra
 
 Besides samples, we want this project to:
 
-- Deploys to CodeSandbox - _planned_
-- GitOps to update SuperViz SDK version before (in a separate branch) and after a new version is released - _planned_
+- GitOps to update the SuperViz SDK version before (in a separate branch) and after a new version is released - _in progress_
 - User Interface Automatic Tests - _planned_
