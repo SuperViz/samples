@@ -443,10 +443,10 @@
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/sdk@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.1.0.tgz#9adf34dee0bf4b3a9f30df3b5de9c1067832230b"
-  integrity sha512-RrdBpahwmWCBVzUQIMLUFeTiT1gyfFG1r+Fn4dXUeCCA9utdhnBQg5HOAGkcnnZivBybCKcIKLuHTT3KqkqLbQ==
+"@superviz/sdk@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.1.1.tgz#f98247e2992e36a463ed1b781eb3da7b2e5984b9"
+  integrity sha512-hmhGJZqzhlZLsY28eA7mQhwhl44G1YaXtp8xrXG85Szn1Pz7JDjirMSHBmfr0YNB/TCuKDbJlRfnQOzEVtRayg==
   dependencies:
     "@superviz/sv-icons" "^0.8.8"
     ably "^1.2.45"
