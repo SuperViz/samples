@@ -1,0 +1,42 @@
+name: Update package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Update package
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Update package for each subdirectory
+        run: |
+          for dir in $(find . -mindepth 3 -maxdepth 3 -type d ! -path "./.git*"); do
+            dir=${dir#./}
+            echo "Updating package for $dir"
+            npm update --save --pattern "@superviz/sdk"
+            if [[ $dir == *"matterport"* ]]; then
+              npm update --save --pattern "@superviz/matterport-plugin"
+            fi
+            if [[ $dir == *"autodesk"* ]]; then
+              npm update --save --pattern "@superviz/autodesk-viewer-plugin"
+            fi
+            if [[ $dir == *"threejs"* ]]; then
+              npm update --save --pattern "@superviz/threejs-plugin"
+            fi
+          done
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update package
