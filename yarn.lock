@@ -1147,10 +1147,10 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.2.tgz#a53515db25d8038374381b73af20bb4f2e508d87"
   integrity sha512-T7VNNlYVM1SgQ+VsMYhnDkcGmWhQdL0bDyGm5TlQ3GBXnJscEClUUOKduWTmm2zCnvNLC1hc3JpuXjs/nFOc5w==
 
-"@superviz/sdk@^5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.1.1.tgz#f98247e2992e36a463ed1b781eb3da7b2e5984b9"
-  integrity sha512-hmhGJZqzhlZLsY28eA7mQhwhl44G1YaXtp8xrXG85Szn1Pz7JDjirMSHBmfr0YNB/TCuKDbJlRfnQOzEVtRayg==
+"@superviz/sdk@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.2.0.tgz#9fee338ae3e0b573d5bdc1e4596d8b2217b37b56"
+  integrity sha512-iweWEoBeU/ApohfXvDgy70bAonS1Sq86WUmWnQlkq+XpgoyFMIlIrpDKpNmIFlgWrKfPxWqU1x1HGi0QLD/OFw==
   dependencies:
     "@superviz/sv-icons" "^0.8.8"
     ably "^1.2.45"
