@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@superviz/autodesk-viewer-plugin": "^1.8.0",
-    "@superviz/sdk": "^5.1.1",
+    "@superviz/sdk": "^5.2.0",
     "forge-apis": "^0.9.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
