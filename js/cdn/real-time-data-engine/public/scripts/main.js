@@ -32,15 +32,15 @@ async function loadSuperVizRealTimeDataEngine() {
 
   realtime = new window.SuperVizRoom.Realtime();
 
-  realtime.subscribe("Discord", callbackFunctionForWhenTheEventIsDispatched);
-  realtime.subscribe("Slack", callbackFunctionForWhenTheEventIsDispatched);
-  realtime.subscribe("Linkedin", callbackFunctionForWhenTheEventIsDispatched);
+  realtime.subscribe("event_name_1", callbackFunctionForWhenTheEventIsDispatched);
+  realtime.subscribe("event_name_2", callbackFunctionForWhenTheEventIsDispatched);
+  realtime.subscribe("event_name_3", callbackFunctionForWhenTheEventIsDispatched);
 
   room.addComponent(realtime);
 
-  eventsSubscribed.push("Discord");
-  eventsSubscribed.push("Slack");
-  eventsSubscribed.push("Linkedin");
+  eventsSubscribed.push("event_name_1");
+  eventsSubscribed.push("event_name_2");
+  eventsSubscribed.push("event_name_3");
 
   const container = document.getElementById("events");
   container.innerHTML = `<h2>Subscribed to:</h2>`;
