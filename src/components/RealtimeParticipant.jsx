@@ -28,11 +28,11 @@ export default function RealtimeParticipant({ name, roomId }) {
       },
     });
 
-    realtime.subscribe("Discord", callbackFunctionForWhenTheEventIsDispatched);
-    realtime.subscribe("Slack", callbackFunctionForWhenTheEventIsDispatched);
-    realtime.subscribe("Linkedin", callbackFunctionForWhenTheEventIsDispatched);
+    realtime.subscribe("event_name_1", callbackFunctionForWhenTheEventIsDispatched);
+    realtime.subscribe("event_name_2", callbackFunctionForWhenTheEventIsDispatched);
+    realtime.subscribe("event_name_3", callbackFunctionForWhenTheEventIsDispatched);
 
-    setEventsSubscribed(["Discord", "Slack", "Linkedin"]);
+    setEventsSubscribed(["event_name_1", "event_name_2", "event_name_3"]);
 
     room.addComponent(realtime);
   };
