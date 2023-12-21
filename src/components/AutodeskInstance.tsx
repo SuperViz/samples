@@ -1,6 +1,5 @@
 import { useState } from "react";
 import SuperVizRoom from "@superviz/sdk";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types";
 import { Presence3D } from "@superviz/autodesk-viewer-plugin";
 
 interface Props {
