@@ -434,19 +434,19 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/matterport-plugin@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.11.0.tgz#46801e220fc4d800341aaea34fc654f0532b7b60"
-  integrity sha512-U2KMX/0anCdEXkMuKi6SoQx+Kj0Q4lsepyBDJbiIhYes1FvX4kvcsO/QqPJxinq/obRTVmNYL7+wBifvel6rwA==
+"@superviz/matterport-plugin@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.10.0.tgz#023a7c2b09f7950cd17a4604ce4d7a0608feef77"
+  integrity sha512-PY+dAbZzNAGuRQ52PhnQc1g866Hlj7HPYE5hGX6Ptr+1+NRXri30JGuoHcbF5kV41rZQg0JMxAZEb2DNENvqfg==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/sdk@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.2.0.tgz#9fee338ae3e0b573d5bdc1e4596d8b2217b37b56"
-  integrity sha512-iweWEoBeU/ApohfXvDgy70bAonS1Sq86WUmWnQlkq+XpgoyFMIlIrpDKpNmIFlgWrKfPxWqU1x1HGi0QLD/OFw==
+"@superviz/sdk@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.1.0.tgz#9adf34dee0bf4b3a9f30df3b5de9c1067832230b"
+  integrity sha512-RrdBpahwmWCBVzUQIMLUFeTiT1gyfFG1r+Fn4dXUeCCA9utdhnBQg5HOAGkcnnZivBybCKcIKLuHTT3KqkqLbQ==
   dependencies:
     "@superviz/sv-icons" "^0.8.8"
     ably "^1.2.45"
@@ -461,9 +461,9 @@
     semantic-release-version-file "^1.0.2"
 
 "@superviz/sv-icons@^0.8.8":
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/@superviz/sv-icons/-/sv-icons-0.8.8.tgz#702ff1f2dd6bd89bb9b82953ec05c60ee2037119"
-  integrity sha512-+X5yqHSriKNlCdJq6b2j0xRuOYl9gCGXSG58t7HMZ1Vm4bxYgNxkfWjz6HmWNnotsQh/mBktE5J00KZK3jP2Gg==
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/@superviz/sv-icons/-/sv-icons-0.8.10.tgz#b17b4ddfba856ce21e8fd50db5ae311a1f636882"
+  integrity sha512-P8m7XFfdKj+ta9ffVnrOFQmjdfbQn+h6eHshB7B1j1lmwMG7BRiFOBwQA06J5wT4NWLZ4ERe3PUkZbOed1m8Ag==
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"
