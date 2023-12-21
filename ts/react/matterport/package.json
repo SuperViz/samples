@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@superviz/matterport-plugin": "^0.11.0",
-    "@superviz/sdk": "^5.2.0",
+    "@superviz/matterport-plugin": "^0.12.0",
+    "@superviz/sdk": "^5.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uuid": "^9.0.1"

@@ -3,7 +3,6 @@ import { useState } from "react";
 import SuperVizRoom from "@superviz/sdk";
 import { Presence3D } from "@superviz/threejs-plugin";
 import { BaseComponent } from "@superviz/sdk/lib/components/base/index.js";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types.js";
 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";

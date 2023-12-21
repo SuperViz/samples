@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import SuperVizRoom, { LauncherFacade } from "@superviz/sdk";
 import { ThreeJsPin } from "@superviz/threejs-plugin";
 import { Comments } from "@superviz/sdk/lib/components/index.js";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types";
 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
