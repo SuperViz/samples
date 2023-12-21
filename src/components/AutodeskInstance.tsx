@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 
 import SuperVizRoom from "@superviz/sdk";
 import { AutodeskPin } from "@superviz/autodesk-viewer-plugin";
-import { EnvironmentTypes } from "@superviz/sdk/lib/common/types/sdk-options.types";
 import { Comments } from "@superviz/sdk/lib/components";
 
 interface Props {
