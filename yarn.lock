@@ -434,10 +434,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/sdk@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.3.0.tgz#bdc438ca126b9ba8a0ae64671789de6897517802"
-  integrity sha512-qp1LsPWVuglGol3Cb7cMU0ariOfRUTy2poE3E6w8DxrsU3biFKGwBI4uzO71PzanIcweQWNU2QCO+/TQD1OLvQ==
+"@superviz/sdk@^5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.4.0.tgz#fae2032f120137a615230f72e6ed23a8cfa4ee70"
+  integrity sha512-HbipxAVWCEL5gAC1QP1TovigkQnZFDpDTwHdPU9g+UBUcw/hwUwWgijWR2LD83/OJGM20qwKMLQsj+mjj0Nj1A==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"
