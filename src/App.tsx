@@ -1,8 +1,10 @@
+import { useRef } from "react";
 import MatterportInstance from "./components/MatterportInstance";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  const roomId = uuidv4();
+  const roomId = useRef(uuidv4()).current;
+
   // We are initializing multiple rooms for demo purposes.
   return (
     <main>

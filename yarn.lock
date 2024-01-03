@@ -434,10 +434,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/matterport-plugin@^0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.13.0.tgz#c9b3be2c4f5aa75ae1548021e380c4c03d5ddc9c"
-  integrity sha512-JTfG3EckzoPPrZqwyl77mdDy7fn2Ek+APcnqu/b52Dk1BZ5/2YsRYYvroA4RWeBHkmzyiMLO4Xn28Nt3nrAPBw==
+"@superviz/matterport-plugin@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.14.0.tgz#8fe4bd78fe542c12baf76001ceee551785a11830"
+  integrity sha512-X2D0laWSxuoQMHA3swifShFQIaiXX7QTgdIH8mkdJOT5Viil9N6X/fY+O5U5JL1VR4TIsBJ7PBq32qe8iEErcQ==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
