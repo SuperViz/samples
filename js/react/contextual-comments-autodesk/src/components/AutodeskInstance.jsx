@@ -44,12 +44,11 @@ export default function AutodeskInstance({ name, roomId, toggle }) {
     const modelID = btoa(modelURN);
     const FORGE_CLIENT = import.meta.env.VITE_CLIENT_ID;
     const FORGE_SECRET = import.meta.env.VITE_CLIENT_SECRET;
-    const AUTH_URL = "https://developer.api.autodesk.com/authentication/v1/authenticate";
+    const AUTH_URL = "https://developer.api.autodesk.com/authentication/v2/token";
     const documentId = `urn:${modelID}`;
+    const token = btoa(`${FORGE_CLIENT}:${FORGE_SECRET}`);
 
     let data = {
-      client_id: FORGE_CLIENT,
-      client_secret: FORGE_SECRET,
       grant_type: "client_credentials",
       scope: "data:read bucket:read",
     };
@@ -59,7 +58,7 @@ export default function AutodeskInstance({ name, roomId, toggle }) {
 
     fetch(AUTH_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: `Basic ${token}` },
       body: new URLSearchParams(data).toString(),
     })
       .then((res) => {

@@ -4,14 +4,13 @@ const roomId = generateUUID();
 const groupId = "sv-sample-room-cdn-js-presence3d-autodesk-viewer";
 const groupName = "Sample Room for Presence3D for Autodesk viewer (CDN/JS)";
 
-const AUTH_URL = "https://developer.api.autodesk.com/authentication/v1/authenticate";
+const AUTH_URL = "https://developer.api.autodesk.com/authentication/v2/token";
 const modelURN = "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
 const AutodeskData = {
-  client_id: CLIENT_ID,
-  client_secret: CLIENT_SECRET,
   grant_type: "client_credentials",
   scope: "data:read bucket:read",
 };
+const token = btoa(`${FORGE_CLIENT}:${FORGE_SECRET}`);
 
 document.getElementById("zeus-button").addEventListener("click", InitFirstParticipant);
 document.getElementById("hera-button").addEventListener("click", InitSecondParticipant);
@@ -33,7 +32,7 @@ function InitParticipantAutodesk(participantName) {
 
   fetch(AUTH_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: `Basic ${token}` },
     body: new URLSearchParams(AutodeskData).toString(),
   })
     .then((res) => {
