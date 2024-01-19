@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@superviz/sdk": "^5.4.0",
-    "@superviz/threejs-plugin": "^0.17.0",
+    "@superviz/sdk": "^5.5.0",
+    "@superviz/threejs-plugin": "^0.19.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.158.0",

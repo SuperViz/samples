@@ -439,19 +439,19 @@
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-4.6.0.tgz"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/autodesk-viewer-plugin@^1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.10.1.tgz#6eac6109f250b9593d063452dab0718d57161f37"
-  integrity sha512-ncaYkoUVsgpRksEupJvqesPT2fkrc06hM03u63XzdXPjs5Fxl7LOMuaohwjbJ9wf4UMFzfmzCgk+wE2GgvFOOA==
+"@superviz/autodesk-viewer-plugin@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.12.0.tgz#8098ac39f89e14ee016b74928052e248a3b69ef8"
+  integrity sha512-LJ7/LBAqM6Hk9sT+gUsZpSsjMQEbXueakrFVHCrUCFVQIRm64HPUjJufDyzjjBGviSL/xWcbCog4MowOVZQ5DQ==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/sdk@^5.4.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.4.0.tgz#fae2032f120137a615230f72e6ed23a8cfa4ee70"
-  integrity sha512-HbipxAVWCEL5gAC1QP1TovigkQnZFDpDTwHdPU9g+UBUcw/hwUwWgijWR2LD83/OJGM20qwKMLQsj+mjj0Nj1A==
+"@superviz/sdk@^5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.5.0.tgz#35090b8afd2f40199cb18dae52a0bea946237663"
+  integrity sha512-KHnpeUNnVd2AeQ0hSnlI0dMOAdsKVcsgakM9V99aq19wBAJ8mEKvTJDxZrNrRA1yUNPSm/nM6H++yyhObv7bOA==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"
