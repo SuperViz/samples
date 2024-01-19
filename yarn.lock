@@ -511,10 +511,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/sdk@^5.4.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.4.0.tgz#fae2032f120137a615230f72e6ed23a8cfa4ee70"
-  integrity sha512-HbipxAVWCEL5gAC1QP1TovigkQnZFDpDTwHdPU9g+UBUcw/hwUwWgijWR2LD83/OJGM20qwKMLQsj+mjj0Nj1A==
+"@superviz/sdk@^5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.5.0.tgz#35090b8afd2f40199cb18dae52a0bea946237663"
+  integrity sha512-KHnpeUNnVd2AeQ0hSnlI0dMOAdsKVcsgakM9V99aq19wBAJ8mEKvTJDxZrNrRA1yUNPSm/nM6H++yyhObv7bOA==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"
@@ -527,10 +527,10 @@
     luxon "^3.4.3"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/threejs-plugin@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.17.0.tgz#29856571b74d143bdb623fd8a457a8c0235a85cb"
-  integrity sha512-t4r2YQgHNe/JEG4sNl2k2+QUv+VVAvhvl8F47KgXG2w29eoyCP+zTKh665eM0OY8bn7vvud/7SdImvLmoTfUHg==
+"@superviz/threejs-plugin@^0.19.1":
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.19.1.tgz#16e5071c17efca71557a92dc523c2d6b23b4b577"
+  integrity sha512-gbYsScyq2Rgbd4uEnN3ucgomGHGaUUYoeg2gnwclH3Wb6vOkFY4nKFjg+fFraeKPgZdA2LL77hoqDKkVOHmxEw==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
