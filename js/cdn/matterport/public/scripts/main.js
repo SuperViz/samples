@@ -14,7 +14,7 @@ function InitFirstParticipantMatterport() {
   if (!showcase) return;
 
   const showcaseWindow = showcase.contentWindow;
-  showcase.src = `./mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
+  showcase.src = `./mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
 
   showcase.addEventListener("load", async () => {
     if (!showcaseWindow) return;
@@ -29,7 +29,7 @@ function InitSecondParticipantMatterport() {
   if (!showcase) return;
 
   const showcaseWindow = showcase.contentWindow;
-  showcase.src = `./mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
+  showcase.src = `./mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
 
   showcase.addEventListener("load", async () => {
     if (!showcaseWindow) return;

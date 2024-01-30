@@ -1,6 +1,6 @@
 import SuperVizRoom from "@superviz/sdk";
 import { Presence3D } from "@superviz/matterport-plugin";
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MatterportInstance({ name, roomId }: { name: string; roomId: string }) {
   const participantId = name.toLowerCase();
@@ -10,10 +10,12 @@ export default function MatterportInstance({ name, roomId }: { name: string; roo
   const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
   const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
 
-  const ref = useRef<any>(null);
-  const [disableButton, setDisableButton] = useState(false);
+  const [disableButton, setDisableButton] = useState(true);
+  const [matterport, setMatterport] = useState();
 
-  const initSuperVizWithMatterport = async (mpSdk: any) => {
+  const initSuperVizWithMatterport = async () => {
+    setDisableButton(true);
+
     // This line is only for demonstration purpose. You can use any avatar you want.
     const avatarImageForParticipant = name == "Hera" ? "2" : "5";
 
@@ -33,7 +35,7 @@ export default function MatterportInstance({ name, roomId }: { name: string; roo
       },
     });
 
-    const matterportPresence = new Presence3D(mpSdk, {
+    const matterportPresence = new Presence3D(matterport as any, {
       isAvatarsEnabled: true,
       isLaserEnabled: true,
       isNameEnabled: true,
@@ -47,26 +49,27 @@ export default function MatterportInstance({ name, roomId }: { name: string; roo
     room.addComponent(matterportPresence as any);
   };
 
-  const InitMatterport = async () => {
-    const showcaseWindow = ref.current.contentWindow;
+  useEffect(() => {
+    const showcase = document.getElementById(`${name}-container`) as any;
 
-    if (!showcaseWindow) return;
-    const mpSdk = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
+    showcase.onload = async () => {
+      const showcaseWindow = showcase.contentWindow as any;
 
-    initSuperVizWithMatterport(mpSdk);
-    setDisableButton(true);
-  };
+      const mpSdk = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
+      setMatterport(mpSdk);
+      setDisableButton(false);
+    };
+  }, []);
 
   return (
     <>
       <section>
-        <button onClick={InitMatterport} disabled={disableButton}>
+        <button onClick={initSuperVizWithMatterport} disabled={disableButton}>
           Join Matterport room as "{name}"
         </button>
         <iframe
-          ref={ref}
           id={`${name}-container`}
-          src={`/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
+          src={`/mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
         />
       </section>
     </>

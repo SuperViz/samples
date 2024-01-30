@@ -434,21 +434,20 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/matterport-plugin@0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.10.0.tgz#023a7c2b09f7950cd17a4604ce4d7a0608feef77"
-  integrity sha512-PY+dAbZzNAGuRQ52PhnQc1g866Hlj7HPYE5hGX6Ptr+1+NRXri30JGuoHcbF5kV41rZQg0JMxAZEb2DNENvqfg==
+"@superviz/matterport-plugin@^0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.15.0.tgz#de9466dd3a36385ccf79f291555c8fd9d53ad9c2"
+  integrity sha512-BvXUAy5m/DdWQrdYsUOZ1pzFhoVy9FkD1+hVOJpfTUY8mYG52Huy9Qk14P+8fcVYRONbFvG83xacEpNT/pAXHw==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/sdk@5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.1.0.tgz#9adf34dee0bf4b3a9f30df3b5de9c1067832230b"
-  integrity sha512-RrdBpahwmWCBVzUQIMLUFeTiT1gyfFG1r+Fn4dXUeCCA9utdhnBQg5HOAGkcnnZivBybCKcIKLuHTT3KqkqLbQ==
+"@superviz/sdk@5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.5.1.tgz#74e99e0c1ecd674a545ecab17ff790842d8f4ea6"
+  integrity sha512-vzB3tsYle25qfB+0LO0tRd1wi+YTQ1LcDnD5UWTpSmqyJhWLy/qDKN1B6eQS7Kc0IEIWzPGHVrEZNrdqco0SyA==
   dependencies:
-    "@superviz/sv-icons" "^0.8.8"
     ably "^1.2.45"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
@@ -459,11 +458,6 @@
     lodash.isequal "^4.5.0"
     luxon "^3.4.3"
     semantic-release-version-file "^1.0.2"
-
-"@superviz/sv-icons@^0.8.8":
-  version "0.8.10"
-  resolved "https://registry.yarnpkg.com/@superviz/sv-icons/-/sv-icons-0.8.10.tgz#b17b4ddfba856ce21e8fd50db5ae311a1f636882"
-  integrity sha512-P8m7XFfdKj+ta9ffVnrOFQmjdfbQn+h6eHshB7B1j1lmwMG7BRiFOBwQA06J5wT4NWLZ4ERe3PUkZbOed1m8Ag==
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"

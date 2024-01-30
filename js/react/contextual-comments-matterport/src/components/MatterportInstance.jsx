@@ -75,7 +75,7 @@ export default function MatterportInstance({ name, roomId, toggle }) {
         className={name.toLowerCase()}
         ref={ref}
         id={`${name}-container`}
-        src={`/mp-bundle/showcase.html?&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
+        src={`/mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
       />
     </>
   );

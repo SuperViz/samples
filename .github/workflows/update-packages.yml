@@ -29,15 +29,9 @@ jobs:
             cd "$dir"
             echo "Updating package for $dir"
             npx npm-check-updates -u @superviz/sdk
-            if [[ $dir == *"matterport"* ]]; then
-              npx npm-check-updates -u @superviz/matterport-plugin
-            fi
-            if [[ $dir == *"autodesk"* ]]; then
-              npx npm-check-updates -u @superviz/autodesk-viewer-plugin
-            fi
-            if [[ $dir == *"threejs"* ]]; then
-              npx npm-check-updates -u @superviz/threejs-plugin
-            fi
+            npx npm-check-updates -u @superviz/matterport-plugin
+            npx npm-check-updates -u @superviz/autodesk-viewer-plugin
+            npx npm-check-updates -u @superviz/threejs-plugin
             yarn install
             git add .
             cd -
@@ -47,3 +41,15 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update package
+
+  dispatch:
+    name: Update samples at docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.SUPERVIZ_DEV_TOKEN }}
+          repository: SuperViz/docs-samples
+          event-type: new-release
+          client-payload: '{"version": "v0.0.0"}'

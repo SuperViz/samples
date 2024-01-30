@@ -4,14 +4,13 @@ const roomId = "4be67c09-0e3b-4fe8-9eb6-20c098463968";
 const groupId = "sv-sample-room-react-cdn-contextual-comments-autodesk";
 const groupName = "Sample Room with Contextual Comments for Autodesk  (React/CDN)";
 
-const AUTH_URL = "https://developer.api.autodesk.com/authentication/v1/authenticate";
+const AUTH_URL = "https://developer.api.autodesk.com/authentication/v2/token";
 const modelURN = "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
 const AutodeskData = {
-  client_id: CLIENT_ID,
-  client_secret: CLIENT_SECRET,
   grant_type: "client_credentials",
   scope: "data:read bucket:read",
 };
+const token = btoa(`${FORGE_CLIENT}:${FORGE_SECRET}`);
 
 let room;
 let participantName = "Zeus";
@@ -39,7 +38,7 @@ function InitParticipantAutodesk(participantName) {
 
   fetch(AUTH_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: `Basic ${token}` },
     body: new URLSearchParams(AutodeskData).toString(),
   })
     .then((res) => {

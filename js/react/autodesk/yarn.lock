@@ -434,21 +434,20 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/autodesk-viewer-plugin@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.8.0.tgz#91b38cbd549fea1518f435947f3f835e48e9c268"
-  integrity sha512-dqN8L15/ojUhfgaUtxO+yEfhZP0MwzYgvk6aNkEuVf8QWX2uLjx+O3CxJrrfRExLXf/3SrQyD3I1+jxhAYItkA==
+"@superviz/autodesk-viewer-plugin@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.12.0.tgz#8098ac39f89e14ee016b74928052e248a3b69ef8"
+  integrity sha512-LJ7/LBAqM6Hk9sT+gUsZpSsjMQEbXueakrFVHCrUCFVQIRm64HPUjJufDyzjjBGviSL/xWcbCog4MowOVZQ5DQ==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/sdk@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.2.0.tgz#9fee338ae3e0b573d5bdc1e4596d8b2217b37b56"
-  integrity sha512-iweWEoBeU/ApohfXvDgy70bAonS1Sq86WUmWnQlkq+XpgoyFMIlIrpDKpNmIFlgWrKfPxWqU1x1HGi0QLD/OFw==
+"@superviz/sdk@^5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.5.1.tgz#74e99e0c1ecd674a545ecab17ff790842d8f4ea6"
+  integrity sha512-vzB3tsYle25qfB+0LO0tRd1wi+YTQ1LcDnD5UWTpSmqyJhWLy/qDKN1B6eQS7Kc0IEIWzPGHVrEZNrdqco0SyA==
   dependencies:
-    "@superviz/sv-icons" "^0.8.8"
     ably "^1.2.45"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
@@ -459,11 +458,6 @@
     lodash.isequal "^4.5.0"
     luxon "^3.4.3"
     semantic-release-version-file "^1.0.2"
-
-"@superviz/sv-icons@^0.8.8":
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/@superviz/sv-icons/-/sv-icons-0.8.8.tgz#702ff1f2dd6bd89bb9b82953ec05c60ee2037119"
-  integrity sha512-+X5yqHSriKNlCdJq6b2j0xRuOYl9gCGXSG58t7HMZ1Vm4bxYgNxkfWjz6HmWNnotsQh/mBktE5J00KZK3jP2Gg==
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"
