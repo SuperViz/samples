@@ -43,13 +43,36 @@ jobs:
           commit_message: Update package
 
   dispatch:
-    name: Update samples at docs
+    name: Repository Dispatch
     runs-on: ubuntu-latest
     steps:
-      - name: Repository Dispatch
+      - name: Update doc-samples
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.SUPERVIZ_DEV_TOKEN }}
           repository: SuperViz/docs-samples
           event-type: new-release
           client-payload: '{"version": "v0.0.0"}'
+
+      - name: Update demos
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.SUPERVIZ_DEV_TOKEN }}
+          repository: SuperViz/demos
+          event-type: new-release
+          client-payload: '{"version": "v0.0.0"}'
+
+  slackNotificationProduction:
+    needs:
+      - dispatch
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_ICON: https://avatars.slack-edge.com/2020-11-18/1496892993975_af721d1c045bea2d5a46_48.png
+          MSG_MINIMAL: true
+          SLACK_USERNAME: Samples update
