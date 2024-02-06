@@ -443,10 +443,10 @@
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/sdk@5.5.1":
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.5.1.tgz#74e99e0c1ecd674a545ecab17ff790842d8f4ea6"
-  integrity sha512-vzB3tsYle25qfB+0LO0tRd1wi+YTQ1LcDnD5UWTpSmqyJhWLy/qDKN1B6eQS7Kc0IEIWzPGHVrEZNrdqco0SyA==
+"@superviz/sdk@5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.6.0.tgz#cb0d6f6f280683fa939382867abf15373225f885"
+  integrity sha512-VsvTgXZfSk5CbBhPjtvoIMIWb8W+YiCvVxM89KOWBW8eoSvFQOhlLOTQiU6PJ0mecTXjTeoC8Qh0Vpd3J8XJJA==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"
