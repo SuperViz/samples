@@ -30,7 +30,6 @@ function App() {
           id: user.toString(),
           name: "John Doe",
         }}
-        environment="dev"
         roomId={roomId}
         onParticipantLocalJoined={joinedRoom}
       >
