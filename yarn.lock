@@ -434,10 +434,41 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/sdk@^5.6.0":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.6.0.tgz#cb0d6f6f280683fa939382867abf15373225f885"
-  integrity sha512-VsvTgXZfSk5CbBhPjtvoIMIWb8W+YiCvVxM89KOWBW8eoSvFQOhlLOTQiU6PJ0mecTXjTeoC8Qh0Vpd3J8XJJA==
+"@superviz/autodesk-viewer-plugin@1.11.0-lab.3":
+  version "1.11.0-lab.3"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.11.0-lab.3.tgz#30ecabeacfc9fe9ead6393789fee7398e501703d"
+  integrity sha512-KDSr+BavhDMFIaBjCqgHG8uXoE6fk/8tnpJWb7V+2db1oDG6S2+Kb+0PIZCf9G+4clbtDijQluiXxLvU79L/iw==
+  dependencies:
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    three "0.139.2"
+
+"@superviz/matterport-plugin@0.15.0-lab.1":
+  version "0.15.0-lab.1"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.15.0-lab.1.tgz#c587a3bf4b39a76b517514b0e47a2d0802a55cbc"
+  integrity sha512-PDnr0zbMVH4pEiKfw87lEr9oCVrMvpsUfXEV22KB9hnqZ717REM1xUOSCR8LWyKiwgdsmc0oczfFivVlaRToWg==
+  dependencies:
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    three-spritetext "^1.7.1"
+
+"@superviz/react-sdk@1.1.0-beta.19":
+  version "1.1.0-beta.19"
+  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.1.0-beta.19.tgz#237870c410321a20983a8ac02065492024cdb322"
+  integrity sha512-4WWdVgDA04HpgQPtmytWcEAoeVOZLynPBcA8Koaza3lz++zEUH0RYmN5pR/z5Ja1jntfmgmuwisnIl2C5REOMQ==
+  dependencies:
+    "@superviz/autodesk-viewer-plugin" "1.11.0-lab.3"
+    "@superviz/matterport-plugin" "0.15.0-lab.1"
+    "@superviz/sdk" "5.7.0-lab.4"
+    "@superviz/threejs-plugin" "0.20.0-lab.1"
+    lodash "^4.17.21"
+    react "^18.2.0"
+    react-dom "^18.2.0"
+
+"@superviz/sdk@5.7.0-lab.4":
+  version "5.7.0-lab.4"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.0-lab.4.tgz#1fec7f27acb4719fcfc786dfd74a61eb386b7e73"
+  integrity sha512-ZV6c+idWQMuMybAFpMJP5eORY4gMk+/NJdl6LsL07w6TbeeqzhfNXXX8CO9fzYXKxJwxRDKig9kYkOiG7pcD+Q==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"
@@ -449,6 +480,17 @@
     lodash.isequal "^4.5.0"
     luxon "^3.4.3"
     semantic-release-version-file "^1.0.2"
+
+"@superviz/threejs-plugin@0.20.0-lab.1":
+  version "0.20.0-lab.1"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.20.0-lab.1.tgz#ee33bfe0402ab042565c219e74e0213cd90c5add"
+  integrity sha512-GlaXUdf9z1f5SP4sjXDP7JZe7b6XF53R7H5soP06yS5daHdSSkUQFttVSsKRJ+wq/IWedY4uAaoxcVWPiLBXKw==
+  dependencies:
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    three "^0.157.0"
+    three-mesh-bvh "^0.5.23"
+    three-spritetext "^1.7.1"
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"
@@ -1012,6 +1054,26 @@ supports-color@^5.3.0:
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
+
+three-mesh-bvh@^0.5.23:
+  version "0.5.24"
+  resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.5.24.tgz#56dd27ad35bfbafacedaba4a4d567723bbdd686c"
+  integrity sha512-VTIgfjz8aFoPKTQoMIQQv9jJD4ybFRZuKKE1/kqy78FQcuHQ0+iIWv7C5cSb2inlvs7bNMVY3yRx3RXGZfrvzQ==
+
+three-spritetext@^1.7.1:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/three-spritetext/-/three-spritetext-1.8.2.tgz#62d8106e579274c65d86df2b56dda46b13fa97cc"
+  integrity sha512-OYjyAhWnQ6+7CPKjnpq3JQM+Lpr6cSOppCtbOOzF1IbCauGkoDFvbAnxYd0LVxEsIO2RALXXScg2eX+R6CAfyA==
+
+three@0.139.2:
+  version "0.139.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.139.2.tgz#b110799a15736df673b9293e31653a4ac73648dd"
+  integrity sha512-gV7q7QY8rogu7HLFZR9cWnOQAUedUhu2WXAnpr2kdXZP9YDKsG/0ychwQvWkZN5PlNw9mv5MoCTin6zNTXoONg==
+
+three@^0.157.0:
+  version "0.157.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.157.0.tgz#5baac531941fc8c4ca62d45ee4265652e03318d0"
+  integrity sha512-CeAwQrf4x3z0/e+MC4F+nXLW5t0gh3pw+L6CCBqpHvOq3bGYIgRYub7Pv0j/9wR+d++OiEglyZzWyuSYbwWGOA==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"

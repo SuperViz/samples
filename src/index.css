@@ -31,7 +31,7 @@ h1 {
 canvas {
   background-color: #c9c4d1;
   width: 100%;
-  height: calc(100% - 3.3125rem);
+  height: 100%;
   border-radius: 6px;
 }
 
