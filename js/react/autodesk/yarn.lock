@@ -434,50 +434,19 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/autodesk-viewer-plugin@1.11.0-lab.3":
-  version "1.11.0-lab.3"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.11.0-lab.3.tgz#30ecabeacfc9fe9ead6393789fee7398e501703d"
-  integrity sha512-KDSr+BavhDMFIaBjCqgHG8uXoE6fk/8tnpJWb7V+2db1oDG6S2+Kb+0PIZCf9G+4clbtDijQluiXxLvU79L/iw==
+"@superviz/autodesk-viewer-plugin@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.14.0.tgz#86d6aa998def81c0c3960ef042cc5fa0a3c81f30"
+  integrity sha512-f+lZM/aZAC8GK5aGgAOgQ4w2gbyaBTVJjxtZpmGKgJDq/cSfG6YVL0901anm4zctCnU9ON4So8yJukrgy93yRA==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/autodesk-viewer-plugin@^1.13.1":
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.13.1.tgz#afad716a2375b0e7156bd994135d7d9189aa3ef5"
-  integrity sha512-vhg5+d9+TEoL5YIda1BKJ731mizBIObpp04q3+yqUWLX6+BNxDb1eZw8+6X2ueXO6yIx31icwYmZsU5gAZOqmQ==
-  dependencies:
-    debug "^4.3.4"
-    lodash "^4.17.21"
-    three "0.139.2"
-
-"@superviz/matterport-plugin@0.15.0-lab.1":
-  version "0.15.0-lab.1"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.15.0-lab.1.tgz#c587a3bf4b39a76b517514b0e47a2d0802a55cbc"
-  integrity sha512-PDnr0zbMVH4pEiKfw87lEr9oCVrMvpsUfXEV22KB9hnqZ717REM1xUOSCR8LWyKiwgdsmc0oczfFivVlaRToWg==
-  dependencies:
-    debug "^4.3.4"
-    lodash "^4.17.21"
-    three-spritetext "^1.7.1"
-
-"@superviz/react-sdk@1.1.0-beta.19":
-  version "1.1.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.1.0-beta.19.tgz#237870c410321a20983a8ac02065492024cdb322"
-  integrity sha512-4WWdVgDA04HpgQPtmytWcEAoeVOZLynPBcA8Koaza3lz++zEUH0RYmN5pR/z5Ja1jntfmgmuwisnIl2C5REOMQ==
-  dependencies:
-    "@superviz/autodesk-viewer-plugin" "1.11.0-lab.3"
-    "@superviz/matterport-plugin" "0.15.0-lab.1"
-    "@superviz/sdk" "5.7.0-lab.4"
-    "@superviz/threejs-plugin" "0.20.0-lab.1"
-    lodash "^4.17.21"
-    react "^18.2.0"
-    react-dom "^18.2.0"
-
-"@superviz/sdk@5.7.0-lab.4":
-  version "5.7.0-lab.4"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.0-lab.4.tgz#1fec7f27acb4719fcfc786dfd74a61eb386b7e73"
-  integrity sha512-ZV6c+idWQMuMybAFpMJP5eORY4gMk+/NJdl6LsL07w6TbeeqzhfNXXX8CO9fzYXKxJwxRDKig9kYkOiG7pcD+Q==
+"@superviz/sdk@^5.7.0":
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.0.tgz#a4c0f4532df85421bcfa6d69a011453036fcf8fa"
+  integrity sha512-jByAxog3PNKKOcS5HSNQP/pKvERpTW5OUyRvlILdVzprHOlZvMBp0ZLTbpxGF095RCgBbngyFfGw5z+BRz7Zuw==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"

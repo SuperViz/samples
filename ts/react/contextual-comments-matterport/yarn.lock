@@ -434,19 +434,19 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/matterport-plugin@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.15.0.tgz#de9466dd3a36385ccf79f291555c8fd9d53ad9c2"
-  integrity sha512-BvXUAy5m/DdWQrdYsUOZ1pzFhoVy9FkD1+hVOJpfTUY8mYG52Huy9Qk14P+8fcVYRONbFvG83xacEpNT/pAXHw==
+"@superviz/matterport-plugin@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.16.0.tgz#dd06da02b12b3c5c2929f47657f6d282f26cdc3c"
+  integrity sha512-ObGiE1NPER68H9QkjxyEsaxqN8vgLR/igHRBx61G+rY2xJkOkx6jR8AJtWM++23Agsf1AoPy8CopK593Uu6yWA==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/sdk@^5.6.0":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.6.0.tgz#cb0d6f6f280683fa939382867abf15373225f885"
-  integrity sha512-VsvTgXZfSk5CbBhPjtvoIMIWb8W+YiCvVxM89KOWBW8eoSvFQOhlLOTQiU6PJ0mecTXjTeoC8Qh0Vpd3J8XJJA==
+"@superviz/sdk@^5.7.0":
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.0.tgz#a4c0f4532df85421bcfa6d69a011453036fcf8fa"
+  integrity sha512-jByAxog3PNKKOcS5HSNQP/pKvERpTW5OUyRvlILdVzprHOlZvMBp0ZLTbpxGF095RCgBbngyFfGw5z+BRz7Zuw==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"
