@@ -1,39 +1,29 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
 
 import Room from "./components/Room";
-import { useState } from "react";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-
-const roomId = "123435";
 const user = Math.floor(Math.random() * 10);
+const groupId = "sv-sample-room-react-js-presence-autodesk";
+const groupName = "Sample Room for Presence Autodesk (React/JS)";
+const roomId = 'samples-presence-autodesk-room';
 
 function App() {
-  const [participantId, setParticipantId] = useState(null);
-
-  const joinedRoom = (e) => {
-    console.log("JOINED", e.id);
-
-    setParticipantId(e.id);
-  };
-
   return (
     <main>
       <SuperVizRoomProvider
         developerKey={DEVELOPER_KEY}
-        debug={true}
         group={{
-          id: "react-sdk-group",
-          name: "react sdk",
+          id: {groupId},
+          name: {groupName},
         }}
         participant={{
           id: user.toString(),
-          name: "John Doe",
+          name: "John" + user,
         }}
         roomId={roomId}
-        onParticipantLocalJoined={joinedRoom}
       >
-        <Room participantId={participantId} />
+        <Room />
       </SuperVizRoomProvider>
     </main>
   );
