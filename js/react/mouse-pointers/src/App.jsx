@@ -1,7 +1,7 @@
 import Room from "./components/Room";
 import { SuperVizRoomProvider } from '@superviz/react-sdk'
 
-const DEVELOPER_KEY = import.meta.env.VITE_SUPERVIZ_DEVELOPER_KEY;
+const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-mouse-pointers";
 const groupName = "Sample Room for Mouse Pointers (React + TS)";
 
