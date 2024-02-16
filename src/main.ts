@@ -1,4 +1,3 @@
-import "./style.css";
 import SuperVizRoom from "@superviz/sdk";
 import { VideoConference } from "@superviz/sdk/lib/components";
 
@@ -18,13 +17,12 @@ async function initializeSuperVizRoom() {
       id: user.toString(),
       name: "John " + user,
     },
-    environment: "dev",
   });
   const video = new VideoConference({ participantType: "host" });
   room.addComponent(video);
   return room;
 }
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = ``;
+document.querySelector<HTMLDivElement>("#root")!.innerHTML = ``;
 
 initializeSuperVizRoom();
