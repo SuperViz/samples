@@ -1,16 +1,29 @@
-import { useRef } from "react";
-import Canvas from "./components/Canvas";
-import { v4 as uuidv4 } from "uuid";
+import Room from "./components/Room";
+import { SuperVizRoomProvider } from '@superviz/react-sdk'
+
+const DEVELOPER_KEY = import.meta.env.VITE_SUPERVIZ_DEVELOPER_KEY;
+const groupId = "sv-sample-room-react-mouse-pointers";
+const groupName = "Sample Room for Mouse Pointers (React + TS)";
 
 function App() {
-  const roomId = useRef(uuidv4()).current;
+  const roomId = 'samples-mouse-pointers-room';
+  const user = Math.floor(Math.random() * 100);
 
-  // We are initializing two rooms for demo purposes.
   return (
-    <>
-      <Canvas name="Zeus" roomId={roomId} />
-      <Canvas name="Hera" roomId={roomId} />
-    </>
+    <SuperVizRoomProvider
+    developerKey={DEVELOPER_KEY}
+    group={{
+      id: groupId,
+      name: groupName,
+    }}
+    participant={{
+      id: user.toString(),
+      name: "John " + user,
+    }}
+    roomId={roomId}
+  >
+    <Room />
+  </SuperVizRoomProvider>
   );
 }
 
