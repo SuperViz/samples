@@ -1,15 +1,41 @@
-import { useRef } from "react";
-import AutodeskInstance from "./components/AutodeskInstance";
-import { v4 as uuidv4 } from "uuid";
+import { SuperVizRoomProvider } from "@superviz/react-sdk";
+
+import Room from "./components/Room";
+import { useState } from "react";
+
+const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+
+const roomId = "123435";
+const user = Math.floor(Math.random() * 10);
 
 function App() {
-  const roomId = useRef(uuidv4()).current;
+  const [participantId, setParticipantId] = useState(null);
 
-  // We are initializing multiple rooms for demo purposes.
+  const joinedRoom = (e) => {
+    console.log("JOINED", e.id);
+
+    setParticipantId(e.id);
+  };
+
   return (
     <main>
-      <AutodeskInstance name="Zeus" roomId={roomId} />
-      <AutodeskInstance name="Hera" roomId={roomId} />
+      <SuperVizRoomProvider
+        developerKey={DEVELOPER_KEY}
+        debug={true}
+        group={{
+          id: "react-sdk-group",
+          name: "react sdk",
+        }}
+        participant={{
+          id: user.toString(),
+          name: "John Doe",
+        }}
+        environment="dev"
+        roomId={roomId}
+        onParticipantLocalJoined={joinedRoom}
+      >
+        <Room participantId={participantId} />
+      </SuperVizRoomProvider>
     </main>
   );
 }
