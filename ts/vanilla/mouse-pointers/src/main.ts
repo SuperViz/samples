@@ -1,10 +1,11 @@
+import "./style.css";
 import SuperVizRoom from "@superviz/sdk";
-import { VideoConference } from "@superviz/sdk/lib/components";
+import { MousePointers } from "@superviz/sdk/lib/components";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 100);
-const groupId = "sv-sample-room-vanilla-video-conference";
-const groupName = "Sample Room for Video Conference (Vanilla + TS)";
+const groupId = "sv-sample-room-vanilla-mouse-pointers";
+const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
 
 async function initializeSuperVizRoom() {
   const room = await SuperVizRoom(DEVELOPER_KEY, {
@@ -18,11 +19,13 @@ async function initializeSuperVizRoom() {
       name: "John " + user,
     },
   });
-  const video = new VideoConference({ participantType: "host" });
-  room.addComponent(video);
+
+  const mousePointers = new MousePointers("element-id");
+  room.addComponent(mousePointers);
+
   return room;
 }
 
-document.querySelector<HTMLDivElement>("#root")!.innerHTML = ``;
+document.querySelector<HTMLDivElement>("#root")!.innerHTML = `<canvas id="element-id"></canvas>`;
 
 initializeSuperVizRoom();
