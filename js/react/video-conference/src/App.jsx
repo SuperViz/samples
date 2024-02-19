@@ -1,41 +1,31 @@
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import SuperVizRoom from "@superviz/sdk";
-import { VideoConference } from "@superviz/sdk/lib/components";
+import { SuperVizRoomProvider } from "@superviz/react-sdk";
 
-const roomId = uuidv4();
-const groupId = "sv-sample-room-react-js-video-conference";
-const groupName = "Sample Room for Video Conference (React/JS)";
+import Room from "./components/Room";
+
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+const groupId = "sv-sample-room-react-js-presence-threejs";
+const groupName = "Sample Room for Presence Video Conference (React/JS)";
+const roomId = 'samples-video-conference-room';
+const user = Math.floor(Math.random() * 100);
+
 
 function App() {
-  const [isRunning, setIsRunning] = useState(false);
-
-  const initSuperVizRoom = async () => {
-    setIsRunning(true);
-    const room = await SuperVizRoom(DEVELOPER_KEY, {
-      roomId: roomId,
-      group: {
+  return (
+    <SuperVizRoomProvider
+      developerKey={DEVELOPER_KEY}
+      debug={true}
+      group={{
         id: groupId,
         name: groupName,
-      },
-      participant: {
-        id: "zeus",
-        name: "Zeus",
-      },
-    });
-
-    const video = new VideoConference({
-      participantType: "host",
-    });
-
-    room.addComponent(video);
-  };
-
-  return (
-    <button disabled={isRunning} onClick={() => initSuperVizRoom()}>
-      Join Video Conference
-    </button>
+      }}
+      participant={{
+        id: user.toString(),
+        name: "John " + user,
+      }}
+      roomId={roomId}
+    >
+      <Room />
+    </SuperVizRoomProvider>
   );
 }
 
