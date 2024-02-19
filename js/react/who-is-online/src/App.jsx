@@ -4,12 +4,10 @@ import Room from "./components/Room";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-js-who-is-online";
 const groupName = "Sample Room for Who-is-Online (React/JS)";
-const roomId = 'samples-who-is-online-room';
+const roomId = "samples-who-is-online-room";
 const user = Math.floor(Math.random() * 100);
 
 function App() {
-
-  // We are initializing multiple rooms for demo purposes.
   return (
     <main>
       <SuperVizRoomProvider
