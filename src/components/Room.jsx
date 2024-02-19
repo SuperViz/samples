@@ -1,53 +1,45 @@
-import SuperVizRoom from "@superviz/sdk";
-import { Realtime } from "@superviz/sdk/lib/components";
 import { useEffect, useRef, useState } from "react";
+import {
+  Realtime,
+  useRealtime,
+  useSuperVizRoom,
+} from "@superviz/react-sdk";
 
-export default function RealtimeParticipant({ name, roomId }) {
-  const participantId = name.toLowerCase();
-  const groupId = "sv-sample-room-react-js-real-time-data-engine";
-  const groupName = "Sample Room for Real-time Data Engine (React/JS)";
-  const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-
-  const [realtime] = useState(new Realtime());
+export default function Room({ participantId }) {
   const [eventsSubscribed, setEventsSubscribed] = useState([]);
   const [lastPublishedMessage, setLastPublishedMessage] = useState();
-
-  const publishTo = useRef(null);
   const message = useRef(null);
+  const publishTo = useRef(null);
+  
+  const { startRoom, stopRoom, hasJoinedRoom } = useSuperVizRoom();
+  const { subscribe, publish } = useRealtime();
 
-  const InitSuperVizRoom = async () => {
-    const room = await SuperVizRoom(DEVELOPER_KEY, {
-      roomId: roomId,
-      group: {
-        id: groupId,
-        name: groupName,
-      },
-      participant: {
-        id: participantId,
-        name: name,
-      },
-    });
+  useEffect(() => {
+    if (!startRoom || hasJoinedRoom) return;
 
-    realtime.subscribe("event_name_1", callbackFunctionForWhenTheEventIsDispatched);
-    realtime.subscribe("event_name_2", callbackFunctionForWhenTheEventIsDispatched);
-    realtime.subscribe("event_name_3", callbackFunctionForWhenTheEventIsDispatched);
+    startRoom();
 
-    setEventsSubscribed(["event_name_1", "event_name_2", "event_name_3"]);
-
-    room.addComponent(realtime);
-  };
+    
+    return () => {
+      if (!stopRoom || !hasJoinedRoom) return;
+      
+      stopRoom();
+    };
+  }, []);
+  
 
   const callbackFunctionForWhenTheEventIsDispatched = (message) => {
     const messageData = message[0];
     if (messageData.participantId === participantId) return;
-
-    console.log("Message received", message);
-
     setLastPublishedMessage(messageData);
   };
 
   const subscribeToBasicEvents = () => {
-    InitSuperVizRoom();
+    subscribe("event_name_1", callbackFunctionForWhenTheEventIsDispatched);
+    subscribe("event_name_2", callbackFunctionForWhenTheEventIsDispatched);
+    subscribe("event_name_3", callbackFunctionForWhenTheEventIsDispatched);
+
+    setEventsSubscribed(["event_name_1", "event_name_2", "event_name_3"]);
   };
 
   const publishEvent = () => {
@@ -55,12 +47,13 @@ export default function RealtimeParticipant({ name, roomId }) {
     const messageToPublish = message.current?.value;
     if (!eventName || !messageToPublish) return;
 
-    realtime.publish(eventName, messageToPublish);
+    publish(eventName, messageToPublish);
   };
 
   return (
+    <>
+      <Realtime />
     <section>
-      <h1>{name}</h1>
       <div className="events-info">
         <div className="container">
           <h2>Subscription Manager</h2>
@@ -102,5 +95,6 @@ export default function RealtimeParticipant({ name, roomId }) {
         </div>
       )}
     </section>
+    </>
   );
 }
