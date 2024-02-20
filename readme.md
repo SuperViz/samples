@@ -1,4 +1,4 @@
-# Sample Room for Presence3D for Matterport (React/TS)
+# Sample Room for Presence3D for Matterport (React/JS)
 
 The Matterport plugin from SuperViz SDK is designed to seamlessly integrate avatars, mouse-pointers, lasers, and host controls into your digital twin tool. Additionally, the feature rich SuperViz SDK for Matterport provides ample flexibility for creating the ideal user experience for your Matterport tool.
 
