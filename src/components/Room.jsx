@@ -5,7 +5,7 @@ function Room() {
   const { startRoom, stopRoom, hasJoinedRoom } = useSuperVizRoom();
 
   const collabMode = {
-    enabled: "false",
+    enabled: false,
   };
 
   // This effect will start the room when the component is mounted
@@ -20,8 +20,6 @@ function Room() {
 
       stopRoom();
     };
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
