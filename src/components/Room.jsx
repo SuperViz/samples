@@ -2,17 +2,17 @@ import { MousePointers, useSuperVizRoom } from "@superviz/react-sdk";
 import { useEffect } from "react";
 
 function Room() {
-  const { startRoom, stopRoom, isJoinedRoom } = useSuperVizRoom();
+  const { startRoom, stopRoom, hasJoinedRoom } = useSuperVizRoom();
 
   // This effect will start the room when the component is mounted
   // and stop the room when the component is unmounted
   useEffect(() => {
-    if (!startRoom || isJoinedRoom) return;
+    if (!startRoom || hasJoinedRoom) return;
 
     startRoom();
 
     return () => {
-      if (!stopRoom || !isJoinedRoom) return;
+      if (!stopRoom || !hasJoinedRoom) return;
 
       stopRoom();
     };
