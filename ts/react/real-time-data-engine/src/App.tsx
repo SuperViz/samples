@@ -1,15 +1,30 @@
-import { useRef } from "react";
-import RealtimeParticipant from "./components/RealtimeParticipant";
-import { v4 as uuidv4 } from "uuid";
+import { SuperVizRoomProvider } from "@superviz/react-sdk";
+
+import Room from "./components/Room";
+
+const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+const user = Math.floor(Math.random() * 10);
+const groupId = "sv-sample-room-react-js-presence-autodesk";
+const groupName = "Sample Room for Presence Autodesk (React/JS)";
+const roomId = 'samples-presence-autodesk-room';
 
 function App() {
-  const roomId = useRef(uuidv4()).current;
-
-  // We are initializing multiple rooms for demo purposes.
   return (
     <main>
-      <RealtimeParticipant name="Zeus" roomId={roomId} />
-      <RealtimeParticipant name="Hera" roomId={roomId} />
+      <SuperVizRoomProvider
+        developerKey={DEVELOPER_KEY}
+        group={{
+          id: groupId,
+          name: groupName,
+        }}
+        participant={{
+          id: user.toString(),
+          name: "John" + user,
+        }}
+        roomId={roomId}
+      >
+        <Room participantId={user.toString()}/>
+      </SuperVizRoomProvider>
     </main>
   );
 }

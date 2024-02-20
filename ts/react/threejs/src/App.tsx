@@ -1,16 +1,30 @@
-import { useRef } from "react";
-import ThreeJSInstance from "./components/ThreeJSInstance";
-import { v4 as uuidv4 } from "uuid";
+import { SuperVizRoomProvider } from "@superviz/react-sdk";
+
+import Room from "./components/Room";
+
+const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+const groupId = "sv-sample-room-react-js-presence-threejs";
+const groupName = "Sample Room for Presence ThreeJs (React/JS)";
+const roomId = 'samples-presence-matterport-room';
+const user = Math.floor(Math.random() * 100);
 
 function App() {
-  const roomId = useRef(uuidv4()).current;
-
-  // We are initializing multiple rooms for demo purposes.
   return (
-    <main>
-      <ThreeJSInstance name="Zeus" roomId={roomId} />
-      <ThreeJSInstance name="Hera" roomId={roomId} />
-    </main>
+    <SuperVizRoomProvider
+      developerKey={DEVELOPER_KEY}
+      debug={true}
+      group={{
+        id: groupId,
+        name: groupName,
+      }}
+      participant={{
+        id: user.toString(),
+        name: "John " + user,
+      }}
+      roomId={roomId}
+    >
+      <Room />
+    </SuperVizRoomProvider>
   );
 }
 

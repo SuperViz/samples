@@ -1,0 +1,25 @@
+{
+  "name": "sv-sample-room-react-ts-presence3d-matterport",
+  "version": "1.0.0",
+  "description": "Sample Room for Presence3D for Matterport (React/TS)",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@superviz/matterport-plugin": "^0.16.0",
+    "@superviz/react-sdk": "1.1.0-beta.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/uuid": "^9.0.7",
+    "@vitejs/plugin-react": "^4.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}

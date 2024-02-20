@@ -101,33 +101,3 @@ function Room({ loaded }) {
 }
 
 export default Room;
-
-/**
- * import SuperVizRoom, { LauncherFacade, ParticipantEvent } from '@superviz/sdk';
-import { Comments, HTMLPin } from '@superviz/sdk/lib/components';
-import { useEffect, useRef, useState } from 'react';
-import { DEVELOPER_KEY } from '../env';
-import { getProperties } from '../utils/SuperVizProperties';
-
-export default function CommentsInstance() {
-  const [room, setRoom] = useState<LauncherFacade>();
-
-  const initSuperVizWithComments = async (room: LauncherFacade | undefined) => {
-    room = await SuperVizRoom(
-      DEVELOPER_KEY,
-      getProperties('8f195880-1010-469b-9a3e-7e9934e588c5')
-    );
-    const pinAdapter = new HTMLPin(containerId);
-    const comments = new Comments(pinAdapter);
-
-    room.addComponent(comments);
-    room.subscribe(ParticipantEvent.LOCAL_JOINED, () => {
-      setLoaded(true);
-    });
-
-    setRoom(room as LauncherFacade);
-  };
-
-
-}
- */

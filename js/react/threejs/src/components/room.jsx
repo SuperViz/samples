@@ -8,7 +8,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
 const containerId = 'threejs-canvas'
-export default function ThreeJSInstance({ name, roomId }) {
+export default function ThreeJSInstance() {
   const { startRoom, stopRoom, hasJoinedRoom } = useSuperVizRoom();
   const canvasRef = useRef(null);
   const [scene, setScene] = useState(null);

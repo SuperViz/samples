@@ -14,8 +14,8 @@ function App() {
       <SuperVizRoomProvider
         developerKey={DEVELOPER_KEY}
         group={{
-          id: {groupId},
-          name: {groupName},
+          id: groupId,
+          name: groupName,
         }}
         participant={{
           id: user.toString(),
