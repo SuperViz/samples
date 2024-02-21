@@ -26,6 +26,7 @@ function App() {
       }}
       roomId={roomId}
       onParticipantJoined={()=> setLoaded(true)}
+
     >
       <Room loaded={loaded}/>
     </SuperVizRoomProvider>

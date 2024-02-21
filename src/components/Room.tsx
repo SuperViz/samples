@@ -1,40 +1,19 @@
-import {
-  Comments,
-  useSuperVizRoom,
-  useHTMLPin,
-} from "@superviz/react-sdk";
-import React, { useEffect, useRef, useState } from "react";
+import { Comments, useHTMLPin } from "@superviz/react-sdk";
+import React, { useEffect, useRef } from "react";
 import useMosaic from "../hooks/useMosaic";
 import useDraggable from "../hooks/useDraggable";
 
 function Room({ loaded }) {
-  const { startRoom, stopRoom, hasJoinedRoom } = useSuperVizRoom();
-
   const containerRef = useRef(null);
   const containerId = 'html-pin-participant';
 
   const styles = `
     .comments__floating-button {
-      background:#eeeeee;
+      background: #eeeeee;
     }`;
 
   const { pin } = useHTMLPin({ containerId });
 
-  // This effect will start the room when the component is mounted
-  // and stop the room when the component is unmounted
-  useEffect(() => {
-    if (!startRoom || hasJoinedRoom) return;
-
-    startRoom();
-
-    
-    return () => {
-      if (!stopRoom || !hasJoinedRoom) return;
-      
-      stopRoom();
-    };
-  }, []);
-  
   useDraggable(containerRef);
   useMosaic(containerRef, loaded);
 
