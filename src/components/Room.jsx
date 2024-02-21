@@ -1,9 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  Realtime,
-  useRealtime,
-  useSuperVizRoom,
-} from "@superviz/react-sdk";
+import { Realtime, useRealtime } from "@superviz/react-sdk";
 
 export default function Room({ participantId }) {
   const [eventsSubscribed, setEventsSubscribed] = useState([]);
@@ -11,22 +7,7 @@ export default function Room({ participantId }) {
   const message = useRef(null);
   const publishTo = useRef(null);
   
-  const { startRoom, stopRoom, hasJoinedRoom } = useSuperVizRoom();
   const { subscribe, publish } = useRealtime();
-
-  useEffect(() => {
-    if (!startRoom || hasJoinedRoom) return;
-
-    startRoom();
-
-    
-    return () => {
-      if (!stopRoom || !hasJoinedRoom) return;
-      
-      stopRoom();
-    };
-  }, []);
-  
 
   const callbackFunctionForWhenTheEventIsDispatched = (message) => {
     const messageData = message[0];

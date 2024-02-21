@@ -22,6 +22,7 @@ function App() {
           name: "John" + user,
         }}
         roomId={roomId}
+  
       >
         <Room participantId={user.toString()}/>
       </SuperVizRoomProvider>
