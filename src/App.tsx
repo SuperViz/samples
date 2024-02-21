@@ -2,6 +2,7 @@ import { SuperVizRoomProvider } from "@superviz/react-sdk";
 
 import Room from "./components/Room.tsx";
 import { useState } from "react";
+import Cards from "./components/Cards.tsx";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 10);
@@ -27,7 +28,8 @@ function App() {
       roomId={roomId}
       onParticipantJoined={()=> setLoaded(true)}
     >
-      <Room loaded={loaded}/>
+      <Room />
+      <Cards loaded={loaded}/>
     </SuperVizRoomProvider>
   );
 }
