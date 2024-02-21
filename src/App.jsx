@@ -21,9 +21,9 @@ function App() {
         name: "John " + user,
       }}
       roomId={roomId}
-
     >
       <Room />
+      <canvas id="element-id" />
     </SuperVizRoomProvider>
   );
 }
