@@ -1,6 +1,7 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
 
 import Room from "./components/Room";
+import EventForm from './components/EventForm'
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 10);
@@ -22,9 +23,9 @@ function App() {
           name: "John" + user,
         }}
         roomId={roomId}
-  
       >
-        <Room participantId={user.toString()}/>
+        <Room />
+        <EventForm participantId={user.toString()} />
       </SuperVizRoomProvider>
     </main>
   );
