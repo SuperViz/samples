@@ -93,11 +93,9 @@ function Room() {
   }, []);
 
   return (
-    <>
-      <Comments pin={pin} buttonLocation="top-right" position="left">
-        <div id="viewer" className="forge-viewer"></div>
-      </Comments>
-    </>
+    <Comments pin={pin} buttonLocation="top-right" position="left">
+      <div id="viewer" className="forge-viewer"></div>
+    </Comments>
   );
 }
 

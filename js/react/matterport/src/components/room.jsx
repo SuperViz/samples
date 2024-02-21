@@ -1,7 +1,7 @@
 import { MatterportIframe } from "@superviz/react-sdk";
 
 function Room() {
-  const modelId = "LmRnZAsWoxy";
+  const modelId = "7ffnfBNamei";
 
   const matterportKey = import.meta.env.VITE_MATTERPORT_KEY;
 

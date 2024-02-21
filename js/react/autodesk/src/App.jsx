@@ -21,8 +21,7 @@ function App() {
           id: user.toString(),
           name: "John" + user,
         }}
-        roomId={roomId}
-        
+        roomId={roomId}     
       >
         <Room />
       </SuperVizRoomProvider>

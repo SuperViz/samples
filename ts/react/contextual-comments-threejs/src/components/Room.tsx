@@ -9,10 +9,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
-const containerId = 'threejs-canvas'
 export default function ThreeJSInstance() {
-
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const sceneRef = useRef<Scene>();
   const cameraRef = useRef<Camera>();
   const playerRef = useRef<Object3D<Object3DEventMap>>();
@@ -26,12 +23,11 @@ export default function ThreeJSInstance() {
   });
 
   useEffect(()=> {
-    if (!canvasRef.current) return;
     InitParticipantThreeJS();
-  }, [canvasRef])
+  }, [])
 
   function InitParticipantThreeJS() {
-    const container = document.getElementById(containerId) as HTMLCanvasElement;
+    const container = document.getElementById('threejs-canvas') as HTMLCanvasElement;
     const width = container.clientWidth;
     const height = container.clientHeight;
 
@@ -77,11 +73,5 @@ export default function ThreeJSInstance() {
     playerRef.current = camera;
   }
 
-  return (
-    <>
-      <Comments pin={pin} >
-        <canvas ref={canvasRef} id={containerId} />
-      </Comments>
-    </>
-  );
+  return <Comments pin={pin} />
 }

@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "vendor"],
+  "include": ["src", "vendor", "../real-time-data-engine/src/components/EventForm.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
