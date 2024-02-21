@@ -1,0 +1,17 @@
+{
+  "title": "Sample Room for Contextual Comments for HTML (React/TS)",
+  "description": "Contextual Comments from the SuperViz SDK embeds a customizable commenting experience into your page or your 3D environment to enable people to collaborate.",
+  "iconUrl": "https://superviz.com/wp-content/uploads/2022/10/superviz-1-80x80.png",
+  "tags": [
+    "react",
+    "javascript",
+    "typescript",
+    "superviz",
+    "real-time",
+    "collaboration",
+    "threejs",
+    "matterport",
+    "autodesk"
+  ],
+  "published": true
+}

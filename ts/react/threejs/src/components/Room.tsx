@@ -1,4 +1,4 @@
-import { ThreeJsPresence, useSuperVizRoom } from "@superviz/react-sdk";
+import { ThreeJsPresence } from "@superviz/react-sdk";
 import { useEffect, useRef, useState } from "react";
 
 import { Color, PerspectiveCamera, PMREMGenerator, Scene, WebGLRenderer, type Camera, type Object3D, type Object3DEventMap } from "three";
@@ -9,7 +9,6 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 
 const containerId = 'threejs-canvas'
 export default function ThreeJSInstance() {
-  const { startRoom, stopRoom, hasJoinedRoom } = useSuperVizRoom();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [scene, setScene] = useState<Scene>();
   const [camera, setCamera] = useState<Camera>();
@@ -64,18 +63,6 @@ export default function ThreeJSInstance() {
     setCamera(camera);
     setPlayer(camera);
   }
-
-  useEffect(() => {
-    if (!startRoom || hasJoinedRoom) return;
-
-    startRoom();
-
-    return () => {
-      if (!stopRoom || !hasJoinedRoom) return;
-
-      stopRoom();
-    };
-  }, []);
 
   return (
     <section>

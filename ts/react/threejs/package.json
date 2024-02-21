@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@superviz/react-sdk": "1.1.0-beta.19",
+    "@superviz/react-sdk": "1.1.0-beta.22",
     "@superviz/threejs-plugin": "^0.20.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

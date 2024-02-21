@@ -1,21 +1,30 @@
-import { useRef, useState } from "react";
-import ThreejsInstance from "./components/AutodeskInstance";
-import { v4 as uuidv4 } from "uuid";
+import { SuperVizRoomProvider } from "@superviz/react-sdk";
+
+import Room from "./components/Room";
+
+const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
+const groupId = "sv-sample-room-react-ts-autodesk-contextual-comments";
+const groupName = "Sample Room for Autodesk Contextual Comments (React/TS)";
+const roomId = 'samples-autodesk-contextual-comments-room';
+const user = Math.floor(Math.random() * 100);
 
 function App() {
-  const roomId = useRef(uuidv4()).current;
-  const [showZeus, setShowZeus] = useState(true);
-
-  const toggle = () => {
-    setShowZeus(!showZeus);
-  };
-
-  // We are initializing multiple rooms for demo purposes.
   return (
-    <main>
-      {showZeus && <ThreejsInstance name="Zeus" toggle={toggle} roomId={roomId} />}
-      {!showZeus && <ThreejsInstance name="Hera" toggle={toggle} roomId={roomId} />}
-    </main>
+    <SuperVizRoomProvider
+      developerKey={DEVELOPER_KEY}
+      debug={true}
+      group={{
+        id: groupId,
+        name: groupName,
+      }}
+      participant={{
+        id: user.toString(),
+        name: "John " + user,
+      }}
+      roomId={roomId}
+    >
+      <Room />
+    </SuperVizRoomProvider>
   );
 }
 

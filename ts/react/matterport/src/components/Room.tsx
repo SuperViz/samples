@@ -1,28 +1,8 @@
-import {
-  MatterportIframe,
-  useSuperVizRoom,
-} from "@superviz/react-sdk";
-import { useEffect } from "react";
+import { MatterportIframe } from "@superviz/react-sdk";
 
 function Room() {
-  const { startRoom, stopRoom, hasJoinedRoom } = useSuperVizRoom();
   const modelId = "LmRnZAsWoxy";
-
   const matterportKey = import.meta.env.VITE_MATTERPORT_KEY;
-
-  // This effect will start the room when the component is mounted
-  // and stop the room when the component is unmounted
-  useEffect(() => {
-    if (!startRoom || hasJoinedRoom) return;
-
-    startRoom();
-
-    return () => {
-      if (!stopRoom || !hasJoinedRoom) return;
-
-      stopRoom();
-    };
-  }, [startRoom, stopRoom]);
 
   return (
     <section>

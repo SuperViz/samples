@@ -434,6 +434,24 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
+"@superviz/autodesk-viewer-plugin@1.14.1":
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.14.1.tgz#e3e775029256c0eaf18c3bae6af434ddb1733cfa"
+  integrity sha512-Dgw4mkns7TudFqyJX/htpEFK8radcH+uqygE2xyaPGlbb53EugoYUbul6QwRdl6GsWnuphPnnG4fpERqTGkzjg==
+  dependencies:
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    three "0.139.2"
+
+"@superviz/matterport-plugin@0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.16.1.tgz#1f35e761d1b6179f89b97c5d6a49729b19421c27"
+  integrity sha512-lWbUabq46HZynBeGLEux+lXW4x2K7XqgbTqPXxqFcGUdH18me9vgLhtIlRCfJPMCnsyno4XSOuMsaJmzMMIdtA==
+  dependencies:
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    three-spritetext "^1.7.1"
+
 "@superviz/matterport-plugin@^0.16.0":
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.16.0.tgz#dd06da02b12b3c5c2929f47657f6d282f26cdc3c"
@@ -443,10 +461,23 @@
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/sdk@^5.7.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.0.tgz#a4c0f4532df85421bcfa6d69a011453036fcf8fa"
-  integrity sha512-jByAxog3PNKKOcS5HSNQP/pKvERpTW5OUyRvlILdVzprHOlZvMBp0ZLTbpxGF095RCgBbngyFfGw5z+BRz7Zuw==
+"@superviz/react-sdk@1.1.0-beta.22":
+  version "1.1.0-beta.22"
+  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.1.0-beta.22.tgz#886d57980f7a402658351f433644f85a2c711b22"
+  integrity sha512-GSCNhz4Y79PTE9EXOWT5HLtp8c/gZsOdniq2RnuvdeBnIndx6BzkZjnh7e9SdCxDLYhEIcz4yDGHR13C+kKSBw==
+  dependencies:
+    "@superviz/autodesk-viewer-plugin" "1.14.1"
+    "@superviz/matterport-plugin" "0.16.1"
+    "@superviz/sdk" "5.7.0-lab.9"
+    "@superviz/threejs-plugin" "0.20.2"
+    lodash "^4.17.21"
+    react "^18.2.0"
+    react-dom "^18.2.0"
+
+"@superviz/sdk@5.7.0-lab.9":
+  version "5.7.0-lab.9"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.0-lab.9.tgz#b8273ddc006b79ccff971457fa73561ba62db3a3"
+  integrity sha512-wA94f/8Tgu9Gvs1i3LlvozDCLhGeqLCPUGaAQfvtyqVOQkMThEt/sczTAR7qNKAVS2y3UVQhTUVGHKvqpKh5mg==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"
@@ -458,6 +489,17 @@
     lodash.isequal "^4.5.0"
     luxon "^3.4.3"
     semantic-release-version-file "^1.0.2"
+
+"@superviz/threejs-plugin@0.20.2":
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.20.2.tgz#be705d9688183facb1e2cbc774c768eea6b16cab"
+  integrity sha512-5VySPVviX/dAGbittBHUXMffoqLt2T4BI2bpgcNHGh6BSUDojwpN6FCm6oHCmejReEVvE5YNQ3/k88ZMmwBBKQ==
+  dependencies:
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    three "^0.157.0"
+    three-mesh-bvh "^0.5.23"
+    three-spritetext "^1.7.1"
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"
@@ -1058,10 +1100,25 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
+three-mesh-bvh@^0.5.23:
+  version "0.5.24"
+  resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.5.24.tgz#56dd27ad35bfbafacedaba4a4d567723bbdd686c"
+  integrity sha512-VTIgfjz8aFoPKTQoMIQQv9jJD4ybFRZuKKE1/kqy78FQcuHQ0+iIWv7C5cSb2inlvs7bNMVY3yRx3RXGZfrvzQ==
+
 three-spritetext@^1.7.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/three-spritetext/-/three-spritetext-1.8.1.tgz#e554230b6f80c75251e0275b8408b8cf2dc2b101"
   integrity sha512-pohv5CcdeUtAPLi9KhG0kcDLj3gmzdIFK/QlgsTJe+U07oQFSj+K0DLPQKbNDPWAK+7YzhulkRcjWdVIQ5F7nw==
+
+three@0.139.2:
+  version "0.139.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.139.2.tgz#b110799a15736df673b9293e31653a4ac73648dd"
+  integrity sha512-gV7q7QY8rogu7HLFZR9cWnOQAUedUhu2WXAnpr2kdXZP9YDKsG/0ychwQvWkZN5PlNw9mv5MoCTin6zNTXoONg==
+
+three@^0.157.0:
+  version "0.157.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.157.0.tgz#5baac531941fc8c4ca62d45ee4265652e03318d0"
+  integrity sha512-CeAwQrf4x3z0/e+MC4F+nXLW5t0gh3pw+L6CCBqpHvOq3bGYIgRYub7Pv0j/9wR+d++OiEglyZzWyuSYbwWGOA==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"

@@ -1,6 +1,6 @@
-# Sample Room for Mouse Pointers (React/TS)
+# Sample Room for Presence3D for Matterport (React/JS)
 
-The Real-time Mouse Pointers feature enables real-time tracking of participants' cursor movements, allowing seamless collaboration within the same room. This is part of the SuperViz SDK.
+The Matterport plugin from SuperViz SDK is designed to seamlessly integrate avatars, mouse-pointers, lasers, and host controls into your digital twin tool. Additionally, the feature rich SuperViz SDK for Matterport provides ample flexibility for creating the ideal user experience for your Matterport tool.
 
 ### SuperViz SDK
 
