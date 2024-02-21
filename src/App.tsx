@@ -24,6 +24,7 @@ function App() {
       roomId={roomId}
     >
       <Room />
+      <canvas id='threejs-canvas' />
     </SuperVizRoomProvider>
   );
 }
