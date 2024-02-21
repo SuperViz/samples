@@ -3,14 +3,13 @@ import { type RefObject, useEffect } from "react";
 export default function useDraggable(elRef: RefObject<HTMLUListElement>) {
   useEffect(() => {
     const dragMouseDown = (e: DragEvent) => {
-      e = e || window.event;
       e.preventDefault();
       let pos3 = e.clientX;
       let pos4 = e.clientY;
-      const target = (e.target as HTMLElement)!.closest('li');
+      const element = e.target as HTMLElement;
+      const target = element!.closest('li');
 
       const elementDrag = (e: MouseEvent) => {
-        e = e || window.event;
         e.preventDefault();
         const pos1 = pos3 - e.clientX;
         const pos2 = pos4 - e.clientY;
