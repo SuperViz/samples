@@ -22,9 +22,14 @@ function App() {
         name: "John " + user,
       }}
       roomId={roomId}
-
     >
       <Room />
+      <iframe
+        width="100%"
+        height="100%"
+        allow="xr-spatial-tracking"
+        id="showcase"
+      />
     </SuperVizRoomProvider>
   );
 }

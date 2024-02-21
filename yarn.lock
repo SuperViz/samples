@@ -461,10 +461,10 @@
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/react-sdk@1.1.0-beta.22":
-  version "1.1.0-beta.22"
-  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.1.0-beta.22.tgz#886d57980f7a402658351f433644f85a2c711b22"
-  integrity sha512-GSCNhz4Y79PTE9EXOWT5HLtp8c/gZsOdniq2RnuvdeBnIndx6BzkZjnh7e9SdCxDLYhEIcz4yDGHR13C+kKSBw==
+"@superviz/react-sdk@1.1.0-beta.23":
+  version "1.1.0-beta.23"
+  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.1.0-beta.23.tgz#c67aa324f5e7576207402ca50bec782651dccca0"
+  integrity sha512-9J2KCnKd1PhX7DecszhPPbXS0MeDzO5pRp4eayvdeTPD0SHDltDFTwsXf6SedqBE6ywUIYJfewsOF7keP5eGnA==
   dependencies:
     "@superviz/autodesk-viewer-plugin" "1.14.1"
     "@superviz/matterport-plugin" "0.16.1"
