@@ -1,14 +1,13 @@
 import { Comments, useMatterportPin } from "@superviz/react-sdk";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Room() {
   const [mpSdkInstance, setMpSdkInstance] = useState(null);
-  const iframe = useRef(null);
   const modelId = '7ffnfBNamei';
 
   const { pin } = useMatterportPin({
     matterportInstance: mpSdkInstance!,
-    showcaseWindow: iframe.current!,
+    showcaseWindow: document.getElementById("showcase") as HTMLIFrameElement,
   });
 
   const matterportKey = import.meta.env.VITE_MATTERPORT_KEY;
@@ -22,21 +21,12 @@ function Room() {
 
     showcase!.addEventListener("load", async () => {
       const matterportSDK = await (showcaseWindow as any).MP_SDK.connect(showcaseWindow);
-      console.log('hahaha')
       setMpSdkInstance(matterportSDK);
     });
   }, []);
 
   return (
-    <Comments pin={pin} >
-      <iframe
-        width="100%"
-        height="100%"
-        allow="xr-spatial-tracking"
-        id="showcase"
-        ref={iframe}
-      ></iframe>
-    </Comments>
+    <Comments pin={pin} />
   );
 }
 
