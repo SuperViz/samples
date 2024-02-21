@@ -23,6 +23,9 @@ function App() {
         roomId={roomId}
       >
         <Room />
+        <section>
+          <div id='container' />
+        </section>
       </SuperVizRoomProvider>
     </main>
   );
