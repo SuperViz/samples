@@ -439,19 +439,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
-"@superviz/autodesk-viewer-plugin@1.14.1":
+"@superviz/autodesk-viewer-plugin@1.14.1", "@superviz/autodesk-viewer-plugin@^1.14.1":
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.14.1.tgz#e3e775029256c0eaf18c3bae6af434ddb1733cfa"
   integrity sha512-Dgw4mkns7TudFqyJX/htpEFK8radcH+uqygE2xyaPGlbb53EugoYUbul6QwRdl6GsWnuphPnnG4fpERqTGkzjg==
-  dependencies:
-    debug "^4.3.4"
-    lodash "^4.17.21"
-    three "0.139.2"
-
-"@superviz/autodesk-viewer-plugin@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.14.0.tgz#86d6aa998def81c0c3960ef042cc5fa0a3c81f30"
-  integrity sha512-f+lZM/aZAC8GK5aGgAOgQ4w2gbyaBTVJjxtZpmGKgJDq/cSfG6YVL0901anm4zctCnU9ON4So8yJukrgy93yRA==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
