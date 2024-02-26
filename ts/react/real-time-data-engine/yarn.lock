@@ -481,10 +481,10 @@
     luxon "^3.4.3"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@^5.7.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.0.tgz#a4c0f4532df85421bcfa6d69a011453036fcf8fa"
-  integrity sha512-jByAxog3PNKKOcS5HSNQP/pKvERpTW5OUyRvlILdVzprHOlZvMBp0ZLTbpxGF095RCgBbngyFfGw5z+BRz7Zuw==
+"@superviz/sdk@^5.7.1":
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.1.tgz#1dcc7fc73db891e7c816ac103ba944ff9f8d1e20"
+  integrity sha512-HWt7CJZWKAfRnwiJfvV+P2c5uPjsMnvotCiI/aGeELWAFLUKVJdvkk75EE2drxxwFyGQZ3PDHn/fuY4mEirq4g==
   dependencies:
     ably "^1.2.45"
     bowser "^2.11.0"
