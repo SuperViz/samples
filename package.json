@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@superviz/autodesk-viewer-plugin": "^1.14.0",
+    "@superviz/autodesk-viewer-plugin": "^1.14.1",
     "@superviz/react-sdk": "1.1.0-beta.22",
     "@types/forge-apis": "^0.9.6",
     "forge-apis": "^0.9.8",
