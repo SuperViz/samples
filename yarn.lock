@@ -481,21 +481,10 @@
     luxon "^3.4.3"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/threejs-plugin@0.20.2":
+"@superviz/threejs-plugin@0.20.2", "@superviz/threejs-plugin@^0.20.2":
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.20.2.tgz#be705d9688183facb1e2cbc774c768eea6b16cab"
   integrity sha512-5VySPVviX/dAGbittBHUXMffoqLt2T4BI2bpgcNHGh6BSUDojwpN6FCm6oHCmejReEVvE5YNQ3/k88ZMmwBBKQ==
-  dependencies:
-    debug "^4.3.4"
-    lodash "^4.17.21"
-    three "^0.157.0"
-    three-mesh-bvh "^0.5.23"
-    three-spritetext "^1.7.1"
-
-"@superviz/threejs-plugin@^0.20.1":
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.20.1.tgz#4f227619ce5c5c054501fe4eddf34ea095692e65"
-  integrity sha512-7L0zpNf7FZBnSq4cZNWp1OO6hcw52kNo4MEQC4zXJhjQj4f6tw0RAa2q7y8vHWua4HfYiaSzzWmlwCqGZOhBKQ==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
