@@ -13,7 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@superviz/react-sdk": "1.1.0-beta.23",
-    "@superviz/matterport-plugin": "^0.16.0",
+    "@superviz/matterport-plugin": "^0.16.2",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
