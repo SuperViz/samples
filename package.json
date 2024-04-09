@@ -14,7 +14,7 @@
     "react-dom": "^18.2.0",
     "@superviz/react-sdk": "1.1.0-beta.22",
     "uuid": "^9.0.1",
-    "@superviz/autodesk-viewer-plugin": "^1.14.1"
+    "@superviz/autodesk-viewer-plugin": "^1.15.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
