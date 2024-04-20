@@ -1,23 +1,32 @@
 import { ThreeJsPresence } from "@superviz/react-sdk";
 import { useEffect, useRef, useState } from "react";
 
-import { Color, PerspectiveCamera, PMREMGenerator, Scene, WebGLRenderer, type Camera, type Object3D, type Object3DEventMap } from "three";
+import {
+  Color,
+  PerspectiveCamera,
+  PMREMGenerator,
+  Scene,
+  WebGLRenderer,
+  type Camera,
+  type Object3D,
+  type Object3DEventMap,
+} from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
-const containerId = 'threejs-canvas'
-export default function ThreeJSInstance() {
+const containerId = "threejs-canvas";
+export default function ThreeJSImplementation() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [scene, setScene] = useState<Scene>();
   const [camera, setCamera] = useState<Camera>();
   const [player, setPlayer] = useState<Object3D<Object3DEventMap>>();
 
-  useEffect(()=> {
+  useEffect(() => {
     if (!canvasRef.current) return;
     InitParticipantThreeJS();
-  }, [canvasRef])
+  }, [canvasRef]);
 
   function InitParticipantThreeJS() {
     const container = document.getElementById(containerId) as HTMLCanvasElement;
@@ -66,11 +75,7 @@ export default function ThreeJSInstance() {
 
   return (
     <section>
-      <ThreeJsPresence
-        scene={scene!}
-        camera={camera!}
-        player={player!}
-      >
+      <ThreeJsPresence scene={scene!} camera={camera!} player={player!}>
         <canvas ref={canvasRef} id={containerId} />
       </ThreeJsPresence>
     </section>
