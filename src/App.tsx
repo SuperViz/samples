@@ -1,15 +1,15 @@
-import { SuperVizRoomProvider } from "@superviz/react-sdk";
-
-import Room from "./components/Room";
+import { SuperVizRoomProvider, VideoConference } from "@superviz/react-sdk";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-js-presence-threejs";
 const groupName = "Sample Room for Presence Video Conference (React/JS)";
-const roomId = 'samples-video-conference-room';
 const user = Math.floor(Math.random() * 100);
 
-
 function App() {
+  const collabMode = {
+    enabled: false,
+  };
+
   return (
     <SuperVizRoomProvider
       developerKey={DEVELOPER_KEY}
@@ -22,9 +22,9 @@ function App() {
         id: user.toString(),
         name: "John " + user,
       }}
-      roomId={roomId}
+      roomId={groupId}
     >
-      <Room />
+      <VideoConference participantType="host" collaborationMode={collabMode}></VideoConference>
     </SuperVizRoomProvider>
   );
 }
