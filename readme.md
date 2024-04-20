@@ -58,7 +58,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Contextual Comments with Matteport  | 🔄️                                 | [Link](/ts/react/contextual-comments-matterport/) | 🔄️                               |
 | Contextual Comments with ThreeJS    | 🔄️                                 | [Link](/ts/react/contextual-comments-threejs/)    | 🔄️                               |
 | Video Conference                    | [🔗](/ts/vanilla/video-conference/) | [Link](/ts/react/video-conference/)               | [Link](/js/vue/video-conference/) |
-| Who-is-Online                       | 🔄️                                 | [Link](/ts/react/who-is-online/)                  | [Link](/ts/vue/who-is-online/)    |
+| Who-is-Online                       | 🔄️                                 | [🔗](/ts/react/who-is-online/)                    | [Link](/ts/vue/who-is-online/)    |
 
 ## Project roadmap
 

@@ -1,5 +1,4 @@
-import { SuperVizRoomProvider } from "@superviz/react-sdk";
-import Room from "./components/Room";
+import { SuperVizRoomProvider, WhoIsOnline } from "@superviz/react-sdk";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-js-who-is-online";
@@ -22,10 +21,8 @@ function App() {
         }}
         roomId={roomId}
       >
-        <Room />
-        <section>
-          <div id='container' />
-        </section>
+        <WhoIsOnline position="container" />
+        <div id="container" />
       </SuperVizRoomProvider>
     </main>
   );
