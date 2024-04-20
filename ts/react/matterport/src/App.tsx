@@ -1,18 +1,16 @@
-import { SuperVizRoomProvider } from "@superviz/react-sdk";
+import { MatterportIframe, SuperVizRoomProvider } from "@superviz/react-sdk";
 
-import Room from "./components/Room";
-
+const modelId = "7ffnfBNamei";
+const matterportKey = import.meta.env.VITE_MATTERPORT_KEY;
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-ts-presence-matterport";
 const groupName = "Sample Room for Presence Matterport (React/TS)";
-const roomId = 'samples-presence-matterport-room';
 const user = Math.floor(Math.random() * 100);
 
 function App() {
   return (
     <SuperVizRoomProvider
       developerKey={DEVELOPER_KEY}
-      debug={true}
       group={{
         id: groupId,
         name: groupName,
@@ -21,9 +19,16 @@ function App() {
         id: user.toString(),
         name: "John " + user,
       }}
-      roomId={roomId}
+      roomId={groupId}
     >
-      <Room />
+      <section>
+        <MatterportIframe
+          width={window.innerWidth}
+          height={window.innerHeight}
+          bundleUrl={`/mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${matterportKey}&m=${modelId}`}
+          matterportKey={matterportKey}
+        />
+      </section>
     </SuperVizRoomProvider>
   );
 }

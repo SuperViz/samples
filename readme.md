@@ -50,7 +50,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Mouse Pointer                       | [🔗](/ts/vanilla/mouse-pointers/)   | [🔗](/ts/react/mouse-pointers/)                   | [Link](/ts/vue/mouse-pointers/)   |
 | Real-time Data Engine               | 🔄️                                 | [🔗](/ts/react/real-time-data-engine/)            | 🔄️                               |
 | Presence for AutoDesk               | 🔄️                                 | [Link](/ts/react/autodesk/)                       | 🔄️                               |
-| Presence for Matteport              | 🔄️                                 | [Link](/ts/react/matterport/)                     | 🔄️                               |
+| Presence for Matteport              | 🔄️                                 | [🔗](/ts/react/matterport/)                       | 🔄️                               |
 | Presence for ThreeJS                | 🔄️                                 | [🔗](/ts/react/threejs/)                          | 🔄️                               |
 | Contextual Comments with Canvas Pin | 🔄️                                 | [Link](/ts/react/contextual-comments-html/)       | 🔄️                               |
 | Contextual Comments with HTML Pin   | 🔄️                                 | 🔄️                                               | 🔄️                               |
