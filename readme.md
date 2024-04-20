@@ -30,7 +30,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 
 | Component                           | CDN                                             | Vanilla | React                                             | Vue                               |
 | ----------------------------------- | ----------------------------------------------- | ------- | ------------------------------------------------- | --------------------------------- |
-| Mouse Pointer                       | [Link](/js/cdn/mouse-pointers/)                 | 🔄️     | [🔗 Link](/js/react/mouse-pointers/)              | [Link](/js/vue/mouse-pointers/)   |
+| Mouse Pointer                       | [Link](/js/cdn/mouse-pointers/)                 | 🔄️     | [Link](/js/react/mouse-pointers/)                 | [Link](/js/vue/mouse-pointers/)   |
 | Real-time Data Engine               | [Link](/js/cdn/real-time-data-engine/)          | 🔄️     | [Link](/js/react/real-time-data-engine/)          | 🔄️                               |
 | Presence3D for AutoDesk             | [Link](/js/cdn/autodesk/)                       | 🔄️     | [Link](/js/react/autodesk/)                       | 🔄️                               |
 | Presence3D for Matteport            | [Link](/js/cdn/matterport/)                     | 🔄️     | [Link](/js/react/matterport/)                     | 🔄️                               |
@@ -47,7 +47,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 
 | Component                           | Vanilla                               | React                                             | Vue                               |
 | ----------------------------------- | ------------------------------------- | ------------------------------------------------- | --------------------------------- |
-| Mouse Pointer                       | [Link](/ts/vanilla/mouse-pointers/)   | [Link](/ts/react/mouse-pointers/)                 | [Link](/ts/vue/mouse-pointers/)   |
+| Mouse Pointer                       | [🔗](/ts/vanilla/mouse-pointers/)     | [Link](/ts/react/mouse-pointers/)                 | [Link](/ts/vue/mouse-pointers/)   |
 | Real-time Data Engine               | 🔄️                                   | [Link](/ts/react/real-time-data-engine/)          | 🔄️                               |
 | Presence for AutoDesk               | 🔄️                                   | [Link](/ts/react/autodesk/)                       | 🔄️                               |
 | Presence for Matteport              | 🔄️                                   | [Link](/ts/react/matterport/)                     | 🔄️                               |

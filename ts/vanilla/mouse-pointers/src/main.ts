@@ -1,6 +1,5 @@
 import "./style.css";
-import SuperVizRoom from "@superviz/sdk";
-import { MousePointers } from "@superviz/sdk/lib/components";
+import SuperVizRoom, { MousePointers } from "@superviz/sdk";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 100);
@@ -21,7 +20,7 @@ async function initializeSuperVizRoom() {
   });
 
   const mousePointers = new MousePointers("element-id");
-  room.addComponent(mousePointers);
+  room.addComponent(mousePointers as any);
 
   return room;
 }
