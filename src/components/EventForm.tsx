@@ -7,29 +7,28 @@ export default function EventForm({ participantId }: { participantId: string }) 
   const [eventsSubscribed, setEventsSubscribed] = useState<string[]>([]);
   const [lastPublishedMessage, setLastPublishedMessage] = useState<RealtimeMessage>();
   const message = useRef<HTMLInputElement>(null);
-  const publishTo = useRef<HTMLInputElement>(null);
-  
+  const publishTo = useRef<HTMLSelectElement>(null);
+
   const { subscribe, publish } = useRealtime();
 
-  const callbackFunctionForWhenTheEventIsDispatched = (message: RealtimeMessage[]) => {
-    const messageData = message[0];
-    if (messageData.participantId === participantId) return;
-    setLastPublishedMessage(messageData);
+  const callbackFunctionForWhenTheEventIsDispatched = (message: RealtimeMessage) => {
+    if (message.participantId === participantId) return;
+
+    setLastPublishedMessage(message);
   };
 
   const subscribeToBasicEvents = () => {
-    subscribe("event_name_1", callbackFunctionForWhenTheEventIsDispatched);
-    subscribe("event_name_2", callbackFunctionForWhenTheEventIsDispatched);
-    subscribe("event_name_3", callbackFunctionForWhenTheEventIsDispatched);
+    subscribe("one", callbackFunctionForWhenTheEventIsDispatched);
+    subscribe("two", callbackFunctionForWhenTheEventIsDispatched);
+    subscribe("three", callbackFunctionForWhenTheEventIsDispatched);
 
-    setEventsSubscribed(["event_name_1", "event_name_2", "event_name_3"]);
+    setEventsSubscribed(["one", "two", "three"]);
   };
 
   const publishEvent = () => {
     const eventName = publishTo.current?.value;
     const messageToPublish = message.current?.value;
     if (!eventName || !messageToPublish) return;
-
     publish(eventName, messageToPublish);
   };
 
@@ -56,8 +55,14 @@ export default function EventForm({ participantId }: { participantId: string }) 
       <div className="container">
         <h2>Publising events</h2>
         <div className="subscribe-options">
+          <select ref={publishTo}>
+            {eventsSubscribed.map((event, index) => (
+              <option key={index} value={event}>
+                {event}
+              </option>
+            ))}
+          </select>
           <input placeholder="Event message" ref={message} />
-          <input placeholder="Event name" ref={publishTo} />
           <button onClick={publishEvent}>Publish</button>
         </div>
       </div>
@@ -76,5 +81,5 @@ export default function EventForm({ participantId }: { participantId: string }) 
         </div>
       )}
     </section>
-  )
+  );
 }

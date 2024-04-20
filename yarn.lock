@@ -446,42 +446,45 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/autodesk-viewer-plugin@1.14.1":
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.14.1.tgz#e3e775029256c0eaf18c3bae6af434ddb1733cfa"
-  integrity sha512-Dgw4mkns7TudFqyJX/htpEFK8radcH+uqygE2xyaPGlbb53EugoYUbul6QwRdl6GsWnuphPnnG4fpERqTGkzjg==
+"@superviz/autodesk-viewer-plugin@1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.16.0.tgz#171617e6b1c76e472334e5d37913e296bdd1d629"
+  integrity sha512-fZXZklTuhoOAn4FvCr1xs4p7Cf3WyYurLzjyhcuVVAiTfLUr/mjeDNFRu6Hm01FqnwykvO3/HaoEWPspWrzm7A==
   dependencies:
+    "@superviz/sdk" "5.9.0-beta.1"
     debug "^4.3.4"
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/matterport-plugin@0.16.1":
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.16.1.tgz#1f35e761d1b6179f89b97c5d6a49729b19421c27"
-  integrity sha512-lWbUabq46HZynBeGLEux+lXW4x2K7XqgbTqPXxqFcGUdH18me9vgLhtIlRCfJPMCnsyno4XSOuMsaJmzMMIdtA==
+"@superviz/matterport-plugin@0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.19.0.tgz#d91df61620ad919ce8fa4d901e2b687f93612933"
+  integrity sha512-iFmWqIgBU0PV9961p4u2oiMZ8CkX18Yt4V65WMCDkDACKAVB18T5CRT5dNjjt8nkE7JenjJGE5SczY5MP2obig==
   dependencies:
+    "@superviz/sdk" "5.9.0-beta.1"
     debug "^4.3.4"
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/react-sdk@1.1.0-beta.22":
-  version "1.1.0-beta.22"
-  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.1.0-beta.22.tgz#886d57980f7a402658351f433644f85a2c711b22"
-  integrity sha512-GSCNhz4Y79PTE9EXOWT5HLtp8c/gZsOdniq2RnuvdeBnIndx6BzkZjnh7e9SdCxDLYhEIcz4yDGHR13C+kKSBw==
+"@superviz/react-sdk@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.5.0.tgz#06112e8731edf192ca7ad77f82f6ccac77662339"
+  integrity sha512-EsOPUPGPrsf01tu7qUusgG0H2RlX5itlOrgMbx+EyhV9FVCIWtTdjz2kSEpk4N+OAAYBs7A7XFDb4VuLXMMHmQ==
   dependencies:
-    "@superviz/autodesk-viewer-plugin" "1.14.1"
-    "@superviz/matterport-plugin" "0.16.1"
-    "@superviz/sdk" "5.7.0-lab.9"
-    "@superviz/threejs-plugin" "0.20.2"
+    "@superviz/autodesk-viewer-plugin" "1.16.0"
+    "@superviz/matterport-plugin" "0.19.0"
+    "@superviz/sdk" "6.0.0"
+    "@superviz/threejs-plugin" "0.22.0"
     lodash "^4.17.21"
     react "^18.2.0"
     react-dom "^18.2.0"
 
-"@superviz/sdk@5.7.0-lab.9":
-  version "5.7.0-lab.9"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.7.0-lab.9.tgz#b8273ddc006b79ccff971457fa73561ba62db3a3"
-  integrity sha512-wA94f/8Tgu9Gvs1i3LlvozDCLhGeqLCPUGaAQfvtyqVOQkMThEt/sczTAR7qNKAVS2y3UVQhTUVGHKvqpKh5mg==
+"@superviz/sdk@5.9.0-beta.1":
+  version "5.9.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.9.0-beta.1.tgz#adf9fe688873534a92ccbabcfb3e844e8a2e5d5b"
+  integrity sha512-EU1s1BkTAfSJi2EHSVGalGcPktPfgvmsHvFuKqAgXeMMaMhWnuJXiW8L0Xq99wePwGo8e3SlVJaI5J6oS10zEw==
   dependencies:
+    "@superviz/socket-client" "1.2.2"
     ably "^1.2.45"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
@@ -491,9 +494,10 @@
     lodash.debounce "^4.0.8"
     lodash.isequal "^4.5.0"
     luxon "^3.4.3"
+    rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@^6.0.0":
+"@superviz/sdk@6.0.0", "@superviz/sdk@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.0.0.tgz#e3b1e711d607059d7557149f6be01a13cb5498d2"
   integrity sha512-8t3K2Ed8DzYuLNctr8C8m6W544gMVuK4loVNXqlmaiUoUkhZRfjYkBVGhKJ3gWmNbBUoLLrwTkZa38d7ufTPuw==
@@ -524,11 +528,12 @@
     socket.io-client "^4.7.4"
     zod "^3.22.4"
 
-"@superviz/threejs-plugin@0.20.2":
-  version "0.20.2"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.20.2.tgz#be705d9688183facb1e2cbc774c768eea6b16cab"
-  integrity sha512-5VySPVviX/dAGbittBHUXMffoqLt2T4BI2bpgcNHGh6BSUDojwpN6FCm6oHCmejReEVvE5YNQ3/k88ZMmwBBKQ==
+"@superviz/threejs-plugin@0.22.0":
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.22.0.tgz#7a5a1773ea65789f7e9f471276f68598b6d349d8"
+  integrity sha512-tSHTJLVJxRLGSPRMB1P4Be3xf7u2pq6VgqByxrjT8RcORSdzO202cqs1Rl7SnlHaUQV2/qcq9ha/NfP5Z/fcdw==
   dependencies:
+    "@superviz/sdk" "5.9.0-beta.1"
     debug "^4.3.4"
     lodash "^4.17.21"
     three "^0.157.0"

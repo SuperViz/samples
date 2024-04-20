@@ -1,13 +1,11 @@
-import { SuperVizRoomProvider } from "@superviz/react-sdk";
+import { Realtime, SuperVizRoomProvider } from "@superviz/react-sdk";
 
-import Room from "./components/Room";
 import EventForm from "./components/EventForm";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 10);
-const groupId = "sv-sample-room-react-js-presence-autodesk";
-const groupName = "Sample Room for Presence Autodesk (React/JS)";
-const roomId = 'samples-presence-autodesk-room';
+const groupId = "sv-sample-room-react-ts-real-time-data-engine";
+const groupName = "Sample Room for Real-time Data Engine (React/TS)";
 
 function App() {
   return (
@@ -22,10 +20,10 @@ function App() {
           id: user.toString(),
           name: "John" + user,
         }}
-        roomId={roomId}
+        roomId={groupId}
       >
-        <Room />
-        <EventForm participantId={user.toString()}/>
+        <Realtime />
+        <EventForm participantId={user.toString()} />
       </SuperVizRoomProvider>
     </main>
   );
