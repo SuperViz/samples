@@ -3,7 +3,6 @@ import { SuperVizRoomProvider, WhoIsOnline } from "@superviz/react-sdk";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-js-who-is-online";
 const groupName = "Sample Room for Who-is-Online (React/JS)";
-const roomId = "samples-who-is-online-room";
 const user = Math.floor(Math.random() * 100);
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
           id: user.toString(),
           name: "John " + user,
         }}
-        roomId={roomId}
+        roomId={groupId}
       >
         <WhoIsOnline position="container" />
         <div id="container" />
