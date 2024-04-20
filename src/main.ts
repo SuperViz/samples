@@ -1,5 +1,4 @@
-import SuperVizRoom from "@superviz/sdk";
-import { VideoConference } from "@superviz/sdk/lib/components";
+import SuperVizRoom, { VideoConference } from "@superviz/sdk";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 100);
@@ -22,7 +21,5 @@ async function initializeSuperVizRoom() {
   room.addComponent(video);
   return room;
 }
-
-document.querySelector<HTMLDivElement>("#root")!.innerHTML = ``;
 
 initializeSuperVizRoom();
