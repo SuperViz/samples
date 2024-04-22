@@ -1,5 +1,5 @@
 import "./style.css";
-import SuperVizRoom, { MousePointers } from "@superviz/sdk";
+import SuperVizRoom, { WhoIsOnline } from "@superviz/sdk";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 100);
@@ -19,12 +19,10 @@ async function initializeSuperVizRoom() {
     },
   });
 
-  const mousePointers = new MousePointers("element-id");
-  room.addComponent(mousePointers as any);
+  const whoisonline = new WhoIsOnline();
+  room.addComponent(whoisonline);
 
   return room;
 }
-
-document.querySelector<HTMLDivElement>("#root")!.innerHTML = `<canvas id="element-id"></canvas>`;
 
 initializeSuperVizRoom();
