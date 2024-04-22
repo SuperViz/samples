@@ -8,7 +8,7 @@ const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
 
 async function initializeSuperVizRoom() {
   const room = await SuperVizRoom(DEVELOPER_KEY, {
-    roomId: "<ROOM-ID>",
+    roomId: groupId,
     group: {
       id: groupId,
       name: groupName,
