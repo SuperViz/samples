@@ -19,7 +19,7 @@ async function initializeSuperVizRoom() {
     },
   });
 
-  const pinAdapter = new HTMLPin("root");
+  const pinAdapter = new HTMLPin("my-div");
   const comments = new Comments(pinAdapter);
   room.addComponent(comments);
 

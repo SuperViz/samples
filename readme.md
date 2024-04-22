@@ -53,7 +53,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Presence for Matteport              | 🔄️                                         | [🔗](/ts/react/matterport/)                     | 🔄️                               |
 | Presence for ThreeJS                | 🔄️                                         | [🔗](/ts/react/threejs/)                        | 🔄️                               |
 | Contextual Comments with Canvas Pin | 🔄️                                         | [🔗](/ts/react/contextual-comments-html/)       | 🔄️                               |
-| Contextual Comments with HTML Pin   | [🔗](/ts/vanilla/contextual-comments-html/) | 🔄️                                             | 🔄️                               |
+| Contextual Comments with HTML Pin   | [🔗](/ts/vanilla/contextual-comments-html/) | [🔗](/ts/react/contextual-comments-html/)       | 🔄️                               |
 | Contextual Comments with AutoDesk   | 🔄️                                         | [🔗](/ts/react/contextual-comments-autodesk/)   | 🔄️                               |
 | Contextual Comments with Matteport  | 🔄️                                         | [🔗](/ts/react/contextual-comments-matterport/) | 🔄️                               |
 | Contextual Comments with ThreeJS    | 🔄️                                         | [🔗](/ts/react/contextual-comments-threejs/)    | 🔄️                               |
