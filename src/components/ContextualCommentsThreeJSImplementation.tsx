@@ -1,33 +1,34 @@
 import { Comments, useThreeJsPin } from "@superviz/react-sdk";
 
-
 import { useEffect, useRef } from "react";
 
-import { Color, PerspectiveCamera, PMREMGenerator, Scene, WebGLRenderer, type Camera, type Object3D, type Object3DEventMap } from "three";
+import {
+  Color,
+  PerspectiveCamera,
+  PMREMGenerator,
+  Scene,
+  WebGLRenderer,
+  type Camera,
+  type Object3D,
+  type Object3DEventMap,
+} from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
-export default function ThreeJSInstance() {
+export default function ContextualCommentsThreeJSImplementation() {
   const sceneRef = useRef<Scene>();
   const cameraRef = useRef<Camera>();
   const playerRef = useRef<Object3D<Object3DEventMap>>();
   const rendererRef = useRef<WebGLRenderer>();
-  
-  const { pin } = useThreeJsPin({
-    camera: cameraRef.current!,
-    scene: sceneRef.current!, 
-    player: playerRef.current!, 
-    renderer: rendererRef.current!
-  });
 
-  useEffect(()=> {
+  useEffect(() => {
     InitParticipantThreeJS();
-  }, [])
+  }, []);
 
   function InitParticipantThreeJS() {
-    const container = document.getElementById('threejs-canvas') as HTMLCanvasElement;
+    const container = document.getElementById("threejs-canvas") as HTMLCanvasElement;
     const width = container.clientWidth;
     const height = container.clientHeight;
 
@@ -73,5 +74,17 @@ export default function ThreeJSInstance() {
     playerRef.current = camera;
   }
 
-  return <Comments pin={pin} />
+  const { pin } = useThreeJsPin({
+    camera: cameraRef.current!,
+    scene: sceneRef.current!,
+    player: playerRef.current!,
+    renderer: rendererRef.current!,
+  });
+
+  return (
+    <>
+      <Comments pin={pin} />
+      <canvas id="threejs-canvas" />
+    </>
+  );
 }
