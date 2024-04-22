@@ -1,18 +1,16 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
 
-import Room from "./components/Room";
+import ContextualCommentsThreeJSImplementation from "./components/ContextualCommentsThreeJSImplementation";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-ts-threejs-contextual-comments";
 const groupName = "Sample Room for ThreeJs Contextual Comments (React/TS)";
-const roomId = 'samples-threejs-contextual-comments-room';
 const user = Math.floor(Math.random() * 100);
 
 function App() {
   return (
     <SuperVizRoomProvider
       developerKey={DEVELOPER_KEY}
-      debug={true}
       group={{
         id: groupId,
         name: groupName,
@@ -21,10 +19,9 @@ function App() {
         id: user.toString(),
         name: "John " + user,
       }}
-      roomId={roomId}
+      roomId={groupId}
     >
-      <Room />
-      <canvas id='threejs-canvas' />
+      <ContextualCommentsThreeJSImplementation />
     </SuperVizRoomProvider>
   );
 }
