@@ -1,14 +1,12 @@
-import Room from "./components/Room";
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
+import { MousePointers } from "@superviz/react-sdk";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const groupId = "sv-sample-room-react-mouse-pointers";
-const groupName = "Sample Room for Mouse Pointers (React + TS)";
+const groupId = "sv-sample-room-react-js-mouse-pointers";
+const groupName = "Sample Room for Mouse Pointers (React/JS)";
 const user = Math.floor(Math.random() * 100);
-const roomId = "samples-mouse-pointers-room";
 
 function App() {
-
   return (
     <SuperVizRoomProvider
       developerKey={DEVELOPER_KEY}
@@ -20,9 +18,9 @@ function App() {
         id: user.toString(),
         name: "John " + user,
       }}
-      roomId={roomId}
+      roomId={groupId}
     >
-      <Room />
+      <MousePointers elementId="element-id" />
       <canvas id="element-id" />
     </SuperVizRoomProvider>
   );

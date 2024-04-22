@@ -4,13 +4,14 @@
   "description": "Sample Room for Mouse Pointers (React/JS)",
   "scripts": {
     "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@superviz/react-sdk": "1.1.0-beta.22",
+    "@superviz/react-sdk": "1.5.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
