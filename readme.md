@@ -54,7 +54,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Presence for ThreeJS                | 🔄️                                 | [🔗](/ts/react/threejs/)                          | 🔄️                               |
 | Contextual Comments with Canvas Pin | 🔄️                                 | [🔗](/ts/react/contextual-comments-html/)         | 🔄️                               |
 | Contextual Comments with HTML Pin   | 🔄️                                 | 🔄️                                               | 🔄️                               |
-| Contextual Comments with AutoDesk   | 🔄️                                 | [Link](/ts/react/contextual-comments-autodesk/)   | 🔄️                               |
+| Contextual Comments with AutoDesk   | 🔄️                                 | [🔗](/ts/react/contextual-comments-autodesk/)     | 🔄️                               |
 | Contextual Comments with Matteport  | 🔄️                                 | [Link](/ts/react/contextual-comments-matterport/) | 🔄️                               |
 | Contextual Comments with ThreeJS    | 🔄️                                 | [🔗](/ts/react/contextual-comments-threejs/)      | 🔄️                               |
 | Video Conference                    | [🔗](/ts/vanilla/video-conference/) | [🔗](/ts/react/video-conference/)                 | [Link](/js/vue/video-conference/) |

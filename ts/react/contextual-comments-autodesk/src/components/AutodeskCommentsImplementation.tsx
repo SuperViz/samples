@@ -1,22 +1,19 @@
-import { Comments, useAutodeskPin } from "@superviz/react-sdk";
+import { useAutodeskPin, Comments } from "@superviz/react-sdk";
 import { useEffect, useRef } from "react";
 
-function Room() {
-  const viewer = useRef<any>()
-  const loaded = useRef(false);
+function AutodeskCommentsImplementation() {
+  const viewer = useRef<any>();
 
   const { pin } = useAutodeskPin({
     autodeskInstance: viewer.current,
   });
 
   function InitParticipantAutodesk() {
-    const modelURN =
-      "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
+    const modelURN = "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
     const modelID = btoa(modelURN);
     const FORGE_CLIENT = import.meta.env.VITE_CLIENT_ID;
     const FORGE_SECRET = import.meta.env.VITE_CLIENT_SECRET;
-    const AUTH_URL =
-      "https://developer.api.autodesk.com/authentication/v2/token";
+    const AUTH_URL = "https://developer.api.autodesk.com/authentication/v2/token";
     const documentId = `urn:${modelID}`;
     const token = btoa(`${FORGE_CLIENT}:${FORGE_SECRET}`);
 
@@ -56,11 +53,7 @@ function Room() {
           viewer.current.setGroundReflection(false);
           viewer.current.setOptimizeNavigation(true);
           viewer.current.setProgressiveRendering(true);
-          window.Autodesk.Viewing.Document.load(
-            documentId,
-            onDocumentLoadSuccess,
-            onDocumentLoadFailure
-          );
+          window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
         });
       });
 
@@ -84,19 +77,17 @@ function Room() {
       console.error(`Error loading forge model: ${error} - ${message}`);
     }
   }
-  
-  useEffect(() => {
-    if (loaded.current) return;
-    loaded.current = true;
 
+  useEffect(() => {
     InitParticipantAutodesk();
   }, []);
 
   return (
-    <Comments pin={pin} buttonLocation="top-right" position="left">
+    <>
       <div id="viewer" className="forge-viewer"></div>
-    </Comments>
+      <Comments pin={pin} />
+    </>
   );
 }
 
-export default Room;
+export default AutodeskCommentsImplementation;
