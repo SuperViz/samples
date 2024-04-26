@@ -5,8 +5,8 @@ import { useRealtime } from "@superviz/react-sdk";
 export default function EventForm({ participantId }) {
   const [eventsSubscribed, setEventsSubscribed] = useState([]);
   const [lastPublishedMessage, setLastPublishedMessage] = useState();
-  const message = useRef<HTMLInputElement>(null);
-  const publishTo = useRef<HTMLSelectElement>(null);
+  const message = useRef(null);
+  const publishTo = useRef(null);
 
   const { subscribe, publish } = useRealtime();
 
