@@ -1,6 +1,6 @@
 import { Comments, useHTMLPin } from "@superviz/react-sdk";
 
-function Room() {
+function ContextualCommentsHtmlImplementation() {
   const containerId = "html-pin-participant";
 
   const { pin } = useHTMLPin({ containerId });
@@ -17,4 +17,4 @@ function Room() {
   );
 }
 
-export default Room;
+export default ContextualCommentsHtmlImplementation;

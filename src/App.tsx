@@ -1,6 +1,6 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
 
-import Room from "./components/Room.tsx";
+import ContextualCommentsHtmlImplementation from "./components/ContextualCommentsHtmlImplementation.tsx";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 10);
@@ -22,7 +22,7 @@ function App() {
       }}
       roomId={roomId}
     >
-      <Room />
+      <ContextualCommentsHtmlImplementation />
     </SuperVizRoomProvider>
   );
 }
