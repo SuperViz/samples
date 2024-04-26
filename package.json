@@ -4,12 +4,12 @@
   "description": "Sample Room with Contextual Comments for Autodesk (React/JS)",
   "scripts": {
     "start": "vite",
+    "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@superviz/autodesk-viewer-plugin": "^1.15.0",
-    "@superviz/react-sdk": "1.1.0-beta.22",
+    "@superviz/react-sdk": "1.5.0",
     "forge-apis": "^0.9.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
