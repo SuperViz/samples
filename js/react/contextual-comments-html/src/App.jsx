@@ -1,30 +1,31 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
 
-import Room from "./components/Room.jsx";
+import ContextualCommentsHtmlImplementation from "./components/ContextualCommentsHtmlImplementation.jsx";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 10);
-const groupId = "sv-sample-room-react-js-presence-autodesk";
-const groupName = "Sample Room for Presence Autodesk (React/JS)";
-const roomId = "samples-presence-autodesk-room";
+
+const groupId = "sv-sample-room-react-js-contextual-comments-html";
+const groupName = "Sample Room for Contextual Comments for HTML (React/JS)";
 
 function App() {
-    return (
-        <SuperVizRoomProvider
-            developerKey={DEVELOPER_KEY}
-            group={{
-                id: groupId,
-                name: groupName,
-            }}
-            participant={{
-                id: user.toString(),
-                name: "John " + user,
-            }}
-            roomId={roomId}
-        >
-            <Room />
-        </SuperVizRoomProvider>
-    );
+  console.log(packageJsonProjectName);
+  return (
+    <SuperVizRoomProvider
+      developerKey={DEVELOPER_KEY}
+      group={{
+        id: groupId,
+        name: groupName,
+      }}
+      participant={{
+        id: user.toString(),
+        name: "John " + user,
+      }}
+      roomId={groupId}
+    >
+      <ContextualCommentsHtmlImplementation />
+    </SuperVizRoomProvider>
+  );
 }
 
 export default App;
