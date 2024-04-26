@@ -4,6 +4,7 @@
   "description": "Sample Room for Video Conference (React/JS)",
   "scripts": {
     "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -12,7 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uuid": "^9.0.1",
-    "@superviz/react-sdk": "1.1.0-beta.22"
+    "@superviz/react-sdk": "1.5.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
