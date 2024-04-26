@@ -1,46 +1,37 @@
-import { Comments, useThreeJsPin } from "@superviz/react-sdk";
+import { ThreeJsPresence } from "@superviz/react-sdk";
+import { useEffect, useRef, useState } from "react";
 
-
-import { useEffect, useRef } from "react";
-
-import { Color, PerspectiveCamera, PMREMGenerator, Scene, WebGLRenderer } from "three";
+import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
+const containerId = 'threejs-canvas'
 export default function ThreeJSInstance() {
-  const sceneRef = useRef();
-  const cameraRef = useRef();
-  const playerRef = useRef();
-  const rendererRef = useRef();
-  
-  const { pin } = useThreeJsPin({
-    camera: cameraRef.current,
-    scene: sceneRef.current, 
-    player: playerRef.current, 
-    renderer: rendererRef.current
-  });
+  const canvasRef = useRef(null);
+  const [scene, setScene] = useState(null);
+  const [camera, setCamera] = useState(null);
+  const [player, setPlayer] = useState(null);
 
   useEffect(()=> {
+    if (!canvasRef.current) return;
     InitParticipantThreeJS();
-  }, [])
-  
+  }, [canvasRef])
+
   function InitParticipantThreeJS() {
-    const container = document.getElementById('threejs-canvas');
+    const container = document.getElementById(containerId);
     const width = container.clientWidth;
     const height = container.clientHeight;
 
-    const renderer = new WebGLRenderer({ canvas: container, antialias: true });
-    rendererRef.current = renderer;
-
+    const renderer = new THREE.WebGLRenderer({ canvas: container, antialias: true });
     renderer.setSize(width, height);
 
-    const pmremGenerator = new PMREMGenerator(renderer);
-    const scene = new Scene();
-    scene.background = new Color(0xb6b7b8);
+    const pmremGenerator = new THREE.PMREMGenerator(renderer);
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xb6b7b8);
     scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
-    const camera = new PerspectiveCamera(60, width / height, 0.1, 300);
+    const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 300);
     camera.position.set(2, 0, 2);
 
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -68,10 +59,20 @@ export default function ThreeJSInstance() {
     };
 
     animate();
-    sceneRef.current = scene;
-    cameraRef.current = camera;
-    playerRef.current = camera;
+    setScene(scene);
+    setCamera(camera);
+    setPlayer(camera);
   }
 
-  return <Comments pin={pin} />;
+  return (
+    <section>
+      <ThreeJsPresence
+        scene={scene}
+        camera={camera}
+        player={player}
+      >
+        <canvas ref={canvasRef} id={containerId} />
+      </ThreeJsPresence>
+    </section>
+  );
 }
