@@ -1,20 +1,19 @@
 import { Comments, useHTMLPin } from "@superviz/react-sdk";
-import React, { useRef } from "react";
-import useMosaic from "../hooks/useMosaic";
-import useDraggable from "../hooks/useDraggable";
 
 function Room() {
-  const containerId = 'html-pin-participant';
-
-  const styles = `
-    .comments__floating-button {
-      background: #eeeeee;
-    }`;
+  const containerId = "html-pin-participant";
 
   const { pin } = useHTMLPin({ containerId });
 
   return (
-    <Comments pin={pin} position="right" styles={styles} />
+    <>
+      <div id={containerId}>
+        <p data-superviz-id="23">Paragraph that can have a comment</p>
+        <p data-superviz-id="42">Another paragraph that can have a comment</p>
+        <p data-superviz-id="16">One more paragraph to have a comment</p>
+      </div>
+      <Comments pin={pin} position="right" />
+    </>
   );
 }
 
