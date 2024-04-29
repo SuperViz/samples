@@ -35,8 +35,8 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Presence3D for AutoDesk             | [Link](/js/cdn/autodesk/)                       | 🔄️     | [🔗](/js/react/autodesk/)                       | 🔄️                               |
 | Presence3D for Matteport            | [Link](/js/cdn/matterport/)                     | 🔄️     | [🔗](/js/react/matterport/)                     | 🔄️                               |
 | Presence3D for ThreeJS              | [Link](/js/cdn/threejs/)                        | 🔄️     | [🔗](/js/react/threejs/)                        | 🔄️                               |
-| Contextual Comments with Canvas Pin | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | [🔗](/js/react/contextual-comments-html/)       | 🔄️                               |
-| Contextual Comments with HTML Pin   | 🔄️                                             | 🔄️     | 🔄️                                             | 🔄️                               |
+| Contextual Comments with Canvas Pin | [Link](/js/cdn/contextual-comments-html/)       | 🔄️     | [🔗](/js/react/contextual-comments-canvas/)     | 🔄️                               |
+| Contextual Comments with HTML Pin   | 🔄️                                             | 🔄️     | [🔗](/js/react/contextual-comments-html/)       | 🔄️                               |
 | Contextual Comments with AutoDesk   | [Link](/js/cdn/contextual-comments-autodesk/)   | 🔄️     | [🔗](/js/react/contextual-comments-autodesk/)   | 🔄️                               |
 | Contextual Comments with Matteport  | [Link](/js/cdn/contextual-comments-matterport/) | 🔄️     | [🔗](/js/react/contextual-comments-matterport/) | 🔄️                               |
 | Contextual Comments with ThreeJS    | [Link](/js/cdn/contextual-comments-threejs/)    | 🔄️     | [🔗](/js/react/contextual-comments-threejs/)    | 🔄️                               |
