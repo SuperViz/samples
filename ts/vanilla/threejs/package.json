@@ -1,0 +1,21 @@
+{
+  "name": "sv-sample-room-react-ts-presence3d-three-js",
+  "version": "1.0.0",
+  "description": "Sample Room for Presence3D for ThreeJS (React/TS)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0",
+    "@types/three": "^0.158.3"
+  },
+  "dependencies": {
+    "@superviz/sdk": "^6.0.0",
+    "@superviz/threejs-plugin": "^0.22.0"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "sv-sample-room-react-ts-contextual-comments-autodesk",
   "version": "1.0.0",
-  "description": "Sample Room with Contextual Comments for Autodesk  (React/TS)",
+  "description": "Sample Room with Contextual Comments for Autodesk (React/TS)",
   "scripts": {
     "dev": "vite",
     "start": "vite",
