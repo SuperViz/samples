@@ -20,11 +20,11 @@ async function initializeSuperVizRoom() {
   });
 
   const mousePointers = new MousePointers("element-id");
-  room.addComponent(mousePointers as any);
+  room.addComponent(mousePointers);
 
   return room;
 }
 
-document.querySelector<HTMLDivElement>("#root")!.innerHTML = `<canvas id="element-id"></canvas>`;
+document.querySelector("#root").innerHTML = `<canvas id="element-id"></canvas>`;
 
 initializeSuperVizRoom();
