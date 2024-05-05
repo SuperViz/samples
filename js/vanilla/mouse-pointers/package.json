@@ -1,0 +1,19 @@
+{
+  "name": "sv-sample-room-vanilla-ts-mouse-pointers",
+  "version": "1.0.0",
+  "description": "Sample Room for Mouse Pointers (Vanilla/TS)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0"
+  },
+  "dependencies": {
+    "@superviz/sdk": "^6.0.0"
+  }
+}
