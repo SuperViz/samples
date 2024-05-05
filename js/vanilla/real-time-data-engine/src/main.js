@@ -1,26 +1,26 @@
 import "./style.css";
-import SuperVizRoom, { Realtime, RealtimeMessage } from "@superviz/sdk";
+import SuperVizRoom, { Realtime } from "@superviz/sdk";
 
 let room;
-let realtime: Realtime;
+let realtime;
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const user = Math.floor(Math.random() * 100);
 const groupId = "sv-sample-room-vanilla-mouse-pointers";
 const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
 
-document.getElementById("subscribe")!.addEventListener("click", subscribeToEvents);
-document.getElementById("publishButton")!.addEventListener("click", publishEvent);
+document.getElementById("subscribe").addEventListener("click", subscribeToEvents);
+document.getElementById("publishButton").addEventListener("click", publishEvent);
 
-function setLastPublishedMessage(message: RealtimeMessage) {
-  document.getElementById("lastElement")!.innerHTML = `
+function setLastPublishedMessage(message) {
+  document.getElementById("lastElement").innerHTML = `
     <p><strong>Last message:</strong> <span>${message.data?.toString()}</span></p>
     <p><strong>Published via:</strong> <span>${message.name}</span></p>
     <p><strong>Published by:</strong> <span>${message.participantId}</span></p>
   `;
 }
 
-function callbackFunctionForWhenTheEventIsDispatched(message: RealtimeMessage) {
+function callbackFunctionForWhenTheEventIsDispatched(message) {
   if (message.participantId === user.toString()) return;
 
   setLastPublishedMessage(message);
@@ -31,17 +31,17 @@ function subscribeToEvents() {
   realtime.subscribe("two", callbackFunctionForWhenTheEventIsDispatched);
   realtime.subscribe("three", callbackFunctionForWhenTheEventIsDispatched);
 
-  document.getElementById("subscribedTo")!.innerHTML = `<h2>Subscribed to:</h2>
+  document.getElementById("subscribedTo").innerHTML = `<h2>Subscribed to:</h2>
           <code>one</code>
           <code>two</code>
           <code>three</code>`;
 
-  (document.getElementById("eventName")! as HTMLSelectElement).disabled = false;
+  document.getElementById("eventName").disabled = false;
 }
 
 function publishEvent() {
-  const eventDropdown = document.getElementById("eventName")! as HTMLSelectElement;
-  const messageInput = document.getElementById("eventMessage")! as HTMLInputElement;
+  const eventDropdown = document.getElementById("eventName");
+  const messageInput = document.getElementById("eventMessage");
 
   const eventName = eventDropdown.value;
   const messageToPublish = messageInput.value;
@@ -65,7 +65,7 @@ async function initializeSuperVizRoom() {
   });
 
   realtime = new Realtime();
-  room.addComponent(realtime as any);
+  room.addComponent(realtime);
 
   return room;
 }
