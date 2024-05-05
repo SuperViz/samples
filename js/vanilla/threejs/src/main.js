@@ -13,7 +13,7 @@ const groupId = "sv-sample-room-vanilla-ts-contextual-comments-threejs";
 const groupName = "Sample Room with Contextual Comments for ThreeJS (Vanilla/TS)";
 
 function InitParticipantThreeJS() {
-  const container = document.getElementById("participant-canvas")!;
+  const container = document.getElementById("participant-canvas");
   const width = container.clientWidth;
   const height = container.clientHeight;
 
@@ -36,13 +36,13 @@ function InitParticipantThreeJS() {
   const loader = new GLTFLoader();
   loader.load(
     "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb",
-    function (gltf: any) {
+    function (gltf) {
       scene.add(gltf.scene);
       InitSuperVizRoomWithThreeJS(scene, camera);
       animate();
     },
     undefined,
-    function (e: any) {
+    function (e) {
       console.error(e);
     }
   );
@@ -57,7 +57,7 @@ function InitParticipantThreeJS() {
   animate();
 }
 
-async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.PerspectiveCamera) {
+async function InitSuperVizRoomWithThreeJS(scene, camera) {
   const room = await SuperVizRoom(DEVELOPER_KEY, {
     roomId: groupId,
     group: {
@@ -75,7 +75,7 @@ async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.Per
   });
 
   const presence = new Presence3D(scene, camera, camera);
-  room.addComponent(presence as any);
+  room.addComponent(presence);
 }
 
 InitParticipantThreeJS();
