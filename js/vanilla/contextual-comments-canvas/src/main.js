@@ -26,6 +26,6 @@ async function initializeSuperVizRoom() {
   return room;
 }
 
-document.querySelector<HTMLDivElement>("#root")!.innerHTML = `<canvas id="element-id"></canvas>`;
+document.querySelector("#root").innerHTML = `<canvas id="element-id"></canvas>`;
 
 initializeSuperVizRoom();
