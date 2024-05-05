@@ -1,6 +1,6 @@
 import SuperVizRoom from "@superviz/sdk";
 import "./style.css";
-import { AutodeskPin, Presence3D } from "@superviz/autodesk-viewer-plugin";
+import { Presence3D } from "@superviz/autodesk-viewer-plugin";
 
 const user = Math.floor(Math.random() * 100);
 const groupId = "sv-sample-room-vanilla-ts-contextual-comments-autodesk";
@@ -20,7 +20,7 @@ const token = btoa(`${FORGE_CLIENT}:${FORGE_SECRET}`);
 
 function InitAutodesk() {
   const contentSection = document.getElementById("zeus-participant");
-  let viewer: any = null;
+  let viewer = null;
 
   fetch(AUTH_URL, {
     method: "POST",
@@ -56,27 +56,27 @@ function InitAutodesk() {
       });
     });
 
-  function onDocumentLoadSuccess(doc: any) {
+  function onDocumentLoadSuccess(doc) {
     const viewable = doc.getRoot().getDefaultGeometry();
     if (viewable) {
       viewer
         .loadDocumentNode(doc, viewable, {
           applyScaling: "meters",
         })
-        .then(async (result: any) => {
+        .then(async (result) => {
           await InitSuperVizRoomWithAutodesk(viewer);
         })
-        .catch((error: any) => {
+        .catch((error) => {
           onDocumentLoadFailure(error);
         });
     }
   }
-  function onDocumentLoadFailure(error: any) {
+  function onDocumentLoadFailure(error) {
     console.error(`Error loading forge model: ${error}`);
   }
 }
 
-async function InitSuperVizRoomWithAutodesk(viewer: any) {
+async function InitSuperVizRoomWithAutodesk(viewer) {
   const room = await SuperVizRoom(DEVELOPER_KEY, {
     roomId: groupId,
     group: {
@@ -104,7 +104,7 @@ async function InitSuperVizRoomWithAutodesk(viewer: any) {
     },
   });
 
-  room.addComponent(autodeskPresence as any);
+  room.addComponent(autodeskPresence);
 }
 
 InitAutodesk();

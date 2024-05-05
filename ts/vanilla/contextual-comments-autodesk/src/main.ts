@@ -1,6 +1,6 @@
 import SuperVizRoom, { Comments } from "@superviz/sdk";
 import "./style.css";
-import { AutodeskPin, Presence3D } from "@superviz/autodesk-viewer-plugin";
+import { AutodeskPin } from "@superviz/autodesk-viewer-plugin";
 
 const user = Math.floor(Math.random() * 100);
 const groupId = "sv-sample-room-vanilla-ts-presence3d-autodesk-viewer";
