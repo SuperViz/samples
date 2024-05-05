@@ -48,7 +48,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Component                           | Vanilla                                           | React                                           | Vue                               |
 | ----------------------------------- | ------------------------------------------------- | ----------------------------------------------- | --------------------------------- |
 | Mouse Pointer                       | [🔗](/ts/vanilla/mouse-pointers/)                 | [🔗](/ts/react/mouse-pointers/)                 | [Link](/ts/vue/mouse-pointers/)   |
-| Real-time Data Engine               | 🔄️                                               | [🔗](/ts/react/real-time-data-engine/)          | 🔄️                               |
+| Real-time Data Engine               | [🔗](/ts/vanilla/realtime-data-engine/)           | [🔗](/ts/react/real-time-data-engine/)          | 🔄️                               |
 | Presence for AutoDesk               | [🔗](/ts/vanilla/autodesk/)                       | [🔗](/ts/react/autodesk/)                       | 🔄️                               |
 | Presence for Matteport              | [🔗](/ts/vanilla/matterport/)                     | [🔗](/ts/react/matterport/)                     | 🔄️                               |
 | Presence for ThreeJS                | [🔗](/ts/vanilla/threejs/)                        | [🔗](/ts/react/threejs/)                        | 🔄️                               |
