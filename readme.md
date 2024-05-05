@@ -52,7 +52,7 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 | Presence for AutoDesk               | [🔗](/ts/vanilla/autodesk/)                       | [🔗](/ts/react/autodesk/)                       | 🔄️                               |
 | Presence for Matteport              | [🔗](/ts/vanilla/matterport/)                     | [🔗](/ts/react/matterport/)                     | 🔄️                               |
 | Presence for ThreeJS                | [🔗](/ts/vanilla/threejs/)                        | [🔗](/ts/react/threejs/)                        | 🔄️                               |
-| Contextual Comments with Canvas Pin | 🔄️                                               | [🔗](/ts/react/contextual-comments-html/)       | 🔄️                               |
+| Contextual Comments with Canvas Pin | [🔗](/ts/vanilla/contextual-comments-canvas/)     | [🔗](/ts/react/contextual-comments-html/)       | 🔄️                               |
 | Contextual Comments with HTML Pin   | [🔗](/ts/vanilla/contextual-comments-html/)       | [🔗](/ts/react/contextual-comments-html/)       | 🔄️                               |
 | Contextual Comments with AutoDesk   | [🔗](/ts/vanilla/contextual-comments-autodesk/)   | [🔗](/ts/react/contextual-comments-autodesk/)   | 🔄️                               |
 | Contextual Comments with Matteport  | [🔗](/ts/vanilla/contextual-comments-matterport/) | [🔗](/ts/react/contextual-comments-matterport/) | 🔄️                               |
@@ -64,7 +64,6 @@ NOTE: inside the `js/` directory you can find the `vanilla/` directory, this con
 
 These are the key features we are working on right now:
 
-- Samples with Vanilla for both JavaScript and TypeScript - _planned_
 - Samples with Vue for both JavaScript and TypeScript - _planned_
 
 After that, we will be working on bringing the samples to more libraries and frameworks, such as Svelte and Angular.
