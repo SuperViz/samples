@@ -10,7 +10,7 @@ const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
 const modelId = "7ffnfBNamei";
 
 function InitMatterport() {
-  const showcase = document.getElementById("participant") as HTMLIFrameElement;
+  const showcase = document.getElementById("participant");
   if (!showcase) return;
 
   const showcaseWindow = showcase.contentWindow;
@@ -24,7 +24,7 @@ function InitMatterport() {
   });
 }
 
-async function InitSuperVizRoomWithMatterport(mpSDK: any) {
+async function InitSuperVizRoomWithMatterport(mpSDK) {
   const room = await SuperVizRoom(DEVELOPER_KEY, {
     roomId: groupId,
     group: {
@@ -52,7 +52,7 @@ async function InitSuperVizRoomWithMatterport(mpSDK: any) {
     },
   });
 
-  room.addComponent(matterportPresence as any);
+  room.addComponent(matterportPresence);
 }
 
 InitMatterport();
