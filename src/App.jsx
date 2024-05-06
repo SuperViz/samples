@@ -1,28 +1,29 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
 import CanvasCommentsImplementation from "./components/CanvasCommentsImplementation";
+import { sampleInfo } from "./projectInfo";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const user = Math.floor(Math.random() * 10);
-const groupId = "sv-sample-room-react-js-comments-canvas";
-const groupName = "Sample Room for Contextual Comments Canvas (React/JS)";
+const participant = Math.floor(Math.random() * 10);
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 function App() {
-    return (
-        <SuperVizRoomProvider
-            developerKey={DEVELOPER_KEY}
-            group={{
-                id: groupId,
-                name: groupName,
-            }}
-            participant={{
-                id: user.toString(),
-                name: "John " + user,
-            }}
-            roomId={groupId}
-        >
-            <CanvasCommentsImplementation />
-        </SuperVizRoomProvider>
-    );
+  return (
+    <SuperVizRoomProvider
+      developerKey={DEVELOPER_KEY}
+      group={{
+        id: groupId,
+        name: groupName,
+      }}
+      participant={{
+        id: participant.toString(),
+        name: "John " + participant,
+      }}
+      roomId={groupId}
+    >
+      <CanvasCommentsImplementation />
+    </SuperVizRoomProvider>
+  );
 }
 
 export default App;
