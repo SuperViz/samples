@@ -1,4 +1,4 @@
-import { MatterportPin, Presence3D } from "@superviz/matterport-plugin";
+import { MatterportPin } from "@superviz/matterport-plugin";
 import SuperVizRoom, { Comments } from "@superviz/sdk";
 import "./style.css";
 import { sampleInfo } from "./projectInfo";
@@ -43,7 +43,7 @@ async function InitSuperVizRoomWithMatterport(mpSDK: any, showcase: HTMLIFrameEl
   });
 
   const pinAdapter = new MatterportPin(mpSDK, showcase);
-  const comments = new Comments(pinAdapter as any);
+  const comments = new Comments(pinAdapter);
 
   room.addComponent(comments);
 }

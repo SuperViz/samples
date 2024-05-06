@@ -76,7 +76,7 @@ async function InitSuperVizRoomWithThreeJS(scene: THREE.Scene, camera: THREE.Per
   });
 
   const presence = new Presence3D(scene, camera, camera);
-  room.addComponent(presence as any);
+  room.addComponent(presence);
 }
 
 InitParticipantThreeJS();

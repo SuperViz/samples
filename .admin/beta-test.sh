@@ -3,9 +3,6 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
 	language=$(echo $dir | cut -d'/' -f2)
 	project=$(echo $dir | cut -d'/' -f4)
 
-	#start counting time
-	start=$(date +%s)
-
 	if [[ $language == "ts" ]]; then
 		cd "$dir"
 		framework=$(echo $dir | cut -d'/' -f3)
@@ -39,20 +36,14 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
 
 		echo "🏗️ Building $dir"
 		yarn build
+		# if build fails
+		if [ $? -ne 0 ]; then
+			echo "❌ Build failed for $dir"
+			exit 1
+		fi
+
 		echo "✅ Built $dir"
-
-		end=$(date +%s)
-		runtime=$((end-start))
-		echo "⏱️  Runtime: $runtime seconds"
-
 		echo " "
-
-		# end of the loop
 	fi
 
 done
-
-#end counting time
-end=$(date +%s)
-runtime=$((end-start))
-echo "⏱️  Runtime: $runtime seconds"

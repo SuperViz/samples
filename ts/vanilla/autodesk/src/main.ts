@@ -105,7 +105,7 @@ async function InitSuperVizRoomWithAutodesk(viewer: any) {
     },
   });
 
-  room.addComponent(autodeskPresence as any);
+  room.addComponent(autodeskPresence);
 }
 
 InitAutodesk();
