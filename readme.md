@@ -1,6 +1,4 @@
-# Sample Room for Who Is Online (React/JS)
-
-The Autodesk plugin from SuperViz SDK is designed to seamlessly integrate avatars, mouse-pointers, lasers, and host controls into your digital twin tool.
+# Sample for Autodesk (React/JavaScript)
 
 ### SuperViz SDK
 
