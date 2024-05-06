@@ -5,12 +5,12 @@ function MatterportCommentsImplementation() {
   const [mpSdkInstance, setMpSdkInstance] = useState(null);
   const modelId = "7ffnfBNamei";
 
-  const matterportKey = import.meta.env.VITE_MATTERPORT_KEY;
+  const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
 
   useEffect(() => {
     const showcase = document.getElementById("showcase") as HTMLIFrameElement;
     const showcaseWindow = showcase!.contentWindow;
-    showcase!.src = `/mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${matterportKey}&m=${modelId}`;
+    showcase!.src = `/mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`;
 
     if (!showcaseWindow) return;
 
