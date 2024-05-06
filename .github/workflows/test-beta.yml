@@ -19,4 +19,5 @@ jobs:
 
       - name: run beta-test.sh from ./.admin
         run: |
+          chmod +x ./.admin/beta-test.sh
           ./.admin/beta-test.sh
