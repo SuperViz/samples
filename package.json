@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-presence3d-three-js",
+  "name": "superviz-threejs-react-ts",
   "version": "1.0.0",
-  "description": "Sample Room for Presence3D for ThreeJS (React/TS)",
+  "description": "This is a sample project for the Threejs, based on react (ts), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "vite",
     "dev": "vite",
