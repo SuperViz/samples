@@ -1,12 +1,13 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
+import { sampleInfo } from "./projectInfo";
 
 import ContextualCommentsHtmlImplementation from "./components/ContextualCommentsHtmlImplementation.jsx";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const user = Math.floor(Math.random() * 10);
+const participant = Math.floor(Math.random() * 10);
 
-const groupId = "sv-sample-room-react-js-contextual-comments-html";
-const groupName = "Sample Room for Contextual Comments for HTML (React/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 function App() {
   console.log(packageJsonProjectName);
@@ -18,8 +19,8 @@ function App() {
         name: groupName,
       }}
       participant={{
-        id: user.toString(),
-        name: "John " + user,
+        id: participant.toString(),
+        name: "John " + participant,
       }}
       roomId={groupId}
     >
