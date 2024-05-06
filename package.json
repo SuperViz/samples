@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-js-video-conference",
+  "name": "superviz-video-conference-react-js",
   "version": "1.0.0",
-  "description": "Sample Room for Video Conference (React/JS)",
+  "description": "This is a sample project for the Video Conference, based on react (js), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "vite",
     "dev": "vite",
