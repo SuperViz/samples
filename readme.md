@@ -1,6 +1,4 @@
-# Sample Room for Who Is Online (React/JS)
-
-The Who-is-On-line component allows you to see participants who are connected in a room. This is part of the SuperViz SDK.
+# Sample for Who Is Online (React/JavaScript)
 
 ### SuperViz SDK
 
