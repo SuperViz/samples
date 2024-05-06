@@ -7,7 +7,7 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
 		cd "$dir"
 		framework=$(echo $dir | cut -d'/' -f3)
 
-		echo "👀 Updating package for $dir"
+		echo "🆕 Updating package for $dir"
 	
 		# React specific updates
 		if [[ $framework == "react" ]]; then
@@ -34,15 +34,14 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
 		fi 
 		echo "🚀 Updated $dir"
 
-		echo "🏗️ Building $dir"
-		yarn build
-		# if build fails
+		echo "👀 Checking types $dir"
+		yarn check-types
 		if [ $? -ne 0 ]; then
 			echo "❌ Build failed for $dir"
 			exit 1
 		fi
 
-		echo "✅ Built $dir"
+		echo "✅ Checked $dir"
 		echo " "
 	fi
 

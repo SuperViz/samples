@@ -6,7 +6,8 @@
     "start": "vite",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@superviz/react-sdk": "^1.5.0-beta.8",
