@@ -2,12 +2,15 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
 	dir=${dir#./}
 	language=$(echo $dir | cut -d'/' -f2)
 	project=$(echo $dir | cut -d'/' -f4)
+	framework=$(echo $dir | cut -d'/' -f3)
 
 	if [[ $language == "ts" ]]; then
 		cd "$dir"
-		framework=$(echo $dir | cut -d'/' -f3)
 
 		echo "🆕 Updating package for $dir"
+		# get package.json name
+		name=$(jq -r '.name' package.json)
+		echo "📦 $name"
 	
 		# React specific updates
 		if [[ $framework == "react" ]]; then
@@ -36,8 +39,9 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
 
 		echo "👀 Checking types $dir"
 		yarn check-types
-		if [ $? -ne 0 ]; then
-			echo "❌ Build failed for $dir"
+
+		if [ $? -eq 0 ]; then
+			echo "❌ Types check failed for $dir"
 			exit 1
 		fi
 
