@@ -1,8 +1,9 @@
 import { DEVELOPER_KEY } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 
 const roomId = "efd689fe-03b0-442e-ba4e-fb0bbd39dfe7";
-const groupId = "sv-sample-room-cdn-js-contextual-comments-html";
-const groupName = "Sample Room for Contextual Comments for HTML (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 let room;
 let participantName = "Zeus";
