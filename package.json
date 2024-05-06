@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-vanilla-ts-video-conference",
+  "name": "superviz-video-conference-vanilla-ts",
   "version": "1.0.0",
-  "description": "Sample Room for Video Conference (Vanilla/TS)",
+  "description": "This is a sample project for the Video Conference, based on vanilla (ts), for more information, go to docs.superviz.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
