@@ -24,7 +24,7 @@ yarn start
 
 Just make sure that you have the required developer keys in the `.env` file. For that copy the `.env.example` file to `.env` and fill in the values.
 
-NOTE: inside the `js/` directory you can find the `cnd/` directory, this contains samples using our SDK with CDN, meaning that the SuperViz package is downloaded from `<script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>` and not using it as a package. It only has a package.json to run a local server, that can also be done with other tools.
+NOTE: inside the `js/` directory you can find the `cnd/` directory, this contains samples using our SDK with CDN, meaning that the SuperViz package is downloaded from `<script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>` and not using it as a package. It only has a package.json to run a local server, which can also be done with other tools.
 
 ## Samples with JavaScript
 

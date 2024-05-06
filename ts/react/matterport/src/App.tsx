@@ -5,7 +5,7 @@ const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const groupId = "sv-sample-room-react-ts-presence-matterport";
 const groupName = "Sample Room for Presence Matterport (React/TS)";
-const user = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100);
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
         name: groupName,
       }}
       participant={{
-        id: user.toString(),
-        name: "John " + user,
+        id: participant.toString(),
+        name: "John " + participant,
       }}
       roomId={groupId}
     >

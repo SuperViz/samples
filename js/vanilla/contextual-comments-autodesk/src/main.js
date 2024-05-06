@@ -2,7 +2,7 @@ import SuperVizRoom, { Comments } from "@superviz/sdk";
 import "./style.css";
 import { AutodeskPin } from "@superviz/autodesk-viewer-plugin";
 
-const user = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100);
 const groupId = "sv-sample-room-vanilla-ts-presence3d-autodesk-viewer";
 const groupName = "Sample Room for Presence3D for Autodesk viewer (Vanilla/TS)";
 
@@ -84,8 +84,8 @@ async function InitSuperVizRoomWithAutodesk(viewer) {
       name: groupName,
     },
     participant: {
-      id: user.toString(),
-      name: "John " + user,
+      id: participant.toString(),
+      name: "John " + participant,
       avatar: {
         imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/2.glb`,

@@ -5,7 +5,7 @@ let room;
 let realtime: Realtime;
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const user = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100);
 const groupId = "sv-sample-room-vanilla-mouse-pointers";
 const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
 
@@ -21,7 +21,7 @@ function setLastPublishedMessage(message: RealtimeMessage) {
 }
 
 function callbackFunctionForWhenTheEventIsDispatched(message: RealtimeMessage) {
-  if (message.participantId === user.toString()) return;
+  if (message.participantId === participant.toString()) return;
 
   setLastPublishedMessage(message);
 }
@@ -59,8 +59,8 @@ async function initializeSuperVizRoom() {
       name: groupName,
     },
     participant: {
-      id: user.toString(),
-      name: "John " + user,
+      id: participant.toString(),
+      name: "John " + participant,
     },
   });
 

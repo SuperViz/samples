@@ -8,7 +8,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const user = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100);
 const groupId = "sv-sample-room-vanilla-ts-contextual-comments-threejs";
 const groupName = "Sample Room with Contextual Comments for ThreeJS (Vanilla/TS)";
 
@@ -57,11 +57,7 @@ function InitParticipantThreeJS() {
   animate();
 }
 
-async function InitSuperVizRoomWithThreeJS(
-  scene,
-  renderer,
-  camera
-) {
+async function InitSuperVizRoomWithThreeJS(scene, renderer, camera) {
   const room = await SuperVizRoom(DEVELOPER_KEY, {
     roomId: groupId,
     group: {
@@ -69,8 +65,8 @@ async function InitSuperVizRoomWithThreeJS(
       name: groupName,
     },
     participant: {
-      id: user.toString(),
-      name: "John " + user,
+      id: participant.toString(),
+      name: "John " + participant,
       avatar: {
         imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/2.glb`,

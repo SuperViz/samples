@@ -4,7 +4,7 @@ import "./style.css";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
-const user = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100);
 const groupId = "sv-sample-room-vanilla-mouse-pointers";
 const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
 const modelId = "7ffnfBNamei";
@@ -32,8 +32,8 @@ async function InitSuperVizRoomWithMatterport(mpSDK: any) {
       name: groupName,
     },
     participant: {
-      id: user.toString(),
-      name: "John " + user,
+      id: participant.toString(),
+      name: "John " + participant,
       avatar: {
         imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
         model3DUrl: `https://production.storage.superviz.com/readyplayerme/2.glb`,

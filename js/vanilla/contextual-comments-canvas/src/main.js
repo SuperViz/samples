@@ -2,7 +2,7 @@ import "./style.css";
 import SuperVizRoom, { CanvasPin, Comments } from "@superviz/sdk";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const user = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100);
 const groupId = "sv-sample-room-vanilla-mouse-pointers";
 const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
 
@@ -14,8 +14,8 @@ async function initializeSuperVizRoom() {
       name: groupName,
     },
     participant: {
-      id: user.toString(),
-      name: "John " + user,
+      id: participant.toString(),
+      name: "John " + participant,
     },
   });
 

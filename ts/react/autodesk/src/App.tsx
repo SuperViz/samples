@@ -3,7 +3,7 @@ import { AutodeskViewer, SuperVizRoomProvider } from "@superviz/react-sdk";
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const FORGE_CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
 const FORGE_CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET;
-const user = Math.floor(Math.random() * 10);
+const participant = Math.floor(Math.random() * 10);
 const groupId = "sv-sample-room-react-ts-presence-autodesk";
 const groupName = "Sample Room for Presence Autodesk (React/TS)";
 
@@ -17,8 +17,8 @@ function App() {
           name: groupName,
         }}
         participant={{
-          id: user.toString(),
-          name: "John" + user,
+          id: participant.toString(),
+          name: "John" + participant,
         }}
         roomId={groupName}
       >

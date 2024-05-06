@@ -3,7 +3,7 @@ import { Realtime, SuperVizRoomProvider } from "@superviz/react-sdk";
 import EventForm from "./components/EventForm";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const user = Math.floor(Math.random() * 10);
+const participant = Math.floor(Math.random() * 10);
 const groupId = "sv-sample-room-react-js-real-time-data-engine";
 const groupName = "Sample Room for Real-time Data Engine (React/JS)";
 
@@ -17,13 +17,13 @@ function App() {
           name: groupName,
         }}
         participant={{
-          id: user.toString(),
-          name: "John" + user,
+          id: participant.toString(),
+          name: "John" + participant,
         }}
         roomId={groupId}
       >
         <Realtime />
-        <EventForm participantId={user.toString()} />
+        <EventForm participantId={participant.toString()} />
       </SuperVizRoomProvider>
     </main>
   );
