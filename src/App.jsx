@@ -1,36 +1,37 @@
 import { MatterportIframe, SuperVizRoomProvider } from "@superviz/react-sdk";
+import { sampleInfo } from "./projectInfo";
 
 const modelId = "7ffnfBNamei";
-const matterportKey = import.meta.env.VITE_MATTERPORT_KEY;
+const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const groupId = "sv-sample-room-react-js-presence-matterport";
-const groupName = "Sample Room for Presence Matterport (React/JS)";
-const user = Math.floor(Math.random() * 100);
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
+const participant = Math.floor(Math.random() * 100);
 
 function App() {
-    return (
-        <SuperVizRoomProvider
-            developerKey={DEVELOPER_KEY}
-            group={{
-                id: groupId,
-                name: groupName,
-            }}
-            participant={{
-                id: user.toString(),
-                name: "John " + user,
-            }}
-            roomId={groupId}
-        >
-            <section>
-                <MatterportIframe
-                    width={window.innerWidth}
-                    height={window.innerHeight}
-                    bundleUrl={`/mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${matterportKey}&m=${modelId}`}
-                    matterportKey={matterportKey}
-                />
-            </section>
-        </SuperVizRoomProvider>
-    );
+  return (
+    <SuperVizRoomProvider
+      developerKey={DEVELOPER_KEY}
+      group={{
+        id: groupId,
+        name: groupName,
+      }}
+      participant={{
+        id: participant.toString(),
+        name: "John " + participant,
+      }}
+      roomId={groupId}
+    >
+      <section>
+        <MatterportIframe
+          width={window.innerWidth}
+          height={window.innerHeight}
+          bundleUrl={`/mp-bundle/showcase.html?&brand=0&mls=2&mt=0&search=0&kb=0&play=1&qs=1&applicationKey=${MATTERPORT_KEY}&m=${modelId}`}
+          MATTERPORT_KEY={MATTERPORT_KEY}
+        />
+      </section>
+    </SuperVizRoomProvider>
+  );
 }
 
 export default App;
