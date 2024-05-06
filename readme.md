@@ -1,6 +1,4 @@
-# Sample Room for Real-time Data Engine (React/TS)
-
-The Real-time Data Engine is a component of the SuperViz SDK that allows you to synchronize states between participants in a room. This enables various functionalities such as real-time data sharing, and event-driven communication for seamless collaborative experiences.
+# Sample for Real Time Data Engine (React/TypeScript)
 
 ### SuperViz SDK
 
