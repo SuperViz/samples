@@ -1,8 +1,9 @@
 import { DEVELOPER_KEY } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 
 let roomId;
-const groupId = "sv-sample-room-react-cdn-video-conference";
-const groupName = "Sample Room for Video Conference (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 document.addEventListener("DOMContentLoaded", function () {
   roomId = generateUUID();
