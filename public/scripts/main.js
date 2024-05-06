@@ -1,8 +1,9 @@
 import { DEVELOPER_KEY, CLIENT_ID, CLIENT_SECRET } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 
 const roomId = "4be67c09-0e3b-4fe8-9eb6-20c098463968";
-const groupId = "sv-sample-room-react-cdn-contextual-comments-autodesk";
-const groupName = "Sample Room with Contextual Comments for Autodesk  (React/CDN)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 const AUTH_URL = "https://developer.api.autodesk.com/authentication/v2/token";
 const modelURN = "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
