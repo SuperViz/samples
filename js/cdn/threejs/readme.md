@@ -1,6 +1,4 @@
-# Sample Room for Presence3D for ThreeJS (CDN/JS)
-
-The Three.js plugin from SuperViz SDK is designed to seamlessly integrate avatars, mouse, and host controls into your digital twin tool.
+# Sample for Threejs (Cdn/JavaScript)
 
 ### SuperViz SDK
 

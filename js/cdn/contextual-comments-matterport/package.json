@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-cdn-js-contextual-comments-matterport",
+  "name": "superviz-contextual-comments-matterport-cdn-js",
   "version": "1.0.0",
-  "description": "Sample Room for Contextual Comments for Matterport (CDN/JS)",
+  "description": "This is a sample project for the Contextual Comments Matterport, based on cdn (js), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "npx live-server public/ --host=localhost"
   },

@@ -1,6 +1,4 @@
-# Sample Room with Contextual Comments for Autodesk  (React/TS)
-
-Contextual Comments from the SuperViz SDK embeds a customizable commenting experience into your page or your 3D environment to enable people to collaborate.
+# Sample for Contextual Comments Autodesk (React/TypeScript)
 
 ### SuperViz SDK
 

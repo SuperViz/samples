@@ -1,8 +1,9 @@
 import { DEVELOPER_KEY } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 
 let roomId;
-const groupId = "sv-sample-room-cdn-js-who-is-online";
-const groupName = "Sample Room for Who-is-Online (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 document.addEventListener("DOMContentLoaded", function () {
   roomId = generateUUID();

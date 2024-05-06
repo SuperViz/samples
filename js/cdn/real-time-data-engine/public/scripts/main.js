@@ -1,4 +1,5 @@
 import { DEVELOPER_KEY } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 
 let room;
 let realtime;
@@ -7,8 +8,8 @@ let eventsSubscribed = [];
 // Generating random name for the participant
 const participantName = Math.floor(Math.random() * Date.now()).toString(36);
 const roomId = "9cbbb622-9e8d-40be-a4fd-0cba22f08887";
-const groupId = "sv-sample-room-react-cdn-real-time-data-engine";
-const groupName = "Sample Room for Real-time Data Engine (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("participant-name").innerHTML = "Participant name: " + participantName;

@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-cdn-video-conference",
+  "name": "superviz-video-conference-cdn-js",
   "version": "1.0.0",
-  "description": "Sample Room for Video Conference (CDN/JS)",
+  "description": "This is a sample project for the Video Conference, based on cdn (js), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "npx live-server public/ --host=localhost"
   },

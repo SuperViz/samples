@@ -1,9 +1,8 @@
 {
-  "name": "sv-sample-room-react-js-contextual-comments-canvas",
+  "name": "superviz-contextual-comments-canvas-react-js",
   "version": "1.0.0",
-  "description": "Sample Room for Contextual Comments for Canvas (React/JS)",
+  "description": "This is a sample project for the Contextual Comments Canvas, based on react (js), for more information, go to docs.superviz.com",
   "type": "module",
-
   "scripts": {
     "start": "vite",
     "dev": "vite",

@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-who-is-online",
+  "name": "superviz-who-is-online-react-ts",
   "version": "1.0.0",
-  "description": "Sample Room for Who Is Online (React/TS)",
+  "description": "This is a sample project for the Who Is Online, based on react (ts), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "vite",
     "dev": "vite",

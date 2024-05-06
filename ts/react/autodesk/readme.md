@@ -1,6 +1,4 @@
-# Sample Room for Presence3D for Autodesk (React/TS)
-
-The Autodesk plugin from SuperViz SDK is designed to seamlessly integrate avatars, mouse-pointers, lasers, and host controls into your digital twin tool.
+# Sample for Autodesk (React/TypeScript)
 
 ### SuperViz SDK
 

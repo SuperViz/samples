@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-cdn-js-mouse-pointers",
+  "name": "superviz-mouse-pointers-cdn-js",
   "version": "1.0.0",
-  "description": "Sample Room for Mouse Pointers (CDN/JS)",
+  "description": "This is a sample project for the Mouse Pointers, based on cdn (js), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "npx live-server public/ --host=localhost"
   },

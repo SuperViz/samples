@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-cdn-js-who-is-online",
+  "name": "superviz-who-is-online-cdn-js",
   "version": "1.0.0",
-  "description": "Sample Room for Who-is-Online (CDN/JS)",
+  "description": "This is a sample project for the Who Is Online, based on cdn (js), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "npx live-server public/ --host=localhost"
   },

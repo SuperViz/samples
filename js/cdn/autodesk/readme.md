@@ -1,6 +1,4 @@
-# Sample Room for Presence3D for Autodesk viewer (CDN/JS)
-
-The Autodesk plugin from SuperViz SDK is designed to seamlessly integrate avatars, mouse-pointers, lasers, and host controls into your digital twin tool.
+# Sample for Autodesk (Cdn/JavaScript)
 
 ### SuperViz SDK
 

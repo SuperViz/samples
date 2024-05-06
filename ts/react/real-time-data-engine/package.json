@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-real-time-data-engine",
+  "name": "superviz-real-time-data-engine-react-ts",
   "version": "1.0.0",
-  "description": "Sample Room for Real-time Data Engine (React/TS)",
+  "description": "This is a sample project for the Real Time Data Engine, based on react (ts), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "vite",
     "dev": "vite",

@@ -1,0 +1,21 @@
+{
+  "name": "superviz-contextual-comments-threejs-vanilla-ts",
+  "version": "1.0.0",
+  "description": "This is a sample project for the Contextual Comments Threejs, based on vanilla (ts), for more information, go to docs.superviz.com",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0",
+    "@types/three": "^0.158.3"
+  },
+  "dependencies": {
+    "@superviz/sdk": "^6.0.0",
+    "@superviz/threejs-plugin": "^0.22.0"
+  }
+}

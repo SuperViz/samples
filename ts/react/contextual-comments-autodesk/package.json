@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-contextual-comments-autodesk",
+  "name": "superviz-contextual-comments-autodesk-react-ts",
   "version": "1.0.0",
-  "description": "Sample Room with Contextual Comments for Autodesk  (React/TS)",
+  "description": "This is a sample project for the Contextual Comments Autodesk, based on react (ts), for more information, go to docs.superviz.com",
   "scripts": {
     "dev": "vite",
     "start": "vite",

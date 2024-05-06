@@ -1,30 +1,31 @@
 import { SuperVizRoomProvider, WhoIsOnline } from "@superviz/react-sdk";
+import { sampleInfo } from "./projectInfo";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const groupId = "sv-sample-room-react-js-who-is-online";
-const groupName = "Sample Room for Who-is-Online (React/JS)";
-const user = Math.floor(Math.random() * 100);
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
+const participant = Math.floor(Math.random() * 100);
 
 function App() {
-    return (
-        <main>
-            <SuperVizRoomProvider
-                developerKey={DEVELOPER_KEY}
-                group={{
-                    id: groupId,
-                    name: groupName,
-                }}
-                participant={{
-                    id: user.toString(),
-                    name: "John " + user,
-                }}
-                roomId={groupId}
-            >
-                <WhoIsOnline position="container" />
-                <div id="container" />
-            </SuperVizRoomProvider>
-        </main>
-    );
+  return (
+    <main>
+      <SuperVizRoomProvider
+        developerKey={DEVELOPER_KEY}
+        group={{
+          id: groupId,
+          name: groupName,
+        }}
+        participant={{
+          id: participant.toString(),
+          name: "John " + participant,
+        }}
+        roomId={groupId}
+      >
+        <WhoIsOnline position="container" />
+        <div id="container" />
+      </SuperVizRoomProvider>
+    </main>
+  );
 }
 
 export default App;

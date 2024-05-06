@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperViz SDK</title>
+  </head>
+  <body>
+    <section>
+      <div class="events-info">
+        <div class="container">
+          <h2>Subscription Manager</h2>
+          <button id="subscribe">Subscribe to events</button>
+        </div>
+
+        <div class="container" id="subscribedTo">
+          <h2>Not subscribed to any event</h2>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <h2>Publising events</h2>
+        <div class="subscribe-options">
+          <select id="eventName" disabled>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+          </select>
+          <input placeholder="Event message" id="eventMessage" />
+          <button id="publishButton">Publish</button>
+        </div>
+      </div>
+
+      <div class="last-message container" id="lastElement"></div>
+    </section>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

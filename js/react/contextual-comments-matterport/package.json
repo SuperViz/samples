@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-js-contextual-comments-matterport",
+  "name": "superviz-contextual-comments-matterport-react-js",
   "version": "1.0.0",
-  "description": "Sample Room with Contextual Comments for Matterport (React/JS)",
+  "description": "This is a sample project for the Contextual Comments Matterport, based on react (js), for more information, go to docs.superviz.com",
   "type": "module",
   "scripts": {
     "start": "vite",
