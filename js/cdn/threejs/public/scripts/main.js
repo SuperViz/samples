@@ -1,12 +1,13 @@
 import { DEVELOPER_KEY } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 import * as THREE from "three";
 import { RoomEnvironment } from "/vendor/threejs/examples/jsm/environments/RoomEnvironment.js";
 import { OrbitControls } from "/vendor/threejs/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "/vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
 
 const roomId = generateUUID();
-const groupId = "sv-sample-room-cdn-js-presence3d-three-js";
-const groupName = "Sample Room for Presence3D for ThreeJS (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 document.getElementById("zeus-button").addEventListener("click", InitFirstParticipant);
 document.getElementById("hera-button").addEventListener("click", InitSecondParticipant);

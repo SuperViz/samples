@@ -1,10 +1,11 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
+import { sampleInfo } from "./projectInfo";
 
 import ThreeJSImplementation from "./components/ThreeJSImplementation";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const groupId = "sv-sample-room-react-js-presence-threejs";
-const groupName = "Sample Room for Presence ThreeJs (React/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 const participant = Math.floor(Math.random() * 100);
 
 function App() {

@@ -1,13 +1,14 @@
 import "./style.css";
 import SuperVizRoom, { Realtime } from "@superviz/sdk";
+import { sampleInfo } from "./projectInfo";
 
 let room;
 let realtime;
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const participant = Math.floor(Math.random() * 100);
-const groupId = "sv-sample-room-vanilla-mouse-pointers";
-const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 document.getElementById("subscribe").addEventListener("click", subscribeToEvents);
 document.getElementById("publishButton").addEventListener("click", publishEvent);

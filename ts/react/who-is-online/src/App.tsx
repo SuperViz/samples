@@ -1,8 +1,9 @@
 import { SuperVizRoomProvider, WhoIsOnline } from "@superviz/react-sdk";
+import { sampleInfo } from "./projectInfo";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const groupId = "sv-sample-room-react-ts-who-is-online";
-const groupName = "Sample Room for Who-is-Online (React/TS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 const participant = Math.floor(Math.random() * 100);
 
 function App() {

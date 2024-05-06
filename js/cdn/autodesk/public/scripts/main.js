@@ -1,8 +1,9 @@
 import { DEVELOPER_KEY, CLIENT_ID, CLIENT_SECRET } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 
 const roomId = generateUUID();
-const groupId = "sv-sample-room-cdn-js-presence3d-autodesk-viewer";
-const groupName = "Sample Room for Presence3D for Autodesk viewer (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 const AUTH_URL = "https://developer.api.autodesk.com/authentication/v2/token";
 const modelURN = "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
@@ -10,7 +11,7 @@ const AutodeskData = {
   grant_type: "client_credentials",
   scope: "data:read bucket:read",
 };
-const token = btoa(`${FORGE_CLIENT}:${FORGE_SECRET}`);
+const token = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`);
 
 document.getElementById("zeus-button").addEventListener("click", InitFirstParticipant);
 document.getElementById("hera-button").addEventListener("click", InitSecondParticipant);

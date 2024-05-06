@@ -1,8 +1,9 @@
 import { DEVELOPER_KEY, MATTERPORT_KEY } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 
 const roomId = "55ec6752-98e8-48c6-b1b6-74bf736c6b14";
-const groupId = "sv-sample-room-cdn-js-contextual-comments-matterport";
-const groupName = "Sample Room for Contextual Comments with Matterport (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 const modelId = "LmRnZAsWoxy";
 
 let room;

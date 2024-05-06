@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-cdn-js-real-time-data-engine",
+  "name": "superviz-real-time-data-engine-cdn-js",
   "version": "1.0.0",
-  "description": "Sample Room for Real-time Data Engine (CDN/JS)",
+  "description": "This is a sample project for the Real Time Data Engine, based on cdn (js), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "npx live-server public/ --host=localhost"
   },

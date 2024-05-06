@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-js-mouse-pointers",
+  "name": "superviz-mouse-pointers-react-js",
   "version": "1.0.0",
-  "description": "Sample Room for Mouse Pointers (React/JS)",
+  "description": "This is a sample project for the Mouse Pointers, based on react (js), for more information, go to docs.superviz.com",
   "scripts": {
     "start": "vite",
     "dev": "vite",

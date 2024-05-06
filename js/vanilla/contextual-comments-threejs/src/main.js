@@ -2,6 +2,7 @@ import { ThreeJsPin } from "@superviz/threejs-plugin";
 import "./style.css";
 import SuperVizRoom, { Comments } from "@superviz/sdk";
 import * as THREE from "three";
+import { sampleInfo } from "./projectInfo";
 
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -9,8 +10,8 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const participant = Math.floor(Math.random() * 100);
-const groupId = "sv-sample-room-vanilla-ts-contextual-comments-threejs";
-const groupName = "Sample Room with Contextual Comments for ThreeJS (Vanilla/TS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 function InitParticipantThreeJS() {
   const container = document.getElementById("participant-canvas");

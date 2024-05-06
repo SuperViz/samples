@@ -1,6 +1,4 @@
-# Sample Room for Contextual Comments for ThreeJS (CDN/JS)
-
-Contextual Comments from the SuperViz SDK embeds a customizable commenting experience into your page or your 3D environment to enable people to collaborate.
+# Sample for Contextual Comments Threejs (Cdn/JavaScript)
 
 ### SuperViz SDK
 

@@ -1,8 +1,9 @@
 import { DEVELOPER_KEY, MATTERPORT_KEY } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 
 const roomId = generateUUID();
-const groupId = "sv-sample-room-cdn-js-presence3d-matterport";
-const groupName = "Sample Room for Presence3D for Matterport (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 const modelId = "LmRnZAsWoxy";
 
 // We are initializing two rooms for demo propose.

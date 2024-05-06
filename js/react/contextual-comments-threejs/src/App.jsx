@@ -1,10 +1,11 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
+import { sampleInfo } from "./projectInfo";
 
 import ContextualCommentsThreeJSImplementation from "./components/ContextualCommentsThreeJSImplementation";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const groupId = "sv-sample-room-react-js-threejs-contextual-comments";
-const groupName = "Sample Room for ThreeJs Contextual Comments (React/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 const participant = Math.floor(Math.random() * 100);
 
 function App() {

@@ -1,12 +1,13 @@
 import { DEVELOPER_KEY } from "../env.js";
+import { sampleInfo } from "../projectInfo";
 import * as THREE from "three";
 import { RoomEnvironment } from "/vendor/threejs/examples/jsm/environments/RoomEnvironment.js";
 import { OrbitControls } from "/vendor/threejs/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "/vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
 
 const roomId = "AAd689fe-03b0-442f-ba5e-fb0bbd39d983";
-const groupId = "sv-sample-room-cdn-js-contextual-comments-threejs";
-const groupName = "Sample Room for Contextual Comments with ThreeJS (CDN/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 let room;
 let participantName = "Zeus";

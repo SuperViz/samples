@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-vanilla-ts-who-is-online",
+  "name": "superviz-who-is-online-vanilla-js",
   "version": "1.0.0",
-  "description": "Sample Room for Who-is-Online (Vanilla/TS)",
+  "description": "This is a sample project for the Who Is Online, based on vanilla (js), for more information, go to docs.superviz.com",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,12 +1,13 @@
 import { Presence3D } from "@superviz/matterport-plugin";
 import SuperVizRoom from "@superviz/sdk";
 import "./style.css";
+import { sampleInfo } from "./projectInfo";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
 const participant = Math.floor(Math.random() * 100);
-const groupId = "sv-sample-room-vanilla-mouse-pointers";
-const groupName = "Sample Room for Mouse Pointers (Vanilla + TS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 const modelId = "7ffnfBNamei";
 
 function InitMatterport() {

@@ -1,10 +1,11 @@
 import { MatterportIframe, SuperVizRoomProvider } from "@superviz/react-sdk";
+import { sampleInfo } from "./projectInfo";
 
 const modelId = "7ffnfBNamei";
 const MATTERPORT_KEY = import.meta.env.VITE_MATTERPORT_KEY;
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const groupId = "sv-sample-room-react-js-presence-matterport";
-const groupName = "Sample Room for Presence Matterport (React/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 const participant = Math.floor(Math.random() * 100);
 
 function App() {

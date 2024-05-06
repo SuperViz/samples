@@ -1,11 +1,12 @@
 import { AutodeskViewer, SuperVizRoomProvider } from "@superviz/react-sdk";
+import { sampleInfo } from "./projectInfo";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const FORGE_CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
 const FORGE_CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET;
 const participant = Math.floor(Math.random() * 10);
-const groupId = "sv-sample-room-react-ts-presence-autodesk";
-const groupName = "Sample Room for Presence Autodesk (React/TS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 function App() {
   return (

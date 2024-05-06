@@ -1,10 +1,11 @@
 import { SuperVizRoomProvider } from "@superviz/react-sdk";
 import CanvasCommentsImplementation from "./components/CanvasCommentsImplementation";
+import { sampleInfo } from "./projectInfo";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const participant = Math.floor(Math.random() * 10);
-const groupId = "sv-sample-room-react-js-comments-canvas";
-const groupName = "Sample Room for Contextual Comments Canvas (React/JS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 function App() {
   return (

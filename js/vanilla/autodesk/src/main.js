@@ -1,10 +1,11 @@
 import SuperVizRoom from "@superviz/sdk";
 import "./style.css";
 import { Presence3D } from "@superviz/autodesk-viewer-plugin";
+import { sampleInfo } from "./projectInfo";
 
 const participant = Math.floor(Math.random() * 100);
-const groupId = "sv-sample-room-vanilla-ts-contextual-comments-autodesk";
-const groupName = "Sample Room with Contextual Comments for Autodesk (Vanilla/TS)";
+const groupId = sampleInfo.id;
+const groupName = sampleInfo.name;
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
 const FORGE_CLIENT = import.meta.env.VITE_CLIENT_ID;
