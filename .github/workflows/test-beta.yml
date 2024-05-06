@@ -18,6 +18,7 @@ jobs:
           fetch-depth: 0
 
       - name: run beta-test.sh from ./.admin
+        working-directory: ./.admin
         run: |
-          chmod +x ./.admin/beta-test.sh
-          ./.admin/beta-test.sh
+          chmod +x ./beta-test.sh
+          ./beta-test.sh
