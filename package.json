@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-contextual-comments-threejs",
+  "name": "superviz-contextual-comments-threejs-react-ts",
   "version": "1.0.0",
-  "description": "Sample Room with Contextual Comments for ThreeJS (React/TS)",
+  "description": "This is a sample project for the Contextual Comments Threejs, based on react (ts), for more information, go to docs.superviz.com",
   "scripts": {
     "dev": "vite",
     "start": "vite",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@superviz/react-sdk": "^1.5.0",
-    "@superviz/threejs-plugin": "^0.21.0",
+    "@superviz/threejs-plugin": "^0.22.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.158.0",
