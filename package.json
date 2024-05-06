@@ -1,7 +1,7 @@
 {
-  "name": "sv-sample-room-react-ts-contextual-comments-html",
+  "name": "superviz-contextual-comments-html-react-ts",
   "version": "1.0.0",
-  "description": "Sample Room for Contextual Comments for HTML (React/TS)",
+  "description": "This is a sample project for the Contextual Comments HTML, based on react (ts), for more information, go to docs.superviz.com",
   "type": "module",
   "scripts": {
     "start": "vite",
