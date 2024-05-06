@@ -1,0 +1,22 @@
+# runs on push to beta branch
+name: Test Beta
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: run beta-test.sh from ./.admin
+        run: |
+          ./.admin/beta-test.sh
