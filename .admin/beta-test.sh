@@ -37,7 +37,7 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
 		echo "👀 Checking types $dir"
 		yarn check-types
 
-		if [ $? -eq 1 ]; then
+		if [ $? -ne 0 ]; then
 			echo "❌ Types check failed for $dir"
 			exit 1
 		fi
