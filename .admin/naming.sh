@@ -17,11 +17,11 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
 	# Update the "name" and "description" properties in the package.json file
   jq --arg projectName "$projectName" --arg description "$description" '.name = $projectName | .description = $description' $dir/package.json > $dir/package.temp.json && mv $dir/package.temp.json $dir/package.json
 
-	# Update first line of every README.md file
-	sed -i "1s|.*|# Sample for $fullProjectName|" $dir/README.md
-
 	# COPY the README.md file from the .admin folder to the project folder
 	# cp ./../.admin/README.md $dir/README.md
+
+	# Update first line of every README.md file
+	sed -i "1s|.*|# Sample for $fullProjectName|" $dir/README.md
 
 	# Update the sampleInfo file
 	if [ $language == "ts" ]; then
