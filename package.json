@@ -14,7 +14,7 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "@superviz/sdk": "^6.0.0",
+    "@superviz/sdk": "^6.1.0",
     "@superviz/autodesk-viewer-plugin": "^1.16.0"
   }
 }
