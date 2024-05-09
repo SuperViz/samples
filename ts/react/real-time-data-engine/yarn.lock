@@ -497,10 +497,28 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@6.0.0", "@superviz/sdk@^6.0.0":
+"@superviz/sdk@6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.0.0.tgz#e3b1e711d607059d7557149f6be01a13cb5498d2"
   integrity sha512-8t3K2Ed8DzYuLNctr8C8m6W544gMVuK4loVNXqlmaiUoUkhZRfjYkBVGhKJ3gWmNbBUoLLrwTkZa38d7ufTPuw==
+  dependencies:
+    "@superviz/socket-client" "1.2.2"
+    ably "^1.2.45"
+    bowser "^2.11.0"
+    bowser-jr "^1.0.6"
+    debug "^4.3.4"
+    lit "^3.0.0"
+    lodash "^4.17.21"
+    lodash.debounce "^4.0.8"
+    lodash.isequal "^4.5.0"
+    luxon "^3.4.3"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+
+"@superviz/sdk@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.1.0.tgz#e2dc36905895a2deca6f26cba3b94be0a210f10c"
+  integrity sha512-6oM/YwBCd6GzWGCd3crHm2D8YWWvoS3qrTwAyd/Sp0WIDlb60LRWsuPWktlxsbtgqB4akQrUHEooyCxyMeINbQ==
   dependencies:
     "@superviz/socket-client" "1.2.2"
     ably "^1.2.45"
