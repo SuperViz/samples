@@ -236,10 +236,10 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.0.0.tgz#e3b1e711d607059d7557149f6be01a13cb5498d2"
-  integrity sha512-8t3K2Ed8DzYuLNctr8C8m6W544gMVuK4loVNXqlmaiUoUkhZRfjYkBVGhKJ3gWmNbBUoLLrwTkZa38d7ufTPuw==
+"@superviz/sdk@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.1.0.tgz#e2dc36905895a2deca6f26cba3b94be0a210f10c"
+  integrity sha512-6oM/YwBCd6GzWGCd3crHm2D8YWWvoS3qrTwAyd/Sp0WIDlb60LRWsuPWktlxsbtgqB4akQrUHEooyCxyMeINbQ==
   dependencies:
     "@superviz/socket-client" "1.2.2"
     ably "^1.2.45"
