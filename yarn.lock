@@ -471,15 +471,15 @@
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/react-sdk@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.5.0.tgz#06112e8731edf192ca7ad77f82f6ccac77662339"
-  integrity sha512-EsOPUPGPrsf01tu7qUusgG0H2RlX5itlOrgMbx+EyhV9FVCIWtTdjz2kSEpk4N+OAAYBs7A7XFDb4VuLXMMHmQ==
+"@superviz/react-sdk@^1.5.0-beta.8":
+  version "1.5.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.5.0-beta.8.tgz#d22dbbf742b95abb289b1da2da83c72610a6fffb"
+  integrity sha512-tsS9aEt7zDqPGkwdBslvkUGLqRuuXEmUohgM+7XTg74ippTdc7ZCzpEQ83WUIv4PRlIvDrwYUsMcgzQkBceH9w==
   dependencies:
     "@superviz/autodesk-viewer-plugin" "1.16.0"
     "@superviz/matterport-plugin" "0.19.0"
-    "@superviz/sdk" "6.0.0"
-    "@superviz/threejs-plugin" "0.22.0"
+    "@superviz/sdk" "6.1.0-lab.4"
+    "@superviz/threejs-plugin" "0.20.0-lab.8"
     lodash "^4.17.21"
     react "^18.2.0"
     react-dom "^18.2.0"
@@ -502,10 +502,10 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.0.0.tgz#e3b1e711d607059d7557149f6be01a13cb5498d2"
-  integrity sha512-8t3K2Ed8DzYuLNctr8C8m6W544gMVuK4loVNXqlmaiUoUkhZRfjYkBVGhKJ3gWmNbBUoLLrwTkZa38d7ufTPuw==
+"@superviz/sdk@6.1.0-lab.4":
+  version "6.1.0-lab.4"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.1.0-lab.4.tgz#e510eecf28a1ae0e11cd4c7255534f4afc30f44f"
+  integrity sha512-1frFScB4BcUMfXr4P533ihhsYES+lzejk0EY4UjgkM7CkKZZH2rGNIKzC2FtvFx9dJiwZVPmMhgCdBHGlLH7ng==
   dependencies:
     "@superviz/socket-client" "1.2.2"
     ably "^1.2.45"
@@ -533,10 +533,10 @@
     socket.io-client "^4.7.4"
     zod "^3.22.4"
 
-"@superviz/threejs-plugin@0.22.0":
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.22.0.tgz#7a5a1773ea65789f7e9f471276f68598b6d349d8"
-  integrity sha512-tSHTJLVJxRLGSPRMB1P4Be3xf7u2pq6VgqByxrjT8RcORSdzO202cqs1Rl7SnlHaUQV2/qcq9ha/NfP5Z/fcdw==
+"@superviz/threejs-plugin@0.20.0-lab.8":
+  version "0.20.0-lab.8"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.20.0-lab.8.tgz#1da43ffdcf1a28beb0d766fd2b31bda97aa6a770"
+  integrity sha512-jXoe7s8hxqAJeeCslIzERA68Ya/E+BfainDkH6i8SFzJufLsD+5hhwodmRu6oh/+WWVw2GZCxIGrK0QeOJ05Cw==
   dependencies:
     "@superviz/sdk" "5.9.0-beta.1"
     debug "^4.3.4"
