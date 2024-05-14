@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a sample project for the Matterport, based on cdn (js), for more information, go to docs.superviz.com",
   "scripts": {
+    "dev": "npx live-server public/ --host=localhost",
     "start": "npx live-server public/ --host=localhost"
   },
   "dependencies": {
