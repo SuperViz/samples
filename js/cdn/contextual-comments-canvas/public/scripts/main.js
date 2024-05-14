@@ -18,7 +18,7 @@ async function initializeSuperVizRoom() {
     },
   });
 
-  const pinAdapter = new window.SuperVizRoom.HTMLPin("my-div");
+  const pinAdapter = new window.SuperVizRoom.CanvasPin("element-id");
   const comments = new window.SuperVizRoom.Comments(pinAdapter);
   room.addComponent(comments);
 
