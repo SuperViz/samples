@@ -1,9 +1,12 @@
 import { DEVELOPER_KEY, CLIENT_ID, CLIENT_SECRET } from "../env.js";
-import { sampleInfo } from "../projectInfo";
+import { sampleInfo } from "./projectInfo.js";
 
-const roomId = generateUUID();
+const participant = Math.floor(Math.random() * 100);
 const groupId = sampleInfo.id;
 const groupName = sampleInfo.name;
+
+const FORGE_CLIENT = CLIENT_ID;
+const FORGE_SECRET = CLIENT_SECRET;
 
 const AUTH_URL = "https://developer.api.autodesk.com/authentication/v2/token";
 const modelURN = "urn:adsk.objects:os.object:e8d17563-1a4e-4471-bd72-a0a7e8d719bc/fileifc.ifc";
@@ -11,24 +14,10 @@ const AutodeskData = {
   grant_type: "client_credentials",
   scope: "data:read bucket:read",
 };
-const token = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`);
+const token = btoa(`${FORGE_CLIENT}:${FORGE_SECRET}`);
 
-document.getElementById("zeus-button").addEventListener("click", InitFirstParticipant);
-document.getElementById("hera-button").addEventListener("click", InitSecondParticipant);
-
-function InitFirstParticipant() {
-  document.getElementById("zeus-button").disabled = true;
-  InitParticipantAutodesk("Zeus");
-}
-
-function InitSecondParticipant() {
-  document.getElementById("hera-button").disabled = true;
-  InitParticipantAutodesk("Hera");
-}
-
-function InitParticipantAutodesk(participantName) {
-  const participantId = participantName.toLowerCase();
-  const contentSection = document.getElementById(participantId + "-participant");
+function InitAutodesk() {
+  const contentSection = document.getElementById("zeus-participant");
   let viewer = null;
 
   fetch(AUTH_URL, {
@@ -61,7 +50,7 @@ function InitParticipantAutodesk(participantName) {
         viewer.setOptimizeNavigation(true);
         viewer.setProgressiveRendering(true);
 
-        Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
+        window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
       });
     });
 
@@ -72,35 +61,32 @@ function InitParticipantAutodesk(participantName) {
         .loadDocumentNode(doc, viewable, {
           applyScaling: "meters",
         })
-        .then((result) => {
-          InitSuperVizRoomWithAutodesk(viewer, participantName, participantId);
+        .then(async (result) => {
+          await InitSuperVizRoomWithAutodesk(viewer);
         })
         .catch((error) => {
-          this.onDocumentLoadFailure(error);
+          onDocumentLoadFailure(error);
         });
     }
   }
-  function onDocumentLoadFailure(error, message) {
-    console.error(`Error loading forge model: ${error} - ${message}`);
+  function onDocumentLoadFailure(error) {
+    console.error(`Error loading forge model: ${error}`);
   }
 }
 
-async function InitSuperVizRoomWithAutodesk(viewer, participant, participantId) {
-  // This line is only for demonstration purpose. You can use any avatar you want.
-  const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
-
+async function InitSuperVizRoomWithAutodesk(viewer) {
   const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-    roomId: roomId,
+    roomId: groupId,
     group: {
       id: groupId,
       name: groupName,
     },
     participant: {
-      id: participantId,
-      name: participant,
+      id: participant.toString(),
+      name: "John " + participant,
       avatar: {
-        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
-        model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
+        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
+        model3DUrl: `https://production.storage.superviz.com/readyplayerme/2.glb`,
       },
     },
   });
@@ -119,18 +105,4 @@ async function InitSuperVizRoomWithAutodesk(viewer, participant, participantId) 
   room.addComponent(autodeskPresence);
 }
 
-function generateUUID() {
-  var d = new Date().getTime();
-  var d2 = (typeof performance !== "undefined" && performance.now && performance.now() * 1000) || 0; //Time in microseconds since page-load or 0 if unsupported
-  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
-    var r = Math.random() * 16;
-    if (d > 0) {
-      r = (d + r) % 16 | 0;
-      d = Math.floor(d / 16);
-    } else {
-      r = (d2 + r) % 16 | 0;
-      d2 = Math.floor(d2 / 16);
-    }
-    return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
-  });
-}
+InitAutodesk();

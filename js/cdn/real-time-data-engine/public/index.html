@@ -6,12 +6,42 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <title>SuperViz SDK</title>
 
+    <!-- SuperViz SDK -->
+    <script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>
+
+    <!-- Main script, after SDK -->
+    <script type="module" src="/scripts/main.js"></script>
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
-    <main>
-      <iframe src="./participant-one.html" title="Participant One"></iframe>
-      <iframe src="./participant-two.html" title="Participant Two"></iframe>
-    </main>
+    <section>
+      <div class="events-info">
+        <div class="container">
+          <h2>Subscription Manager</h2>
+          <button id="subscribe">Subscribe to events</button>
+        </div>
+
+        <div class="container" id="subscribedTo">
+          <h2>Not subscribed to any event</h2>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <h2>Publising events</h2>
+        <div class="subscribe-options">
+          <select id="eventName" disabled>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+          </select>
+          <input placeholder="Event message" id="eventMessage" />
+          <button id="publishButton">Publish</button>
+        </div>
+      </div>
+
+      <div class="last-message container" id="lastElement"></div>
+    </section>
   </body>
 </html>

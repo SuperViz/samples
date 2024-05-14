@@ -1,70 +1,72 @@
 import { DEVELOPER_KEY } from "../env.js";
-import { sampleInfo } from "../projectInfo";
+import { sampleInfo } from "../projectInfo.js";
 
 let room;
 let realtime;
-let eventsSubscribed = [];
 
-// Generating random name for the participant
-const participantName = Math.floor(Math.random() * Date.now()).toString(36);
-const roomId = "9cbbb622-9e8d-40be-a4fd-0cba22f08887";
+const participant = Math.floor(Math.random() * 100);
 const groupId = sampleInfo.id;
 const groupName = sampleInfo.name;
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("participant-name").innerHTML = "Participant name: " + participantName;
-});
+document.getElementById("subscribe").addEventListener("click", subscribeToEvents);
+document.getElementById("publishButton").addEventListener("click", publishEvent);
 
-document.getElementById("subscribe-all").addEventListener("click", loadSuperVizRealTimeDataEngine);
-document.getElementById("publish").addEventListener("click", publish);
+function setLastPublishedMessage(message) {
+  document.getElementById("lastElement").innerHTML = `
+    <p><strong>Last message:</strong> <span>${message.data?.toString()}</span></p>
+    <p><strong>Published via:</strong> <span>${message.name}</span></p>
+    <p><strong>Published by:</strong> <span>${message.participantId}</span></p>
+  `;
+}
 
-async function loadSuperVizRealTimeDataEngine() {
+function callbackFunctionForWhenTheEventIsDispatched(message) {
+  if (message.participantId === participant.toString()) return;
+
+  setLastPublishedMessage(message);
+}
+
+function subscribeToEvents() {
+  realtime.subscribe("one", callbackFunctionForWhenTheEventIsDispatched);
+  realtime.subscribe("two", callbackFunctionForWhenTheEventIsDispatched);
+  realtime.subscribe("three", callbackFunctionForWhenTheEventIsDispatched);
+
+  document.getElementById("subscribedTo").innerHTML = `<h2>Subscribed to:</h2>
+          <code>one</code>
+          <code>two</code>
+          <code>three</code>`;
+
+  document.getElementById("eventName").disabled = false;
+}
+
+function publishEvent() {
+  const eventDropdown = document.getElementById("eventName");
+  const messageInput = document.getElementById("eventMessage");
+
+  const eventName = eventDropdown.value;
+  const messageToPublish = messageInput.value;
+
+  if (!eventName || !messageToPublish) return;
+
+  realtime.publish(eventName, messageToPublish);
+}
+
+async function initializeSuperVizRoom() {
   room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-    roomId: roomId,
+    roomId: groupId,
     group: {
       id: groupId,
       name: groupName,
     },
     participant: {
-      id: participantName,
-      name: participantName,
+      id: participant.toString(),
+      name: "John " + participant,
     },
   });
 
   realtime = new window.SuperVizRoom.Realtime();
-
-  realtime.subscribe("event_name_1", callbackFunctionForWhenTheEventIsDispatched);
-  realtime.subscribe("event_name_2", callbackFunctionForWhenTheEventIsDispatched);
-  realtime.subscribe("event_name_3", callbackFunctionForWhenTheEventIsDispatched);
-
   room.addComponent(realtime);
 
-  eventsSubscribed.push("event_name_1");
-  eventsSubscribed.push("event_name_2");
-  eventsSubscribed.push("event_name_3");
-
-  const container = document.getElementById("events");
-  container.innerHTML = `<h2>Subscribed to:</h2>`;
-  container.innerHTML += eventsSubscribed.map((event) => `<code>${event}</code>`).join("");
+  return room;
 }
 
-function publish() {
-  const eventName = document.getElementById("name").value;
-  const eventMessage = document.getElementById("message").value;
-
-  console.log("Publishing", realtime);
-
-  realtime.publish(eventName, eventMessage);
-}
-
-function callbackFunctionForWhenTheEventIsDispatched(message) {
-  const messageData = message[0];
-  if (messageData.participantId === participantName) return;
-
-  console.log("Message received", messageData);
-
-  const container = document.getElementById("last-message");
-  container.innerHTML = `<p><strong>Last message:</strong> <span>${messageData.data}</span></p>
-        <p><strong>Published via:</strong> <span>${messageData.name}</span></p>
-        <p><strong>Published by:</strong> <span>${messageData.participantId}</span></p>`;
-}
+initializeSuperVizRoom();

@@ -1,42 +1,20 @@
 import { DEVELOPER_KEY } from "../env.js";
-import { sampleInfo } from "../projectInfo";
+import { sampleInfo } from "./../projectInfo.js";
 import * as THREE from "three";
 import { RoomEnvironment } from "/vendor/threejs/examples/jsm/environments/RoomEnvironment.js";
 import { OrbitControls } from "/vendor/threejs/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "/vendor/threejs/examples/jsm/loaders/GLTFLoader.js";
 
-const roomId = "AAd689fe-03b0-442f-ba5e-fb0bbd39d983";
+const participant = Math.floor(Math.random() * 100);
 const groupId = sampleInfo.id;
 const groupName = sampleInfo.name;
 
-let room;
-let participantName = "Zeus";
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
-  InitParticipantThreeJS(participantName);
-});
-
-document.getElementById("change-participant").addEventListener("click", changeParticipant);
-
-function changeParticipant() {
-  participantName = participantName == "Zeus" ? "Hera" : "Zeus";
-  document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
-
-  room.destroy();
-
-  InitParticipantThreeJS(participantName);
-}
-
-function InitParticipantThreeJS(participantName) {
-  const participantId = participantName.toLowerCase();
-
+function InitParticipantThreeJS() {
   const container = document.getElementById("participant-canvas");
   const width = container.clientWidth;
   const height = container.clientHeight;
 
   const renderer = new THREE.WebGLRenderer({ canvas: container, antialias: true });
-  renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.setSize(width, height);
 
   const pmremGenerator = new THREE.PMREMGenerator(renderer);
@@ -57,7 +35,7 @@ function InitParticipantThreeJS(participantName) {
     "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/GlamVelvetSofa/glTF-Binary/GlamVelvetSofa.glb",
     function (gltf) {
       scene.add(gltf.scene);
-      InitSuperVizRoomWithThreeJS(scene, renderer, camera, participantName, participantId);
+      InitSuperVizRoomWithThreeJS(scene, renderer, camera);
       animate();
     },
     undefined,
@@ -76,29 +54,27 @@ function InitParticipantThreeJS(participantName) {
   animate();
 }
 
-async function InitSuperVizRoomWithThreeJS(scene, renderer, camera, participant, participantId) {
-  // This line is only for demonstration purpose. You can use any avatar you want.
-  const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
-
-  room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-    roomId: roomId,
+async function InitSuperVizRoomWithThreeJS(scene, renderer, camera) {
+  const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
+    roomId: groupId,
     group: {
       id: groupId,
       name: groupName,
     },
     participant: {
-      id: participantId,
-      name: participant,
+      id: participant.toString(),
+      name: "John " + participant,
       avatar: {
-        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
-        model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
+        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
+        model3DUrl: `https://production.storage.superviz.com/readyplayerme/2.glb`,
       },
     },
   });
 
   const pinAdapter = new window.ThreeJsPin(scene, renderer, camera);
-
   const comments = new window.SuperVizRoom.Comments(pinAdapter);
 
   room.addComponent(comments);
 }
+
+InitParticipantThreeJS();

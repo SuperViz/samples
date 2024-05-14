@@ -1,32 +1,13 @@
 import { DEVELOPER_KEY, MATTERPORT_KEY } from "../env.js";
-import { sampleInfo } from "../projectInfo";
+import { sampleInfo } from "./projectInfo.js";
 
-const roomId = "55ec6752-98e8-48c6-b1b6-74bf736c6b14";
+const participant = Math.floor(Math.random() * 100);
 const groupId = sampleInfo.id;
 const groupName = sampleInfo.name;
 const modelId = "LmRnZAsWoxy";
 
-let room;
-let participantName = "Zeus";
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
-  InitParticipantMatterport(participantName);
-});
-
-document.getElementById("change-participant").addEventListener("click", changeParticipant);
-
-function changeParticipant() {
-  participantName = participantName == "Zeus" ? "Hera" : "Zeus";
-  document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
-
-  room.destroy();
-
-  InitParticipantMatterport(participantName);
-}
-
-function InitParticipantMatterport(participantName) {
-  const showcase = document.getElementById("participant-showcase");
+function InitMatterport() {
+  const showcase = document.getElementById("participant");
   if (!showcase) return;
 
   const showcaseWindow = showcase.contentWindow;
@@ -36,28 +17,31 @@ function InitParticipantMatterport(participantName) {
     if (!showcaseWindow) return;
     const mpSDK = await showcaseWindow.MP_SDK.connect(showcaseWindow, MATTERPORT_KEY);
 
-    InitSuperVizRoomWithMatterport(mpSDK, showcase, participantName);
+    InitSuperVizRoomWithMatterport(mpSDK, showcase);
   });
 }
 
-async function InitSuperVizRoomWithMatterport(mpSDK, showcase, participant) {
-  room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-    roomId: roomId,
+async function InitSuperVizRoomWithMatterport(mpSDK, showcase) {
+  const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
+    roomId: groupId,
     group: {
       id: groupId,
       name: groupName,
     },
     participant: {
-      id: participant.toLowerCase(),
-      name: participant,
+      id: participant.toString(),
+      name: "John " + participant,
+      avatar: {
+        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
+        model3DUrl: `https://production.storage.superviz.com/readyplayerme/2.glb`,
+      },
     },
   });
 
   const pinAdapter = new window.MatterportPin(mpSDK, showcase);
-  const comments = new window.SuperVizRoom.Comments(pinAdapter, {
-    position: "left",
-    buttonLocation: `top-left`,
-  });
+  const comments = new window.SuperVizRoom.Comments(pinAdapter);
 
   room.addComponent(comments);
 }
+
+InitMatterport();

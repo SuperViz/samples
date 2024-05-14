@@ -97,8 +97,8 @@ async function InitSuperVizRoomWithAutodesk(viewer: any) {
   const pinAdapter = new AutodeskPin(viewer);
   console.log("pinAdapter", pinAdapter);
 
-  const comments = new Comments(pinAdapter as any);
-  room.addComponent(comments as any);
+  const comments = new Comments(pinAdapter);
+  room.addComponent(comments);
 }
 
 InitAutodesk();

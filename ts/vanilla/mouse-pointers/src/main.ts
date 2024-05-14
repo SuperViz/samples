@@ -21,7 +21,7 @@ async function initializeSuperVizRoom() {
   });
 
   const mousePointers = new MousePointers("element-id");
-  room.addComponent(mousePointers as any);
+  room.addComponent(mousePointers);
 
   return room;
 }

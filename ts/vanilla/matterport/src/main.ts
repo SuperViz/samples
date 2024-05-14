@@ -53,7 +53,7 @@ async function InitSuperVizRoomWithMatterport(mpSDK: any) {
     },
   });
 
-  room.addComponent(matterportPresence as any);
+  room.addComponent(matterportPresence);
 }
 
 InitMatterport();
