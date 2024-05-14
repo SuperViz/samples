@@ -1,7 +1,7 @@
 import { DEVELOPER_KEY, CLIENT_ID, CLIENT_SECRET } from "../env.js";
-import { sampleInfo } from "../projectInfo";
+import { sampleInfo } from "../projectInfo.js";
 
-const roomId = "4be67c09-0e3b-4fe8-9eb6-20c098463968";
+const participant = Math.floor(Math.random() * 100);
 const groupId = sampleInfo.id;
 const groupName = sampleInfo.name;
 
@@ -11,30 +11,10 @@ const AutodeskData = {
   grant_type: "client_credentials",
   scope: "data:read bucket:read",
 };
-const token = btoa(`${FORGE_CLIENT}:${FORGE_SECRET}`);
+const token = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`);
 
-let room;
-let participantName = "Zeus";
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
-  InitParticipantAutodesk(participantName);
-});
-
-document.getElementById("change-participant").addEventListener("click", changeParticipant);
-
-function changeParticipant() {
-  participantName = participantName == "Zeus" ? "Hera" : "Zeus";
-  document.getElementById("participant-name").innerHTML = "View from " + participantName + " participant";
-
-  room.destroy();
-
-  InitParticipantAutodesk(participantName);
-}
-
-function InitParticipantAutodesk(participantName) {
-  const participantId = participantName.toLowerCase();
-  const contentSection = document.getElementById("participant-canvas");
+function InitAutodesk() {
+  const contentSection = document.getElementById("zeus-participant");
   let viewer = null;
 
   fetch(AUTH_URL, {
@@ -67,7 +47,7 @@ function InitParticipantAutodesk(participantName) {
         viewer.setOptimizeNavigation(true);
         viewer.setProgressiveRendering(true);
 
-        Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
+        window.Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
       });
     });
 
@@ -78,42 +58,41 @@ function InitParticipantAutodesk(participantName) {
         .loadDocumentNode(doc, viewable, {
           applyScaling: "meters",
         })
-        .then((result) => {
-          InitSuperVizRoomWithAutodesk(viewer, contentSection, participantName, participantId);
+        .then(async (result) => {
+          await InitSuperVizRoomWithAutodesk(viewer);
         })
         .catch((error) => {
-          this.onDocumentLoadFailure(error);
+          onDocumentLoadFailure(error);
         });
     }
   }
-  function onDocumentLoadFailure(error, message) {
-    console.error(`Error loading forge model: ${error} - ${message}`);
+  function onDocumentLoadFailure(error) {
+    console.error(`Error loading forge model: ${error}`);
   }
 }
 
-async function InitSuperVizRoomWithAutodesk(viewer, viewerElement, participant, participantId) {
-  // This line is only for demonstration purpose. You can use any avatar you want.
-  const avatarImageForParticipant = participant == "Hera" ? "2" : "5";
-
-  room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-    roomId: roomId,
+async function InitSuperVizRoomWithAutodesk(viewer) {
+  const room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
+    roomId: groupId,
     group: {
       id: groupId,
       name: groupName,
     },
     participant: {
-      id: participantId,
-      name: participant,
+      id: participant.toString(),
+      name: "John " + participant,
       avatar: {
-        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/${avatarImageForParticipant}.png`,
-        model3DUrl: `https://production.storage.superviz.com/readyplayerme/${avatarImageForParticipant}.glb`,
+        imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
+        model3DUrl: `https://production.storage.superviz.com/readyplayerme/2.glb`,
       },
     },
   });
 
-  const pinAdapter = new window.AutodeskPin(viewer, viewerElement);
+  const pinAdapter = new window.AutodeskPin(viewer);
+  console.log("pinAdapter", pinAdapter);
 
   const comments = new window.SuperVizRoom.Comments(pinAdapter);
-
   room.addComponent(comments);
 }
+
+InitAutodesk();
