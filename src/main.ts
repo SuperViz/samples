@@ -66,7 +66,7 @@ async function initializeSuperVizRoom() {
   });
 
   realtime = new Realtime();
-  room.addComponent(realtime as any);
+  room.addComponent(realtime);
 
   return room;
 }
