@@ -80,7 +80,7 @@ async function InitSuperVizRoomWithThreeJS(
   });
 
   const pinAdapter = new ThreeJsPin(scene, renderer, camera);
-  const comments = new Comments(pinAdapter as any);
+  const comments = new Comments(pinAdapter);
 
   room.addComponent(comments);
 }
