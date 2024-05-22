@@ -15,7 +15,7 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "@superviz/sdk": "^6.1.0",
-    "@superviz/matterport-plugin": "^0.19.0"
+    "@superviz/sdk": "^6.2.0",
+    "@superviz/matterport-plugin": "^0.20.0"
   }
 }
