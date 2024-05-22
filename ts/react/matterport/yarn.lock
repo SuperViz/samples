@@ -456,12 +456,22 @@
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/matterport-plugin@0.19.0", "@superviz/matterport-plugin@^0.19.0":
+"@superviz/matterport-plugin@0.19.0":
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.19.0.tgz#d91df61620ad919ce8fa4d901e2b687f93612933"
   integrity sha512-iFmWqIgBU0PV9961p4u2oiMZ8CkX18Yt4V65WMCDkDACKAVB18T5CRT5dNjjt8nkE7JenjJGE5SczY5MP2obig==
   dependencies:
     "@superviz/sdk" "5.9.0-beta.1"
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    three-spritetext "^1.7.1"
+
+"@superviz/matterport-plugin@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.20.0.tgz#f86b489817844ba261d2160c38e60986e01755fa"
+  integrity sha512-7xeK+S9UXbouSqvqFeNRKaF+tiVlg5TOsdeWwfC5dBR7qzLwQBTPo7Khp/UJ9JOTlEl2hCNmwy+8tqOE9mIzYQ==
+  dependencies:
+    "@superviz/sdk" "6.1.0-lab.16"
     debug "^4.3.4"
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
@@ -515,10 +525,41 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
+"@superviz/sdk@6.1.0-lab.16":
+  version "6.1.0-lab.16"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.1.0-lab.16.tgz#a198aa52b3bc68f75c331aa17aacef0ee3274ee1"
+  integrity sha512-F4VNFTmpdSJ9PHJCuhL7C600iO2MEpbXhA4iJBzTQSnQ/v87zgDGE8wyLp+YAtJ+JR2cBCCNfuySfCnGjs/XGQ==
+  dependencies:
+    "@superviz/socket-client" "1.4.0"
+    ably "^1.2.45"
+    bowser "^2.11.0"
+    bowser-jr "^1.0.6"
+    debug "^4.3.4"
+    lit "^3.0.0"
+    lodash "^4.17.21"
+    lodash.debounce "^4.0.8"
+    lodash.isequal "^4.5.0"
+    luxon "^3.4.3"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+
 "@superviz/socket-client@1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.2.2.tgz#6f228e84588051ca092e827c172af6c8f18182f5"
   integrity sha512-JDvKBtyamCe00Tf0KM5Uaac73LVafcLKlByPxXBc5wTmcEo/cuLeaQ4sbpQzUUwJaS2ptnbvZMmYkhL3SnW1AQ==
+  dependencies:
+    "@reactivex/rxjs" "^6.6.7"
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+    socket.io-client "^4.7.4"
+    zod "^3.22.4"
+
+"@superviz/socket-client@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.4.0.tgz#374326131dd4a89f2d8f71e8be1305ed55311921"
+  integrity sha512-Ue66/5dxhGaPxqiFE3KWjusfp2FCBmT8vPJfq8FMD/ZCR6ac/tqnKqLrMtpz3oA6/51CQW9tfoSuqaXC+hrKWw==
   dependencies:
     "@reactivex/rxjs" "^6.6.7"
     debug "^4.3.4"
