@@ -3,6 +3,7 @@ import { sampleInfo } from "../projectInfo.js";
 
 let room;
 let realtime;
+let channel;
 
 const participant = Math.floor(Math.random() * 100);
 const groupId = sampleInfo.id;
@@ -26,9 +27,9 @@ function callbackFunctionForWhenTheEventIsDispatched(message) {
 }
 
 function subscribeToEvents() {
-  realtime.subscribe("one", callbackFunctionForWhenTheEventIsDispatched);
-  realtime.subscribe("two", callbackFunctionForWhenTheEventIsDispatched);
-  realtime.subscribe("three", callbackFunctionForWhenTheEventIsDispatched);
+  channel.subscribe("one", callbackFunctionForWhenTheEventIsDispatched);
+  channel.subscribe("two", callbackFunctionForWhenTheEventIsDispatched);
+  channel.subscribe("three", callbackFunctionForWhenTheEventIsDispatched);
 
   document.getElementById("subscribedTo").innerHTML = `<h2>Subscribed to:</h2>
           <code>one</code>
@@ -47,7 +48,7 @@ function publishEvent() {
 
   if (!eventName || !messageToPublish) return;
 
-  realtime.publish(eventName, messageToPublish);
+  channel.publish(eventName, messageToPublish);
 }
 
 async function initializeSuperVizRoom() {
@@ -64,6 +65,14 @@ async function initializeSuperVizRoom() {
   });
 
   realtime = new window.SuperVizRoom.Realtime();
+
+  realtime.subscribe("realtime-component.state-changed", (state) => {
+    if (state === "STARTED") {
+      channel = realtime.connect("your_channel_name");
+      console.log("Realtime component started", channel);
+    }
+  });
+
   room.addComponent(realtime);
 
   return room;
