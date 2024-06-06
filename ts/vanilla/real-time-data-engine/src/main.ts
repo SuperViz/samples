@@ -21,7 +21,9 @@ function setLastPublishedMessage(message: RealtimeMessage) {
   `;
 }
 
-function callbackFunctionForWhenTheEventIsDispatched(message: RealtimeMessage) {
+function callbackFunctionForWhenTheEventIsDispatched(message: RealtimeMessage | string) {
+  if(typeof message === "string") return;
+
   if (message.participantId === participant.toString()) return;
 
   setLastPublishedMessage(message);
