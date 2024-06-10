@@ -246,12 +246,12 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.2.0.tgz#e7fc4d9c239a160279db273a43c988e852e4d0b2"
-  integrity sha512-iG0fJSKRZIAXw7HJvlxluLmBxvL5DN32cGbODg8RD5xREhGPAkLY4hDPAuHosHy+lywVnG6LMgkNE/iXFhb1gQ==
+"@superviz/sdk@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.3.0.tgz#ae177015803e7528f26dcb89ed3824ae80b666be"
+  integrity sha512-OHaw8V/kj7flxLhMCfv5554m1Ih7ZXydblKYA32Dj0tlFQEHwcOGAeUF2B8F3bgeA5UGHSlQvlLFz0MH+V4COA==
   dependencies:
-    "@superviz/socket-client" "1.4.0"
+    "@superviz/socket-client" "1.5.1"
     ably "^1.2.45"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
@@ -268,6 +268,19 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.4.0.tgz#374326131dd4a89f2d8f71e8be1305ed55311921"
   integrity sha512-Ue66/5dxhGaPxqiFE3KWjusfp2FCBmT8vPJfq8FMD/ZCR6ac/tqnKqLrMtpz3oA6/51CQW9tfoSuqaXC+hrKWw==
+  dependencies:
+    "@reactivex/rxjs" "^6.6.7"
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+    socket.io-client "^4.7.4"
+    zod "^3.22.4"
+
+"@superviz/socket-client@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.5.1.tgz#db1d14f6fbd29ac5e8cf3241dcf8b80cc42e814e"
+  integrity sha512-T+9vbYsKDPuHHrtKWZHLqHJTQ9uL4rQm8xm9OqqIr2E+c6kXkSIZsW40BKK6r45BTX4FT2i8rIS31BxptG5PRQ==
   dependencies:
     "@reactivex/rxjs" "^6.6.7"
     debug "^4.3.4"
