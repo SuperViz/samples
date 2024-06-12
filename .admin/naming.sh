@@ -18,7 +18,7 @@ for dir in $(find ./../ -mindepth 3 -maxdepth 3 -type d ! -path "./../.git*"); d
   jq --arg projectName "$projectName" --arg description "$description" '.name = $projectName | .description = $description' $dir/package.json > $dir/package.temp.json && mv $dir/package.temp.json $dir/package.json
 
 	# COPY the README.md file from the .admin folder to the project folder
-	# cp ./../.admin/README.md $dir/README.md
+	cp ./../.admin/README.md $dir/README.md
 
 	# Update first line of every README.md file
 	sed -i "1s|.*|# Sample for $fullProjectName|" $dir/README.md
