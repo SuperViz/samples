@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <title>SuperViz SDK</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<title>SuperViz SDK</title>
 
-    <!-- SuperViz SDK -->
-    <script type="module" src="https://unpkg.com/@superviz/sdk@6.2.0-beta.1"></script>
+		<!-- SuperViz SDK -->
+		<script type="module" src="https://unpkg.com/@superviz/sdk@6.2.0-beta.1"></script>
 
-    <!-- Main script, after SDK -->
-    <script type="module" src="/scripts/main.js"></script>
-    <link rel="stylesheet" href="/styles/main.css" />
-  </head>
-  <body>
-    <section>
-      <div class="events-info">
-        <div class="container">
-          <h2>Subscription Manager</h2>
-          <button id="subscribe">Subscribe to events</button>
-        </div>
+		<!-- Main script, after SDK -->
+		<script type="module" src="/scripts/main.js"></script>
+		<link rel="stylesheet" href="/styles/main.css" />
+	</head>
+	<body>
+		<section>
+			<div class="events-info">
+				<div class="container">
+					<h2>Subscription Manager</h2>
+					<button id="subscribe">Subscribe to events</button>
+				</div>
 
-        <div class="container" id="subscribedTo">
-          <h2>Not subscribed to any event</h2>
-        </div>
-      </div>
+				<div class="container" id="subscribedTo">
+					<h2>Not subscribed to any event</h2>
+				</div>
+			</div>
 
-      <hr />
+			<hr />
 
-      <div class="container">
-        <h2>Publising events</h2>
-        <div class="subscribe-options">
-          <select id="eventName" disabled>
-            <option value="one">one</option>
-            <option value="two">two</option>
-            <option value="three">three</option>
-          </select>
-          <input placeholder="Event message" id="eventMessage" />
-          <button id="publishButton">Publish</button>
-        </div>
-      </div>
+			<div class="container">
+				<h2>Publising events</h2>
+				<div class="subscribe-options">
+					<select id="eventName" disabled>
+						<option value="one">one</option>
+						<option value="two">two</option>
+						<option value="three">three</option>
+					</select>
+					<input placeholder="Event message" id="eventMessage" />
+					<button id="publishButton">Publish</button>
+				</div>
+			</div>
 
-      <div class="last-message container" id="lastElement"></div>
-    </section>
-  </body>
+			<div class="last-message container" id="lastElement"></div>
+		</section>
+	</body>
 </html>

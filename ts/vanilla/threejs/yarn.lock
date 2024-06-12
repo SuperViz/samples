@@ -218,12 +218,12 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/sdk@5.9.0-beta.1":
-  version "5.9.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-5.9.0-beta.1.tgz#adf9fe688873534a92ccbabcfb3e844e8a2e5d5b"
-  integrity sha512-EU1s1BkTAfSJi2EHSVGalGcPktPfgvmsHvFuKqAgXeMMaMhWnuJXiW8L0Xq99wePwGo8e3SlVJaI5J6oS10zEw==
+"@superviz/sdk@6.1.0-lab.16":
+  version "6.1.0-lab.16"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.1.0-lab.16.tgz#a198aa52b3bc68f75c331aa17aacef0ee3274ee1"
+  integrity sha512-F4VNFTmpdSJ9PHJCuhL7C600iO2MEpbXhA4iJBzTQSnQ/v87zgDGE8wyLp+YAtJ+JR2cBCCNfuySfCnGjs/XGQ==
   dependencies:
-    "@superviz/socket-client" "1.2.2"
+    "@superviz/socket-client" "1.4.0"
     ably "^1.2.45"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
@@ -236,12 +236,12 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.0.0.tgz#e3b1e711d607059d7557149f6be01a13cb5498d2"
-  integrity sha512-8t3K2Ed8DzYuLNctr8C8m6W544gMVuK4loVNXqlmaiUoUkhZRfjYkBVGhKJ3gWmNbBUoLLrwTkZa38d7ufTPuw==
+"@superviz/sdk@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.3.0.tgz#ae177015803e7528f26dcb89ed3824ae80b666be"
+  integrity sha512-OHaw8V/kj7flxLhMCfv5554m1Ih7ZXydblKYA32Dj0tlFQEHwcOGAeUF2B8F3bgeA5UGHSlQvlLFz0MH+V4COA==
   dependencies:
-    "@superviz/socket-client" "1.2.2"
+    "@superviz/socket-client" "1.5.1"
     ably "^1.2.45"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
@@ -254,10 +254,10 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/socket-client@1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.2.2.tgz#6f228e84588051ca092e827c172af6c8f18182f5"
-  integrity sha512-JDvKBtyamCe00Tf0KM5Uaac73LVafcLKlByPxXBc5wTmcEo/cuLeaQ4sbpQzUUwJaS2ptnbvZMmYkhL3SnW1AQ==
+"@superviz/socket-client@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.4.0.tgz#374326131dd4a89f2d8f71e8be1305ed55311921"
+  integrity sha512-Ue66/5dxhGaPxqiFE3KWjusfp2FCBmT8vPJfq8FMD/ZCR6ac/tqnKqLrMtpz3oA6/51CQW9tfoSuqaXC+hrKWw==
   dependencies:
     "@reactivex/rxjs" "^6.6.7"
     debug "^4.3.4"
@@ -267,16 +267,29 @@
     socket.io-client "^4.7.4"
     zod "^3.22.4"
 
-"@superviz/threejs-plugin@^0.22.0":
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.22.0.tgz#7a5a1773ea65789f7e9f471276f68598b6d349d8"
-  integrity sha512-tSHTJLVJxRLGSPRMB1P4Be3xf7u2pq6VgqByxrjT8RcORSdzO202cqs1Rl7SnlHaUQV2/qcq9ha/NfP5Z/fcdw==
+"@superviz/socket-client@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.5.1.tgz#db1d14f6fbd29ac5e8cf3241dcf8b80cc42e814e"
+  integrity sha512-T+9vbYsKDPuHHrtKWZHLqHJTQ9uL4rQm8xm9OqqIr2E+c6kXkSIZsW40BKK6r45BTX4FT2i8rIS31BxptG5PRQ==
   dependencies:
-    "@superviz/sdk" "5.9.0-beta.1"
+    "@reactivex/rxjs" "^6.6.7"
     debug "^4.3.4"
     lodash "^4.17.21"
-    three "^0.157.0"
-    three-mesh-bvh "^0.5.23"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+    socket.io-client "^4.7.4"
+    zod "^3.22.4"
+
+"@superviz/threejs-plugin@^0.23.0":
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.23.0.tgz#5c3898bec7ce9222ae51392291e532809ccb984d"
+  integrity sha512-X1qReK7GnXcqSuXsv5J+6oqcQ6WsHYA73+Rj0c8H/ICtbjj0Cu6q5d5RyVe6KXZB7Q0Ybn0ACKBmNVoHFSfzDA==
+  dependencies:
+    "@superviz/sdk" "6.1.0-lab.16"
+    debug "^4.3.4"
+    lodash "^4.17.21"
+    three "^0.164.0"
+    three-mesh-bvh "^0.7.4"
     three-spritetext "^1.7.1"
 
 "@szmarczak/http-timer@^4.0.5":
@@ -727,20 +740,20 @@ source-map-js@^1.0.2:
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
-three-mesh-bvh@^0.5.23:
-  version "0.5.24"
-  resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.5.24.tgz#56dd27ad35bfbafacedaba4a4d567723bbdd686c"
-  integrity sha512-VTIgfjz8aFoPKTQoMIQQv9jJD4ybFRZuKKE1/kqy78FQcuHQ0+iIWv7C5cSb2inlvs7bNMVY3yRx3RXGZfrvzQ==
+three-mesh-bvh@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.7.4.tgz#a5c799856a3f26f73537a73b6ec632c30f712ba8"
+  integrity sha512-flxe0A4uflTPR6elgq/Y8VrLoljDNS899i422SxQcU3EtMj6o8z4kZRyqZqGWzR0qMf1InTZzY1/0xZl/rnvVw==
 
 three-spritetext@^1.7.1:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/three-spritetext/-/three-spritetext-1.8.2.tgz#62d8106e579274c65d86df2b56dda46b13fa97cc"
   integrity sha512-OYjyAhWnQ6+7CPKjnpq3JQM+Lpr6cSOppCtbOOzF1IbCauGkoDFvbAnxYd0LVxEsIO2RALXXScg2eX+R6CAfyA==
 
-three@^0.157.0:
-  version "0.157.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.157.0.tgz#5baac531941fc8c4ca62d45ee4265652e03318d0"
-  integrity sha512-CeAwQrf4x3z0/e+MC4F+nXLW5t0gh3pw+L6CCBqpHvOq3bGYIgRYub7Pv0j/9wR+d++OiEglyZzWyuSYbwWGOA==
+three@^0.164.0:
+  version "0.164.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.164.1.tgz#b742f76bd8dfd3736ba0d86a12dfddb73c5cdcc0"
+  integrity sha512-iC/hUBbl1vzFny7f5GtqzVXYjMJKaTPxiCxXfrvVdBi1Sf+jhd1CAkitiFwC7mIBFCo3MrDLJG97yisoaWig0w==
 
 to-utf8@0.0.1:
   version "0.0.1"
