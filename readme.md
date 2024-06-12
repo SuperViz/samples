@@ -1,4 +1,4 @@
-# Sample for Contextual Comments HTML (Cdn/JavaScript)
+# Sample for Contextual Comments Canvas (Cdn/JavaScript)
 
 ### SuperViz SDK
 
