@@ -1,4 +1,4 @@
-# Sample for Mouse Pointers (Cdn/JavaScript)
+# Sample for Forms Editor (Cdn/JavaScript)
 
 ### SuperViz SDK
 

@@ -1,1 +1,1 @@
-export const sampleInfo = { id: 'superviz-mouse-pointers-react-ts', name: 'Mouse Pointers (React/TypeScript)' };
+export const sampleInfo = { id: 'superviz-forms-editor-react-js', name: 'Forms Editor (React/JavaScript)' };

@@ -1,1 +1,1 @@
-export const sampleInfo = { id: 'superviz-form-elements-vanilla-ts', name: 'Mouse Pointers (Vanilla/TypeScript)' }
+export const sampleInfo = { id: 'superviz-forms-editor-vanilla-js', name: 'Forms Editor (Vanilla/JavaScript)' };

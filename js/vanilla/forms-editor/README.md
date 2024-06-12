@@ -1,4 +1,4 @@
-# Sample for Mouse Pointers (Vanilla/TypeScript)
+# Sample for Forms Editor (Vanilla/JavaScript)
 
 ### SuperViz SDK
 
