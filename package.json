@@ -10,8 +10,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@superviz/react-sdk": "1.5.0",
-    "@superviz/sdk": "^6.3.0",
+    "@superviz/react-sdk": "1.7.0-beta.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uuid": "^9.0.1"
