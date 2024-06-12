@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>SuperViz SDK</title>
+
+    <!-- SuperViz SDK -->
+    <script type="module" src="https://unpkg.com/@superviz/sdk@latest"></script>
+
+    <!-- Main script, after SDK -->
+    <script type="module" src="/scripts/main.js"></script>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div class="formelements">
+			<h1>Generic Form</h1>
+			<label>
+				Name: <br />
+				<input type="text" id="name" name="name" />
+			</label>
+			<label>
+				Email: <br />
+				<input type="email" id="email" name="email" />
+			</label>
+			<label>
+				What is your kind of pet?
+				<div className="radio-option">
+					<span> <input type="radio" name="pet" value="cat" id="cat" /> Cat </span>
+					<span> <input type="radio" name="pet" value="dog" id="dog" /> Dog </span>
+					<span> <input type="radio" name="pet" value="fish" id="fish" /> Fish </span>
+				</div>
+			</label>
+		</div>
+  </body>
+</html>
