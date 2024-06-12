@@ -1,7 +1,7 @@
 {
-  "name": "superviz-matterport-vanilla-ts",
+  "name": "superviz-mouse-pointers-vanilla-ts",
   "version": "1.0.0",
-  "description": "This is a sample project for the Matterport, based on vanilla (ts), for more information, go to docs.superviz.com",
+  "description": "This is a sample project for the Mouse Pointers, based on vanilla (ts), for more information, go to docs.superviz.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +15,6 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "@superviz/sdk": "^6.3.0",
-    "@superviz/matterport-plugin": "^0.21.0"
+    "@superviz/sdk": "^6.3.0"
   }
 }
