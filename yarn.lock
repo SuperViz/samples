@@ -218,10 +218,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/matterport-plugin@^0.20.0":
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.20.0.tgz#f86b489817844ba261d2160c38e60986e01755fa"
-  integrity sha512-7xeK+S9UXbouSqvqFeNRKaF+tiVlg5TOsdeWwfC5dBR7qzLwQBTPo7Khp/UJ9JOTlEl2hCNmwy+8tqOE9mIzYQ==
+"@superviz/matterport-plugin@^0.21.0":
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.21.0.tgz#c069f09fa75dbf88cfa6e4b7b9dbcc6b7cf3c49d"
+  integrity sha512-wvJqijFOKWbUEpSKVbNDItQEoD2ydXZPf7Jsyp0dNg7fruG7wFUw2vWCFrXhLHfMWrJ8QT2ttJqla4sXXaGTpA==
   dependencies:
     "@superviz/sdk" "6.1.0-lab.16"
     debug "^4.3.4"
