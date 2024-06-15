@@ -31,7 +31,7 @@ NOTE: inside the `js/` directory you can find the `cnd/` directory, this contain
 | Component                           | CDN                                           | Vanilla                                           | React                                           |
 | ----------------------------------- | --------------------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
 | Mouse Pointer                       | [🔗](/js/cdn/mouse-pointers/)                 | [🔗](/js/vanilla/mouse-pointers/)                 | [🔗](/js/react/mouse-pointers/)                 |
-| Forms Editor                        | [🔗](/js/cdn/forms-editor/)                   | [🔗](/js/vanilla/forms-editor/)                   | [🔗](/js/react/forms-editor/)                   |
+| Forms Elements                        | [🔗](/js/cdn/forms-elements/)                   | [🔗](/js/vanilla/forms-elements/)                   | [🔗](/js/react/forms-elements/)                   |
 | Real-time Data Engine               | [🔗](/js/cdn/real-time-data-engine/)          | [🔗](/js/vanilla/realtime-data-engine/)           | [🔗](/js/react/real-time-data-engine/)          |
 | Presence3D for Autodesk             | [🔗](/js/cdn/autodesk/)                       | [🔗](/js/vanilla/autodesk/)                       | [🔗](/js/react/autodesk/)                       |
 | Presence3D for Matteport            | [🔗](/js/cdn/matterport/)                     | [🔗](/js/vanilla/matterport/)                     | [🔗](/js/react/matterport/)                     |
@@ -49,7 +49,7 @@ NOTE: inside the `js/` directory you can find the `cnd/` directory, this contain
 | Component                           | Vanilla                                           | React                                           |
 | ----------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
 | Mouse Pointer                       | [🔗](/ts/vanilla/mouse-pointers/)                 | [🔗](/ts/react/mouse-pointers/)                 |
-| Forms Editor                        | [🔗](/ts/vanilla/forms-editor/)                   | [🔗](/ts/react/forms-editor/)                   |
+| Forms Elements                       | [🔗](/ts/vanilla/forms-elements/)                   | [🔗](/ts/react/forms-elements/)                   |
 | Real-time Data Engine               | [🔗](/ts/vanilla/realtime-data-engine/)           | [🔗](/ts/react/real-time-data-engine/)          |
 | Presence for Autodesk               | [🔗](/ts/vanilla/autodesk/)                       | [🔗](/ts/react/autodesk/)                       |
 | Presence for Matteport              | [🔗](/ts/vanilla/matterport/)                     | [🔗](/ts/react/matterport/)                     |
