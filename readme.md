@@ -49,7 +49,7 @@ NOTE: inside the `js/` directory you can find the `cnd/` directory, this contain
 | Component                           | Vanilla                                           | React                                           |
 | ----------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
 | Mouse Pointer                       | [🔗](/ts/vanilla/mouse-pointers/)                 | [🔗](/ts/react/mouse-pointers/)                 |
-| Forms Editor                        | [🔗](/ts/vanilla/forms-elements/)                   | [🔗](/ts/react/forms-elements/)                   |
+| Forms Elements                       | [🔗](/ts/vanilla/forms-elements/)                   | [🔗](/ts/react/forms-elements/)                   |
 | Real-time Data Engine               | [🔗](/ts/vanilla/realtime-data-engine/)           | [🔗](/ts/react/real-time-data-engine/)          |
 | Presence for Autodesk               | [🔗](/ts/vanilla/autodesk/)                       | [🔗](/ts/react/autodesk/)                       |
 | Presence for Matteport              | [🔗](/ts/vanilla/matterport/)                     | [🔗](/ts/react/matterport/)                     |

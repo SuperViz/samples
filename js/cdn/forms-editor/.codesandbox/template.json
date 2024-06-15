@@ -1,0 +1,14 @@
+{
+  "title": "Sample Room for Mouse Pointers (CDN/JS)",
+  "description": "The Real-time Mouse Pointers feature enables real-time tracking of participants' cursor movements, allowing seamless collaboration within the same room. This is part of the SuperViz SDK.",
+  "iconUrl": "https://superviz.com/wp-content/uploads/2022/10/superviz-1-80x80.png",
+  "tags": [
+    "react",
+    "javascript",
+    "typescript",
+    "superviz",
+    "real-time",
+    "collaboration"
+  ],
+  "published": true
+}
