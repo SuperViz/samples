@@ -362,12 +362,24 @@
   resolved "https://registry.yarnpkg.com/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.2.tgz#d693d972974a354034454ec1317eb6afd0b00312"
   integrity sha512-jnOD+/+dSrfTWYfSXBXlo5l5f0q1UuJo3tkbMDCYA2lKUYq79jaxqtGEvnRoh049nt1vdo1+45RinipU6FGY2g==
 
+"@lit-labs/ssr-dom-shim@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.2.0.tgz#353ce4a76c83fadec272ea5674ede767650762fd"
+  integrity sha512-yWJKmpGE6lUURKAaIltoPIE/wrbY3TEkqQt+X0m+7fQNnAv0keydnYvbiJFP1PnMhizmIWRWOG5KLhYyc/xl+g==
+
 "@lit/reactive-element@^2.0.0":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@lit/reactive-element/-/reactive-element-2.0.2.tgz#779ae9d265407daaf7737cb892df5ec2a86e22a0"
   integrity sha512-SVOwLAWUQg3Ji1egtOt1UiFe4zdDpnWHyc5qctSceJ5XIu0Uc76YmGpIjZgx9YJ0XtdW0Jm507sDvjOu+HnB8w==
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.1.2"
+
+"@lit/reactive-element@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@lit/reactive-element/-/reactive-element-2.0.4.tgz#8f2ed950a848016383894a26180ff06c56ae001b"
+  integrity sha512-GFn91inaUa2oHLak8awSIigYz0cU0Payr1rcFsrkf5OJ5eSPxElyZfKh0f2p9FsTiZWXQdWGJeXZICEfXXYSXQ==
+  dependencies:
+    "@lit-labs/ssr-dom-shim" "^1.2.0"
 
 "@reactivex/rxjs@^6.6.7":
   version "6.6.7"
@@ -466,15 +478,15 @@
     lodash "^4.17.21"
     three-spritetext "^1.7.1"
 
-"@superviz/matterport-plugin@^0.20.0":
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.20.0.tgz#f86b489817844ba261d2160c38e60986e01755fa"
-  integrity sha512-7xeK+S9UXbouSqvqFeNRKaF+tiVlg5TOsdeWwfC5dBR7qzLwQBTPo7Khp/UJ9JOTlEl2hCNmwy+8tqOE9mIzYQ==
+"@superviz/matterport-plugin@^0.22.0":
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.22.0.tgz#8b713d0ce1f9c71499d734b344fe548c0a663bd2"
+  integrity sha512-qYEsfSp5lx3TApfC1VWA0mXxtW5i17kn6cfwc/HA1uSmgMEStlS9ukaCoY6eeB8OjIUWY8O/ziKrA2umTi5pcw==
   dependencies:
-    "@superviz/sdk" "6.1.0-lab.16"
-    debug "^4.3.4"
+    "@superviz/sdk" "6.3.0-lab.11"
+    debug "^4.3.5"
     lodash "^4.17.21"
-    three-spritetext "^1.7.1"
+    three-spritetext "^1.8.2"
 
 "@superviz/react-sdk@1.5.0":
   version "1.5.0"
@@ -525,21 +537,20 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@6.1.0-lab.16":
-  version "6.1.0-lab.16"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.1.0-lab.16.tgz#a198aa52b3bc68f75c331aa17aacef0ee3274ee1"
-  integrity sha512-F4VNFTmpdSJ9PHJCuhL7C600iO2MEpbXhA4iJBzTQSnQ/v87zgDGE8wyLp+YAtJ+JR2cBCCNfuySfCnGjs/XGQ==
+"@superviz/sdk@6.3.0-lab.11":
+  version "6.3.0-lab.11"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.3.0-lab.11.tgz#e2876e4c346848cc5e09e6bfa5925c1f6742a7e8"
+  integrity sha512-raBzDvhEnZRt0SgLbklkH7/w2LvuRsIrqXvO4BMQJqJ1YnvJ+zioWaYS/H6bQiRYS59GBiPVK5RiKobe9nmF+A==
   dependencies:
-    "@superviz/socket-client" "1.4.0"
-    ably "^1.2.45"
+    "@superviz/socket-client" "1.8.0"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
     debug "^4.3.4"
-    lit "^3.0.0"
+    lit "^3.1.4"
     lodash "^4.17.21"
     lodash.debounce "^4.0.8"
     lodash.isequal "^4.5.0"
-    luxon "^3.4.3"
+    luxon "^3.4.4"
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
@@ -556,10 +567,10 @@
     socket.io-client "^4.7.4"
     zod "^3.22.4"
 
-"@superviz/socket-client@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.4.0.tgz#374326131dd4a89f2d8f71e8be1305ed55311921"
-  integrity sha512-Ue66/5dxhGaPxqiFE3KWjusfp2FCBmT8vPJfq8FMD/ZCR6ac/tqnKqLrMtpz3oA6/51CQW9tfoSuqaXC+hrKWw==
+"@superviz/socket-client@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.8.0.tgz#6e21f177bc3f5ed128784f14a95a3c4f59d40593"
+  integrity sha512-+jTpYYug8rgugaoBvgfa3GU/zCSi00grwZzwCDZkLXTxil7e3psiZyRUYH9HucPRUT8ULgpplDN5MF9G43E/fQ==
   dependencies:
     "@reactivex/rxjs" "^6.6.7"
     debug "^4.3.4"
@@ -821,6 +832,13 @@ debug@^4.1.0, debug@^4.3.4, debug@~4.3.1, debug@~4.3.2:
   dependencies:
     ms "2.1.2"
 
+debug@^4.3.5:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.5.tgz#e83444eceb9fedd4a1da56d671ae2446a01a6e1e"
+  integrity sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==
+  dependencies:
+    ms "2.1.2"
+
 decompress-response@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/decompress-response/-/decompress-response-6.0.0.tgz#ca387612ddb7e104bd16d85aab00d5ecf09c66fc"
@@ -992,10 +1010,26 @@ lit-element@^4.0.0:
     "@lit/reactive-element" "^2.0.0"
     lit-html "^3.1.0"
 
+lit-element@^4.0.4:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-4.0.6.tgz#b9f5b5d68f30636be1314ec76c9a73a6405f04dc"
+  integrity sha512-U4sdJ3CSQip7sLGZ/uJskO5hGiqtlpxndsLr6mt3IQIjheg93UKYeGQjWMRql1s/cXNOaRrCzC2FQwjIwSUqkg==
+  dependencies:
+    "@lit-labs/ssr-dom-shim" "^1.2.0"
+    "@lit/reactive-element" "^2.0.4"
+    lit-html "^3.1.2"
+
 lit-html@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-3.1.0.tgz#a7b93dd682073f2e2029656f4e9cd91e8034c196"
   integrity sha512-FwAjq3iNsaO6SOZXEIpeROlJLUlrbyMkn4iuv4f4u1H40Jw8wkeR/OUXZUHUoiYabGk8Y4Y0F/rgq+R4MrOLmA==
+  dependencies:
+    "@types/trusted-types" "^2.0.2"
+
+lit-html@^3.1.2:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-3.1.4.tgz#30ad4f11467a61e2f08856de170e343184e9034e"
+  integrity sha512-yKKO2uVv7zYFHlWMfZmqc+4hkmSbFp8jgjdZY9vvR9jr4J8fH6FUMXhr+ljfELgmjpvlF7Z1SJ5n5/Jeqtc9YA==
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
@@ -1007,6 +1041,15 @@ lit@^3.0.0:
     "@lit/reactive-element" "^2.0.0"
     lit-element "^4.0.0"
     lit-html "^3.1.0"
+
+lit@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/lit/-/lit-3.1.4.tgz#03a72e9f0b1f5da317bf49b1ab579a7132e73d7a"
+  integrity sha512-q6qKnKXHy2g1kjBaNfcoLlgbI3+aSOZ9Q4tiGa9bGYXq5RBXxkVTqTIVmP2VWMp29L4GyvCFm8ZQ2o56eUAMyA==
+  dependencies:
+    "@lit/reactive-element" "^2.0.4"
+    lit-element "^4.0.4"
+    lit-html "^3.1.2"
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
@@ -1042,7 +1085,7 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-luxon@^3.4.3:
+luxon@^3.4.3, luxon@^3.4.4:
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.4.4.tgz#cf20dc27dc532ba41a169c43fdcc0063601577af"
   integrity sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==
@@ -1230,6 +1273,11 @@ three-spritetext@^1.7.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/three-spritetext/-/three-spritetext-1.8.1.tgz#e554230b6f80c75251e0275b8408b8cf2dc2b101"
   integrity sha512-pohv5CcdeUtAPLi9KhG0kcDLj3gmzdIFK/QlgsTJe+U07oQFSj+K0DLPQKbNDPWAK+7YzhulkRcjWdVIQ5F7nw==
+
+three-spritetext@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/three-spritetext/-/three-spritetext-1.8.2.tgz#62d8106e579274c65d86df2b56dda46b13fa97cc"
+  integrity sha512-OYjyAhWnQ6+7CPKjnpq3JQM+Lpr6cSOppCtbOOzF1IbCauGkoDFvbAnxYd0LVxEsIO2RALXXScg2eX+R6CAfyA==
 
 three@0.139.2:
   version "0.139.2"
