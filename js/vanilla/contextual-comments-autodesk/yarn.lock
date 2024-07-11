@@ -233,10 +233,10 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@^6.4.0":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.4.0.tgz#9aaf01f0c283f9764d190c8359af392256a81b7e"
-  integrity sha512-xnanIKW2Qjbc9JkTk4WQ4/HWK60BMYZt9jCVjQNc6olRjuSHrvF6ZKsJdji+PEaj2iS2SStpP/vib+iVM0msyw==
+"@superviz/sdk@^6.4.1":
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.4.1.tgz#11270080577935baa3e61d72cba726bb795837e4"
+  integrity sha512-JRE3l2jN/uB7bmsFDDScLL9NSdm/KQuHjFxPfFSXt1pSbfrPh+rrF76s058ZarWIPJESqjT05CbvOBMYeI5j+w==
   dependencies:
     "@superviz/socket-client" "1.8.0"
     bowser "^2.11.0"
