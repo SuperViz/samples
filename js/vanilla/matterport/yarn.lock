@@ -233,12 +233,12 @@
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
 
-"@superviz/sdk@^6.4.1":
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.4.1.tgz#11270080577935baa3e61d72cba726bb795837e4"
-  integrity sha512-JRE3l2jN/uB7bmsFDDScLL9NSdm/KQuHjFxPfFSXt1pSbfrPh+rrF76s058ZarWIPJESqjT05CbvOBMYeI5j+w==
+"@superviz/sdk@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.4.2.tgz#03ab03c70a8ce19fc911d585e79d076bc53775d3"
+  integrity sha512-qHxDIR4s0M9F8oRflFejaSJpfRchuQT+e1I7+9r3YmJ+kEzf2rhpdYP8c3Nu/Anrd5eDrp+l8unKclUWaFIL5g==
   dependencies:
-    "@superviz/socket-client" "1.8.0"
+    "@superviz/socket-client" "1.8.2"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
     debug "^4.3.4"
@@ -262,6 +262,19 @@
     semantic-release-version-file "^1.0.2"
     socket.io-client "^4.7.4"
     zod "^3.22.4"
+
+"@superviz/socket-client@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.8.2.tgz#054a19df95e144ae99f459ce75f38795feffbcb9"
+  integrity sha512-pB4Pq9GYL7iXFN5ppri9D5sG2ff5Yg/muBoT6pgW2scj91OL2741/ULuxcvTZiUtCW6H7ndHuplVMyHCczkIAA==
+  dependencies:
+    "@reactivex/rxjs" "^6.6.7"
+    debug "^4.3.5"
+    lodash "^4.17.21"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+    socket.io-client "^4.7.5"
+    zod "^3.23.8"
 
 "@types/estree@1.0.5":
   version "1.0.5"
@@ -450,7 +463,7 @@ semantic-release-version-file@^1.0.2:
   resolved "https://registry.npmjs.org/semantic-release-version-file/-/semantic-release-version-file-1.0.2.tgz"
   integrity sha512-/kf9hqGfy0iceKDC1dXGKajKXYfDEHlGFynIaoXOTUv3szlZ4Io2i+7sLl46y4Fv2DCKLeM+3sC/0IWxsgpL9A==
 
-socket.io-client@^4.7.4:
+socket.io-client@^4.7.4, socket.io-client@^4.7.5:
   version "4.7.5"
   resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-4.7.5.tgz#919be76916989758bdc20eec63f7ee0ae45c05b7"
   integrity sha512-sJ/tqHOCe7Z50JCBCXrsY3I2k03iOiUe+tj1OmKeD2lXPiGH/RUCdTZFoqVyN7l1MnpIzPrGtLcijffmeouNlQ==
@@ -513,3 +526,8 @@ zod@^3.22.4:
   version "3.22.4"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
   integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
+
+zod@^3.23.8:
+  version "3.23.8"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
+  integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==
