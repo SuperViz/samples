@@ -129,13 +129,6 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.2.0"
 
-"@reactivex/rxjs@^6.6.7":
-  version "6.6.7"
-  resolved "https://registry.yarnpkg.com/@reactivex/rxjs/-/rxjs-6.6.7.tgz#52ab48f989aba9cda2b995acc904a43e6e1b3b40"
-  integrity sha512-xZIV2JgHhWoVPm3uVcFbZDRVJfx2hgqmuTX7J4MuKaZ+j5jN29agniCPBwrlCmpA15/zLKcPi7/bogt0ZwOFyA==
-  dependencies:
-    tslib "^1.9.0"
-
 "@rollup/rollup-android-arm-eabi@4.9.6":
   version "4.9.6"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.9.6.tgz#66b8d9cb2b3a474d115500f9ebaf43e2126fe496"
@@ -206,12 +199,11 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/sdk@^6.4.2":
-  version "6.4.2"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.4.2.tgz#03ab03c70a8ce19fc911d585e79d076bc53775d3"
-  integrity sha512-qHxDIR4s0M9F8oRflFejaSJpfRchuQT+e1I7+9r3YmJ+kEzf2rhpdYP8c3Nu/Anrd5eDrp+l8unKclUWaFIL5g==
+"@superviz/sdk@^6.4.3":
+  version "6.4.3"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.4.3.tgz#283ec308f89787688f7f85eb910cec3247e9ca02"
+  integrity sha512-9G5viuRPdUTEHI5dMboM9hPs8owdqRNQ++ifneLr3zde8Ot4Y4wtyuMIeGGOxLrp77lF1usprnBgWEbYe4FcFQ==
   dependencies:
-    "@superviz/socket-client" "1.8.2"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
     debug "^4.3.4"
@@ -220,17 +212,6 @@
     lodash.debounce "^4.0.8"
     lodash.isequal "^4.5.0"
     luxon "^3.4.4"
-    rxjs "^7.8.1"
-    semantic-release-version-file "^1.0.2"
-
-"@superviz/socket-client@1.8.2":
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.8.2.tgz#054a19df95e144ae99f459ce75f38795feffbcb9"
-  integrity sha512-pB4Pq9GYL7iXFN5ppri9D5sG2ff5Yg/muBoT6pgW2scj91OL2741/ULuxcvTZiUtCW6H7ndHuplVMyHCczkIAA==
-  dependencies:
-    "@reactivex/rxjs" "^6.6.7"
-    debug "^4.3.5"
-    lodash "^4.17.21"
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
     socket.io-client "^4.7.5"
@@ -260,13 +241,6 @@ debug@^4.3.4, debug@~4.3.1, debug@~4.3.2:
   version "4.3.4"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
-  dependencies:
-    ms "2.1.2"
-
-debug@^4.3.5:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.5.tgz#e83444eceb9fedd4a1da56d671ae2446a01a6e1e"
-  integrity sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==
   dependencies:
     ms "2.1.2"
 
@@ -445,11 +419,6 @@ source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
-
-tslib@^1.9.0:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
-  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^2.1.0:
   version "2.6.2"
