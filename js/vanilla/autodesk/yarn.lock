@@ -129,13 +129,6 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.2.0"
 
-"@reactivex/rxjs@^6.6.7":
-  version "6.6.7"
-  resolved "https://registry.yarnpkg.com/@reactivex/rxjs/-/rxjs-6.6.7.tgz#52ab48f989aba9cda2b995acc904a43e6e1b3b40"
-  integrity sha512-xZIV2JgHhWoVPm3uVcFbZDRVJfx2hgqmuTX7J4MuKaZ+j5jN29agniCPBwrlCmpA15/zLKcPi7/bogt0ZwOFyA==
-  dependencies:
-    tslib "^1.9.0"
-
 "@rollup/rollup-android-arm-eabi@4.9.6":
   version "4.9.6"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.9.6.tgz#66b8d9cb2b3a474d115500f9ebaf43e2126fe496"
@@ -206,34 +199,17 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/autodesk-viewer-plugin@^1.19.0":
-  version "1.19.0"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.19.0.tgz#3b92d74daae26ce52917d136da3253ed4db62a3a"
-  integrity sha512-ymQO5fPreSzbhhF/bYBKE4b4WiMM/TvYQMROJIty3HwY80icfHoqMWW7sdwxJ/tviUS1ZSjLzKBHS/K/uFwquQ==
+"@superviz/autodesk-viewer-plugin@~1.19.0":
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.19.1.tgz#02d91d6d3659402e2385bf9e38e09021f6933e97"
+  integrity sha512-oVc69/P2dPewDiU8W4RtaZHdFKaaFscYnNO/NQiniVsecqCDZ0/xt1Q4ay+jZZI0pyE5avMuIRsG/8/Vwm83cQ==
   dependencies:
-    "@superviz/sdk" "6.3.0-lab.11"
+    "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/sdk@6.3.0-lab.11":
-  version "6.3.0-lab.11"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.3.0-lab.11.tgz#e2876e4c346848cc5e09e6bfa5925c1f6742a7e8"
-  integrity sha512-raBzDvhEnZRt0SgLbklkH7/w2LvuRsIrqXvO4BMQJqJ1YnvJ+zioWaYS/H6bQiRYS59GBiPVK5RiKobe9nmF+A==
-  dependencies:
-    "@superviz/socket-client" "1.8.0"
-    bowser "^2.11.0"
-    bowser-jr "^1.0.6"
-    debug "^4.3.4"
-    lit "^3.1.4"
-    lodash "^4.17.21"
-    lodash.debounce "^4.0.8"
-    lodash.isequal "^4.5.0"
-    luxon "^3.4.4"
-    rxjs "^7.8.1"
-    semantic-release-version-file "^1.0.2"
-
-"@superviz/sdk@^6.4.3":
+"@superviz/sdk@6.4.3", "@superviz/sdk@^6.4.3":
   version "6.4.3"
   resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.4.3.tgz#283ec308f89787688f7f85eb910cec3247e9ca02"
   integrity sha512-9G5viuRPdUTEHI5dMboM9hPs8owdqRNQ++ifneLr3zde8Ot4Y4wtyuMIeGGOxLrp77lF1usprnBgWEbYe4FcFQ==
@@ -250,19 +226,6 @@
     semantic-release-version-file "^1.0.2"
     socket.io-client "^4.7.5"
     zod "^3.23.8"
-
-"@superviz/socket-client@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.8.0.tgz#6e21f177bc3f5ed128784f14a95a3c4f59d40593"
-  integrity sha512-+jTpYYug8rgugaoBvgfa3GU/zCSi00grwZzwCDZkLXTxil7e3psiZyRUYH9HucPRUT8ULgpplDN5MF9G43E/fQ==
-  dependencies:
-    "@reactivex/rxjs" "^6.6.7"
-    debug "^4.3.4"
-    lodash "^4.17.21"
-    rxjs "^7.8.1"
-    semantic-release-version-file "^1.0.2"
-    socket.io-client "^4.7.4"
-    zod "^3.22.4"
 
 "@types/estree@1.0.5":
   version "1.0.5"
@@ -451,7 +414,7 @@ semantic-release-version-file@^1.0.2:
   resolved "https://registry.npmjs.org/semantic-release-version-file/-/semantic-release-version-file-1.0.2.tgz"
   integrity sha512-/kf9hqGfy0iceKDC1dXGKajKXYfDEHlGFynIaoXOTUv3szlZ4Io2i+7sLl46y4Fv2DCKLeM+3sC/0IWxsgpL9A==
 
-socket.io-client@^4.7.4, socket.io-client@^4.7.5:
+socket.io-client@^4.7.5:
   version "4.7.5"
   resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-4.7.5.tgz#919be76916989758bdc20eec63f7ee0ae45c05b7"
   integrity sha512-sJ/tqHOCe7Z50JCBCXrsY3I2k03iOiUe+tj1OmKeD2lXPiGH/RUCdTZFoqVyN7l1MnpIzPrGtLcijffmeouNlQ==
@@ -479,11 +442,6 @@ three@0.139.2:
   resolved "https://registry.yarnpkg.com/three/-/three-0.139.2.tgz#b110799a15736df673b9293e31653a4ac73648dd"
   integrity sha512-gV7q7QY8rogu7HLFZR9cWnOQAUedUhu2WXAnpr2kdXZP9YDKsG/0ychwQvWkZN5PlNw9mv5MoCTin6zNTXoONg==
 
-tslib@^1.9.0:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
-  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
-
 tslib@^2.1.0:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
@@ -509,11 +467,6 @@ xmlhttprequest-ssl@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-2.0.0.tgz#91360c86b914e67f44dce769180027c0da618c67"
   integrity sha512-QKxVRxiRACQcVuQEYFsI1hhkrMlrXHPegbbd1yn9UHOmRxY+si12nQYzri3vbzt8VdTTRviqcKxcyllFas5z2A==
-
-zod@^3.22.4:
-  version "3.22.4"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
-  integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
 
 zod@^3.23.8:
   version "3.23.8"

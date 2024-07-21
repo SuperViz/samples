@@ -29,6 +29,7 @@ jobs:
             cd "$dir"
             echo "Updating package for $dir"
             npx npm-check-updates -u @superviz/sdk
+            npx npm-check-updates -u @superviz/react-sdk
             npx npm-check-updates -u @superviz/matterport-plugin
             npx npm-check-updates -u @superviz/autodesk-viewer-plugin
             npx npm-check-updates -u @superviz/threejs-plugin
@@ -59,6 +60,14 @@ jobs:
         with:
           token: ${{ secrets.SUPERVIZ_DEV_TOKEN }}
           repository: SuperViz/demos
+          event-type: new-release
+          client-payload: '{"version": "v0.0.0"}'
+
+      - name: Update doc-demos
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.SUPERVIZ_DEV_TOKEN }}
+          repository: SuperViz/docs-demos
           event-type: new-release
           client-payload: '{"version": "v0.0.0"}'
 
