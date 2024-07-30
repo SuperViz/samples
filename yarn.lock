@@ -199,20 +199,38 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/autodesk-viewer-plugin@~1.19.0":
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.19.1.tgz#02d91d6d3659402e2385bf9e38e09021f6933e97"
-  integrity sha512-oVc69/P2dPewDiU8W4RtaZHdFKaaFscYnNO/NQiniVsecqCDZ0/xt1Q4ay+jZZI0pyE5avMuIRsG/8/Vwm83cQ==
+"@superviz/autodesk-viewer-plugin@~1.20.0":
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.20.0.tgz#af198bc5d975db2d4d743b153b70982f6ce0aff9"
+  integrity sha512-evKO5t3YgTJZBmaWUwJEDNMDAiXU3vj8dIRVcmHVPKui2PfgcT+pAhyp4xXznYnYh8vHnyHuYxvH0GPPtN5TCw==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/sdk@6.4.3", "@superviz/sdk@^6.4.3":
+"@superviz/sdk@6.4.3":
   version "6.4.3"
   resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.4.3.tgz#283ec308f89787688f7f85eb910cec3247e9ca02"
   integrity sha512-9G5viuRPdUTEHI5dMboM9hPs8owdqRNQ++ifneLr3zde8Ot4Y4wtyuMIeGGOxLrp77lF1usprnBgWEbYe4FcFQ==
+  dependencies:
+    bowser "^2.11.0"
+    bowser-jr "^1.0.6"
+    debug "^4.3.4"
+    lit "^3.1.4"
+    lodash "^4.17.21"
+    lodash.debounce "^4.0.8"
+    lodash.isequal "^4.5.0"
+    luxon "^3.4.4"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+    socket.io-client "^4.7.5"
+    zod "^3.23.8"
+
+"@superviz/sdk@^6.5.0":
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.0.tgz#4c048a5173631404fdb62c93232d53246fb4cdf2"
+  integrity sha512-sNErArYItRROR2a9cfznu4YBxxwuxr8XYCt6TrFS327bGyNlFW4ztbiKrJKGbZVQ162JzsTWwEbeMtwkMKJ0hA==
   dependencies:
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
