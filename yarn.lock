@@ -454,36 +454,36 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.1.tgz#621270c02c0a5d4f4669eb1caa9723c91cf201de"
   integrity sha512-dzJtaDAAoXx4GCOJpbB2eG/Qj8VDpdwkLsWGzGm+0L7E8/434RyMbAHmk9ubXWVAb9nXmc44jUf8GKqVDiKezg==
 
-"@superviz/autodesk-viewer-plugin@1.19.1":
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.19.1.tgz#02d91d6d3659402e2385bf9e38e09021f6933e97"
-  integrity sha512-oVc69/P2dPewDiU8W4RtaZHdFKaaFscYnNO/NQiniVsecqCDZ0/xt1Q4ay+jZZI0pyE5avMuIRsG/8/Vwm83cQ==
+"@superviz/autodesk-viewer-plugin@1.20.0":
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.20.0.tgz#af198bc5d975db2d4d743b153b70982f6ce0aff9"
+  integrity sha512-evKO5t3YgTJZBmaWUwJEDNMDAiXU3vj8dIRVcmHVPKui2PfgcT+pAhyp4xXznYnYh8vHnyHuYxvH0GPPtN5TCw==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
     lodash "^4.17.21"
     three "0.139.2"
 
-"@superviz/matterport-plugin@0.22.1":
-  version "0.22.1"
-  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-0.22.1.tgz#8a1e342025ede953547aa2f7246832220c7741fb"
-  integrity sha512-q4EsfXwygIH1B7eMkR3TQem9g25SYc3m2dKxcL4WvHGDu2JqhI2HN/L+2BfoTzHdwPc+C4XU52w6/QKbSSbiGA==
+"@superviz/matterport-plugin@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@superviz/matterport-plugin/-/matterport-plugin-1.0.0.tgz#2bcc1b39c95b14eff16f0c3ae4f21f371e83fb51"
+  integrity sha512-ObEyoNUMDiBln8B9hobaGFwQGSraFLVdSjsnLWXi4crdpGjHTRalCkkXPr8tsv3JiauJRNZKHUqBgxymZxgHDw==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
     lodash "^4.17.21"
     three-spritetext "^1.8.2"
 
-"@superviz/react-sdk@^1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.10.1.tgz#a591d855e1af4c04c18b49771d6db4ec0f458634"
-  integrity sha512-FphPgvLaapwMnfIQi0KltqxpkNUOjmbKSWHWz653Jo2L58DhiWQtP2KLaEtLr8e61YEyxXje4AcaEsVNsAZi0g==
+"@superviz/react-sdk@^1.11.0":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.11.0.tgz#ea3bc019db092f9b8720173683d3a7e9f08bd03c"
+  integrity sha512-nq92aIQGHIT78j8pD2QX/5Nz1vrBJkmCZkKK+qvMTzr5KDL5VH9oR+LBHpa9dKLS1P/B0f/GYOvqdMXMuIQKkQ==
   dependencies:
     "@rollup/plugin-replace" "^5.0.7"
-    "@superviz/autodesk-viewer-plugin" "1.19.1"
-    "@superviz/matterport-plugin" "0.22.1"
-    "@superviz/sdk" "6.4.3"
-    "@superviz/threejs-plugin" "0.25.1"
+    "@superviz/autodesk-viewer-plugin" "1.20.0"
+    "@superviz/matterport-plugin" "1.0.0"
+    "@superviz/sdk" "6.5.0"
+    "@superviz/threejs-plugin" "1.0.0"
     lodash "^4.17.21"
     react "^18.2.0"
     react-dom "^18.2.0"
@@ -506,10 +506,28 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/threejs-plugin@0.25.1":
-  version "0.25.1"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-0.25.1.tgz#98fd88aa7f95c3e3dfb3dfbf6869e92227536e19"
-  integrity sha512-P72RlRkABypRSFwNRH2c0IQ8cPgg55lGfh0wNa/yZ+7qg/Jjz2G6Lx6+UCJlxJa1vxsYsZ2AqybJaZkCXeK1zw==
+"@superviz/sdk@6.5.0":
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.0.tgz#4c048a5173631404fdb62c93232d53246fb4cdf2"
+  integrity sha512-sNErArYItRROR2a9cfznu4YBxxwuxr8XYCt6TrFS327bGyNlFW4ztbiKrJKGbZVQ162JzsTWwEbeMtwkMKJ0hA==
+  dependencies:
+    bowser "^2.11.0"
+    bowser-jr "^1.0.6"
+    debug "^4.3.4"
+    lit "^3.1.4"
+    lodash "^4.17.21"
+    lodash.debounce "^4.0.8"
+    lodash.isequal "^4.5.0"
+    luxon "^3.4.4"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+    socket.io-client "^4.7.5"
+    zod "^3.23.8"
+
+"@superviz/threejs-plugin@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.0.0.tgz#25548fc17577cc951be454b91fad651e6969a63d"
+  integrity sha512-HPhu3GN+JibWdKudKH/47XXd8AyXl/TPKelz1evXj0mjtQzWh1Fp6lFeDrep8xr6B+vW02o50BhXjEjG5KCCNg==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
