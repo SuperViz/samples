@@ -546,15 +546,15 @@
     lodash "^4.17.21"
     three-spritetext "^1.8.2"
 
-"@superviz/react-sdk@1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.11.0.tgz#ea3bc019db092f9b8720173683d3a7e9f08bd03c"
-  integrity sha512-nq92aIQGHIT78j8pD2QX/5Nz1vrBJkmCZkKK+qvMTzr5KDL5VH9oR+LBHpa9dKLS1P/B0f/GYOvqdMXMuIQKkQ==
+"@superviz/react-sdk@1.11.1":
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.11.1.tgz#57a6ffb9b294897a0357f455c3f28d7c227168f2"
+  integrity sha512-REEkfgk0XNM00IbZJVZLslHAscEdZ+XVuxhAo3bpuNhdX4g5VF3UwmF+j/mdtWcqor8Y8n1p92mAp+sBcLtZoQ==
   dependencies:
     "@rollup/plugin-replace" "^5.0.7"
     "@superviz/autodesk-viewer-plugin" "1.20.0"
     "@superviz/matterport-plugin" "1.0.0"
-    "@superviz/sdk" "6.5.0"
+    "@superviz/sdk" "6.5.1"
     "@superviz/threejs-plugin" "1.0.0"
     lodash "^4.17.21"
     react "^18.2.0"
@@ -578,10 +578,10 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/sdk@6.5.0":
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.0.tgz#4c048a5173631404fdb62c93232d53246fb4cdf2"
-  integrity sha512-sNErArYItRROR2a9cfznu4YBxxwuxr8XYCt6TrFS327bGyNlFW4ztbiKrJKGbZVQ162JzsTWwEbeMtwkMKJ0hA==
+"@superviz/sdk@6.5.1":
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.1.tgz#75a6b210454ac2a4347c17fe67e26196026c915a"
+  integrity sha512-on2u0uI0chMuzPMqc5zywv3yBR0VmlbsdHtwhZFmfR8X5NdeRVntjCLc5PvCPtfVrgosdqo+ynJPRf3z7oIYog==
   dependencies:
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
