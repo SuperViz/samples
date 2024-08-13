@@ -22,5 +22,5 @@
     "@vitejs/plugin-react": "^4.2.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
-  },
+  }
 }
