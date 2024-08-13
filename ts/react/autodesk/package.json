@@ -10,7 +10,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@superviz/react-sdk": "^1.11.1",
+    "@superviz/react-sdk": "^1.11.2",
     "@types/forge-apis": "^0.9.6",
     "forge-apis": "^0.9.8",
     "react": "^18.2.0",

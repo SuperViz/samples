@@ -199,10 +199,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/sdk@^6.5.2":
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.2.tgz#4f6ea7ce5bb98bc70f3f19b527799ea4097a5052"
-  integrity sha512-WfKiasGuGw8vYXKdoge0DV7xHWjavmI1yvYeJJgPNWJ1QeorRvh9vvdHPRKOEthWcetGOMmks59eN3HTHG6okA==
+"@superviz/sdk@^6.5.3":
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.3.tgz#315088c61dea63e0fa60ea421b7b56b48781f359"
+  integrity sha512-RLhUGUz314v4wOfViWZLzqHW9d0tCaKoURyZdo+xEgVxEB0eGdbtz/lUCDRbenyUfweLhkOj+xovH54m5HVr6w==
   dependencies:
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
