@@ -16,5 +16,5 @@
   },
   "dependencies": {
     "@superviz/sdk": "^6.5.3"
-  },
+  }
 }

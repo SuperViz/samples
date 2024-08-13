@@ -15,5 +15,5 @@
   "dependencies": {
     "@superviz/sdk": "^6.5.3",
     "@superviz/matterport-plugin": "~1.0.0"
-  },
+  }
 }
