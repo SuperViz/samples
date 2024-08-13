@@ -20,9 +20,6 @@ jobs:
         with:
           node-version: "18.x"
 
-      - name: Enable corepack
-        run: corepack enable
-
       - name: Update package for each subdirectory
         run: |
           for dir in $(find . -mindepth 3 -maxdepth 3 -type d ! -path "./.git*"); do
