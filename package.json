@@ -17,5 +17,5 @@
   "dependencies": {
     "@superviz/sdk": "^6.5.3",
     "@superviz/autodesk-viewer-plugin": "~1.20.0"
-  },
+  }
 }
