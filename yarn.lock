@@ -474,16 +474,16 @@
     lodash "^4.17.21"
     three-spritetext "^1.8.2"
 
-"@superviz/react-sdk@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.11.2.tgz#9a59a47982f2c1f55c37ff7dc416ce09d9f49caa"
-  integrity sha512-gJsceRie1fbHVm5XjNN52Ccjf4kpSsfhaSxITqCNUNa4AM8OFAS5L/JrveXow1gTYsIbicw2qvKT+nvXYh39Aw==
+"@superviz/react-sdk@1.11.3":
+  version "1.11.3"
+  resolved "https://registry.yarnpkg.com/@superviz/react-sdk/-/react-sdk-1.11.3.tgz#b380fef7b12853c9229660dd57aefa906ba52dfd"
+  integrity sha512-Othh0ffE2EmNsf8FgUutuT+Vxprfcc0uMa9L2KwlCTt0rlcMKDR4OKw//Sbrd23OKRySC8K1+8lQaLyE2ghJ4A==
   dependencies:
     "@rollup/plugin-replace" "^5.0.7"
     "@superviz/autodesk-viewer-plugin" "1.20.0"
     "@superviz/matterport-plugin" "1.0.0"
-    "@superviz/sdk" "6.5.2"
-    "@superviz/threejs-plugin" "1.0.0"
+    "@superviz/sdk" "6.5.3"
+    "@superviz/threejs-plugin" "1.0.1"
     lodash "^4.17.21"
     react "^18.2.0"
     react-dom "^18.2.0"
@@ -506,10 +506,10 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/sdk@6.5.2":
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.2.tgz#4f6ea7ce5bb98bc70f3f19b527799ea4097a5052"
-  integrity sha512-WfKiasGuGw8vYXKdoge0DV7xHWjavmI1yvYeJJgPNWJ1QeorRvh9vvdHPRKOEthWcetGOMmks59eN3HTHG6okA==
+"@superviz/sdk@6.5.3":
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.3.tgz#315088c61dea63e0fa60ea421b7b56b48781f359"
+  integrity sha512-RLhUGUz314v4wOfViWZLzqHW9d0tCaKoURyZdo+xEgVxEB0eGdbtz/lUCDRbenyUfweLhkOj+xovH54m5HVr6w==
   dependencies:
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
@@ -524,17 +524,17 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/threejs-plugin@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.0.0.tgz#25548fc17577cc951be454b91fad651e6969a63d"
-  integrity sha512-HPhu3GN+JibWdKudKH/47XXd8AyXl/TPKelz1evXj0mjtQzWh1Fp6lFeDrep8xr6B+vW02o50BhXjEjG5KCCNg==
+"@superviz/threejs-plugin@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.0.1.tgz#a68008a1c68d6750e5328045b0dbda9bd9ad5444"
+  integrity sha512-0Oglhj06dYdnaNkrJ0v6CO52G3FYhrEHkQgsFvfb+g9ThMqwuIV6zksBP7ltBFwfIeeEn7tl4HAR6aBqcb/a7g==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
     lodash "^4.17.21"
-    three "^0.164.0"
-    three-mesh-bvh "^0.7.4"
-    three-spritetext "^1.7.1"
+    three "0.167.1"
+    three-mesh-bvh "0.7.6"
+    three-spritetext "1.8.2"
 
 "@types/babel__core@^7.20.4":
   version "7.20.5"
@@ -1265,12 +1265,12 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-three-mesh-bvh@^0.7.4:
+three-mesh-bvh@0.7.6:
   version "0.7.6"
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.7.6.tgz#6764b39475bdba9450ad3a4065492678ee537272"
   integrity sha512-rCjsnxEqR9r1/C/lCqzGLS67NDty/S/eT6rAJfDvsanrIctTWdNoR4ZOGWewCB13h1QkVo2BpmC0wakj1+0m8A==
 
-three-spritetext@^1.7.1, three-spritetext@^1.8.2:
+three-spritetext@1.8.2, three-spritetext@^1.8.2:
   version "1.8.2"
   resolved "https://registry.npmjs.org/three-spritetext/-/three-spritetext-1.8.2.tgz"
   integrity sha512-OYjyAhWnQ6+7CPKjnpq3JQM+Lpr6cSOppCtbOOzF1IbCauGkoDFvbAnxYd0LVxEsIO2RALXXScg2eX+R6CAfyA==
@@ -1280,10 +1280,10 @@ three@0.139.2:
   resolved "https://registry.npmjs.org/three/-/three-0.139.2.tgz"
   integrity sha512-gV7q7QY8rogu7HLFZR9cWnOQAUedUhu2WXAnpr2kdXZP9YDKsG/0ychwQvWkZN5PlNw9mv5MoCTin6zNTXoONg==
 
-three@^0.164.0:
-  version "0.164.1"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.164.1.tgz#b742f76bd8dfd3736ba0d86a12dfddb73c5cdcc0"
-  integrity sha512-iC/hUBbl1vzFny7f5GtqzVXYjMJKaTPxiCxXfrvVdBi1Sf+jhd1CAkitiFwC7mIBFCo3MrDLJG97yisoaWig0w==
+three@0.167.1:
+  version "0.167.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.167.1.tgz#3fe4ba2b0a03fd662afe4977a56803d955b61689"
+  integrity sha512-gYTLJA/UQip6J/tJvl91YYqlZF47+D/kxiWrbTon35ZHlXEN0VOo+Qke2walF1/x92v55H6enomymg4Dak52kw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
