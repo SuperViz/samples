@@ -227,10 +227,10 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/sdk@^6.5.3":
-  version "6.5.3"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.3.tgz#315088c61dea63e0fa60ea421b7b56b48781f359"
-  integrity sha512-RLhUGUz314v4wOfViWZLzqHW9d0tCaKoURyZdo+xEgVxEB0eGdbtz/lUCDRbenyUfweLhkOj+xovH54m5HVr6w==
+"@superviz/sdk@^6.5.4":
+  version "6.5.4"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.4.tgz#21301cfe47c90df22d2d99d0dd4216d083464d4d"
+  integrity sha512-8bfV10I/XNe9QIbiUKdavVwivmwuqNmc+ri56oFVRo2ooQwgTgVdJUH2R6vmLdZCHGt2to37PuPWkPRJoM/D1A==
   dependencies:
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
