@@ -13,7 +13,7 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "@superviz/sdk": "^6.5.3",
+    "@superviz/sdk": "^6.5.4",
     "@superviz/threejs-plugin": "~1.0.1"
   }
 }
