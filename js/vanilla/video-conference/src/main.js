@@ -2,7 +2,7 @@ import SuperVizRoom, { VideoConference } from "@superviz/sdk";
 import { sampleInfo } from "./projectInfo";
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const participant = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100).toString().padStart(3, "0");
 const groupId = sampleInfo.id;
 const groupName = sampleInfo.name;
 
@@ -14,7 +14,7 @@ async function initializeSuperVizRoom() {
       name: groupName,
     },
     participant: {
-      id: participant.toString(),
+      id: participant,
       name: "John " + participant,
     },
   });

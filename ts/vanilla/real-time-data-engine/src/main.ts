@@ -1,12 +1,12 @@
 import "./style.css";
-import SuperVizRoom, { Realtime, RealtimeMessage } from "@superviz/sdk";
+import SuperVizRoom, { Realtime, RealtimeComponentEvent, RealtimeComponentState, RealtimeMessage } from "@superviz/sdk";
 import { sampleInfo } from "./projectInfo";
 
 let room;
-let realtime: Realtime;
+let channel: any;
 
 const DEVELOPER_KEY = import.meta.env.VITE_DEVELOPER_KEY;
-const participant = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100).toString().padStart(3, "0");
 const groupId = sampleInfo.id;
 const groupName = sampleInfo.name;
 
@@ -22,17 +22,18 @@ function setLastPublishedMessage(message: RealtimeMessage) {
 }
 
 function callbackFunctionForWhenTheEventIsDispatched(message: RealtimeMessage | string) {
-  if(typeof message === "string") return;
+  console.log('Received message:', message);
+  if (typeof message === "string") return;
 
-  if (message.participantId === participant.toString()) return;
+  if (message.participantId === participant) return;
 
   setLastPublishedMessage(message);
 }
 
 function subscribeToEvents() {
-  realtime.subscribe("one", callbackFunctionForWhenTheEventIsDispatched);
-  realtime.subscribe("two", callbackFunctionForWhenTheEventIsDispatched);
-  realtime.subscribe("three", callbackFunctionForWhenTheEventIsDispatched);
+  channel.subscribe("one", callbackFunctionForWhenTheEventIsDispatched);
+  channel.subscribe("two", callbackFunctionForWhenTheEventIsDispatched);
+  channel.subscribe("three", callbackFunctionForWhenTheEventIsDispatched);
 
   document.getElementById("subscribedTo")!.innerHTML = `<h2>Subscribed to:</h2>
           <code>one</code>
@@ -51,7 +52,7 @@ function publishEvent() {
 
   if (!eventName || !messageToPublish) return;
 
-  realtime.publish(eventName, messageToPublish);
+  channel.publish(eventName, messageToPublish);
 }
 
 async function initializeSuperVizRoom() {
@@ -62,12 +63,19 @@ async function initializeSuperVizRoom() {
       name: groupName,
     },
     participant: {
-      id: participant.toString(),
+      id: participant,
       name: "John " + participant,
     },
   });
 
-  realtime = new Realtime();
+  const realtime = new Realtime();
+
+  realtime.subscribe(RealtimeComponentEvent.REALTIME_STATE_CHANGED, (state) => {
+    if (state === RealtimeComponentState.STARTED) {
+      channel = realtime.connect('my-channel');
+    }
+  });
+
   room.addComponent(realtime);
 
   return room;

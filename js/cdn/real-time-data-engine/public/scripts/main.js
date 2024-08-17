@@ -59,7 +59,7 @@ async function initializeSuperVizRoom() {
 			name: groupName,
 		},
 		participant: {
-			id: participant.toString(),
+			id: participant,
 			name: 'John ' + participant,
 		},
 	})

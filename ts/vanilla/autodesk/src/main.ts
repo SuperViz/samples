@@ -85,7 +85,7 @@ async function InitSuperVizRoomWithAutodesk(viewer: any) {
 			name: groupName,
 		},
 		participant: {
-			id: participant.toString(),
+			id: participant,
 			name: 'John ' + participant,
 			avatar: {
 				imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
