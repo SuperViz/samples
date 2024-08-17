@@ -3,7 +3,7 @@ import "./style.css";
 import { AutodeskPin } from "@superviz/autodesk-viewer-plugin";
 import { sampleInfo } from "./projectInfo";
 
-const participant = Math.floor(Math.random() * 100);
+const participant = Math.floor(Math.random() * 100).toString().padStart(3, "0");
 const groupId = sampleInfo.id;
 const groupName = sampleInfo.name;
 
@@ -85,7 +85,7 @@ async function InitSuperVizRoomWithAutodesk(viewer: any) {
       name: groupName,
     },
     participant: {
-      id: participant.toString(),
+      id: participant,
       name: "John " + participant,
       avatar: {
         imageUrl: `https://production.cdn.superviz.com/static/default-avatars/2.png`,
