@@ -19,7 +19,7 @@ function App() {
         name: groupName,
       }}
       participant={{
-        id: participant.toString(),
+        id: participant,
         name: "John " + participant,
       }}
       roomId={groupId}
