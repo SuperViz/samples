@@ -199,10 +199,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/autodesk-viewer-plugin@~1.20.0":
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.20.0.tgz#af198bc5d975db2d4d743b153b70982f6ce0aff9"
-  integrity sha512-evKO5t3YgTJZBmaWUwJEDNMDAiXU3vj8dIRVcmHVPKui2PfgcT+pAhyp4xXznYnYh8vHnyHuYxvH0GPPtN5TCw==
+"@superviz/autodesk-viewer-plugin@~1.20.1":
+  version "1.20.1"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.20.1.tgz#e1acd079ea0de69ab9c03563e7d798136ba582a7"
+  integrity sha512-xsSVp4mc/LR8Dto2IBtfttjkKpdias1NfJcYnr8ZhhNBIiyDxtC3cYE97OWF251IuwM7RlqQg082f2OUwjpIuw==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
@@ -227,10 +227,10 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/sdk@^6.5.4":
-  version "6.5.4"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.4.tgz#21301cfe47c90df22d2d99d0dd4216d083464d4d"
-  integrity sha512-8bfV10I/XNe9QIbiUKdavVwivmwuqNmc+ri56oFVRo2ooQwgTgVdJUH2R6vmLdZCHGt2to37PuPWkPRJoM/D1A==
+"@superviz/sdk@^6.5.5":
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.5.tgz#f4381b43626882341defc41c288f073925ef2bb3"
+  integrity sha512-1KpMPIizAytwWsPHjJv4fO9FjNCA8AFnXQPKmzo+CW6S6lglZjz1N7jBNfVU824TNy0emsiqTwT+ha0QRFcJIg==
   dependencies:
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
