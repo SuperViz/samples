@@ -217,10 +217,10 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/sdk@^6.5.4":
-  version "6.5.4"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.4.tgz#21301cfe47c90df22d2d99d0dd4216d083464d4d"
-  integrity sha512-8bfV10I/XNe9QIbiUKdavVwivmwuqNmc+ri56oFVRo2ooQwgTgVdJUH2R6vmLdZCHGt2to37PuPWkPRJoM/D1A==
+"@superviz/sdk@^6.5.5":
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.5.tgz#f4381b43626882341defc41c288f073925ef2bb3"
+  integrity sha512-1KpMPIizAytwWsPHjJv4fO9FjNCA8AFnXQPKmzo+CW6S6lglZjz1N7jBNfVU824TNy0emsiqTwT+ha0QRFcJIg==
   dependencies:
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
@@ -235,10 +235,10 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/threejs-plugin@~1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.0.1.tgz#a68008a1c68d6750e5328045b0dbda9bd9ad5444"
-  integrity sha512-0Oglhj06dYdnaNkrJ0v6CO52G3FYhrEHkQgsFvfb+g9ThMqwuIV6zksBP7ltBFwfIeeEn7tl4HAR6aBqcb/a7g==
+"@superviz/threejs-plugin@~1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.0.2.tgz#bec4c47579e6831b91bb1af674d81328abf73670"
+  integrity sha512-vGT8Iqb4/v8wnkl0naRuph5DknAZjNEcYLcP2yaVVUw19FwJHkOtv0FCSERsnrOJurHxu5gHioZTbpLDuZ0Qqw==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"

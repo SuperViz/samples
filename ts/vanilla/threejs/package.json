@@ -16,7 +16,7 @@
     "@types/three": "^0.167.1"
   },
   "dependencies": {
-    "@superviz/sdk": "^6.5.4",
-    "@superviz/threejs-plugin": "~1.0.1"
+    "@superviz/sdk": "^6.5.5",
+    "@superviz/threejs-plugin": "~1.0.2"
   }
 }
