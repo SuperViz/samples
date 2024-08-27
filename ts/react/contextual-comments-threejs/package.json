@@ -10,7 +10,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@superviz/react-sdk": "^1.12.0",
+    "@superviz/react-sdk": "^1.12.1",
     "@superviz/threejs-plugin": "~1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
