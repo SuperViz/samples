@@ -129,6 +129,13 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.2.0"
 
+"@reactivex/rxjs@^6.6.7":
+  version "6.6.7"
+  resolved "https://registry.yarnpkg.com/@reactivex/rxjs/-/rxjs-6.6.7.tgz#52ab48f989aba9cda2b995acc904a43e6e1b3b40"
+  integrity sha512-xZIV2JgHhWoVPm3uVcFbZDRVJfx2hgqmuTX7J4MuKaZ+j5jN29agniCPBwrlCmpA15/zLKcPi7/bogt0ZwOFyA==
+  dependencies:
+    tslib "^1.9.0"
+
 "@rollup/rollup-android-arm-eabi@4.9.6":
   version "4.9.6"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.9.6.tgz#66b8d9cb2b3a474d115500f9ebaf43e2126fe496"
@@ -199,11 +206,12 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/sdk@^6.5.6":
-  version "6.5.6"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.6.tgz#d8cc0b67223569f8fb554bc618957cc912b786a4"
-  integrity sha512-P+QDbUt44CJdlwZ4enX2ihcLORpUNzxuZDJdCgauKJPLQodh4Jg/xxzO/v4OrAvxb+Yu0gxYpLyrAcrc5l3IaA==
+"@superviz/sdk@^6.6.0":
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.6.0.tgz#ad812acfa53dd18ba6c0ca9733c18053e00ba6a7"
+  integrity sha512-fNswMeKeTXTPQhlLrKt6qLDkNjUe5fwtzYUERoh4hfYeVD2xHXC1yE8sDFcl1xOjM1WefD7QjiRdVhwXtDXMTA==
   dependencies:
+    "@superviz/socket-client" "^1.10.0"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
     debug "^4.3.4"
@@ -212,6 +220,18 @@
     lodash.debounce "^4.0.8"
     lodash.isequal "^4.5.0"
     luxon "^3.4.4"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
+    zod "^3.23.8"
+
+"@superviz/socket-client@^1.10.0":
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.12.1.tgz#345c6496445b4269b43ee04db361b1ec32119ff7"
+  integrity sha512-ZUSVQJP4OJ+isujpeqkjSZnuCAd5qeqrbFR7rS6OiaQi/fnsALxZchm9Sy+46yVw5xMNuBp1j8p7lW19wCC4DA==
+  dependencies:
+    "@reactivex/rxjs" "^6.6.7"
+    debug "^4.3.5"
+    lodash "^4.17.21"
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
     socket.io-client "^4.7.5"
@@ -243,6 +263,13 @@ debug@^4.3.4, debug@~4.3.1, debug@~4.3.2:
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
   dependencies:
     ms "2.1.2"
+
+debug@^4.3.5:
+  version "4.3.7"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.7.tgz#87945b4151a011d76d95a198d7111c865c360a52"
+  integrity sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==
+  dependencies:
+    ms "^2.1.3"
 
 engine.io-client@~6.5.2:
   version "6.5.3"
@@ -344,6 +371,11 @@ ms@2.1.2:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
+ms@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
+  integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
+
 nanoid@^3.3.7:
   version "3.3.7"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz"
@@ -419,6 +451,11 @@ source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
+
+tslib@^1.9.0:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^2.1.0:
   version "2.6.2"

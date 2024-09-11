@@ -129,6 +129,13 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.2.0"
 
+"@reactivex/rxjs@^6.6.7":
+  version "6.6.7"
+  resolved "https://registry.yarnpkg.com/@reactivex/rxjs/-/rxjs-6.6.7.tgz#52ab48f989aba9cda2b995acc904a43e6e1b3b40"
+  integrity sha512-xZIV2JgHhWoVPm3uVcFbZDRVJfx2hgqmuTX7J4MuKaZ+j5jN29agniCPBwrlCmpA15/zLKcPi7/bogt0ZwOFyA==
+  dependencies:
+    tslib "^1.9.0"
+
 "@rollup/rollup-android-arm-eabi@4.9.6":
   version "4.9.6"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.9.6.tgz#66b8d9cb2b3a474d115500f9ebaf43e2126fe496"
@@ -217,11 +224,12 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/sdk@^6.5.6":
-  version "6.5.6"
-  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.5.6.tgz#d8cc0b67223569f8fb554bc618957cc912b786a4"
-  integrity sha512-P+QDbUt44CJdlwZ4enX2ihcLORpUNzxuZDJdCgauKJPLQodh4Jg/xxzO/v4OrAvxb+Yu0gxYpLyrAcrc5l3IaA==
+"@superviz/sdk@^6.6.0":
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/@superviz/sdk/-/sdk-6.6.0.tgz#ad812acfa53dd18ba6c0ca9733c18053e00ba6a7"
+  integrity sha512-fNswMeKeTXTPQhlLrKt6qLDkNjUe5fwtzYUERoh4hfYeVD2xHXC1yE8sDFcl1xOjM1WefD7QjiRdVhwXtDXMTA==
   dependencies:
+    "@superviz/socket-client" "^1.10.0"
     bowser "^2.11.0"
     bowser-jr "^1.0.6"
     debug "^4.3.4"
@@ -232,13 +240,25 @@
     luxon "^3.4.4"
     rxjs "^7.8.1"
     semantic-release-version-file "^1.0.2"
+    zod "^3.23.8"
+
+"@superviz/socket-client@^1.10.0":
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/@superviz/socket-client/-/socket-client-1.12.1.tgz#345c6496445b4269b43ee04db361b1ec32119ff7"
+  integrity sha512-ZUSVQJP4OJ+isujpeqkjSZnuCAd5qeqrbFR7rS6OiaQi/fnsALxZchm9Sy+46yVw5xMNuBp1j8p7lW19wCC4DA==
+  dependencies:
+    "@reactivex/rxjs" "^6.6.7"
+    debug "^4.3.5"
+    lodash "^4.17.21"
+    rxjs "^7.8.1"
+    semantic-release-version-file "^1.0.2"
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/threejs-plugin@~1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.0.2.tgz#bec4c47579e6831b91bb1af674d81328abf73670"
-  integrity sha512-vGT8Iqb4/v8wnkl0naRuph5DknAZjNEcYLcP2yaVVUw19FwJHkOtv0FCSERsnrOJurHxu5gHioZTbpLDuZ0Qqw==
+"@superviz/threejs-plugin@~1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.1.0.tgz#50df11beafdd06b7130a626c514c73bf1f32f617"
+  integrity sha512-CyrTkuTQDK8mcHY4GV35oi6pO31Zl4RjNVuqKYff1J02Kaz3QFzhNDF36rV/nMO+nvy45+4MJJF8tpzCAKSSig==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
@@ -471,6 +491,11 @@ three@0.167.1:
   version "0.167.1"
   resolved "https://registry.yarnpkg.com/three/-/three-0.167.1.tgz#3fe4ba2b0a03fd662afe4977a56803d955b61689"
   integrity sha512-gYTLJA/UQip6J/tJvl91YYqlZF47+D/kxiWrbTon35ZHlXEN0VOo+Qke2walF1/x92v55H6enomymg4Dak52kw==
+
+tslib@^1.9.0:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^2.1.0:
   version "2.6.2"

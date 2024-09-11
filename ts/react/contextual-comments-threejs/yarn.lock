@@ -508,10 +508,10 @@
     three-mesh-bvh "0.7.6"
     three-spritetext "1.8.2"
 
-"@superviz/threejs-plugin@~1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.0.2.tgz#bec4c47579e6831b91bb1af674d81328abf73670"
-  integrity sha512-vGT8Iqb4/v8wnkl0naRuph5DknAZjNEcYLcP2yaVVUw19FwJHkOtv0FCSERsnrOJurHxu5gHioZTbpLDuZ0Qqw==
+"@superviz/threejs-plugin@~1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.1.0.tgz#50df11beafdd06b7130a626c514c73bf1f32f617"
+  integrity sha512-CyrTkuTQDK8mcHY4GV35oi6pO31Zl4RjNVuqKYff1J02Kaz3QFzhNDF36rV/nMO+nvy45+4MJJF8tpzCAKSSig==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
