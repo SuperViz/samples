@@ -13,7 +13,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@superviz/react-sdk": "1.12.1",
+    "@superviz/react-sdk": "1.13.0",
     "uuid": "^9.0.1",
     "three": "^0.167.1"
   },
