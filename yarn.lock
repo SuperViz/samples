@@ -206,10 +206,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@superviz/autodesk-viewer-plugin@~1.21.0":
-  version "1.21.0"
-  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.21.0.tgz#4c80be8882555538e2faa0282f194069c7c2ebef"
-  integrity sha512-JHLkI401wjIoeKz4Y74hgJAiJOvKdSz0k69SyZSEMqahYu3DVyzhJkIGHtEEL/+pPfL3hvqzHON9ked7xSLEAA==
+"@superviz/autodesk-viewer-plugin@~1.21.1":
+  version "1.21.1"
+  resolved "https://registry.yarnpkg.com/@superviz/autodesk-viewer-plugin/-/autodesk-viewer-plugin-1.21.1.tgz#6e048366442ab45bc39ed906ae3ca42b93b4d65f"
+  integrity sha512-V9v6tiHvdekA8tUtHWIvDrWu9evLGlLrY2uERBWXOEi5bP6KD0c2C8A3e35oRlGePDtl0nnMMXjBYbuBQK8MgA==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
