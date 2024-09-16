@@ -255,10 +255,10 @@
     socket.io-client "^4.7.5"
     zod "^3.23.8"
 
-"@superviz/threejs-plugin@~1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.1.0.tgz#50df11beafdd06b7130a626c514c73bf1f32f617"
-  integrity sha512-CyrTkuTQDK8mcHY4GV35oi6pO31Zl4RjNVuqKYff1J02Kaz3QFzhNDF36rV/nMO+nvy45+4MJJF8tpzCAKSSig==
+"@superviz/threejs-plugin@~1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@superviz/threejs-plugin/-/threejs-plugin-1.1.1.tgz#b16a97770224d167f5f35291ea9bc44807fb6d9a"
+  integrity sha512-e/3m84cy+CS8fVD+r0jJI7TZydUcpLLMrGge50qiREB+v5GF3xq3wXFzQAesXhNyOZJXbzoBRx4TD6rmyLs7AA==
   dependencies:
     "@superviz/sdk" "6.4.3"
     debug "^4.3.5"
