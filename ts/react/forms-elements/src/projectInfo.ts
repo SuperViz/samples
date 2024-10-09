@@ -1,1 +1,1 @@
-export const sampleInfo = { id: 'superviz-forms-editor-react-ts', name: 'Forms Editor (React/TypeScript)' };
+export const sampleInfo = { id: 'superviz-forms-elements-react-ts', name: 'Forms Elements (React/TypeScript)' };
