@@ -1,13 +1,11 @@
 import { DEVELOPER_KEY } from '../env.js'
 import { sampleInfo } from '../projectInfo.js'
 
-let room
 let realtime
 let channel
 
-const participant = Math.floor(Math.random() * 100)
+const participant = String(Math.floor(Math.random() * 100))
 const groupId = sampleInfo.id
-const groupName = sampleInfo.name
 
 document.getElementById('subscribe').addEventListener('click', subscribeToEvents)
 document.getElementById('publishButton').addEventListener('click', publishEvent)
@@ -52,30 +50,14 @@ function publishEvent() {
 }
 
 async function initializeSuperVizRoom() {
-	room = await window.SuperVizRoom.init(DEVELOPER_KEY, {
-		roomId: groupId,
-		group: {
-			id: groupId,
-			name: groupName,
-		},
+	realtime = new window.Realtime(DEVELOPER_KEY, {
 		participant: {
 			id: participant,
 			name: 'John ' + participant,
 		},
 	})
 
-	realtime = new window.SuperVizRoom.Realtime()
-
-	realtime.subscribe('realtime-component.state-changed', (state) => {
-		if (state === 'STARTED') {
-			channel = realtime.connect('your_channel_name')
-			console.log('Realtime component started', channel)
-		}
-	})
-
-	room.addComponent(realtime)
-
-	return room
+	channel = await realtime.connect(groupId)
 }
 
 initializeSuperVizRoom()
