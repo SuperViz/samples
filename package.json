@@ -1,0 +1,32 @@
+{
+	"name": "superviz-yjs-provider-with-monaco-react-ts",
+	"version": "1.0.0",
+	"description": "This is a sample project for the Yjs Provider With Monaco, based on react (ts), for more information, go to docs.superviz.com",
+	"type": "module",
+	"scripts": {
+		"start": "vite",
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"check-types": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@monaco-editor/react": "^4.6.0",
+		"monaco-editor": "^0.52.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"uuid": "^9.0.1",
+		"y-monaco": "^0.1.6",
+		"y-protocols": "^1.0.6",
+		"yjs": "^13.6.19",
+		"@superviz/react-sdk": "1.14.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.15",
+		"@types/react-dom": "^18.2.15",
+		"@types/uuid": "^9.0.7",
+		"@vitejs/plugin-react": "^4.2.0",
+		"typescript": "^5.2.2",
+		"vite": "^5.0.0"
+	}
+}
