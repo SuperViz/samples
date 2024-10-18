@@ -1,4 +1,4 @@
-# Sample for Real Time Data Engine (React/TypeScript)
+# Sample for Yjs Provider With Monaco (Vanilla/JavaScript)
 
 ### SuperViz SDK
 

@@ -1,7 +1,7 @@
 {
-	"name": "superviz-contextual-comments-autodesk-vanilla-ts",
+	"name": "superviz-yjs-provider-with-monaco-vanilla-ts",
 	"version": "1.0.0",
-	"description": "This is a sample project for the Contextual Comments Autodesk, based on vanilla (ts), for more information, go to docs.superviz.com",
+	"description": "This is a sample project for the Yjs Provider With Monaco, based on vanilla (ts), for more information, go to docs.superviz.com",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
@@ -16,6 +16,9 @@
 	},
 	"dependencies": {
 		"@superviz/sdk": "^6.7.0",
-		"@superviz/autodesk-viewer-plugin": "^1.22.0"
+		"@superviz/yjs": "1.0.0",
+		"monaco-editor": "^0.52.0",
+		"y-monaco": "^0.1.6",
+		"yjs": "^13.6.19"
 	}
 }
