@@ -1,0 +1,34 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+html {
+	height: 100%;
+}
+
+#root {
+	background: #e9e5ef;
+	margin: 0;
+	min-height: 100vh;
+}
+
+#editorContainer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.ql-cursor-selections .ql-cursor-selection-block {
+	background-color: red !important;
+	opacity: 0.4;
+}
+
+.ql-cursor-caret-container .ql-cursor-caret {
+	background-color: red !important;
+}
+
+.ql-cursor-flag {
+	background-color: red !important;
+	color: white !important;
+}
