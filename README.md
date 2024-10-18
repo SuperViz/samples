@@ -1,4 +1,4 @@
-# Sample for Forms Editor (Vanilla/TypeScript)
+# Sample for Forms Elements (Vanilla/TypeScript)
 
 ### SuperViz SDK
 
