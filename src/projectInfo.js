@@ -1,1 +1,1 @@
-export const sampleInfo = { id: 'superviz-forms-editor-vanilla-js', name: 'Forms Editor (Vanilla/JavaScript)' };
+export const sampleInfo = { id: 'superviz-forms-elements-vanilla-js', name: 'Forms Elements (Vanilla/JavaScript)' };

@@ -1,7 +1,7 @@
 {
-  "name": "superviz-forms-editor-vanilla-js",
+  "name": "superviz-forms-elements-vanilla-js",
   "version": "1.0.0",
-  "description": "This is a sample project for the Forms Editor, based on vanilla (js), for more information, go to docs.superviz.com",
+  "description": "This is a sample project for the Forms Elements, based on vanilla (js), for more information, go to docs.superviz.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
