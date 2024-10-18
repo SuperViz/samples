@@ -1,4 +1,4 @@
-# Sample for Forms Editor (Vanilla/JavaScript)
+# Sample for Forms Elements (Vanilla/JavaScript)
 
 ### SuperViz SDK
 
