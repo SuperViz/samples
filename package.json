@@ -1,29 +1,29 @@
 {
-  "name": "superviz-contextual-comments-threejs-react-ts",
-  "version": "1.0.0",
-  "description": "This is a sample project for the Contextual Comments Threejs, based on react (ts), for more information, go to docs.superviz.com",
-  "scripts": {
-    "dev": "vite",
-    "start": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "check-types": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@superviz/react-sdk": "^1.13.0",
-    "@superviz/threejs-plugin": "~1.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "three": "^0.167.1",
-    "uuid": "^9.0.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@types/three": "^0.167.1",
-    "@types/uuid": "^9.0.7",
-    "@vitejs/plugin-react": "^4.2.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.0"
-  }
+	"name": "superviz-contextual-comments-threejs-react-ts",
+	"version": "1.0.0",
+	"description": "This is a sample project for the Contextual Comments Threejs, based on react (ts), for more information, go to docs.superviz.com",
+	"scripts": {
+		"dev": "vite",
+		"start": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"check-types": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@superviz/react-sdk": "^1.13.0",
+		"@superviz/threejs-plugin": "^1.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"three": "^0.167.1",
+		"uuid": "^9.0.1"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.37",
+		"@types/react-dom": "^18.2.15",
+		"@types/three": "^0.167.1",
+		"@types/uuid": "^9.0.7",
+		"@vitejs/plugin-react": "^4.2.0",
+		"typescript": "^5.2.2",
+		"vite": "^5.0.0"
+	}
 }
