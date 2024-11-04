@@ -31,8 +31,8 @@ NOTE: inside the `js/` directory you can find the `cnd/` directory, this contain
 | Component                           | CDN                                           | Vanilla                                           | React                                           |
 | ----------------------------------- | --------------------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
 | Mouse Pointer                       | [🔗](/js/cdn/mouse-pointers/)                 | [🔗](/js/vanilla/mouse-pointers/)                 | [🔗](/js/react/mouse-pointers/)                 |
-| Forms Elements                        | [🔗](/js/cdn/forms-elements/)                   | [🔗](/js/vanilla/forms-elements/)                   | [🔗](/js/react/forms-elements/)                   |
-| Real-time Data Engine               | [🔗](/js/cdn/real-time-data-engine/)          | [🔗](/js/vanilla/realtime-data-engine/)           | [🔗](/js/react/real-time-data-engine/)          |
+| Forms Elements                      | [🔗](/js/cdn/forms-elements/)                 | [🔗](/js/vanilla/forms-elements/)                 | [🔗](/js/react/forms-elements/)                 |
+| Real-time Data Engine               | [🔗](/js/cdn/real-time-data-engine/)          | [🔗](/js/vanilla/realtime-data-engine/)           |                                                 |
 | Presence3D for Autodesk             | [🔗](/js/cdn/autodesk/)                       | [🔗](/js/vanilla/autodesk/)                       | [🔗](/js/react/autodesk/)                       |
 | Presence3D for Matteport            | [🔗](/js/cdn/matterport/)                     | [🔗](/js/vanilla/matterport/)                     | [🔗](/js/react/matterport/)                     |
 | Presence3D for ThreeJS              | [🔗](/js/cdn/threejs/)                        | [🔗](/js/vanilla/threejs/)                        | [🔗](/js/react/threejs/)                        |
@@ -43,14 +43,16 @@ NOTE: inside the `js/` directory you can find the `cnd/` directory, this contain
 | Contextual Comments with ThreeJS    | [🔗](/js/cdn/contextual-comments-threejs/)    | [🔗](/js/vanilla/contextual-comments-threejs/)    | [🔗](/js/react/contextual-comments-threejs/)    |
 | Video Conference                    | [🔗](/js/cdn/video-conference/)               | [🔗](/js/vanilla/video-conference/)               | [🔗](/js/react/video-conference/)               |
 | Who-is-Online                       | [🔗](/js/cdn/who-is-online/)                  | [🔗](/js/vanilla/who-is-online/)                  | [🔗](/js/react/who-is-online/)                  |
+| Yjs Provider with Monaco            |                                               | [🔗](/js/vanilla/yjs-provider-with-monaco/)       | [🔗](/js/react/yjs-provider-with-monaco/)       |
+| Yjs Provider with Quill             |                                               | [🔗](/js/vanilla/yjs-provider-with-quill/)        | [🔗](/js/react/yjs-provider-with-quill/)        |
 
 ## Samples with TypeScript
 
 | Component                           | Vanilla                                           | React                                           |
 | ----------------------------------- | ------------------------------------------------- | ----------------------------------------------- |
 | Mouse Pointer                       | [🔗](/ts/vanilla/mouse-pointers/)                 | [🔗](/ts/react/mouse-pointers/)                 |
-| Forms Elements                       | [🔗](/ts/vanilla/forms-elements/)                   | [🔗](/ts/react/forms-elements/)                   |
-| Real-time Data Engine               | [🔗](/ts/vanilla/realtime-data-engine/)           | [🔗](/ts/react/real-time-data-engine/)          |
+| Forms Elements                      | [🔗](/ts/vanilla/forms-elements/)                 | [🔗](/ts/react/forms-elements/)                 |
+| Real-time Data Engine               | [🔗](/ts/vanilla/realtime-data-engine/)           |                                                 |
 | Presence for Autodesk               | [🔗](/ts/vanilla/autodesk/)                       | [🔗](/ts/react/autodesk/)                       |
 | Presence for Matteport              | [🔗](/ts/vanilla/matterport/)                     | [🔗](/ts/react/matterport/)                     |
 | Presence for ThreeJS                | [🔗](/ts/vanilla/threejs/)                        | [🔗](/ts/react/threejs/)                        |
@@ -61,6 +63,8 @@ NOTE: inside the `js/` directory you can find the `cnd/` directory, this contain
 | Contextual Comments with ThreeJS    | [🔗](/ts/vanilla/contextual-comments-threejs/)    | [🔗](/ts/react/contextual-comments-threejs/)    |
 | Video Conference                    | [🔗](/ts/vanilla/video-conference/)               | [🔗](/ts/react/video-conference/)               |
 | Who-is-Online                       | [🔗](/ts/vanilla/who-is-online/)                  | [🔗](/ts/react/who-is-online/)                  |
+| Yjs Provider with Monaco            | [🔗](/ts/vanilla/yjs-provider-with-monaco/)       | [🔗](/ts/react/yjs-provider-with-monaco/)       |
+| Yjs Provider with Quill             | [🔗](/ts/vanilla/yjs-provider-with-quill/)        | [🔗](/ts/react/yjs-provider-with-quill/)        |
 
 ## Project roadmap
 
